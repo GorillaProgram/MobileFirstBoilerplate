@@ -1,44 +1,32 @@
-const NetworkUtils = {
-    sendRequest: (adapter, procedure, params, onSuccess, onFailure) => {
-        try {
-            const invocationData = {
-                adapter: adapter,
-                procedure: procedure,
-                parameters: [...params]
-            };
-            WL.Client.invokeProcedure(invocationData, {
-                onSuccess: onSuccess,
-                onFailure: onFailure
-            });
-        } catch (e) {
-            alert("系统错误" + e.message.toString());
-        }
-    },
-    fetchDatas: (adapter, procedure, params) => {
+import DebugUtility from './DebugUtility';
+
+class NetworkUtils {
+    function fetchDatas(adapter, procedure, params) {
         return new Promise((resolve, reject) => {
-            console.log({adapter, procedure, params});
+            log(adapter, procedure, params);
             try {
                 const invocationData = {
                     adapter: adapter,
                     procedure: procedure,
-                    parameters: [...params]
+                    parameters: [params]
                 };
                 WL.Client.invokeProcedure(invocationData, {
                     onSuccess: (response) => {
-                        console.log({response});
+                        log(response);
                         resolve(response);
                     },
                     onFailure: (error) => {
-                        console.log({error});
+                        log(error);
                         reject(error);
                     }
                 });
             } catch (error) {
-                console.log({error});
+                log(error);
                 reject(error);
             }
         });
     }
+
 }
 
 export default NetworkUtils;

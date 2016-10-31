@@ -1,4 +1,8 @@
 /css/main.css
+/dist/bundle.js
+/dist/bundle.js.map
+/dist/bundle.min.js
+/dist/index.html
 /filelist
 /images/icon.png
 /images/thumbnail.png
@@ -6,6 +10,9 @@
 /js/initOptions.js
 /js/main.js
 /js/messages.js
+/static/vendor/css/bootstrap.min.css
+/static/vendor/css/slick.css
+/static/vendor/js/jquery/jquery.min.js
 /worklight/cordova.js
 /worklight/cordova_plugins.js
 /worklight/messages/de/messages.json
