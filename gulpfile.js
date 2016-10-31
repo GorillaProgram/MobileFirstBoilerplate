@@ -11,9 +11,9 @@ const runSequence = require('run-sequence');
 const assign = require('object-assign');
 
 /* ========================== path end ========================== */
-const reactPath = './ReactProject/';
+const reactPath = './WebComponents/';
 const reactDistPath = reactPath + 'dist';
-const mobileFirstPath = './MobileFirst-React/apps/ReactHybrid/common/';
+const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
 const mobileFirstDistPath = mobileFirstPath + 'dist';
 /* ========================== path end ========================== */
 

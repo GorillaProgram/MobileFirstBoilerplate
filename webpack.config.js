@@ -3,11 +3,11 @@ const webpack = require('webpack');
 
 const env = process.env.NODE_ENV;
 
-const entryPath = './ReactProject/app/index.js';
-const reactPath = './ReactProject/';
-const reactPublicPath = '/ReactProject/';
-const mobileFirstPath = './MobileFirst-React/apps/ReactHybrid/common/';
-const mobileFirstPublicPath = '/MobileFirst-React/apps/ReactHybrid/common/';
+const entryPath = './WebComponents/app/index.js';
+const reactPath = './WebComponents/';
+const reactPublicPath = '/WebComponents/';
+const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
+const mobileFirstPublicPath = '/MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
 
 const dirPath = reactPath;
 const publicDirName = reactPublicPath;
