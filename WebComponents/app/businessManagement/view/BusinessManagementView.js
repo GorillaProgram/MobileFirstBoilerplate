@@ -4,7 +4,6 @@ import commonStyles from '../../main/styles/commonStyles';
 import Images from '../../main/images/Images';
 import SliderGroup from '../../main/components/slider/SliderGroup';
 import Square from '../../main/components/slider/components/Square';
-import DebugUtility from '../../main/utilities/DebugUtility';
 
 /*
     1.集成性.
@@ -34,9 +33,9 @@ class BusinessManagementView extends Component {
             <div style={{...commonStyles.container, ...styles.container}}>
                 <SliderGroup title="借记卡业务" settings={settings}>
                     <div style={styles.slide}>
-                        <button onClick={() => {
-                            DebugUtility.log('=====', '----', 'aassd');
-                        }}><Square title="开卡" image={Images.kk} onClick={this.props.handleOpenCardClick} /></button>
+                        <Link to="businessManagement/openCardStepOne">
+                            <Square title="开卡" image={Images.kk} onClick={this.props.handleOpenCardClick} />
+                        </Link>
                         <Link to="businessManagement/cardActive">
                             <Square title="卡激活" image={Images.jh} onClick={this.props.handleCardActiveClick} />
                         </Link>
