@@ -1,4 +1,4 @@
-class StoreUtility {
+const StoreUtility = {
 
     /**
      * 内存缓存, 存取方法(一个参数: getter; 两个参数: setter | remove)

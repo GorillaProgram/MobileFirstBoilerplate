@@ -1,13 +1,14 @@
-class JSONUtility {
+const JSONUtility = {
+
     /**
      * JSON -> String
      *
      * @param json
      * @return sting
      */
-    jsonToString(json) {
+    jsonToString: (json) => {
         return JSON.stringify(json);
-    }
+    },
 
     /**
      * String -> JSON
@@ -15,7 +16,7 @@ class JSONUtility {
      * @param string
      * @returns json
      */
-    stringToJson(string) {
+    stringToJson: (string) => {
         return JSON.parse(string);
     }
 
