@@ -1,7 +1,9 @@
 class DebugUtility {
 
-    function log(params) {
-        console.log(...params);
+    log() {
+        arguments.forEach((argument, index, array) => {
+            console.log(argument);
+        });
     }
 
 }

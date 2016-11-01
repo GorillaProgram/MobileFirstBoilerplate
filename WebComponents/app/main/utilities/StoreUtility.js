@@ -8,7 +8,7 @@ class StoreUtility {
      * @return
      *      getter时, 返回获取的值
      */
-    function memoryCache(key, value) {
+    memoryCache(key, value) {
         if (value) {
             // setter | remove
             key === 'remove' ? memoryCacheRemove(value) : memoryCacheSetter(key, value);
@@ -21,19 +21,19 @@ class StoreUtility {
     /**
      * 私有方法, 禁止使用
      */
-    function memoryCacheSetter(key, value) {
+    memoryCacheSetter(key, value) {
         sessionStorage.setItem(key, value);
     }
     /**
      * 私有方法, 禁止使用
      */
-    function memoryCacheGetter(key) {
+    memoryCacheGetter(key) {
         return sessionStorage.getItem(key) !== null ? sessionStorage.getItem(key) : 'error: no value for key ~';
     }
     /**
      * 私有方法, 禁止使用
      */
-    function memoryCacheRemove(key) {
+    memoryCacheRemove(key) {
         sessionStorage.removeItem(key);
     }
 
@@ -45,7 +45,7 @@ class StoreUtility {
      * @return
      *      getter时, 返回获取的值
      */
-    function diskCache(key, value) {
+    diskCache(key, value) {
         if (value) {
             // setter | remove
             key === 'remove' ? diskCacheRemove(value) : diskCacheSetter(key, value);
@@ -58,19 +58,19 @@ class StoreUtility {
     /**
      * 私有方法, 禁止使用
      */
-    function diskCacheSetter(key, value) {
+    diskCacheSetter(key, value) {
         localStorage.setItem(key, value);
     }
     /**
      * 私有方法, 禁止使用
      */
-    function diskCacheGetter(key) {
+    diskCacheGetter(key) {
         return localStorage.getItem(key) !== null ? localStorage.getItem(key) : 'error: no value for key ~';
     }
     /**
      * 私有方法, 禁止使用
      */
-    function diskCacheRemove(key) {
+    diskCacheRemove(key) {
         localStorage.removeItem(key);
     }
 

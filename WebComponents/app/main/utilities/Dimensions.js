@@ -1,10 +1,10 @@
-class Dimensions {
+class Dimensions extends Object {
 
-    function width() {
+    width() {
         return screen.availWidth;
     }
 
-    function height() {
+    height() {
         return screen.availHeight;
     }
 

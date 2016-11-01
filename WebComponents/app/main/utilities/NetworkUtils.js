@@ -1,7 +1,8 @@
 import DebugUtility from './DebugUtility';
 
 class NetworkUtils {
-    function fetchDatas(adapter, procedure, params) {
+
+    fetchDatas(adapter, procedure, params) {
         return new Promise((resolve, reject) => {
             log(adapter, procedure, params);
             try {

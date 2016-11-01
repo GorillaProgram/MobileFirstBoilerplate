@@ -5,7 +5,7 @@ class JSONUtility {
      * @param json
      * @return sting
      */
-    function jsonToString(json) {
+    jsonToString(json) {
         return JSON.stringify(json);
     }
 
@@ -15,7 +15,7 @@ class JSONUtility {
      * @param string
      * @returns json
      */
-    function stringToJson(string) {
+    stringToJson(string) {
         return JSON.parse(string);
     }
 
