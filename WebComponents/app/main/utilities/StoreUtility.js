@@ -16,26 +16,26 @@ const StoreUtility = {
             // getter
             return memoryCacheGetter(key);
         }
-    }
+    },
 
     /**
      * 私有方法, 禁止使用
      */
     memoryCacheSetter(key, value) {
         sessionStorage.setItem(key, value);
-    }
+    },
     /**
      * 私有方法, 禁止使用
      */
     memoryCacheGetter(key) {
         return sessionStorage.getItem(key) !== null ? sessionStorage.getItem(key) : 'error: no value for key ~';
-    }
+    },
     /**
      * 私有方法, 禁止使用
      */
     memoryCacheRemove(key) {
         sessionStorage.removeItem(key);
-    }
+    },
 
     /**
      * 本地缓存, 存取方法(一个参数: getter; 两个参数: setter | remove)
@@ -53,20 +53,20 @@ const StoreUtility = {
             // getter
             return diskCacheGetter(key);
         }
-    }
+    },
 
     /**
      * 私有方法, 禁止使用
      */
     diskCacheSetter(key, value) {
         localStorage.setItem(key, value);
-    }
+    },
     /**
      * 私有方法, 禁止使用
      */
     diskCacheGetter(key) {
         return localStorage.getItem(key) !== null ? localStorage.getItem(key) : 'error: no value for key ~';
-    }
+    },
     /**
      * 私有方法, 禁止使用
      */

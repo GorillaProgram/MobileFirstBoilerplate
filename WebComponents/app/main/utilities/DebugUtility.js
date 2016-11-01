@@ -1,9 +1,9 @@
 const DebugUtility = {
 
-    log: () => {
+    log() {
         console.log(arguments);
     }
-    
+
 }
 
 export default DebugUtility;

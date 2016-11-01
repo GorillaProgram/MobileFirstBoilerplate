@@ -35,8 +35,7 @@ class BusinessManagementView extends Component {
                 <SliderGroup title="借记卡业务" settings={settings}>
                     <div style={styles.slide}>
                         <button onClick={() => {
-                            var debugUtility = new DebugUtility();
-                            debugUtility.log('=====', '----', 'aassd');
+                            DebugUtility.log('=====', '----', 'aassd');
                         }}><Square title="开卡" image={Images.kk} onClick={this.props.handleOpenCardClick} /></button>
                         <Link to="businessManagement/cardActive">
                             <Square title="卡激活" image={Images.jh} onClick={this.props.handleCardActiveClick} />
