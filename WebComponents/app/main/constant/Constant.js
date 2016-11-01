@@ -32,5 +32,7 @@ export default {
         editView: 'editView',
         textView: 'textView',
         textViewOnly: 'textViewOnly',
-    }
+    },
+
+    FULL_IMAGE_URL: 'http://10.240.90.212:7001/padServer/padimages/'
 };

@@ -1,3 +1,5 @@
+import Constant from '../constant/Constant';
+
 const DataUtility = {
 
     isNull(arg) {
@@ -15,7 +17,7 @@ const DataUtility = {
     /**
      * 转换日期格式 19900101为1991-01-01
      */
-    getDateUtil(date) {
+    dateFormate(date) {
         var newDate = '';
         if (isNotNull(date)) {
             if (date.length == 8) {
@@ -23,6 +25,24 @@ const DataUtility = {
             }
         }
         return newDate;
+    },
+    /**
+     * 获取性别信息
+     */
+    gender(gender) {
+        return gender === 'M' ? '男' : '女';
+    },
+    /**
+     *  获取性别信息对应的值
+     */
+    genderValue(gender) {
+        return gender === '男' ? 'M' : 'F';
+    },
+    /**
+     * 获取图片全路径
+     */
+    fullImageUrl(imageUrl) {
+        return `${Constant.FULL_IMAGE_URL}${imageUrl}`;
     }
 
 
