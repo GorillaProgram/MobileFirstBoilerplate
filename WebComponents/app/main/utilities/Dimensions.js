@@ -1,10 +1,9 @@
-class Dimensions extends Object {
+const Dimensions = {
 
-    width() {
+    width: () => {
         return screen.availWidth;
-    }
-
-    height() {
+    },
+    height: () => {
         return screen.availHeight;
     }
 
