@@ -20,6 +20,6 @@ const JSONUtility = {
         return JSON.parse(string);
     }
 
-}
+};
 
 export default JSONUtility;

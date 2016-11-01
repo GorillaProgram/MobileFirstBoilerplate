@@ -7,6 +7,6 @@ const Dimensions = {
         return screen.availHeight;
     }
 
-}
+};
 
 export default Dimensions;

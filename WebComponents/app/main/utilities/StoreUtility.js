@@ -74,6 +74,6 @@ const StoreUtility = {
         localStorage.removeItem(key);
     }
 
-}
+};
 
 export default StoreUtility;

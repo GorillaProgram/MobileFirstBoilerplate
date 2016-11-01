@@ -28,6 +28,6 @@ const NetworkUtils = {
         });
     }
 
-}
+};
 
 export default NetworkUtils;

@@ -4,6 +4,6 @@ const DebugUtility = {
         console.log(arguments);
     }
 
-}
+};
 
 export default DebugUtility;
