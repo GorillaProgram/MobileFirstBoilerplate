@@ -1,11 +1,7 @@
-class DebugUtility {
-
-    log() {
-        arguments.forEach((argument, index, array) => {
-            console.log(argument);
-        });
+const DebugUtility = {
+    log: () => {
+        console.log(arguments);
     }
-
 }
 
 export default DebugUtility;
