@@ -93,8 +93,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import App from './App';
-	
 	
 	var store = (0, _Store2.default)();
 	
@@ -58283,7 +58281,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { style: styles.container },
-	                _react2.default.createElement('img', { src: './app/static/imgs/ad.png' })
+	                _react2.default.createElement('img', { src: './static/imgs/ad.png' })
 	            );
 	        }
 	    }]);
