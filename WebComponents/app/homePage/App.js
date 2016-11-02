@@ -4,7 +4,7 @@
  */
 import React, { Component } from 'react';
 
-class App extends Component {
+class AppView extends Component {
     constructor(props) {
         super(props);
 
@@ -13,12 +13,18 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{...styles.container, ...styles.background}}>
+
             </div>
         );
     }
 }
 
+const styles = {
+    container: {
+        fontSize: 20,
+    },
+    
+};
 
-
-export default App;
+export default AppView;
