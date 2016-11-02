@@ -88,7 +88,7 @@ const ImageCache = {
     /**
      * 当前缓存大小
      */
-    getCurrentSize() {
+    currentSize() {
         return ImgCache.getCurrentSize();
     },
     /**

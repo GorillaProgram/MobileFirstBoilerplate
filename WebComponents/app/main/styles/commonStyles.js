@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import Constant from '../constant/Constant';
 
 const commonStyles = {

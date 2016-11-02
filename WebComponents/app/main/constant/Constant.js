@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import Dimensions from '../utilities/userInterface/Dimensions';
 
 const tabWidth = 188;

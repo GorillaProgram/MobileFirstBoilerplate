@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import DebugUtility from '../utilities/function/DebugUtility';
 import DataUtility from '../utilities/data/DataUtility';
 import JSONUtility from '../utilities/data/JSONUtility';
