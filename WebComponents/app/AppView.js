@@ -3,6 +3,9 @@
  * https://github.com/maybewaityou
  */
 import React, { Component } from 'react';
+import { Router, Route, Link, IndexRoute, Redirect, hashHistory } from 'react-router';
+import Test00 from './test/Test00';
+import Test01 from './test/Test01';
 
 class AppView extends Component {
     constructor(props) {
@@ -13,9 +16,11 @@ class AppView extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
-                <img src="./static/imgs/ad.png" />
-            </div>
+            <Router history={hashHistory}>
+                <Route path="/" component={Test00}>
+                    <Route path="/test01" component={Test01}></Route>
+                </Route>
+            </Router>
         );
     }
 }
