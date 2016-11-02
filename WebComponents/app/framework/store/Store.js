@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';

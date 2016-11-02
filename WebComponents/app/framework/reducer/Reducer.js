@@ -1,4 +1,7 @@
-/* jshint esversion: 6 */
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import { combineReducers } from 'redux';
 import Just from '../../main/constant/Just';
 import {

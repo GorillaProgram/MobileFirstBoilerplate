@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import NetworkActions from './NetworkActions';
 import LoginActions from './LoginActions';
 

@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import AppView from './AppView';

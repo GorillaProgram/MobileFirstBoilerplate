@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import ImgCache from 'imgcache.js';
 import Constant from '../../constant/Constant';
 import DebugUtility from '../function/DebugUtility';

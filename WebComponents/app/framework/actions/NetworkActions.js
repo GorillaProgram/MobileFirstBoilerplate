@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import Just from '../../main/constant/Just';
 
 export const REQUESTING = 'REQUESTING';
