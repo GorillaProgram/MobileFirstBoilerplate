@@ -72,6 +72,10 @@
 	
 	var _ImageCache2 = _interopRequireDefault(_ImageCache);
 	
+	var _DebugUtility = __webpack_require__(262);
+	
+	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -91,7 +95,6 @@
 	        var _this = _possibleConstructorReturn(this, (ReduxApp.__proto__ || Object.getPrototypeOf(ReduxApp)).call(this, props));
 	
 	        document.addEventListener("deviceready", function () {
-	            console.log('===================================');
 	            _ImageCache2.default.imageCacheInitConfig();
 	        }, false);
 	        return _this;
@@ -29388,14 +29391,22 @@
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	
 	var DebugUtility = {
 	    log: function log() {
-	        console.log(arguments);
+	        var _WL$Logger;
+	
+	        for (var _len = arguments.length, params = Array(_len), _key = 0; _key < _len; _key++) {
+	            params[_key] = arguments[_key];
+	        }
+	
+	        // console.log(...params);
+	        (_WL$Logger = WL.Logger).info.apply(_WL$Logger, ['======>>>> '].concat(params));
 	    }
 	};
 	
@@ -30549,9 +30560,9 @@
 	});
 	exports.ERROR = exports.RECEIVED = exports.REQUESTING = undefined;
 	
-	var _NetworkUtils = __webpack_require__(274);
+	var _NetworkUtility = __webpack_require__(274);
 	
-	var _NetworkUtils2 = _interopRequireDefault(_NetworkUtils);
+	var _NetworkUtility2 = _interopRequireDefault(_NetworkUtility);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30612,10 +30623,10 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var NetworkUtils = {
+	var NetworkUtility = {
 	    fetchDatas: function fetchDatas(adapter, procedure, params) {
 	        return new Promise(function (resolve, reject) {
-	            log(adapter, procedure, params);
+	            _DebugUtility2.default.log(adapter, procedure, params);
 	            try {
 	                var invocationData = {
 	                    adapter: adapter,
@@ -30624,25 +30635,25 @@
 	                };
 	                WL.Client.invokeProcedure(invocationData, {
 	                    onSuccess: function onSuccess(response) {
-	                        log(response);
+	                        _DebugUtility2.default.log(response);
 	                        resolve(response);
 	                    },
 	                    onFailure: function onFailure(error) {
-	                        log(error);
+	                        _DebugUtility2.default.log(error);
 	                        reject(error);
 	                    }
 	                });
 	            } catch (error) {
-	                log(error);
+	                _DebugUtility2.default.log(error);
 	                reject(error);
 	            }
 	        });
 	    }
 	};
 	
-	exports.default = NetworkUtils;
+	exports.default = NetworkUtility;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NetworkUtils.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NetworkUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 275 */
@@ -30781,9 +30792,9 @@
 	
 	var _NetworkActions2 = _interopRequireDefault(_NetworkActions);
 	
-	var _NetworkUtils = __webpack_require__(274);
+	var _NetworkUtility = __webpack_require__(274);
 	
-	var _NetworkUtils2 = _interopRequireDefault(_NetworkUtils);
+	var _NetworkUtility2 = _interopRequireDefault(_NetworkUtility);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30791,7 +30802,7 @@
 	    validateTeller: function validateTeller(params) {
 	        return function (dispatch) {
 	            dispatch(_NetworkActions2.default.requesting());
-	            return _NetworkUtils2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
+	            return _NetworkUtility2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
 	                dispatch(_NetworkActions2.default.received());
 	                return dispatch(_NetworkActions2.default.receivedData(params, response));
 	            }, function (error) {
@@ -30802,11 +30813,11 @@
 	    // validateTeller: (params) => {
 	    //     return dispatch => {
 	    //         dispatch(NetworkActions.requesting());
-	    //         return NetworkUtils.fetchDatas(params.adapter, params.procedure, params.parameters)
+	    //         return NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
 	    //             .then((validateTellerResponse) => {
-	    //                 return dispatch(NetworkUtils.fetchDatas(params.adapter, params.procedure, params.parameters)
+	    //                 return dispatch(NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
 	    //                     .then((loginAfterValidateTellerResponse) => {
-	    //                         return dispatch(NetworkUtils.fetchDatas(params.adapter, params.procedure, params.parameters)
+	    //                         return dispatch(NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
 	    //                             .then((loginResponse) => {
 	    //                                 dispatch(NetworkActions.received());
 	    //                                 return dispatch(NetworkActions.receivedData(params, loginResponse));
@@ -30818,7 +30829,7 @@
 	    prevLogin: function prevLogin(params) {
 	        return function (dispatch) {
 	            dispatch(_NetworkActions2.default.requesting());
-	            return _NetworkUtils2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
+	            return _NetworkUtility2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
 	                return dispatch(LoginActions.login(params, response));
 	            }, function (error) {
 	                return dispatch(_NetworkActions2.default.error(params, error));
@@ -30827,7 +30838,7 @@
 	    },
 	    login: function login(params, prevResponse) {
 	        return function (dispatch) {
-	            return _NetworkUtils2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
+	            return _NetworkUtility2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
 	                dispatch(_NetworkActions2.default.received());
 	                return dispatch(_NetworkActions2.default.receivedData(params, response));
 	            }, function (error) {

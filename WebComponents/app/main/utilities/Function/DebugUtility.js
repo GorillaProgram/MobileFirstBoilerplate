@@ -2,7 +2,7 @@
 const DebugUtility = {
 
     log(...params) {
-        console.log(...params);
+        WL.Logger.info('======>>>> ', ...params);
     }
 
 };
