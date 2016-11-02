@@ -5,7 +5,7 @@ import TestMobileFirstExample from './example/testExample/TestMobileFirstExample
 import RouterExample from './example/routerExample/routerExample';
 import SlickExample from './example/slickExample/SlickExample';
 // import App from './App';
-import App from './homePage/App';
+import AppView from './homePage/AppView';
 
 import { Provider } from 'react-redux';
 import configureStore from './framework/store/Store';
@@ -17,7 +17,7 @@ class ReduxApp extends Component {
     render() {
         return (
             <Provider store={store}>
-                <App />
+                <AppView />
             </Provider>
         );
     }

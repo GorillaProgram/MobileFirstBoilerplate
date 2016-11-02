@@ -14,7 +14,7 @@ class AppView extends Component {
     render() {
         return (
             <div style={styles.container}>
-
+                <img src="./app/static/imgs/ad.png" />
             </div>
         );
     }
@@ -22,9 +22,19 @@ class AppView extends Component {
 
 const styles = {
     container: {
+        display: 'flex',
+        flexDirection: 'row',
         flex: 1,
-        
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'red'
     },
+    test1: {
+        flex: 2,
+    },
+    test2: {
+        flex: 1,
+    }
 
 };
 
