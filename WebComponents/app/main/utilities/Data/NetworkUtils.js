@@ -1,10 +1,10 @@
-import DebugUtility from './DebugUtility';
+import DebugUtility from '../Function/DebugUtility';
 
 const NetworkUtils = {
 
     fetchDatas(adapter, procedure, params) {
         return new Promise((resolve, reject) => {
-            log(adapter, procedure, params);
+            DebugUtility.log(adapter, procedure, params);
             try {
                 const invocationData = {
                     adapter: adapter,
@@ -13,16 +13,16 @@ const NetworkUtils = {
                 };
                 WL.Client.invokeProcedure(invocationData, {
                     onSuccess: (response) => {
-                        log(response);
+                        DebugUtility.log(response);
                         resolve(response);
                     },
                     onFailure: (error) => {
-                        log(error);
+                        DebugUtility.log(error);
                         reject(error);
                     }
                 });
             } catch (error) {
-                log(error);
+                DebugUtility.log(error);
                 reject(error);
             }
         });

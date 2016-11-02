@@ -1,7 +1,8 @@
+
 const DebugUtility = {
 
-    log() {
-        console.log(arguments);
+    log(...params) {
+        console.log(...params);
     }
 
 };

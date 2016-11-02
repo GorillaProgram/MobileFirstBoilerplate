@@ -1,6 +1,6 @@
 import ImgCache from 'imgcache.js';
 import Constant from '../../constant/Constant';
-import DebugUtility from '../Data/DebugUtility';
+import DebugUtility from '../Function/DebugUtility';
 import DataUtility from '../Data/DataUtility';
 
 const ImageCache = {
@@ -72,6 +72,7 @@ const ImageCache = {
             var url = URLs[i];
             ImgCache.isCached(url, function(path, success) {
                 if (success) {
+                    DebugUtility.log('====缓存成功' + path);
                 } else {
                     ImgCache.cacheFile(path, function (path, success) {
                         DebugUtility.log('缓存成功====' + path);
