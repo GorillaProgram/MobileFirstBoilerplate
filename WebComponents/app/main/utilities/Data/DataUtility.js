@@ -45,7 +45,6 @@ const DataUtility = {
         return `${Constant.FULL_IMAGE_URL}${imageUrl}`;
     }
 
-
 };
 
 export default DataUtility;
