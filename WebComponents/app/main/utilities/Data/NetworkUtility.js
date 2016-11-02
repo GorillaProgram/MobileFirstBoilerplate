@@ -1,6 +1,6 @@
 import DebugUtility from '../Function/DebugUtility';
 
-const NetworkUtils = {
+const NetworkUtility = {
 
     fetchDatas(adapter, procedure, params) {
         return new Promise((resolve, reject) => {
@@ -30,4 +30,4 @@ const NetworkUtils = {
 
 };
 
-export default NetworkUtils;
+export default NetworkUtility;

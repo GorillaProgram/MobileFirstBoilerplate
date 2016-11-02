@@ -1,4 +1,4 @@
-import NetworkUtils from '../../main/utilities/Data/NetworkUtils';
+import NetworkUtility from '../../main/utilities/Data/NetworkUtility';
 
 export const REQUESTING = 'REQUESTING';
 export const RECEIVED = 'RECEIVED';
