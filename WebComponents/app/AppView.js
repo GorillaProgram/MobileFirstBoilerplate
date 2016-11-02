@@ -8,6 +8,7 @@ import Test00 from './test/Test00';
 import Test01 from './test/Test01';
 
 class AppView extends Component {
+
     constructor(props) {
         super(props);
 

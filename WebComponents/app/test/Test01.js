@@ -6,6 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 class Test01 extends Component {
+
     constructor(props) {
         super(props);
 

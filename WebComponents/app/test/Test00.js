@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import UIManager from '../main/manager/UIManager';
 
 class Test00 extends Component {
+
     constructor(props) {
         super(props);
 
