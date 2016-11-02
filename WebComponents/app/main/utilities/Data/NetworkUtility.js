@@ -1,4 +1,4 @@
-import DebugUtility from '../Function/DebugUtility';
+import DebugUtility from '../function/DebugUtility';
 
 const NetworkUtility = {
 

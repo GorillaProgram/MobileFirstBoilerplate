@@ -1,5 +1,5 @@
 import NetworkActions from './NetworkActions';
-import NetworkUtility from '../../main/utilities/Data/NetworkUtility';
+import NetworkUtility from '../../main/utilities/data/NetworkUtility';
 
 const LoginActions = {
     validateTeller: (params) => {

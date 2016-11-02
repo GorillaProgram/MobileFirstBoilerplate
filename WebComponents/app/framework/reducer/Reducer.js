@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 import { combineReducers } from 'redux';
-import DebugUtility from '../../main/utilities/Function/DebugUtility';
+import DebugUtility from '../../main/utilities/function/DebugUtility';
 import {
     REQUESTING,
     RECEIVED,
