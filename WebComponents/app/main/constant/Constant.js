@@ -1,4 +1,4 @@
-import Dimensions from '../utilities/UI/Dimensions';
+import Dimensions from '../utilities/userInterface/Dimensions';
 
 const tabWidth = 188;
 const titleHeight = 60;

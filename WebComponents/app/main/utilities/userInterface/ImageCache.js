@@ -1,7 +1,7 @@
 import ImgCache from 'imgcache.js';
 import Constant from '../../constant/Constant';
-import DebugUtility from '../Function/DebugUtility';
-import DataUtility from '../Data/DataUtility';
+import DebugUtility from '../function/DebugUtility';
+import DataUtility from '../data/DataUtility';
 
 const ImageCache = {
 

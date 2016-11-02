@@ -1,6 +1,6 @@
-import DebugUtility from '../utilities/Function/DebugUtility';
-import Dimensions from '../utilities/UI/Dimensions';
-import ImageCache from '../utilities/UI/ImageCache';
+import DebugUtility from '../utilities/function/DebugUtility';
+import Dimensions from '../utilities/userInterface/Dimensions';
+import ImageCache from '../utilities/userInterface/ImageCache';
 
 const UIManager = {
     ...Dimensions,

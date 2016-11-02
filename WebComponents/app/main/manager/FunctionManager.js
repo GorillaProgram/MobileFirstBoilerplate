@@ -1,4 +1,4 @@
-import DebugUtility from '../utilities/Function/DebugUtility';
+import DebugUtility from '../utilities/function/DebugUtility';
 
 const FunctionManager = {
     ...DebugUtility
