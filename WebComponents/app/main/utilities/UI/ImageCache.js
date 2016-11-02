@@ -1,6 +1,7 @@
-import ImgCache from 'imgcache';
+import ImgCache from 'imgcache.js';
 import Constant from '../../constant/Constant';
 import DebugUtility from '../Data/DebugUtility';
+import DataUtility from '../Data/DataUtility';
 
 const ImageCache = {
 
@@ -16,12 +17,12 @@ const ImageCache = {
 
         ImgCache.init(function() {
             DebugUtility.log('ImgCache init: success!');
-            if (exist(successExecutor)) {
+            if (DataUtility.isNotNull(successExecutor)) {
                 successExecutor();
             }
         }, function() {
             DebugUtility.log('ImgCache init: error! Check the log for errors');
-            if (exist(failureExecutor)) {
+            if (DataUtility.isNotNull(failureExecutor)) {
                 failureExecutor();
             }
         });
