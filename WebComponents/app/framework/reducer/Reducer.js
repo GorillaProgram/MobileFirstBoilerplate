@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 import { combineReducers } from 'redux';
-import DebugUtility from '../../main/utilities/function/DebugUtility';
+import Just from '../../main/constant/Just';
 import {
     REQUESTING,
     RECEIVED,
@@ -18,7 +18,7 @@ function test(state = {
 }, action) {
     switch (action.type) {
         case TEST:
-            DebugUtility.log('======>>>>> TEST');
+            Just.log('======>>>>> TEST');
             return {
                 ...state,
                 item: action.payload.item
@@ -38,7 +38,7 @@ function login(state = {
 }, action) {
     switch (action.type) {
         case VALIDATE_TELLER:
-            DebugUtility.log('===== VALIDATE_TELLER =====');
+            Just.log('===== VALIDATE_TELLER =====');
             return {
                 ...state,
                 validateResponse: action.payload.response,
@@ -49,7 +49,7 @@ function login(state = {
                 shouldShowPasswordLayout: action.payload.response.responseJSON.bsadata.RSD == 1, // 登录方式 1密码 2指纹
             };
         case LOGIN:
-            DebugUtility.log('===== LOGIN =====');
+            Just.log('===== LOGIN =====');
             return {
                 ...state,
                 loginResponse: action.payload.response,
@@ -65,19 +65,19 @@ function network(state = {
 }, action) {
     switch (action.type) {
         case REQUESTING:
-            DebugUtility.log('===== REQUESTING =====');
+            Just.log('===== REQUESTING =====');
             return {
                 ...state,
                 isFetching: true,
             };
         case RECEIVED:
-            DebugUtility.log('===== RECEIVED =====');
+            Just.log('===== RECEIVED =====');
             return {
                 ...state,
                 isFetching: false,
             };
         case ERROR:
-            DebugUtility.log('===== ERROR =====');
+            Just.log('===== ERROR =====');
             return {
                 ...state,
                 isFetching: false,
@@ -93,13 +93,13 @@ function calculate(state = {
 }, action) {
     switch (action.type) {
         case ADD:
-            DebugUtility.log('======>>>>> ADD');
+            Just.log('======>>>>> ADD');
             return {
                 ...state,
                 item: action.item
             };
         case SUBTRACT:
-            DebugUtility.log('======>>>>> SUBTRACT');
+            Just.log('======>>>>> SUBTRACT');
             return {
                 ...state,
                 item: action.item

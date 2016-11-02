@@ -1,11 +1,11 @@
 import NetworkActions from './NetworkActions';
-import NetworkUtility from '../../main/utilities/data/NetworkUtility';
+import Just from '../../main/constant/Just';
 
 const LoginActions = {
     validateTeller: (params) => {
         return dispatch => {
             dispatch(NetworkActions.requesting());
-            return NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+            return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
                     dispatch(NetworkActions.received());
                     return dispatch(NetworkActions.receivedData(params, response));
@@ -17,11 +17,11 @@ const LoginActions = {
     // validateTeller: (params) => {
     //     return dispatch => {
     //         dispatch(NetworkActions.requesting());
-    //         return NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+    //         return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
     //             .then((validateTellerResponse) => {
-    //                 return dispatch(NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+    //                 return dispatch(Just.fetchDatas(params.adapter, params.procedure, params.parameters)
     //                     .then((loginAfterValidateTellerResponse) => {
-    //                         return dispatch(NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+    //                         return dispatch(Just.fetchDatas(params.adapter, params.procedure, params.parameters)
     //                             .then((loginResponse) => {
     //                                 dispatch(NetworkActions.received());
     //                                 return dispatch(NetworkActions.receivedData(params, loginResponse));
@@ -33,7 +33,7 @@ const LoginActions = {
     prevLogin: (params) => {
         return dispatch => {
             dispatch(NetworkActions.requesting());
-            return NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+            return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
                     return dispatch(LoginActions.login(params, response));
                 }, (error) => {
@@ -43,7 +43,7 @@ const LoginActions = {
     },
     login: (params, prevResponse) => {
         return dispatch => {
-            return NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+            return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
                     dispatch(NetworkActions.received());
                     return dispatch(NetworkActions.receivedData(params, response));
