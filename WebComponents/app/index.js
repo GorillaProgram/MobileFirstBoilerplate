@@ -4,8 +4,8 @@ import AppView from './AppView';
 
 import { Provider } from 'react-redux';
 import configureStore from './framework/store/Store';
-import ImageCache from './main/utilities/UI/ImageCache';
-import DebugUtility from './main/utilities/Function/DebugUtility';
+import UIManager from './main/manager/UIManager';
+import FunctionManager from './main/manager/FunctionManager';
 
 var store = configureStore();
 
@@ -15,7 +15,7 @@ class ReduxApp extends Component {
         super(props);
 
         document.addEventListener("deviceready", function() {
-            ImageCache.imageCacheInitConfig();
+            UIManager.imageCacheInitConfig();
 		}, false);
     }
 
