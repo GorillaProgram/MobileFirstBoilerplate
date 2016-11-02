@@ -1,5 +1,4 @@
 import Constant from '../constant/Constant';
-import Images from '../images/Images';
 
 const commonStyles = {
     container: {
