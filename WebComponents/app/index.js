@@ -4,7 +4,6 @@ import AppView from './AppView';
 
 import { Provider } from 'react-redux';
 import configureStore from './framework/store/Store';
-
 import UIManager from './main/manager/UIManager';
 import FunctionManager from './main/manager/FunctionManager';
 
