@@ -4,7 +4,6 @@ import TestExample from './example/testExample/TestExample';
 import TestMobileFirstExample from './example/testExample/TestMobileFirstExample';
 import RouterExample from './example/routerExample/routerExample';
 import SlickExample from './example/slickExample/SlickExample';
-// import App from './App';
 import AppView from './homePage/AppView';
 
 import { Provider } from 'react-redux';

@@ -13,8 +13,10 @@ const assign = require('object-assign');
 /* ========================== path end ========================== */
 const reactPath = './WebComponents/';
 const reactDistPath = reactPath + 'dist';
+const reactImagesPath = reactPath + 'static/imgs';
 const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
 const mobileFirstDistPath = mobileFirstPath + 'dist';
+const mobileFirstImagesPath = mobileFirstPath + 'static/imgs';
 /* ========================== path end ========================== */
 
 gulp.task('default', []);
@@ -54,11 +56,17 @@ gulp.task('copy', () => {
       .pipe(gulp.dest(mobileFirstDistPath));
 });
 
+gulp.task('copy_images', () => {
+  return gulp.src(reactImagesPath + '/**/*')
+      .pipe(gulp.dest(mobileFirstImagesPath));
+});
+
 gulp.task('build', (callback) => {
     runSequence(
         'clean',
         'webpack_build',
         'uglify',
+        'copy_images',
         'copy',
         (error) => {
             if (error) {
