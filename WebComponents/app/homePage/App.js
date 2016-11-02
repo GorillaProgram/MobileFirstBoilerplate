@@ -13,7 +13,7 @@ class AppView extends Component {
 
     render() {
         return (
-            <div style={{...styles.container, ...styles.background}}>
+            <div style={styles.container}>
 
             </div>
         );
@@ -22,9 +22,10 @@ class AppView extends Component {
 
 const styles = {
     container: {
-        fontSize: 20,
+        flex: 1,
+        
     },
-    
+
 };
 
 export default AppView;
