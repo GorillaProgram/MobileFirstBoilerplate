@@ -4,7 +4,7 @@
  */
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexRoute, Redirect, hashHistory, browserHistory } from 'react-router';
-import RouterManager from './main/manager/RouterManager';
+import UIManager from './main/manager/UIManager';
 import Test00 from './test/Test00';
 import Test01 from './test/Test01';
 
@@ -19,9 +19,10 @@ class AppView extends Component {
     render() {
         return (
             <Router history={browserHistory}>
-                <Route path={RouterManager.AppPath} component={Test00}>
-                    <Route path={RouterManager.Test01} component={Test01}></Route>
+                <Route path={UIManager.AppPath} component={Test00}>
+                    <Route path={UIManager.Test01} component={Test01}></Route>
                 </Route>
+                {this.props.children}
             </Router>
         );
     }

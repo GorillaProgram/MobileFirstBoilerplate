@@ -16,11 +16,11 @@ class Test00 extends Component {
 
     render() {
         return (
-            <div style={styles.container} onClick={() => {
-                // this.context.router.push('/WebComponents/test01');
-                // UIManager.showLoader();
-            }}>
-                <button className="ui-btn ui-shadow ui-corner-all" data-role="button">button</button>
+            <div style={styles.container}>
+                <button className="ui-btn ui-shadow ui-corner-all" data-role="button" onClick={() => {
+                    this.context.router.push('/WebComponents/test01');
+                    // UIManager.showLoader();
+                }}>mu haha~</button>
                 {this.props.children}
             </div>
         );
