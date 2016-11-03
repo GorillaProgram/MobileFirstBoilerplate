@@ -22,28 +22,9 @@ class AppView extends Component {
                 <Route path={UIManager.AppPath} component={Test00}>
                     <Route path={UIManager.Test01} component={Test01}></Route>
                 </Route>
-                {this.props.children}
             </Router>
         );
     }
 }
-
-const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'row',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'red'
-    },
-    test1: {
-        flex: 2,
-    },
-    test2: {
-        flex: 1,
-    }
-
-};
 
 export default AppView;
