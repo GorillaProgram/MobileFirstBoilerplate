@@ -66,17 +66,17 @@
 	
 	var _reactRedux = __webpack_require__(229);
 	
-	var _Store = __webpack_require__(264);
+	var _Store = __webpack_require__(265);
 	
 	var _Store2 = _interopRequireDefault(_Store);
 	
-	var _ImageCache = __webpack_require__(260);
+	var _UIManager = __webpack_require__(257);
 	
-	var _ImageCache2 = _interopRequireDefault(_ImageCache);
+	var _UIManager2 = _interopRequireDefault(_UIManager);
 	
-	var _DebugUtility = __webpack_require__(262);
+	var _FunctionManager = __webpack_require__(279);
 	
-	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
+	var _FunctionManager2 = _interopRequireDefault(_FunctionManager);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -84,7 +84,11 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by MeePwn
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
 	
 	var store = (0, _Store2.default)();
 	
@@ -96,8 +100,10 @@
 	
 	        var _this = _possibleConstructorReturn(this, (ReduxApp.__proto__ || Object.getPrototypeOf(ReduxApp)).call(this, props));
 	
+	        _FunctionManager2.default.log(_UIManager2.default);
+	
 	        document.addEventListener("deviceready", function () {
-	            _ImageCache2.default.imageCacheInitConfig();
+	            ImageCache.imageCacheInitConfig();
 	        }, false);
 	        return _this;
 	    }
@@ -21511,7 +21517,7 @@
 	
 	var _Test2 = _interopRequireDefault(_Test);
 	
-	var _Test3 = __webpack_require__(263);
+	var _Test3 = __webpack_require__(264);
 	
 	var _Test4 = _interopRequireDefault(_Test3);
 	
@@ -26501,13 +26507,9 @@
 	
 	var _reactRedux = __webpack_require__(229);
 	
-	var _DataUtility = __webpack_require__(257);
+	var _UIManager = __webpack_require__(257);
 	
-	var _DataUtility2 = _interopRequireDefault(_DataUtility);
-	
-	var _ImageCache = __webpack_require__(260);
-	
-	var _ImageCache2 = _interopRequireDefault(_ImageCache);
+	var _UIManager2 = _interopRequireDefault(_UIManager);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26539,7 +26541,7 @@
 	                'div',
 	                { onClick: function onClick() {
 	                        // this.context.router.push('test01');
-	                        _ImageCache2.default.cacheFile(['http://10.240.90.212:7001/padServer/padimages/1.png']);
+	                        _UIManager2.default.cacheFile(['http://10.240.90.212:7001/padServer/padimages/1.png']);
 	                    } },
 	                'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 	                this.props.children
@@ -28209,68 +28211,34 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
-	var _Constant = __webpack_require__(258);
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+	                                                                                                                                                                                                                                                                   * Created by MeePwn
+	                                                                                                                                                                                                                                                                   * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                   */
 	
-	var _Constant2 = _interopRequireDefault(_Constant);
+	
+	var _DebugUtility = __webpack_require__(258);
+	
+	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
+	
+	var _Dimensions = __webpack_require__(259);
+	
+	var _Dimensions2 = _interopRequireDefault(_Dimensions);
+	
+	var _ImageCache = __webpack_require__(260);
+	
+	var _ImageCache2 = _interopRequireDefault(_ImageCache);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var DataUtility = {
-	    isNull: function isNull(arg) {
-	        return arg === undefined || arg === null || arg === '' || arg === 'null' || arg === ' ' || arg === 'undefined' || arg === 'error: no value for key ~';
-	    },
-	    isNotNull: function isNotNull(arg) {
-	        return !DataUtility.isNull(arg);
-	    },
+	var UIManager = _extends({}, _Dimensions2.default, _ImageCache2.default);
 	
-	    /**
-	     * 判断是否为空, 为空的话, 返回空字符串
-	     */
-	    nullToEmptyString: function nullToEmptyString(arg) {
-	        return DataUtility.isNull(arg) ? '' : arg;
-	    },
+	exports.default = UIManager;
 	
-	    /**
-	     * 转换日期格式 19900101为1991-01-01
-	     */
-	    dateFormate: function dateFormate(date) {
-	        var newDate = '';
-	        if (DataUtility.isNotNull(date)) {
-	            if (date.length == 8) {
-	                newDate = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
-	            }
-	        }
-	        return newDate;
-	    },
-	
-	    /**
-	     * 获取性别信息
-	     */
-	    gender: function gender(_gender) {
-	        return _gender === 'M' ? '男' : '女';
-	    },
-	
-	    /**
-	     *  获取性别信息对应的值
-	     */
-	    genderValue: function genderValue(gender) {
-	        return gender === '男' ? 'M' : 'F';
-	    },
-	
-	    /**
-	     * 获取图片全路径
-	     */
-	    fullImageUrl: function fullImageUrl(imageUrl) {
-	        return '' + _Constant2.default.FULL_IMAGE_URL + imageUrl;
-	    }
-	};
-	
-	exports.default = DataUtility;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "DataUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "UIManager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 258 */
@@ -28283,52 +28251,26 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
+	var DebugUtility = {
+	    log: function log() {
+	        var _console;
 	
-	var _Dimensions = __webpack_require__(259);
+	        for (var _len = arguments.length, params = Array(_len), _key = 0; _key < _len; _key++) {
+	            params[_key] = arguments[_key];
+	        }
 	
-	var _Dimensions2 = _interopRequireDefault(_Dimensions);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var tabWidth = 188;
-	var titleHeight = 60;
-	
-	exports.default = {
-	    defaultTabWidth: tabWidth,
-	    defaultHomeWidth: _Dimensions2.default.width - tabWidth,
-	    defaultHomeHeight: _Dimensions2.default.height,
-	    screenWidth: _Dimensions2.default.width,
-	    screenHeight: _Dimensions2.default.height,
-	    contentHeight: _Dimensions2.default.height - titleHeight,
-	    defaultButtonWidth: 480,
-	    titleHeight: titleHeight,
-	    headerHeight: 60,
-	    tabLogoWH: 122,
-	    defaultFontSize: 16,
-	    smallFontSize: 14,
-	    largeFontSize: 18,
-	    fontSize13: 13,
-	    fontSize12: 12,
-	    fontSize11: 11,
-	    lightFontColor: 'white',
-	    tabSelectedColor: '#1177db',
-	    tabHeaderColor: '#004892',
-	    primaryColor: '#0096ef',
-	    titleBackgroundColor: '#00a2e3',
-	    orangeColor: '#ff6e01',
-	    squareWH: 80,
-	    matchParent: '100%',
-	    inputTypes: {
-	        editView: 'editView',
-	        textView: 'textView',
-	        textViewOnly: 'textViewOnly'
-	    },
-	
-	    IMAGE_CACHE_SIZE: 50 * 1024 * 1024, // 图片缓存大小
-	    FULL_IMAGE_URL: 'http://10.240.90.212:7001/padServer/padimages/' // 图片地址(需要前端进行拼接)
+	        // WL.Logger.info('======>>>> ', ...params);
+	        (_console = console).log.apply(_console, ['======>>>> '].concat(params));
+	    }
 	};
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Constant.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	exports.default = DebugUtility;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "DebugUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 259 */
@@ -28341,6 +28283,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
 	var Dimensions = {
 	    width: function width() {
 	        return screen.availWidth;
@@ -28370,20 +28316,24 @@
 	
 	var _imgcache2 = _interopRequireDefault(_imgcache);
 	
-	var _Constant = __webpack_require__(258);
+	var _Constant = __webpack_require__(262);
 	
 	var _Constant2 = _interopRequireDefault(_Constant);
 	
-	var _DebugUtility = __webpack_require__(262);
+	var _DebugUtility = __webpack_require__(258);
 	
 	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
 	
-	var _DataUtility = __webpack_require__(257);
+	var _DataUtility = __webpack_require__(263);
 	
 	var _DataUtility2 = _interopRequireDefault(_DataUtility);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
 	var ImageCache = {
 	
 	    /**
@@ -28469,7 +28419,7 @@
 	    /**
 	     * 当前缓存大小
 	     */
-	    getCurrentSize: function getCurrentSize() {
+	    currentSize: function currentSize() {
 	        return _imgcache2.default.getCurrentSize();
 	    },
 	
@@ -29399,25 +29349,132 @@
 	    value: true
 	});
 	
-	var DebugUtility = {
-	    log: function log() {
-	        var _WL$Logger;
+	var _Dimensions = __webpack_require__(259);
 	
-	        for (var _len = arguments.length, params = Array(_len), _key = 0; _key < _len; _key++) {
-	            params[_key] = arguments[_key];
-	        }
+	var _Dimensions2 = _interopRequireDefault(_Dimensions);
 	
-	        // console.log(...params);
-	        (_WL$Logger = WL.Logger).info.apply(_WL$Logger, ['======>>>> '].concat(params));
-	    }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var tabWidth = 188; /**
+	                     * Created by MeePwn
+	                     * https://github.com/maybewaityou
+	                     */
+	
+	var titleHeight = 60;
+	
+	exports.default = {
+	    defaultTabWidth: tabWidth,
+	    defaultHomeWidth: _Dimensions2.default.width - tabWidth,
+	    defaultHomeHeight: _Dimensions2.default.height,
+	    screenWidth: _Dimensions2.default.width,
+	    screenHeight: _Dimensions2.default.height,
+	    contentHeight: _Dimensions2.default.height - titleHeight,
+	    defaultButtonWidth: 480,
+	    titleHeight: titleHeight,
+	    headerHeight: 60,
+	    tabLogoWH: 122,
+	    defaultFontSize: 16,
+	    smallFontSize: 14,
+	    largeFontSize: 18,
+	    fontSize13: 13,
+	    fontSize12: 12,
+	    fontSize11: 11,
+	    lightFontColor: 'white',
+	    tabSelectedColor: '#1177db',
+	    tabHeaderColor: '#004892',
+	    primaryColor: '#0096ef',
+	    titleBackgroundColor: '#00a2e3',
+	    orangeColor: '#ff6e01',
+	    squareWH: 80,
+	    matchParent: '100%',
+	    inputTypes: {
+	        editView: 'editView',
+	        textView: 'textView',
+	        textViewOnly: 'textViewOnly'
+	    },
+	
+	    IMAGE_CACHE_SIZE: 50 * 1024 * 1024, // 图片缓存大小
+	    FULL_IMAGE_URL: 'http://10.240.90.212:7001/padServer/padimages/' // 图片地址(需要前端进行拼接)
 	};
 	
-	exports.default = DebugUtility;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "DebugUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Constant.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _Constant = __webpack_require__(262);
+	
+	var _Constant2 = _interopRequireDefault(_Constant);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var DataUtility = {
+	    isNull: function isNull(arg) {
+	        return arg === undefined || arg === null || arg === '' || arg === 'null' || arg === ' ' || arg === 'undefined' || arg === 'error: no value for key ~';
+	    },
+	    isNotNull: function isNotNull(arg) {
+	        return !DataUtility.isNull(arg);
+	    },
+	
+	    /**
+	     * 判断是否为空, 为空的话, 返回空字符串
+	     */
+	    nullToEmptyString: function nullToEmptyString(arg) {
+	        return DataUtility.isNull(arg) ? '' : arg;
+	    },
+	
+	    /**
+	     * 转换日期格式 19900101为1991-01-01
+	     */
+	    dateFormate: function dateFormate(date) {
+	        var newDate = '';
+	        if (DataUtility.isNotNull(date)) {
+	            if (date.length == 8) {
+	                newDate = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
+	            }
+	        }
+	        return newDate;
+	    },
+	
+	    /**
+	     * 获取性别信息
+	     */
+	    gender: function gender(_gender) {
+	        return _gender === 'M' ? '男' : '女';
+	    },
+	
+	    /**
+	     *  获取性别信息对应的值
+	     */
+	    genderValue: function genderValue(gender) {
+	        return gender === '男' ? 'M' : 'F';
+	    },
+	
+	    /**
+	     * 获取图片全路径
+	     */
+	    fullImageUrl: function fullImageUrl(imageUrl) {
+	        return '' + _Constant2.default.FULL_IMAGE_URL + imageUrl;
+	    }
+	}; /**
+	    * Created by MeePwn
+	    * https://github.com/maybewaityou
+	    */
+	exports.default = DataUtility;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "DataUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -29493,7 +29550,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Test01.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 264 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -29507,20 +29564,24 @@
 	
 	var _redux = __webpack_require__(236);
 	
-	var _reduxThunk = __webpack_require__(265);
+	var _reduxThunk = __webpack_require__(266);
 	
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 	
-	var _reduxLogger = __webpack_require__(266);
+	var _reduxLogger = __webpack_require__(267);
 	
 	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
 	
-	var _Reducer = __webpack_require__(272);
+	var _Reducer = __webpack_require__(273);
 	
 	var _Reducer2 = _interopRequireDefault(_Reducer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
 	var loggerMiddleware = (0, _reduxLogger2.default)();
 	
 	var createStoreWithMiddleware = (0, _redux.applyMiddleware)(_reduxThunk2.default, loggerMiddleware)(_redux.createStore);
@@ -29532,7 +29593,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Store.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 265 */
+/* 266 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29560,7 +29621,7 @@
 	exports['default'] = thunk;
 
 /***/ },
-/* 266 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29571,11 +29632,11 @@
 	  value: true
 	});
 	
-	var _core = __webpack_require__(267);
+	var _core = __webpack_require__(268);
 	
-	var _helpers = __webpack_require__(268);
+	var _helpers = __webpack_require__(269);
 	
-	var _defaults = __webpack_require__(271);
+	var _defaults = __webpack_require__(272);
 	
 	var _defaults2 = _interopRequireDefault(_defaults);
 	
@@ -29678,7 +29739,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 267 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29688,9 +29749,9 @@
 	});
 	exports.printBuffer = printBuffer;
 	
-	var _helpers = __webpack_require__(268);
+	var _helpers = __webpack_require__(269);
 	
-	var _diff = __webpack_require__(269);
+	var _diff = __webpack_require__(270);
 	
 	var _diff2 = _interopRequireDefault(_diff);
 	
@@ -29819,7 +29880,7 @@
 	}
 
 /***/ },
-/* 268 */
+/* 269 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -29843,7 +29904,7 @@
 	var timer = exports.timer = typeof performance !== "undefined" && performance !== null && typeof performance.now === "function" ? performance : Date;
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29853,7 +29914,7 @@
 	});
 	exports.default = diffLogger;
 	
-	var _deepDiff = __webpack_require__(270);
+	var _deepDiff = __webpack_require__(271);
 	
 	var _deepDiff2 = _interopRequireDefault(_deepDiff);
 	
@@ -29939,7 +30000,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -30368,7 +30429,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30419,7 +30480,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -30430,14 +30491,23 @@
 	    value: true
 	});
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /* jshint esversion: 6 */
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+	                                                                                                                                                                                                                                                                   * Created by MeePwn
+	                                                                                                                                                                                                                                                                   * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                   */
 	
 	
 	var _redux = __webpack_require__(236);
 	
-	var _NetworkActions = __webpack_require__(273);
+	var _Just = __webpack_require__(274);
 	
-	var _Actions = __webpack_require__(275);
+	var _Just2 = _interopRequireDefault(_Just);
+	
+	var _NetworkActions = __webpack_require__(282);
+	
+	var _Actions = __webpack_require__(283);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function test() {
 	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
@@ -30447,7 +30517,7 @@
 	
 	    switch (action.type) {
 	        case _Actions.TEST:
-	            console.log('======>>>>> TEST');
+	            _Just2.default.log('======>>>>> TEST');
 	            return _extends({}, state, {
 	                item: action.payload.item
 	            });
@@ -30469,7 +30539,7 @@
 	
 	    switch (action.type) {
 	        case _Actions.VALIDATE_TELLER:
-	            console.log('===== VALIDATE_TELLER =====');
+	            _Just2.default.log('===== VALIDATE_TELLER =====');
 	            return _extends({}, state, {
 	                validateResponse: action.payload.response,
 	                responseJSON: action.payload.response.responseJSON,
@@ -30478,7 +30548,7 @@
 	                orgCode: action.payload.response.responseJSON.bsadata.orgCode,
 	                shouldShowPasswordLayout: action.payload.response.responseJSON.bsadata.RSD == 1 });
 	        case _Actions.LOGIN:
-	            console.log('===== LOGIN =====');
+	            _Just2.default.log('===== LOGIN =====');
 	            return _extends({}, state, {
 	                loginResponse: action.payload.response
 	            });
@@ -30496,17 +30566,17 @@
 	
 	    switch (action.type) {
 	        case _NetworkActions.REQUESTING:
-	            console.log('===== REQUESTING =====');
+	            _Just2.default.log('===== REQUESTING =====');
 	            return _extends({}, state, {
 	                isFetching: true
 	            });
 	        case _NetworkActions.RECEIVED:
-	            console.log('===== RECEIVED =====');
+	            _Just2.default.log('===== RECEIVED =====');
 	            return _extends({}, state, {
 	                isFetching: false
 	            });
 	        case _NetworkActions.ERROR:
-	            console.log('===== ERROR =====');
+	            _Just2.default.log('===== ERROR =====');
 	            return _extends({}, state, {
 	                isFetching: false,
 	                params: action.payload.params
@@ -30524,12 +30594,12 @@
 	
 	    switch (action.type) {
 	        case _Actions.ADD:
-	            console.log('======>>>>> ADD');
+	            _Just2.default.log('======>>>>> ADD');
 	            return _extends({}, state, {
 	                item: action.item
 	            });
 	        case _Actions.SUBTRACT:
-	            console.log('======>>>>> SUBTRACT');
+	            _Just2.default.log('======>>>>> SUBTRACT');
 	            return _extends({}, state, {
 	                item: action.item
 	            });
@@ -30550,7 +30620,366 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Reducer.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 273 */
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _DataManager = __webpack_require__(275);
+	
+	var _DataManager2 = _interopRequireDefault(_DataManager);
+	
+	var _FunctionManager = __webpack_require__(279);
+	
+	var _FunctionManager2 = _interopRequireDefault(_FunctionManager);
+	
+	var _UIManager = __webpack_require__(257);
+	
+	var _UIManager2 = _interopRequireDefault(_UIManager);
+	
+	var _TaskManager = __webpack_require__(280);
+	
+	var _TaskManager2 = _interopRequireDefault(_TaskManager);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Just = _extends({}, _DataManager2.default, _FunctionManager2.default, _UIManager2.default, _TaskManager2.default);
+	
+	exports.default = Just;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Just.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+	                                                                                                                                                                                                                                                                   * Created by MeePwn
+	                                                                                                                                                                                                                                                                   * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                   */
+	
+	
+	var _DebugUtility = __webpack_require__(258);
+	
+	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
+	
+	var _DataUtility = __webpack_require__(263);
+	
+	var _DataUtility2 = _interopRequireDefault(_DataUtility);
+	
+	var _JSONUtility = __webpack_require__(276);
+	
+	var _JSONUtility2 = _interopRequireDefault(_JSONUtility);
+	
+	var _NetworkUtility = __webpack_require__(277);
+	
+	var _NetworkUtility2 = _interopRequireDefault(_NetworkUtility);
+	
+	var _StoreUtility = __webpack_require__(278);
+	
+	var _StoreUtility2 = _interopRequireDefault(_StoreUtility);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var DataManager = _extends({}, _DebugUtility2.default, _DataUtility2.default, _JSONUtility2.default, _NetworkUtility2.default, _StoreUtility2.default);
+	
+	exports.default = DataManager;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "DataManager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
+	var JSONUtility = {
+	
+	  /**
+	   * JSON -> String
+	   *
+	   * @param json
+	   * @return sting
+	   */
+	  jsonToString: function jsonToString(json) {
+	    return JSON.stringify(json);
+	  },
+	
+	
+	  /**
+	   * String -> JSON
+	   *
+	   * @param string
+	   * @returns json
+	   */
+	  stringToJson: function stringToJson(string) {
+	    return JSON.parse(string);
+	  }
+	};
+	
+	exports.default = JSONUtility;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "JSONUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _DebugUtility = __webpack_require__(258);
+	
+	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var NetworkUtility = {
+	    fetchDatas: function fetchDatas(adapter, procedure, params) {
+	        return new Promise(function (resolve, reject) {
+	            _DebugUtility2.default.log(adapter, procedure, params);
+	            try {
+	                var invocationData = {
+	                    adapter: adapter,
+	                    procedure: procedure,
+	                    parameters: [params]
+	                };
+	                WL.Client.invokeProcedure(invocationData, {
+	                    onSuccess: function onSuccess(response) {
+	                        _DebugUtility2.default.log(response);
+	                        resolve(response);
+	                    },
+	                    onFailure: function onFailure(error) {
+	                        _DebugUtility2.default.log(error);
+	                        reject(error);
+	                    }
+	                });
+	            } catch (error) {
+	                _DebugUtility2.default.log(error);
+	                reject(error);
+	            }
+	        });
+	    }
+	}; /**
+	    * Created by MeePwn
+	    * https://github.com/maybewaityou
+	    */
+	exports.default = NetworkUtility;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NetworkUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
+	var StoreUtility = {
+	
+	    /**
+	     * 内存缓存, 存取方法(一个参数: getter; 两个参数: setter | remove)
+	     *
+	     * @param key 键
+	     * @param value 值
+	     * @return
+	     *      getter时, 返回获取的值
+	     */
+	    memoryCache: function memoryCache(key, value) {
+	        if (value) {
+	            // setter | remove
+	            key === 'remove' ? memoryCacheRemove(value) : memoryCacheSetter(key, value);
+	        } else {
+	            // getter
+	            return memoryCacheGetter(key);
+	        }
+	    },
+	
+	
+	    /**
+	     * 私有方法, 禁止使用
+	     */
+	    memoryCacheSetter: function memoryCacheSetter(key, value) {
+	        sessionStorage.setItem(key, value);
+	    },
+	
+	    /**
+	     * 私有方法, 禁止使用
+	     */
+	    memoryCacheGetter: function memoryCacheGetter(key) {
+	        return sessionStorage.getItem(key) !== null ? sessionStorage.getItem(key) : 'error: no value for key ~';
+	    },
+	
+	    /**
+	     * 私有方法, 禁止使用
+	     */
+	    memoryCacheRemove: function memoryCacheRemove(key) {
+	        sessionStorage.removeItem(key);
+	    },
+	
+	
+	    /**
+	     * 本地缓存, 存取方法(一个参数: getter; 两个参数: setter | remove)
+	     *
+	     * @param key 键
+	     * @param value 值
+	     * @return
+	     *      getter时, 返回获取的值
+	     */
+	    diskCache: function diskCache(key, value) {
+	        if (value) {
+	            // setter | remove
+	            key === 'remove' ? diskCacheRemove(value) : diskCacheSetter(key, value);
+	        } else {
+	            // getter
+	            return diskCacheGetter(key);
+	        }
+	    },
+	
+	
+	    /**
+	     * 私有方法, 禁止使用
+	     */
+	    diskCacheSetter: function diskCacheSetter(key, value) {
+	        localStorage.setItem(key, value);
+	    },
+	
+	    /**
+	     * 私有方法, 禁止使用
+	     */
+	    diskCacheGetter: function diskCacheGetter(key) {
+	        return localStorage.getItem(key) !== null ? localStorage.getItem(key) : 'error: no value for key ~';
+	    },
+	
+	    /**
+	     * 私有方法, 禁止使用
+	     */
+	    diskCacheRemove: function diskCacheRemove(key) {
+	        localStorage.removeItem(key);
+	    }
+	};
+	
+	exports.default = StoreUtility;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "StoreUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+	                                                                                                                                                                                                                                                                   * Created by MeePwn
+	                                                                                                                                                                                                                                                                   * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                   */
+	
+	
+	var _DebugUtility = __webpack_require__(258);
+	
+	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var FunctionManager = _extends({}, _DebugUtility2.default);
+	
+	exports.default = FunctionManager;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "FunctionManager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _CommonTask = __webpack_require__(281);
+	
+	var _CommonTask2 = _interopRequireDefault(_CommonTask);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var TaskManager = {}; /**
+	                       * Created by MeePwn
+	                       * https://github.com/maybewaityou
+	                       */
+	exports.default = TaskManager;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TaskManager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
+	var CommonTask = {};
+	
+	exports.default = CommonTask;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "CommonTask.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -30562,13 +30991,16 @@
 	});
 	exports.ERROR = exports.RECEIVED = exports.REQUESTING = undefined;
 	
-	var _NetworkUtility = __webpack_require__(274);
+	var _Just = __webpack_require__(274);
 	
-	var _NetworkUtility2 = _interopRequireDefault(_NetworkUtility);
+	var _Just2 = _interopRequireDefault(_Just);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var REQUESTING = exports.REQUESTING = 'REQUESTING';
+	var REQUESTING = exports.REQUESTING = 'REQUESTING'; /**
+	                                                     * Created by MeePwn
+	                                                     * https://github.com/maybewaityou
+	                                                     */
 	var RECEIVED = exports.RECEIVED = 'RECEIVED';
 	var ERROR = exports.ERROR = 'ERROR';
 	
@@ -30608,57 +31040,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NetworkActions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _DebugUtility = __webpack_require__(262);
-	
-	var _DebugUtility2 = _interopRequireDefault(_DebugUtility);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var NetworkUtility = {
-	    fetchDatas: function fetchDatas(adapter, procedure, params) {
-	        return new Promise(function (resolve, reject) {
-	            _DebugUtility2.default.log(adapter, procedure, params);
-	            try {
-	                var invocationData = {
-	                    adapter: adapter,
-	                    procedure: procedure,
-	                    parameters: [params]
-	                };
-	                WL.Client.invokeProcedure(invocationData, {
-	                    onSuccess: function onSuccess(response) {
-	                        _DebugUtility2.default.log(response);
-	                        resolve(response);
-	                    },
-	                    onFailure: function onFailure(error) {
-	                        _DebugUtility2.default.log(error);
-	                        reject(error);
-	                    }
-	                });
-	            } catch (error) {
-	                _DebugUtility2.default.log(error);
-	                reject(error);
-	            }
-	        });
-	    }
-	};
-	
-	exports.default = NetworkUtility;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NetworkUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 275 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -30677,17 +31059,21 @@
 	exports.delayAdd = delayAdd;
 	exports.delaySubtract = delaySubtract;
 	
-	var _NetworkActions = __webpack_require__(273);
+	var _NetworkActions = __webpack_require__(282);
 	
 	var _NetworkActions2 = _interopRequireDefault(_NetworkActions);
 	
-	var _LoginActions = __webpack_require__(276);
+	var _LoginActions = __webpack_require__(284);
 	
 	var _LoginActions2 = _interopRequireDefault(_LoginActions);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	/* ============================= Action Type Start =============================== */
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
 	var TEST = exports.TEST = 'TEST';
 	var DEFAULT = exports.DEFAULT = 'DEFAULT';
 	var ADD = exports.ADD = 'ADD';
@@ -30779,7 +31165,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Actions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 276 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -30790,21 +31176,25 @@
 	    value: true
 	});
 	
-	var _NetworkActions = __webpack_require__(273);
+	var _NetworkActions = __webpack_require__(282);
 	
 	var _NetworkActions2 = _interopRequireDefault(_NetworkActions);
 	
-	var _NetworkUtility = __webpack_require__(274);
+	var _Just = __webpack_require__(274);
 	
-	var _NetworkUtility2 = _interopRequireDefault(_NetworkUtility);
+	var _Just2 = _interopRequireDefault(_Just);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	/**
+	 * Created by MeePwn
+	 * https://github.com/maybewaityou
+	 */
 	var LoginActions = {
 	    validateTeller: function validateTeller(params) {
 	        return function (dispatch) {
 	            dispatch(_NetworkActions2.default.requesting());
-	            return _NetworkUtility2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
+	            return _Just2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
 	                dispatch(_NetworkActions2.default.received());
 	                return dispatch(_NetworkActions2.default.receivedData(params, response));
 	            }, function (error) {
@@ -30815,11 +31205,11 @@
 	    // validateTeller: (params) => {
 	    //     return dispatch => {
 	    //         dispatch(NetworkActions.requesting());
-	    //         return NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+	    //         return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
 	    //             .then((validateTellerResponse) => {
-	    //                 return dispatch(NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+	    //                 return dispatch(Just.fetchDatas(params.adapter, params.procedure, params.parameters)
 	    //                     .then((loginAfterValidateTellerResponse) => {
-	    //                         return dispatch(NetworkUtility.fetchDatas(params.adapter, params.procedure, params.parameters)
+	    //                         return dispatch(Just.fetchDatas(params.adapter, params.procedure, params.parameters)
 	    //                             .then((loginResponse) => {
 	    //                                 dispatch(NetworkActions.received());
 	    //                                 return dispatch(NetworkActions.receivedData(params, loginResponse));
@@ -30831,7 +31221,7 @@
 	    prevLogin: function prevLogin(params) {
 	        return function (dispatch) {
 	            dispatch(_NetworkActions2.default.requesting());
-	            return _NetworkUtility2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
+	            return _Just2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
 	                return dispatch(LoginActions.login(params, response));
 	            }, function (error) {
 	                return dispatch(_NetworkActions2.default.error(params, error));
@@ -30840,7 +31230,7 @@
 	    },
 	    login: function login(params, prevResponse) {
 	        return function (dispatch) {
-	            return _NetworkUtility2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
+	            return _Just2.default.fetchDatas(params.adapter, params.procedure, params.parameters).then(function (response) {
 	                dispatch(_NetworkActions2.default.received());
 	                return dispatch(_NetworkActions2.default.receivedData(params, response));
 	            }, function (error) {
