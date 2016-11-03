@@ -13,7 +13,7 @@ const assign = require('object-assign');
 /* ========================== path end ========================== */
 const reactPath = './WebComponents/';
 const reactDistPath = reactPath + 'dist';
-const reactImagesPath = reactPath + 'static/imgs';
+const reactStaticResourcePath = reactPath + 'static';
 const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
 const mobileFirstDistPath = mobileFirstPath + 'dist';
 const mobileFirstStaticResourcePath = mobileFirstPath + 'static';
@@ -57,7 +57,7 @@ gulp.task('copy', () => {
 });
 
 gulp.task('copy_static_resource', () => {
-  return gulp.src(reactImagesPath + '/**/*')
+  return gulp.src(reactStaticResourcePath + '/**/*')
       .pipe(gulp.dest(mobileFirstStaticResourcePath));
 });
 

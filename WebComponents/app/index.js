@@ -21,7 +21,7 @@ class ReduxApp extends Component {
         FunctionManager.log(UIManager);
 
         document.addEventListener("deviceready", function() {
-            ImageCache.imageCacheInitConfig();
+            UIManager.imageCacheInitConfig();
 		}, false);
     }
 
