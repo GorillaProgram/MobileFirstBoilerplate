@@ -4,9 +4,18 @@
  */
 import '../../../../static/stylesheets/screen.css';
 import DataUtility from '../data/DataUtility';
+import ImageCache from './ImageCache';
 
 const JQMUtility = {
 
+    /**
+     * 初始化页面配置
+     */
+    initializePage() {
+        document.addEventListener("deviceready", function() {
+            ImageCache.imageCacheInitConfig();
+        }, false);
+    },
     showLoader(message) {
         var messageTag = DataUtility.isNotNull(message) ? `
             <div class="sk-circle-text-layout">${message}</div>
