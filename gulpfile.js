@@ -16,7 +16,7 @@ const reactDistPath = reactPath + 'dist';
 const reactImagesPath = reactPath + 'static/imgs';
 const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
 const mobileFirstDistPath = mobileFirstPath + 'dist';
-const mobileFirstImagesPath = mobileFirstPath + 'static/imgs';
+const mobileFirstStaticResourcePath = mobileFirstPath + 'static';
 /* ========================== path end ========================== */
 
 gulp.task('default', []);
@@ -56,9 +56,9 @@ gulp.task('copy', () => {
       .pipe(gulp.dest(mobileFirstDistPath));
 });
 
-gulp.task('copy_images', () => {
+gulp.task('copy_static_resource', () => {
   return gulp.src(reactImagesPath + '/**/*')
-      .pipe(gulp.dest(mobileFirstImagesPath));
+      .pipe(gulp.dest(mobileFirstStaticResourcePath));
 });
 
 gulp.task('build', (callback) => {
@@ -66,7 +66,7 @@ gulp.task('build', (callback) => {
         'clean',
         'webpack_build',
         'uglify',
-        'copy_images',
+        'copy_static_resource',
         'copy',
         (error) => {
             if (error) {
