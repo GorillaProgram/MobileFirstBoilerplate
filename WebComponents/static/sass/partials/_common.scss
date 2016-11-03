@@ -1,0 +1,67 @@
+@import "variables", "mixin";
+
+/* extend start */
+%verticalLayout {
+  display: flex;
+  flex-direction: column;
+}
+%horizontalLayout {
+  display: flex;
+  flex-direction: row;
+}
+%commonButton {
+  width: $defaultButtonWidth;
+  height: $defaultButtonHeight;
+  min-height: $defaultButtonHeight;
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: -0.15px;
+  background: #1177DB;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  &:active {
+    background: #0B4D8D;
+  }
+}
+%smallButton {
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: -0.15px;
+  background: #1177DB;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  &:active {
+    background: #0B4D8D;
+  }
+}
+%commonEditTitle {
+  font-size: 20px;
+  width: 159px;
+  text-align: center;
+  color: #333333;
+  letter-spacing: -0.13px;
+}
+%commonEditView {
+  height: 36px;
+  padding-left: 15px;
+  margin-left: 20px;
+  border: 1px solid #979797;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+  font-size: 18px;
+  color: #999999;
+  letter-spacing: -0.12px;
+}
+%commonEditSelect {
+  height: 36px;
+  padding-left: 15px;
+  margin-left: 20px;
+  border: 1px solid #979797;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+  color: #999999;
+  letter-spacing: -0.12px;
+}
+/* extend end */

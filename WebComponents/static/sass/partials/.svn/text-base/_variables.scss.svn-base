@@ -1,0 +1,54 @@
+$lineColor: #979797;
+
+/* 颜色相关 start */
+$innerBackgroundColor: #f8f8f8;
+/* 颜色相关 end */
+
+/* Title相关 start */
+$titleLayoutHeight: 80px;
+$titleLayoutBackgroundColor: white;
+$titleFontSize: 24px;
+$titleBackFontSize: 18px;
+/* Title相关 end */
+
+/* button相关 start */
+$defaultButtonWidth: 400px;
+$defaultButtonHeight: 44px;
+$defaultEditViewHeight: 33px;
+/* 字体相关 end */
+
+/* 字体相关 start */
+$defaultFontSize: 18px;
+$largeFontSize: 20px;
+$middleFontSize: 16px;
+$smallFontSize: 14px;
+$dialogButtonSize: 18px;
+
+$darkFontColor: #333;
+$defaultFontColor: #666;
+$disabledFontColor: #999;
+$blueColor: #1177DB;
+/* 字体相关 end */
+
+/* Tab相关 start */
+$defaultTabHeight: 40px;
+$defaultTabColor: lightgray;
+$defaultTabActiveColor: #0B4D8D;
+$defaultTabActiveFontColor: white;
+$defaultTabWidth: 100px;
+/* Tab相关 end */
+
+/* Select相关 start */
+$defaultSelectWidth: 150px;
+/* Select相关 end */
+
+/* Table相关 start */
+//$defaultTableHeight: 150px;
+$defaultTableItemHeight: 30px;
+/* Table相关 end */
+
+$negativeColor: #7F7F7F;
+$negativeActiveColor: #666;
+$halfWhiteColor: rgba(255, 255, 255, .75);
+
+$MaxZ_Index: 1000;
