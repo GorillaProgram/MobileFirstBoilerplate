@@ -18,13 +18,14 @@ class AppView extends Component {
 
     render() {
         return (
-            <Router history={browserHistory}>
+            <Router key={Math.random()} history={browserHistory}>
                 <Route path={UIManager.AppPath} component={Test00}>
                     <Route path={UIManager.Test01} component={Test01}></Route>
                 </Route>
             </Router>
         );
     }
+
 }
 
 export default AppView;

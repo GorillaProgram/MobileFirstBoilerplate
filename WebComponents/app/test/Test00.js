@@ -21,7 +21,7 @@ class Test00 extends Component {
                 <button className="ui-btn ui-shadow ui-corner-all" data-role="button" onClick={() => {
                     this.context.router.push('/WebComponents/test01');
                     // UIManager.showLoader();
-                }}>mu haha~~</button>
+                }}>mu haha~</button>
                 {this.props.children}
             </div>
         );
