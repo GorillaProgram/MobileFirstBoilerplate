@@ -18,8 +18,6 @@ class Test00 extends Component {
         return (
             <div style={styles.container} onClick={() => {
                 this.context.router.push('test01');
-                // UIManager.cacheFile(['http://10.240.90.212:7001/padServer/padimages/1.png']);
-                // UIManager.showLoader();
             }}>
                 <button data-role="button">button</button>
                 {this.props.children}

@@ -103,7 +103,7 @@
 	        _FunctionManager2.default.log(_UIManager2.default);
 	
 	        document.addEventListener("deviceready", function () {
-	            ImageCache.imageCacheInitConfig();
+	            _UIManager2.default.imageCacheInitConfig();
 	        }, false);
 	        return _this;
 	    }
@@ -26632,8 +26632,6 @@
 	                'div',
 	                { style: styles.container, onClick: function onClick() {
 	                        _this2.context.router.push('test01');
-	                        // UIManager.cacheFile(['http://10.240.90.212:7001/padServer/padimages/1.png']);
-	                        // UIManager.showLoader();
 	                    } },
 	                _react2.default.createElement(
 	                    'button',
