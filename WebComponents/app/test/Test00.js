@@ -21,7 +21,7 @@ class Test00 extends Component {
                 // UIManager.cacheFile(['http://10.240.90.212:7001/padServer/padimages/1.png']);
                 UIManager.showLoader();
             }}>
-                <button className="ui-btn" data-role="button">button</button>
+                <button data-role="button">button</button>
                 {this.props.children}
             </div>
         );
