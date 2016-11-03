@@ -17,9 +17,9 @@ class Test00 extends Component {
     render() {
         return (
             <div style={styles.container} onClick={() => {
-                this.context.router.push('test01');
+                this.context.router.push('/WebComponents/test01');
             }}>
-                <button data-role="button">button</button>
+                <button className="ui-btn ui-shadow ui-corner-all" data-role="button">button</button>
                 {this.props.children}
             </div>
         );

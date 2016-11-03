@@ -21547,11 +21547,11 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _reactRouter.Router,
-	                { history: _reactRouter.hashHistory },
+	                { history: _reactRouter.browserHistory },
 	                _react2.default.createElement(
 	                    _reactRouter.Route,
-	                    { path: '/', component: _Test2.default },
-	                    _react2.default.createElement(_reactRouter.Route, { path: '/test01', component: _Test4.default })
+	                    { path: '/WebComponents', component: _Test2.default },
+	                    _react2.default.createElement(_reactRouter.Route, { path: '/WebComponents/test01', component: _Test4.default })
 	                )
 	            );
 	        }
@@ -26631,11 +26631,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { style: styles.container, onClick: function onClick() {
-	                        _this2.context.router.push('test01');
+	                        _this2.context.router.push('/WebComponents/test01');
 	                    } },
 	                _react2.default.createElement(
 	                    'button',
-	                    { 'data-role': 'button' },
+	                    { className: 'ui-btn ui-shadow ui-corner-all', 'data-role': 'button' },
 	                    'button'
 	                ),
 	                this.props.children
