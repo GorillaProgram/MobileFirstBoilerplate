@@ -3,9 +3,11 @@
  * https://github.com/maybewaityou
  */
 import PeripheralUtility from '../utilities/peripheral/PeripheralUtility';
+import DeviceUtility from '../utilities/peripheral/DeviceUtility';
 
 const PeripheralManager = {
-    ...PeripheralUtility
+    ...PeripheralUtility,
+    ...DeviceUtility
 };
 
 export default PeripheralManager;

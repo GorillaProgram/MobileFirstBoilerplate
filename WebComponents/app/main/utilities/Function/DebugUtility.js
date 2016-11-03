@@ -5,8 +5,8 @@
 const DebugUtility = {
 
     log(...params) {
-        // WL.Logger.info('======>>>> ', ...params);
-        console.log('======>>>> ', ...params);
+        // WL.Logger.info(...params);
+        console.log(...params);
     },
     toast(...params) {
         WL.Toast.show(...params);
