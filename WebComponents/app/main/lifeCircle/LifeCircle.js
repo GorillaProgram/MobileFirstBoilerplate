@@ -11,7 +11,7 @@ const LifeCircle = {
      * 初始化页面配置
      */
     initializePage() {
-        document.addEventListener("deviceready", function() {
+        document.addEventListener("deviceready", () => {
 
             /* 初始化图片缓存 */
             ImageCache.imageCacheInitConfig();

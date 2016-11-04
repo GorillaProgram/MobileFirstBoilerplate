@@ -11,10 +11,10 @@ const MayUtility = {
      * 获取当前位置
      */
     currentLocation() {
-        return new Promise(function (resolve, reject) {
-            CordovaUtility.executor('LocationPlugin', 'currentLocation', [], function (result) {
+        return new Promise((resolve, reject) => {
+            CordovaUtility.executor('LocationPlugin', 'currentLocation', [], (result) => {
                 resolve(result);
-            }, function (error) {
+            }, (error) => {
                 reject(error);
             });
         });
@@ -24,10 +24,10 @@ const MayUtility = {
      * 大于distance则不允许做交易
      */
     farAwayFromTargetLocation(targetPosition, radius) {
-        return new Promise(function (resolve, reject) {
-            CordovaUtility.executor('LocationPlugin', 'farAwayFromTargetLocation', [targetPosition.latitude, targetPosition.longitude, radius], function (result) {
+        return new Promise((resolve, reject) => {
+            CordovaUtility.executor('LocationPlugin', 'farAwayFromTargetLocation', [targetPosition.latitude, targetPosition.longitude, radius], (result) => {
                 resolve(result);
-            }, function (error) {
+            }, (error) => {
                 reject(error);
             });
         });

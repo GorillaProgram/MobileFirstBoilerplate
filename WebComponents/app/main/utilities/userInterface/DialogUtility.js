@@ -84,13 +84,13 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#negativeButton').on('click', function () {
+        $('#negativeButton').on('click', () => {
             if (negativeAction) {
                 negativeAction();
             }
             DialogUtility.dismissDialog();
         });
-        $('#positiveButton').on('click', function () {
+        $('#positiveButton').on('click', () => {
             if (positiveAction) {
                 positiveAction();
             }
@@ -131,7 +131,7 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#positiveButton').on('click', function () {
+        $('#positiveButton').on('click', () => {
             if (positiveAction) {
                 positiveAction();
             }
@@ -167,13 +167,13 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#negativeButton').on('click', function () {
+        $('#negativeButton').on('click', () => {
             if (negativeAction) {
                 negativeAction();
             }
             DialogUtility.dismissDialog();
         });
-        $('#positiveButton').on('click', function () {
+        $('#positiveButton').on('click', () => {
             if (positiveAction) {
                 positiveAction();
             }
@@ -201,19 +201,19 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#negativeButton').on('click', function () {
+        $('#negativeButton').on('click', () => {
             if (negativeAction) {
                 negativeAction();
             }
             DialogUtility.dismissDialog();
         });
-        $('#magneticStripeCardButton').on('click', function () {
+        $('#magneticStripeCardButton').on('click', () => {
             if (magneticStripePositiveAction) {
                 magneticStripePositiveAction();
             }
             DialogUtility.dismissDialog();
         });
-        $('#ICCardButton').on('click', function () {
+        $('#ICCardButton').on('click', () => {
             if (ICPositiveAction) {
                 ICPositiveAction();
             }
@@ -240,13 +240,13 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#negativeButton').on('click', function () {
+        $('#negativeButton').on('click', () => {
             if (negativeAction) {
                 negativeAction();
             }
             DialogUtility.dismissDialog();
         });
-        $('#positiveButton').on('click', function () {
+        $('#positiveButton').on('click', () => {
             if (positiveAction) {
                 positiveAction();
             }
@@ -325,28 +325,28 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#originPassword').on('click', function () {
+        $('#originPassword').on('click', () => {
             if (originPasswordAction) {
                 originPasswordAction();
             }
         });
-        $('#newPassword').on('click', function () {
+        $('#newPassword').on('click', () => {
             if (newPasswordAction) {
                 newPasswordAction();
             }
         });
-        $('#signatureImage').on('click', function () {
+        $('#signatureImage').on('click', () => {
             if (signatureAction) {
                 signatureAction();
             }
         });
-        $('#negativeButton').on('click', function () {
+        $('#negativeButton').on('click', () => {
             if (negativeAction) {
                 negativeAction();
             }
             DialogUtility.dismissDialog();
         });
-        $('#positiveButton').on('click', function () {
+        $('#positiveButton').on('click', () => {
             if (positiveAction) {
                 positiveAction();
             }
@@ -406,7 +406,7 @@ const DialogUtility = {
                     </div>
                 </div>
             `);
-        $('#closeImage').on('click', function () {
+        $('#closeImage').on('click', () => {
             DialogUtility.dismissDialog();
         });
     },

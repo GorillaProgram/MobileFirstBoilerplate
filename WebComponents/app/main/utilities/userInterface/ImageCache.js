@@ -19,12 +19,12 @@ const ImageCache = {
         // 设置图片缓存大小 50MB, 默认 10MB
         ImgCache.options.chromeQuota = Constant.IMAGE_CACHE_SIZE;
 
-        ImgCache.init(function() {
+        ImgCache.init(() => {
             DebugUtility.log('ImgCache init: success!');
             if (DataUtility.isNotNull(successExecutor)) {
                 successExecutor();
             }
-        }, function() {
+        }, () => {
             DebugUtility.log('ImgCache init: error! Check the log for errors');
             if (DataUtility.isNotNull(failureExecutor)) {
                 failureExecutor();
@@ -35,14 +35,14 @@ const ImageCache = {
      * 设置图片
      */
     setImage(target) {
-        ImgCache.isCached(target.attr('src'), function(path, success) {
+        ImgCache.isCached(target.attr('src'), (path, success) => {
             DebugUtility.log(target.attr('src'));
             if (success) {
                 // already cached
                 ImgCache.useCachedFile(target);
             } else {
                 // not there, need to cache the image
-                ImgCache.cacheFile(target.attr('src'), function() {
+                ImgCache.cacheFile(target.attr('src'), () => {
                     ImgCache.useCachedFile(target);
                 });
             }
@@ -53,7 +53,7 @@ const ImageCache = {
      */
     setImageWithURL(target, targetURL) {
         target.attr('src', targetURL);
-        ImgCache.isCached(target.attr('src'), function(path, success) {
+        ImgCache.isCached(target.attr('src'), (path, success) => {
             // DebugUtility.log(target.attr('src'));
             if (success) {
                 // already cached
@@ -62,7 +62,7 @@ const ImageCache = {
             } else {
                 // not there, need to cache the image
                 DebugUtility.log('重新下载');
-                ImgCache.cacheFile(target.attr('src'), function() {
+                ImgCache.cacheFile(target.attr('src'), () => {
                     ImgCache.useCachedFile(target);
                 });
             }
@@ -74,11 +74,11 @@ const ImageCache = {
     cacheFile(URLs) {
         for (var i=0; i<URLs.length; i++) {
             var url = URLs[i];
-            ImgCache.isCached(url, function(path, success) {
+            ImgCache.isCached(url, (path, success) => {
                 if (success) {
                     DebugUtility.log('====缓存成功' + path);
                 } else {
-                    ImgCache.cacheFile(path, function (path, success) {
+                    ImgCache.cacheFile(path, (path, success) => {
                         DebugUtility.log('缓存成功====' + path);
                     });
                 }

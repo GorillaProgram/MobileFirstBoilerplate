@@ -4,12 +4,12 @@ const FunctionUtility = {
         setTimeout(executor, 500);
     },
     promise(params) {
-        return new Promise(function (resolve) {
+        return new Promise((resolve) => {
             resolve(params);
         });
     },
     promiseError(error) {
-        return new Promise(function (resolve) {
+        return new Promise((resolve) => {
             resolve(error);
         });
     }
