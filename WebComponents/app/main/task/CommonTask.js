@@ -6,7 +6,7 @@ import Just from '../constant/Just';
 
 const CommonTask = {
 
-    
+
 
 };
 
