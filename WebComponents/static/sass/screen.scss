@@ -5,6 +5,23 @@
 
 @import "compass/reset", "partials/variables", "partials/mixin";
 
+/* content start */
+.positiveButton {
+    @include commonButton();
+    @include width(20%);
+    font-size: $dialogButtonSize;
+}
+.negativeButton {
+    @include commonButton();
+    @include width(20%);
+    font-size: $dialogButtonSize;
+    background-color: $negativeColor;
+    &:active {
+        background-color: $negativeActiveColor;
+    }
+}
+/* content end */
+
 /* loading start */
 .sk-circle-layout {
     @include flexLayout();
@@ -132,3 +149,270 @@
         -webkit-transform: scale(1);
         transform: scale(1); } }
 /* loading end */
+
+/* dialog start */
+.dialogLayout {
+    @include flexLayout();
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    .dialogBackground {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: $halfWhiteColor;
+    }
+    .dialog {
+        @include flexLayout();
+        @include width(50%);
+        @include height(50%);
+        background-color: white;
+        margin-top: 10%;
+        border: 1px solid #999999;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+        z-index: $MaxZ_Index;
+        .dialogHeaderLayout {
+            @include flexLayout(row);
+            @include height(64px);
+            background-color: #EDEDED;
+            color: $darkFontColor;
+            font-size: $defaultFontSize;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 15px;
+        }
+        .dialogContentLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height();
+            padding: 30px;
+            padding-left: 20%;
+            padding-bottom: 20px;
+            .dialogImage {
+                @include width(70px);
+                @include height(70px);
+            }
+            .dialogMessageLayout {
+                @include width(70%);
+                margin-left: 30px;
+                overflow: auto;
+                .dialogMessage {
+                    font-size: $defaultFontSize;
+                }
+            }
+        }
+        .dialogButtonLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(84px);
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+    }
+    .dialogCard {
+        @include flexLayout();
+        @include width(50%);
+        @include height(60%);
+        background-color: white;
+        margin-top: 10%;
+        border: 1px solid #999999;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+        z-index: $MaxZ_Index;
+        .dialogHeaderLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(64px);
+            background-color: #EDEDED;
+            color: $darkFontColor;
+            font-size: $defaultFontSize;
+            padding: 15px;
+        }
+        .dialogContentBigImageLayout {
+            @include flexLayout();
+            @include width();
+            @include height();
+            align-items: center;
+            padding: 20px;
+            .dialogImageDes {
+                font-size: $defaultFontSize;
+                margin-top: 10px;
+            }
+            .dialogImage {
+                @include width(80%);
+                @include height(70%);
+            }
+            .dialogFingerprint {
+                @include width(130px);
+                @include height(130px);
+                margin-top: 20px;
+            }
+        }
+        .dialogButtonLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(84px);
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+    }
+    .dialogConsumerInfoConfirm {
+        @include flexLayout();
+        @include width(80%);
+        @include height(80%);
+        min-height: 300px;
+        background-color: white;
+        margin-top: 5%;
+        border: 1px solid #999999;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+        z-index: $MaxZ_Index;
+        .dialogHeaderLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(64px);
+            background-color: #EDEDED;
+            color: $darkFontColor;
+            font-size: $defaultFontSize;
+            padding: 15px;
+            z-index: $MaxZ_Index;
+        }
+        .dialogConsumerInfoConfirmLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(80%);
+            .dialogConsumerInfoLayout {
+                @include flexLayout();
+                @include width(50%);
+                @include height(280px);
+                padding-left: 20px;
+                padding-right: 20px;
+                overflow: auto;
+            }
+            .dialogConsumerSignatureLayout {
+                @include width(50%);
+                @include height(280px);
+                padding-left: 20px;
+                padding-right: 20px;
+                overflow: auto;
+            }
+        }
+        .dialogButtonLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(44px);
+            justify-content: space-around;
+            min-height: 44px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    .dialogEditRadius {
+        @include flexLayout();
+        @include width(50%);
+        @include height(60%);
+        background-color: white;
+        margin-top: 10%;
+        border: 1px solid #999999;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+        z-index: $MaxZ_Index;
+        .dialogHeaderLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(64px);
+            background-color: #EDEDED;
+            color: $darkFontColor;
+            font-size: $defaultFontSize;
+            padding: 15px;
+        }
+        .dialogEditLayout {
+            @include flexLayout();
+            @include width();
+            @include height();
+            align-items: center;
+            padding: 20px;
+        }
+        .dialogButtonLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(84px);
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+    }
+    .dialogBusinessDetails {
+        @include flexLayout();
+        @include width(70%);
+        @include height(60%);
+        background-color: white;
+        margin-top: 10%;
+        border: 1px solid #999999;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+        z-index: $MaxZ_Index;
+        .dialogHeaderLayout {
+            @include flexLayout(row);
+            @include width();
+            @include height(64px);
+            justify-content: space-between;
+            color: $darkFontColor;
+            font-size: $defaultFontSize;
+            padding: 15px;
+            background-color: #EDEDED;
+            .closeImage {
+                @include width(34px);
+                @include height(34px);
+            }
+        }
+        .dialogDetailsLayout {
+            @include flexLayout();
+            @include width();
+            @include height();
+            align-items: center;
+            padding: 20px;
+            overflow: auto;
+            .dialogDetailsRowLayout {
+                @include flexLayout(row);
+                @include width();
+                @include height(44px);
+                min-height: 44px;
+                .editLayout {
+                    @include width(50%);
+                    .editTitle {
+                        @include width(120px);
+                    }
+                    .editValue {
+                        @include width(60%);
+                    }
+                }
+            }
+        }
+    }
+}
+.buttonLayout {
+    @include flexLayout(row);
+    @include width();
+    margin-top: 30px;
+    justify-content: space-around;
+    .smallButton {
+        @include smallButton();
+        @include width(30%);
+        margin: 0;
+    }
+}
+.dialogPositiveButton {
+    @include commonButton();
+    @include width(30%);
+    font-size: $dialogButtonSize;
+}
+.dialogNegativeButton {
+    @include commonButton();
+    @include width(30%);
+    font-size: $dialogButtonSize;
+    background-color: $negativeColor;
+    &:active {
+        background-color: $negativeActiveColor;
+    }
+}
+/* dialog end */
