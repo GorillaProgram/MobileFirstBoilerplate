@@ -9,8 +9,6 @@ import Test00 from './test/Test00';
 import Test01 from './test/Test01';
 import Test02 from './test/Test02';
 
-const history = createMemoryHistory(location);
-
 class AppView extends Component {
 
     constructor(props) {
@@ -21,7 +19,7 @@ class AppView extends Component {
 
     render() {
         return (
-            <Router key={Math.random()} history={history}>
+            <Router key={Math.random()} history={createMemoryHistory(location)}>
                 <Route path={Just.AppPath} component={Test00}>
                     <IndexRoute component={Test01} />
                     <Route path={Just.Test02} component={Test02}></Route>
