@@ -15,6 +15,7 @@ class Test00 extends Component {
     }
 
     render() {
+        console.log('========Test00========');
         return (
             <div style={styles.container}>
                 <input type="text" />

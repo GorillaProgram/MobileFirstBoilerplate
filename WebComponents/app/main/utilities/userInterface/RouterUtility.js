@@ -4,9 +4,9 @@
  */
 const RouterUtility = {
 
-    AppPath: '/WebComponents',
-    Test01: '/WebComponents/test01',
-    Test02: '/WebComponents/test02'
+    AppPath: '/',
+    Test01: 'test01',
+    Test02: 'test02'
 
 };
 

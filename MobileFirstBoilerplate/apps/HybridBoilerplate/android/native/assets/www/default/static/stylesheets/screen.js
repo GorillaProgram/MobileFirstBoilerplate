@@ -1185,16 +1185,532 @@ export default StyleSheet.create({
     "main": {
         "display": "block"
     },
-    "ui-corner-all": {
-        "opacity": "1!important"
+    "positiveButton": {
+        "height": 44,
+        "minHeight": 44,
+        "fontSize": 18,
+        "color": "#FFFFFF",
+        "textAlign": "center",
+        "letterSpacing": -0.15,
+        "background": "#1177DB",
+        "border": "none",
+        "outline": "none",
+        "borderRadius": 10,
+        "width": "20%"
     },
-    "ui-body-z": {
-        "opacity": "1!important"
+    "negativeButton": {
+        "height": 44,
+        "minHeight": 44,
+        "fontSize": 18,
+        "color": "#FFFFFF",
+        "textAlign": "center",
+        "letterSpacing": -0.15,
+        "background": "#1177DB",
+        "border": "none",
+        "outline": "none",
+        "borderRadius": 10,
+        "width": "20%",
+        "backgroundColor": "#7F7F7F"
     },
-    "ui-loader-verbose": {
-        "opacity": "1!important"
+    "buttonLayout smallButton": {
+        "height": 44,
+        "minHeight": 44,
+        "fontSize": 18,
+        "color": "#FFFFFF",
+        "textAlign": "center",
+        "letterSpacing": -0.15,
+        "background": "#1177DB",
+        "border": "none",
+        "outline": "none",
+        "borderRadius": 10,
+        "width": "30%",
+        "marginTop": 0,
+        "marginRight": 0,
+        "marginBottom": 0,
+        "marginLeft": 0
     },
-    "ui-loader-textonly": {
-        "opacity": "1!important"
+    "dialogPositiveButton": {
+        "height": 44,
+        "minHeight": 44,
+        "fontSize": 18,
+        "color": "#FFFFFF",
+        "textAlign": "center",
+        "letterSpacing": -0.15,
+        "background": "#1177DB",
+        "border": "none",
+        "outline": "none",
+        "borderRadius": 10,
+        "width": "30%"
+    },
+    "dialogNegativeButton": {
+        "height": 44,
+        "minHeight": 44,
+        "fontSize": 18,
+        "color": "#FFFFFF",
+        "textAlign": "center",
+        "letterSpacing": -0.15,
+        "background": "#1177DB",
+        "border": "none",
+        "outline": "none",
+        "borderRadius": 10,
+        "width": "30%",
+        "backgroundColor": "#7F7F7F"
+    },
+    "positiveButton:active": {
+        "background": "#0B4D8D"
+    },
+    "negativeButton:active": {
+        "background": "#0B4D8D",
+        "backgroundColor": "#666"
+    },
+    "buttonLayout smallButton:active": {
+        "background": "#0B4D8D"
+    },
+    "dialogPositiveButton:active": {
+        "background": "#0B4D8D"
+    },
+    "dialogNegativeButton:active": {
+        "background": "#0B4D8D",
+        "backgroundColor": "#666"
+    },
+    "sk-circle-layout": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "alignItems": "center",
+        "position": "fixed",
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0,
+        "backgroundColor": "rgba(255, 255, 255, 0.75)"
+    },
+    "sk-circle": {
+        "width": 80,
+        "height": 80,
+        "position": "relative"
+    },
+    "sk-circle sk-child": {
+        "width": "100%",
+        "height": "100%",
+        "position": "absolute",
+        "left": 0,
+        "top": 0
+    },
+    "sk-circle sk-child:before": {
+        "content": "''",
+        "display": "block",
+        "marginTop": 0,
+        "marginRight": "auto",
+        "marginBottom": 0,
+        "marginLeft": "auto",
+        "width": "15%",
+        "height": "15%",
+        "backgroundColor": "#1177DB",
+        "borderRadius": "100%",
+        "WebkitAnimation": "sk-circleBounceDelay 1.2s infinite ease-in-out both",
+        "animation": "sk-circleBounceDelay 1.2s infinite ease-in-out both"
+    },
+    "sk-circle sk-circle2": {
+        "WebkitTransform": "rotate(30deg)",
+        "MsTransform": "rotate(30deg)",
+        "transform": "rotate(30deg)"
+    },
+    "sk-circle sk-circle3": {
+        "WebkitTransform": "rotate(60deg)",
+        "MsTransform": "rotate(60deg)",
+        "transform": "rotate(60deg)"
+    },
+    "sk-circle sk-circle4": {
+        "WebkitTransform": "rotate(90deg)",
+        "MsTransform": "rotate(90deg)",
+        "transform": "rotate(90deg)"
+    },
+    "sk-circle sk-circle5": {
+        "WebkitTransform": "rotate(120deg)",
+        "MsTransform": "rotate(120deg)",
+        "transform": "rotate(120deg)"
+    },
+    "sk-circle sk-circle6": {
+        "WebkitTransform": "rotate(150deg)",
+        "MsTransform": "rotate(150deg)",
+        "transform": "rotate(150deg)"
+    },
+    "sk-circle sk-circle7": {
+        "WebkitTransform": "rotate(180deg)",
+        "MsTransform": "rotate(180deg)",
+        "transform": "rotate(180deg)"
+    },
+    "sk-circle sk-circle8": {
+        "WebkitTransform": "rotate(210deg)",
+        "MsTransform": "rotate(210deg)",
+        "transform": "rotate(210deg)"
+    },
+    "sk-circle sk-circle9": {
+        "WebkitTransform": "rotate(240deg)",
+        "MsTransform": "rotate(240deg)",
+        "transform": "rotate(240deg)"
+    },
+    "sk-circle sk-circle10": {
+        "WebkitTransform": "rotate(270deg)",
+        "MsTransform": "rotate(270deg)",
+        "transform": "rotate(270deg)"
+    },
+    "sk-circle sk-circle11": {
+        "WebkitTransform": "rotate(300deg)",
+        "MsTransform": "rotate(300deg)",
+        "transform": "rotate(300deg)"
+    },
+    "sk-circle sk-circle12": {
+        "WebkitTransform": "rotate(330deg)",
+        "MsTransform": "rotate(330deg)",
+        "transform": "rotate(330deg)"
+    },
+    "sk-circle sk-circle2:before": {
+        "WebkitAnimationDelay": "-1.1s",
+        "animationDelay": "-1.1s"
+    },
+    "sk-circle sk-circle3:before": {
+        "WebkitAnimationDelay": "-1s",
+        "animationDelay": "-1s"
+    },
+    "sk-circle sk-circle4:before": {
+        "WebkitAnimationDelay": "-0.9s",
+        "animationDelay": "-0.9s"
+    },
+    "sk-circle sk-circle5:before": {
+        "WebkitAnimationDelay": "-0.8s",
+        "animationDelay": "-0.8s"
+    },
+    "sk-circle sk-circle6:before": {
+        "WebkitAnimationDelay": "-0.7s",
+        "animationDelay": "-0.7s"
+    },
+    "sk-circle sk-circle7:before": {
+        "WebkitAnimationDelay": "-0.6s",
+        "animationDelay": "-0.6s"
+    },
+    "sk-circle sk-circle8:before": {
+        "WebkitAnimationDelay": "-0.5s",
+        "animationDelay": "-0.5s"
+    },
+    "sk-circle sk-circle9:before": {
+        "WebkitAnimationDelay": "-0.4s",
+        "animationDelay": "-0.4s"
+    },
+    "sk-circle sk-circle10:before": {
+        "WebkitAnimationDelay": "-0.3s",
+        "animationDelay": "-0.3s"
+    },
+    "sk-circle sk-circle11:before": {
+        "WebkitAnimationDelay": "-0.2s",
+        "animationDelay": "-0.2s"
+    },
+    "sk-circle sk-circle12:before": {
+        "WebkitAnimationDelay": "-0.1s",
+        "animationDelay": "-0.1s"
+    },
+    "sk-circle-text-layout": {
+        "fontSize": 18,
+        "marginTop": 20
+    },
+    "dialogLayout": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "position": "fixed",
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+    },
+    "dialogLayout dialogBackground": {
+        "position": "fixed",
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0,
+        "backgroundColor": "rgba(255, 255, 255, 0.75)"
+    },
+    "dialogLayout dialog": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "50%",
+        "height": "50%",
+        "backgroundColor": "white",
+        "marginTop": "10%",
+        "border": "1px solid #999999",
+        "borderRadius": 10,
+        "boxShadow": "0 0 20px 0 black",
+        "zIndex": 1000
+    },
+    "dialogLayout dialog dialogHeaderLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "height": 64,
+        "backgroundColor": "#EDEDED",
+        "color": "#333",
+        "fontSize": 18,
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "paddingTop": 15,
+        "paddingRight": 15,
+        "paddingBottom": 15,
+        "paddingLeft": 15
+    },
+    "dialogLayout dialog dialogContentLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": "100%",
+        "paddingTop": 30,
+        "paddingRight": 30,
+        "paddingBottom": 20,
+        "paddingLeft": "20%"
+    },
+    "dialogLayout dialog dialogContentLayout dialogImage": {
+        "width": 70,
+        "height": 70
+    },
+    "dialogLayout dialog dialogContentLayout dialogMessageLayout": {
+        "width": "70%",
+        "marginLeft": 30,
+        "overflow": "auto"
+    },
+    "dialogLayout dialog dialogContentLayout dialogMessageLayout dialogMessage": {
+        "fontSize": 18
+    },
+    "dialogLayout dialog dialogButtonLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 84,
+        "justifyContent": "space-around",
+        "marginBottom": 20
+    },
+    "dialogLayout dialogCard": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "50%",
+        "height": "60%",
+        "backgroundColor": "white",
+        "marginTop": "10%",
+        "border": "1px solid #999999",
+        "borderRadius": 10,
+        "boxShadow": "0 0 20px 0 black",
+        "zIndex": 1000
+    },
+    "dialogLayout dialogCard dialogHeaderLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 64,
+        "backgroundColor": "#EDEDED",
+        "color": "#333",
+        "fontSize": 18,
+        "paddingTop": 15,
+        "paddingRight": 15,
+        "paddingBottom": 15,
+        "paddingLeft": 15
+    },
+    "dialogLayout dialogCard dialogContentBigImageLayout": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "100%",
+        "height": "100%",
+        "alignItems": "center",
+        "paddingTop": 20,
+        "paddingRight": 20,
+        "paddingBottom": 20,
+        "paddingLeft": 20
+    },
+    "dialogLayout dialogCard dialogContentBigImageLayout dialogImageDes": {
+        "fontSize": 18,
+        "marginTop": 10
+    },
+    "dialogLayout dialogCard dialogContentBigImageLayout dialogImage": {
+        "width": "80%",
+        "height": "70%"
+    },
+    "dialogLayout dialogCard dialogContentBigImageLayout dialogFingerprint": {
+        "width": 130,
+        "height": 130,
+        "marginTop": 20
+    },
+    "dialogLayout dialogCard dialogButtonLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 84,
+        "justifyContent": "space-around",
+        "marginBottom": 20
+    },
+    "dialogLayout dialogConsumerInfoConfirm": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "80%",
+        "height": "80%",
+        "minHeight": 300,
+        "backgroundColor": "white",
+        "marginTop": "5%",
+        "border": "1px solid #999999",
+        "borderRadius": 10,
+        "boxShadow": "0 0 20px 0 black",
+        "zIndex": 1000
+    },
+    "dialogLayout dialogConsumerInfoConfirm dialogHeaderLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 64,
+        "backgroundColor": "#EDEDED",
+        "color": "#333",
+        "fontSize": 18,
+        "paddingTop": 15,
+        "paddingRight": 15,
+        "paddingBottom": 15,
+        "paddingLeft": 15,
+        "zIndex": 1000
+    },
+    "dialogLayout dialogConsumerInfoConfirm dialogConsumerInfoConfirmLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": "80%"
+    },
+    "dialogLayout dialogConsumerInfoConfirm dialogConsumerInfoConfirmLayout dialogConsumerInfoLayout": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "50%",
+        "height": 280,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "overflow": "auto"
+    },
+    "dialogLayout dialogConsumerInfoConfirm dialogConsumerInfoConfirmLayout dialogConsumerSignatureLayout": {
+        "width": "50%",
+        "height": 280,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "overflow": "auto"
+    },
+    "dialogLayout dialogConsumerInfoConfirm dialogButtonLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 44,
+        "justifyContent": "space-around",
+        "minHeight": 44,
+        "marginTop": 20,
+        "marginBottom": 20
+    },
+    "dialogLayout dialogEditRadius": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "50%",
+        "height": "60%",
+        "backgroundColor": "white",
+        "marginTop": "10%",
+        "border": "1px solid #999999",
+        "borderRadius": 10,
+        "boxShadow": "0 0 20px 0 black",
+        "zIndex": 1000
+    },
+    "dialogLayout dialogEditRadius dialogHeaderLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 64,
+        "backgroundColor": "#EDEDED",
+        "color": "#333",
+        "fontSize": 18,
+        "paddingTop": 15,
+        "paddingRight": 15,
+        "paddingBottom": 15,
+        "paddingLeft": 15
+    },
+    "dialogLayout dialogEditRadius dialogEditLayout": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "100%",
+        "height": "100%",
+        "alignItems": "center",
+        "paddingTop": 20,
+        "paddingRight": 20,
+        "paddingBottom": 20,
+        "paddingLeft": 20
+    },
+    "dialogLayout dialogEditRadius dialogButtonLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 84,
+        "justifyContent": "space-around",
+        "marginBottom": 20
+    },
+    "dialogLayout dialogBusinessDetails": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "70%",
+        "height": "60%",
+        "backgroundColor": "white",
+        "marginTop": "10%",
+        "border": "1px solid #999999",
+        "borderRadius": 10,
+        "boxShadow": "0 0 20px 0 black",
+        "zIndex": 1000
+    },
+    "dialogLayout dialogBusinessDetails dialogHeaderLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 64,
+        "justifyContent": "space-between",
+        "color": "#333",
+        "fontSize": 18,
+        "paddingTop": 15,
+        "paddingRight": 15,
+        "paddingBottom": 15,
+        "paddingLeft": 15,
+        "backgroundColor": "#EDEDED"
+    },
+    "dialogLayout dialogBusinessDetails dialogHeaderLayout closeImage": {
+        "width": 34,
+        "height": 34
+    },
+    "dialogLayout dialogBusinessDetails dialogDetailsLayout": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "100%",
+        "height": "100%",
+        "alignItems": "center",
+        "paddingTop": 20,
+        "paddingRight": 20,
+        "paddingBottom": 20,
+        "paddingLeft": 20,
+        "overflow": "auto"
+    },
+    "dialogLayout dialogBusinessDetails dialogDetailsLayout dialogDetailsRowLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "height": 44,
+        "minHeight": 44
+    },
+    "dialogLayout dialogBusinessDetails dialogDetailsLayout dialogDetailsRowLayout editLayout": {
+        "width": "50%"
+    },
+    "dialogLayout dialogBusinessDetails dialogDetailsLayout dialogDetailsRowLayout editLayout editTitle": {
+        "width": 120
+    },
+    "dialogLayout dialogBusinessDetails dialogDetailsLayout dialogDetailsRowLayout editLayout editValue": {
+        "width": "60%"
+    },
+    "buttonLayout": {
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%",
+        "marginTop": 30,
+        "justifyContent": "space-around"
     }
 });

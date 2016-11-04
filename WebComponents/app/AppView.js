@@ -14,17 +14,12 @@ class AppView extends Component {
     constructor(props) {
         super(props);
 
-        // <Router key={Math.random()} history={browserHistory}>
-        //     <Route path={Just.AppPath} component={Test00}>
-        //         <Route path={Just.Test01} component={Test01}></Route>
-        //     </Route>
-        // </Router>
 
     }
 
     render() {
         return (
-            <Router history={browserHistory}>
+            <Router key={Math.random()} history={hashHistory}>
                 <Route path={Just.AppPath} component={Test00}>
                     <IndexRoute component={Test01} />
                     <Route path={Just.Test02} component={Test02}></Route>

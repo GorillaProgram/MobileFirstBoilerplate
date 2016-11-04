@@ -9,7 +9,7 @@ const LoginActions = {
     validateTeller: (params) => {
         return dispatch => {
             dispatch(NetworkActions.requesting());
-            return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
+            return Just.silenceTask(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
                     dispatch(NetworkActions.received());
                     return dispatch(NetworkActions.receivedData(params, response));
@@ -21,11 +21,11 @@ const LoginActions = {
     // validateTeller: (params) => {
     //     return dispatch => {
     //         dispatch(NetworkActions.requesting());
-    //         return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
+    //         return Just.silenceTask(params.adapter, params.procedure, params.parameters)
     //             .then((validateTellerResponse) => {
-    //                 return dispatch(Just.fetchDatas(params.adapter, params.procedure, params.parameters)
+    //                 return dispatch(Just.silenceTask(params.adapter, params.procedure, params.parameters)
     //                     .then((loginAfterValidateTellerResponse) => {
-    //                         return dispatch(Just.fetchDatas(params.adapter, params.procedure, params.parameters)
+    //                         return dispatch(Just.silenceTask(params.adapter, params.procedure, params.parameters)
     //                             .then((loginResponse) => {
     //                                 dispatch(NetworkActions.received());
     //                                 return dispatch(NetworkActions.receivedData(params, loginResponse));
@@ -37,7 +37,7 @@ const LoginActions = {
     prevLogin: (params) => {
         return dispatch => {
             dispatch(NetworkActions.requesting());
-            return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
+            return Just.silenceTask(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
                     return dispatch(LoginActions.login(params, response));
                 }, (error) => {
@@ -47,7 +47,7 @@ const LoginActions = {
     },
     login: (params, prevResponse) => {
         return dispatch => {
-            return Just.fetchDatas(params.adapter, params.procedure, params.parameters)
+            return Just.silenceTask(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
                     dispatch(NetworkActions.received());
                     return dispatch(NetworkActions.receivedData(params, response));
