@@ -27506,6 +27506,8 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	
+	var history = (0, _reactRouter.createMemoryHistory)(location);
+	
 	var AppView = function (_Component) {
 	    _inherits(AppView, _Component);
 	
@@ -27513,23 +27515,14 @@
 	        _classCallCheck(this, AppView);
 	
 	        return _possibleConstructorReturn(this, (AppView.__proto__ || Object.getPrototypeOf(AppView)).call(this, props));
-	
-	        // <Router key={Math.random()} history={browserHistory}>
-	        //     <Route path={Just.AppPath} component={Test00}>
-	        //         <Route path={Just.Test01} component={Test01}></Route>
-	        //     </Route>
-	        // </Router>
-	        // <Route path={Just.Test02} component={Test02}></Route>
-	
 	    }
 	
 	    _createClass(AppView, [{
 	        key: 'render',
 	        value: function render() {
-	            console.log('========AppView========');
 	            return _react2.default.createElement(
 	                _reactRouter.Router,
-	                { key: Math.random(), history: _reactRouter.hashHistory },
+	                { key: Math.random(), history: history },
 	                _react2.default.createElement(
 	                    _reactRouter.Route,
 	                    { path: _Just2.default.AppPath, component: _Test2.default },
@@ -32477,7 +32470,6 @@
 	    _createClass(Test00, [{
 	        key: 'render',
 	        value: function render() {
-	            console.log('========Test00========');
 	            return _react2.default.createElement(
 	                'div',
 	                { style: styles.container },
@@ -32578,7 +32570,6 @@
 	        value: function render() {
 	            var _this2 = this;
 	
-	            console.log('========Test01========');
 	            return _react2.default.createElement(
 	                'div',
 	                { style: { backgroundColor: 'red', width: 100, height: 200 } },
@@ -32663,7 +32654,6 @@
 	        value: function render() {
 	            var _this2 = this;
 	
-	            console.log('========Test02========');
 	            return _react2.default.createElement(
 	                'div',
 	                { style: styles.container },
