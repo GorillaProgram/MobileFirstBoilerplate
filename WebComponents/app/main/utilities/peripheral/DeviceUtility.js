@@ -10,13 +10,13 @@ const DeviceUtility = {
     eventBackButton() {
         // 调用Toast提示
         DebugUtility.toast('再次点击退出程序!');
-        document.removeEventListener("backbutton", eventBackButton, false); // 注销返回键
-        document.addEventListener("backbutton", exitApp, false);//绑定退出事件
-        // 2秒后重新注册
+        document.removeEventListener("backbutton", DeviceUtility.eventBackButton, false); // 注销返回键
+        document.addEventListener("backbutton", DeviceUtility.exitApp, false);//绑定退出事件
+        // 3秒后重新注册
         var intervalID = window.setInterval(function() {
             window.clearInterval(intervalID);
-            document.removeEventListener("backbutton", exitApp, false); // 注销返回键
-            document.addEventListener("backbutton", eventBackButton, false); // 返回键
+            document.removeEventListener("backbutton", DeviceUtility.exitApp, false); // 注销返回键
+            document.addEventListener("backbutton", DeviceUtility.eventBackButton, false); // 返回键
         }, 3000);
     },
     exitApp() {
