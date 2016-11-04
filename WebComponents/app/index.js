@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './framework/store/Store';
 import Just from './main/constant/Just';
-import AppView from './AppView';
+import App from './App';
 
 var store = configureStore();
 
@@ -22,7 +22,7 @@ class ReduxApp extends Component {
     render() {
         return (
             <Provider store={store}>
-                <AppView />
+                <App />
             </Provider>
         );
     }

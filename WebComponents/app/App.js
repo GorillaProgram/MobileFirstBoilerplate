@@ -9,7 +9,7 @@ import Test00 from './test/Test00';
 import Test01 from './test/Test01';
 import Test02 from './test/Test02';
 
-class AppView extends Component {
+class App extends Component {
 
     constructor(props) {
         super(props);
@@ -30,4 +30,4 @@ class AppView extends Component {
 
 }
 
-export default AppView;
+export default App;
