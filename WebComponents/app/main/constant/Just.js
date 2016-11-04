@@ -1,13 +1,16 @@
 import DataManager from '../manager/DataManager';
 import FunctionManager from '../manager/FunctionManager';
 import UIManager from '../manager/UIManager';
+import PeripheralManager from '../manager/PeripheralManager';
 import TaskManager from '../manager/TaskManager';
 
 const Just = {
     ...DataManager,
     ...FunctionManager,
     ...UIManager,
-    ...TaskManager
+    ...PeripheralManager,
+    ...TaskManager,
+
 };
 
 export default Just;

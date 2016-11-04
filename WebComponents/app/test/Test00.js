@@ -4,7 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import UIManager from '../main/manager/UIManager';
+import Just from '../main/constant/Just';
 
 class Test00 extends Component {
 
@@ -19,8 +19,11 @@ class Test00 extends Component {
             <div style={styles.container}>
                 <input type="text" />
                 <button className="ui-btn ui-shadow ui-corner-all" data-role="button" onClick={() => {
-                    this.context.router.push('/WebComponents/test01');
+                    // this.context.router.push('/WebComponents/test01');
                     // UIManager.showLoader();
+                    Just.showSuccess({
+                        message: 'mu haha~'
+                    })
                 }}>mu haha~</button>
                 {this.props.children}
             </div>
