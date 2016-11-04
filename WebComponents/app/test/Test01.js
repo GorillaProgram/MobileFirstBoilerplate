@@ -15,7 +15,6 @@ class Test01 extends Component {
     }
 
     render() {
-        console.log('========Test01========');
         return (
             <div style={{backgroundColor: 'red', width: 100, height: 200}}>
                 <img src="./static/imgs/ad.png" onClick={() => {
