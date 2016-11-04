@@ -27506,8 +27506,6 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	
-	var history = (0, _reactRouter.createMemoryHistory)(location);
-	
 	var AppView = function (_Component) {
 	    _inherits(AppView, _Component);
 	
@@ -27522,7 +27520,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _reactRouter.Router,
-	                { key: Math.random(), history: history },
+	                { key: Math.random(), history: (0, _reactRouter.createMemoryHistory)(location) },
 	                _react2.default.createElement(
 	                    _reactRouter.Route,
 	                    { path: _Just2.default.AppPath, component: _Test2.default },
