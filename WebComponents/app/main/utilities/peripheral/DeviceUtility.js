@@ -17,7 +17,7 @@ const DeviceUtility = {
             window.clearInterval(intervalID);
             document.removeEventListener("backbutton", exitApp, false); // 注销返回键
             document.addEventListener("backbutton", eventBackButton, false); // 返回键
-        }, 2000);
+        }, 3000);
     },
     exitApp() {
         navigator.app.exitApp();
