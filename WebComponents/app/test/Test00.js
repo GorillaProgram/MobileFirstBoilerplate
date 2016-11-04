@@ -21,7 +21,7 @@ class Test00 extends Component {
                 <button className="ui-btn ui-shadow ui-corner-all" data-role="button" onClick={() => {
                     Just.showSuccess({
                         message: 'mu haha~'
-                    })
+                    });
                 }}>mu haha~</button>
                 {this.props.children}
             </div>
