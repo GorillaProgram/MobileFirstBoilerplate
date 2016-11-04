@@ -2,6 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
+import Base64Images from '../../constant/Base64Images';
 import JQMUtility from './JQMUtility';
 import DataUtility from '../data/DataUtility';
 
@@ -12,7 +13,7 @@ const DialogUtility = {
      * 提示弹框
      */
     showMessage(dialogConfig, positiveAction, negativeAction) {
-        dialogConfig.imageURL = messageIcon;
+        dialogConfig.imageURL = Base64Images.messageIcon;
         dialogConfig.dialogTitle = '提示';
         if (negativeAction) {
             DialogUtility.showAlert(dialogConfig, positiveAction, negativeAction);
@@ -24,7 +25,7 @@ const DialogUtility = {
      * 成功弹框
      */
     showSuccess(dialogConfig, positiveAction, negativeAction) {
-        dialogConfig.imageURL = successIcon;
+        dialogConfig.imageURL = Base64Images.successIcon;
         dialogConfig.dialogTitle = '成功';
         if (negativeAction) {
             DialogUtility.showAlert(dialogConfig, positiveAction, negativeAction);
@@ -36,7 +37,7 @@ const DialogUtility = {
      * 失败弹框
      */
     showFailure(dialogConfig, positiveAction, negativeAction) {
-        dialogConfig.imageURL = failureIcon;
+        dialogConfig.imageURL = Base64Images.failureIcon;
         dialogConfig.dialogTitle = '失败';
         if (negativeAction) {
             DialogUtility.showAlert(dialogConfig, positiveAction, negativeAction);
@@ -157,7 +158,7 @@ const DialogUtility = {
                         <div class="dialogHeaderLayout">读取身份证</div>
                         <div class="dialogContentBigImageLayout">
                             <div class="dialogImageDes">读取身份证</div>
-                            <img src="${IDIcon}" class="dialogImage" />
+                            <img src="${Base64Images.IDIcon}" class="dialogImage" />
                         </div>
                         <div class="dialogButtonLayout">
                             <button id="negativeButton" class="negativeButton" data-role="none">取消</button>
@@ -190,7 +191,7 @@ const DialogUtility = {
                         <div class="dialogHeaderLayout">读取借记卡</div>
                         <div class="dialogContentBigImageLayout">
                             <div class="dialogImageDes">读取借记卡</div>
-                            <img src="${debitCardIcon}" class="dialogImage" />
+                            <img src="${Base64Images.debitCardIcon}" class="dialogImage" />
                         </div>
                         <div class="dialogButtonLayout">
                             <button id="magneticStripeCardButton" class="positiveButton" data-role="none">磁条卡</button>
@@ -230,7 +231,7 @@ const DialogUtility = {
                         <div class="dialogHeaderLayout">指纹</div>
                         <div class="dialogContentBigImageLayout">
                             <div class="dialogImageDes">指纹</div>
-                            <img src="${fingerprintIcon}" class="dialogFingerprint"/>
+                            <img src="${Base64Images.fingerprintIcon}" class="dialogFingerprint"/>
                         </div>
                         <div class="dialogButtonLayout">
                             <button id="negativeButton" class="negativeButton" data-role="none">取消</button>
@@ -312,7 +313,7 @@ const DialogUtility = {
                                 <div class="editLayout" style="flex-direction: column; align-items: flex-start;">
                                     <label>用户电子签名区</label>
                                     <div style="min-height: 180px; margin-top: 8px;">
-                                        <img id="signatureImage" src="./static/imgs/credit-cion.png" style="width: 200px; height: 200px">
+                                        <img id="signatureImage" src="${Base64Images.signatureIcon}" style="width: 200px; height: 200px">
                                     </div>
                                 </div>
                             </div>
@@ -362,7 +363,7 @@ const DialogUtility = {
                     <div class="dialogBusinessDetails">
                         <div class="dialogHeaderLayout">
                             <label class="editTitle">交易明细</label>
-                            <img id="closeImage" src="${failureIcon}" class="closeImage" />
+                            <img id="closeImage" src="${Base64Images.failureIcon}" class="closeImage" />
                         </div>
                         <div class="dialogDetailsLayout">
                             <div class="dialogDetailsRowLayout">
