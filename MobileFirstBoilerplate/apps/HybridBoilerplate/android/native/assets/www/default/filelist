@@ -13,6 +13,9 @@
 /static/config.rb
 /static/imgs/ad.png
 /static/sass/ie.scss
+/static/sass/partials/_common.scss
+/static/sass/partials/_mixin.scss
+/static/sass/partials/_variables.scss
 /static/sass/print.scss
 /static/sass/screen.scss
 /static/stylesheets/ie.css

@@ -6,7 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Just from '../main/constant/Just';
 
-class Test00 extends Component {
+class Test02 extends Component {
 
     constructor(props) {
         super(props);
@@ -19,10 +19,8 @@ class Test00 extends Component {
             <div style={styles.container}>
                 <input type="text" />
                 <button className="ui-btn ui-shadow ui-corner-all" data-role="button" onClick={() => {
-                    Just.showSuccess({
-                        message: 'mu haha~'
-                    })
-                }}>mu haha~</button>
+                    this.context.router.goBack();
+                }}>button</button>
                 {this.props.children}
             </div>
         );
@@ -37,12 +35,12 @@ const styles = {
     }
 }
 
-Test00.propTypes = {
+Test02.propTypes = {
     dispatch: PropTypes.func.isRequired,
 
 };
 
-Test00.contextTypes = {
+Test02.contextTypes = {
     router: React.PropTypes.object
 };
 
@@ -53,4 +51,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Test00);
+export default connect(mapStateToProps)(Test02);

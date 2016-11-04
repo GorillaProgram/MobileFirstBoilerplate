@@ -23,6 +23,24 @@
 /* content end */
 
 /* loading start */
+.ui-loader {
+    opacity: 1!important;
+}
+.ui-corner-all {
+    opacity: 1!important;;
+}
+.ui-body-z {
+    opacity: 1!important;;
+}
+.ui-loader-verbose {
+    opacity: 1!important;;
+}
+.ui-loader-textonly {
+    opacity: 1!important;;
+}
+.ui-page-theme-a {
+    text-shadow: none!important;
+}
 .sk-circle-layout {
     @include flexLayout();
     justify-content: center;
@@ -171,6 +189,7 @@
         border-radius: 10px;
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
         z-index: $MaxZ_Index;
+
         .dialogHeaderLayout {
             @include flexLayout(row);
             @include height(64px);

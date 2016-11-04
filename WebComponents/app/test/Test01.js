@@ -4,6 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import Just from '../main/constant/Just';
 
 class Test01 extends Component {
 
@@ -17,7 +18,7 @@ class Test01 extends Component {
         return (
             <div style={{backgroundColor: 'red', width: 100, height: 200}}>
                 <img src="./static/imgs/ad.png" onClick={() => {
-                    this.context.router.goBack();
+                    this.context.router.push(Just.Test02);
                 }} />
             </div>
         );

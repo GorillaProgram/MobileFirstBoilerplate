@@ -1,0 +1,136 @@
+@import "variables";
+
+@mixin height($height: 100%) {
+    height: $height;
+}
+@mixin width($width: 100%) {
+    width: $width;
+}
+
+/* 控件相关 start */
+@mixin commonTab() {
+    width: $defaultTabWidth;
+    height: $defaultTabHeight;
+    min-width: $defaultTabWidth;
+    //&:active {
+    //    background-color: #0B4D8D;
+    //}
+}
+@mixin commonEditTitle() {
+    font-size: $defaultFontSize;
+    width: 159px;
+    text-align: right;
+    color: #333333;
+    letter-spacing: -0.13px;
+}
+@mixin commonEditValue() {
+    margin-left: 20px;
+    font-size: $defaultFontSize;
+    color: #666666;
+}
+@mixin commonEditView() {
+    height: $defaultEditViewHeight;
+    padding-left: 10px;
+    margin-left: 20px;
+    border: 1px solid $lineColor;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    font-size: $defaultFontSize;
+    color: $defaultFontColor;
+    letter-spacing: -0.12px;
+    &:disabled {
+        color: $disabledFontColor;
+    }
+}
+@mixin commonEditSelect() {
+    height: $defaultEditViewHeight;
+    @include width();
+    padding: 0;
+    margin-left: 20px;
+    border: 1px solid $lineColor;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    color: #999999;
+    letter-spacing: -0.12px;
+}
+@mixin commonEditSelectSpan() {
+    color: #999999;
+    padding: 8px 0;
+    margin-right: 20px;
+}
+@mixin commonEditSelectAfter() {
+    background-image: url("../imgs/Triangles.png");
+    background-size: 100% 100%;
+    background-color: inherit;
+    width: 10px;
+}
+@mixin commonEditMustInput() {
+    margin-left: 5px;
+    color: red;
+}
+
+%button {
+    height: $defaultButtonHeight;
+    min-height: $defaultButtonHeight;
+    font-size: $defaultFontSize;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: -0.15px;
+    background: $blueColor;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    &:active {
+        background: #0B4D8D;
+    }
+}
+@mixin commonButton() {
+    @extend %button;
+    width: $defaultButtonWidth;
+}
+@mixin smallButton() {
+    @extend %button;
+}
+/* 控件相关 end */
+
+/* 布局相关 start */
+@mixin flexLayout($flexDirection: column) {
+    display: flex;
+    flex-direction: $flexDirection;
+}
+@mixin verticalLayout() {
+    display: flex;
+    flex-direction: column;
+}
+@mixin horizontalLayout() {
+    display: flex;
+    flex-direction: row;
+}
+@mixin col-6 {
+    width: 50%;
+    //float: left;
+}
+@mixin col($width: 50%) {
+    width: $width;
+    //float: left;
+}
+@mixin col-sm($width: 50%) {
+    @if type-of($width) != number {
+        @error "$width必须是一个数值类型, 你输入的是: #{$width}.";
+    }
+
+    @if not unitless($width) {
+        @if unit($width) != "%" {
+            @error "$width应该是一个百分比, 你输入的是: #{$width}.";
+        }
+    } @else {
+        @warn "$width应该是一个百分比, 你输入的是: #{$width}.";
+        $width: (percentage($width) / 100);
+    }
+
+    @media (min-width: 768px) {
+        width: $width;
+        //float: left;
+    }
+}
+/* 布局相关 end */
