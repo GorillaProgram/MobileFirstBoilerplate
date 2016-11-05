@@ -4,10 +4,10 @@
  */
 import Just from '../constant/Just';
 
-const CommonTask = {
+const AtomicTask = {
 
 
 
 };
 
-export default CommonTask;
+export default AtomicTask;
