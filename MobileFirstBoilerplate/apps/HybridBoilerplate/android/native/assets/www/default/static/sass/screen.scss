@@ -6,6 +6,38 @@
 @import "compass/reset", "partials/variables", "partials/mixin";
 
 /* content start */
+.screenLayout {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+.contentLayout {
+    position: fixed;
+    top: $titleLayoutHeight + 20; left: 20; right: 20; bottom: 20;
+    background-color: $innerBackgroundColor;
+}
+.horizontalLayout {
+    @include flexLayout(row);
+}
+.verticalLayout {
+    @include flexLayout();
+    align-items: center;
+}
+.scrollable {
+    overflow: auto;
+}
+.leftLayout {
+    @include flexLayout();
+    @include width(50%);
+    @include height();
+    margin-right: 10px;
+}
+.rightLayout {
+    @include flexLayout();
+    @include width(50%);
+    @include height();
+    margin-left: 10px;
+}
+
 .positiveButton {
     @include commonButton();
     @include width(20%);

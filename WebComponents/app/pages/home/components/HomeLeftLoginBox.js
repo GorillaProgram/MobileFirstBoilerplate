@@ -59,7 +59,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         height: '30%',
-        width: 188,
+        width: 189,
         backgroundColor: '#004892',
         color: '#FFFFFF'
     },

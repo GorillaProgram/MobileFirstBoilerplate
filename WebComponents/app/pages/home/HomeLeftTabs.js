@@ -128,7 +128,7 @@ const styles = {
         position: 'fixed',
         top: 0, bottom: 0,
         borderRight: '1px solid #ddd',
-        boxShadow: '5px 10px 5px #888888'
+        boxShadow: '8px 10px 5px #888888'
     },
     firstTab: {
         marginTop: 30
