@@ -23,7 +23,7 @@ class HomeView extends Component {
 
 const styles = {
     container: {
-
+        
     },
 
 };

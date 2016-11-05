@@ -17,13 +17,9 @@ class HomeContainer extends Component {
 
     render() {
         return (
-            <div>
-                <Title />
-                <HomeView
+            <HomeView
 
-                />
-            </div>
-
+            />
         );
     }
 }
