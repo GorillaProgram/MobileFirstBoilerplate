@@ -25,7 +25,7 @@ const styles = {
         alignItems: 'center',
         marginTop: 15,
         marginLeft: 20,
-        marginRight: 0,
+        marginRight: 0
     },
     image: {
         width: 30,
@@ -33,6 +33,7 @@ const styles = {
     },
     title: {
         fontSize: 18,
+        marginTop: 8,
         marginLeft: 21
     }
 };
