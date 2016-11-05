@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 
-class HomeView extends Component {
+class LoginView extends Component {
 
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ class HomeView extends Component {
         return (
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>
-                    home
+                    login
                 </div>
             </div>
         );
@@ -31,4 +31,4 @@ const styles = {
 
 };
 
-export default HomeView;
+export default LoginView;
