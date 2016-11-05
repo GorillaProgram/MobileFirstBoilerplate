@@ -27162,7 +27162,7 @@
 	        position: 'fixed',
 	        top: 0, bottom: 0,
 	        borderRight: '1px solid #ddd',
-	        boxShadow: '5px 10px 5px #888888'
+	        boxShadow: '8px 10px 5px #888888'
 	    },
 	    firstTab: {
 	        marginTop: 30
@@ -27220,6 +27220,7 @@
 	    commonToolsTabActiveIcon: './static/imgs/commonToolsTabActiveIcon.png',
 	    commonToolsTabIcon: './static/imgs/commonToolsTabIcon.png',
 	    logo: './static/imgs/logo.png'
+	
 	};
 	
 	exports.default = ImagePath;
@@ -27431,7 +27432,7 @@
 	        display: 'flex',
 	        flexDirection: 'column',
 	        height: '30%',
-	        width: 188,
+	        width: 189,
 	        backgroundColor: '#004892',
 	        color: '#FFFFFF'
 	    },

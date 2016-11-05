@@ -2,7 +2,6 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-
 const ImagePath = {
 
     homeTabActiveIcon: './static/imgs/homeTabActiveIcon.png',
