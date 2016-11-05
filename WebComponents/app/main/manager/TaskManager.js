@@ -2,10 +2,12 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import CommonTask from '../task/CommonTask';
+import AtomicTask from '../task/AtomicTask';
 
 const TaskManager = {
 
+    ...AtomicTask
+    
 };
 
 export default TaskManager;

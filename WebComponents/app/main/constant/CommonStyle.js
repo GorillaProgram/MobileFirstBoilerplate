@@ -2,9 +2,9 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import Constant from '../constant/Constant';
+import Constant from './Constant';
 
-const commonStyles = {
+const CommonStyles = {
     container: {
         overflow: 'auto',
         position: 'fixed',
@@ -24,8 +24,7 @@ const commonStyles = {
         height: '100%',
         marginLeft: '2.5%',
         marginRight: '2.5%',
-        overflow: 'auto',
-        // backgroundColor: 'red'
+        overflow: 'auto'
     },
     centerLine: {
         width: 1,
@@ -40,18 +39,17 @@ const commonStyles = {
         height: '100%',
         marginLeft: '2.5%',
         marginRight: '2.5%',
-        overflow: 'auto',
-        // backgroundColor: 'blue'
+        overflow: 'auto'
     },
     innerLayout: {
         flex: 1,
         width: '99%',
-        marginTop: 80,
+        marginTop: 80
     },
     arrow: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     square: {
         display: 'flex',
@@ -65,8 +63,8 @@ const commonStyles = {
         marginRight: 20,
         color: '#333333',
         fontSize: Constant.defaultFontSize,
-        borderRadius: 5,
+        borderRadius: 5
     },
 };
 
-export default commonStyles;
+export default CommonStyles;

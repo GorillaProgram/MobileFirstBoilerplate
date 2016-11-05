@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Constant from '../constant/Constant';
-import Images from '../images/Images';
+import Constant from '../../constant/Constant';
 
 class Title extends Component {
     constructor(props) {
@@ -17,14 +16,14 @@ class Title extends Component {
         }
         return (
             <div style={styles.container}>
-                <img src={Images.titleLogo} style={{...styles.logo, ...this.props.logoStyle}} />
+                <img src='./static/imgs/ad.png' style={{...styles.logo, ...this.props.logoStyle}} />
                 <div style={styles.titleContentLayout}>
                     <div style={styles.titleLayout}>
                         <div style={{...styles.title, ...this.props.titleStyle}}>{this.props.title}</div>
                         <div style={{...styles.subTitle, ...this.props.titleStyle}}>{this.props.subTitle}</div>
                     </div>
                     <Link to={backTo} style={{...styles.backLayout, ...this.props.backStyle}}>
-                        <img src={Images.backImage} style={styles.backImage} />
+                        <img src='./static/imgs/ad.png' style={styles.backImage} />
                         <label style={styles.backTitle}>返回首页</label>
                     </Link>
                 </div>
