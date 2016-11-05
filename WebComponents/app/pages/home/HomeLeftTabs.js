@@ -3,6 +3,7 @@
  * https://github.com/maybewaityou
  */
 import React, { Component, PropTypes } from 'react';
+import ImagePath from '../../main/constant/ImagePath';
 import HomeLeftTab from './components/HomeLeftTab';
 import HomeLeftLoginBox from './components/HomeLeftLoginBox';
 
@@ -64,28 +65,28 @@ class HomeLeftTabs extends Component {
         var commonToolsImage;
         var commonToolsTitleStyle;
         if (this.state.selectedTab === 'home') {
-            homeImage = './static/imgs/homeTabActiveIcon.png';
-            productionImage = './static/imgs/productionTabIcon.png';
-            businessManagementImage = './static/imgs/businessManagementTabIcon.png';
-            commonToolsImage = './static/imgs/commonToolsTabIcon.png';
+            homeImage = ImagePath.homeTabActiveIcon;
+            productionImage = ImagePath.productionTabIcon;
+            businessManagementImage = ImagePath.businessManagementTabIcon;
+            commonToolsImage = ImagePath.commonToolsTabIcon;
             homeTitleStyle = styles.tabSelectedStyle;
         } else if (this.state.selectedTab === 'production') {
-            homeImage = './static/imgs/homeTabIcon.png';
-            productionImage = './static/imgs/productionTabActiveIcon.png';
-            businessManagementImage = './static/imgs/businessManagementTabIcon.png';
-            commonToolsImage = './static/imgs/commonToolsTabIcon.png';
+            homeImage = ImagePath.homeTabIcon;
+            productionImage = ImagePath.productionTabActiveIcon;
+            businessManagementImage = ImagePath.businessManagementTabIcon;
+            commonToolsImage = ImagePath.commonToolsTabIcon;
             productionTitleStyle = styles.tabSelectedStyle;
         } else if (this.state.selectedTab === 'businessManagement') {
-            homeImage = './static/imgs/homeTabIcon.png';
-            productionImage = './static/imgs/productionTabIcon.png';
-            businessManagementImage = './static/imgs/businessManagementTabActiveIcon.png';
-            commonToolsImage = './static/imgs/commonToolsTabIcon.png';
+            homeImage = ImagePath.homeTabIcon;
+            productionImage = ImagePath.productionTabIcon;
+            businessManagementImage = ImagePath.businessManagementTabActiveIcon;
+            commonToolsImage = ImagePath.commonToolsTabIcon;
             businessManagementTitleStyle = styles.tabSelectedStyle;
         } else if (this.state.selectedTab === 'commonTools') {
-            homeImage = './static/imgs/homeTabIcon.png';
-            productionImage = './static/imgs/productionTabIcon.png';
-            businessManagementImage = './static/imgs/businessManagementTabIcon.png';
-            commonToolsImage = './static/imgs/commonToolsTabActiveIcon.png';
+            homeImage = ImagePath.homeTabIcon;
+            productionImage = ImagePath.productionTabIcon;
+            businessManagementImage = ImagePath.businessManagementTabIcon;
+            commonToolsImage = ImagePath.commonToolsTabActiveIcon;
             commonToolsTitleStyle = styles.tabSelectedStyle;
         }
         return (
@@ -98,7 +99,7 @@ class HomeLeftTabs extends Component {
                 <HomeLeftTab title='业务办理' titleStyle={businessManagementTitleStyle} image={businessManagementImage} onClick={this.handleBusinessManagementClick} />
                 <HomeLeftTab title='常用工具' titleStyle={commonToolsTitleStyle} image={commonToolsImage} onClick={this.handleCommonToolsClick} />
                 <div style={styles.tabLogoLayout} onClick={this.handleLogoClick}>
-                    <img src='./static/imgs/logo.png' style={styles.logo} />
+                    <img src={ImagePath.logo} style={styles.logo} />
                 </div>
                 {this.props.children}
             </div>

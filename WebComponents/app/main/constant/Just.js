@@ -1,3 +1,7 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import LifeCircle from '../lifeCircle/LifeCircle';
 import DataManager from '../manager/DataManager';
 import FunctionManager from '../manager/FunctionManager';
