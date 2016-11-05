@@ -102,7 +102,7 @@ class HomeLeftTabs extends Component {
         return (
             <div style={styles.container}>
                 <HomeLeftLoginBox
-                    isLogin={true}
+                    isLogin={false}
                     handleLoginClick={this.handleLoginClick}
                     handleSettingClick={this.handleSettingClick}
                     />
