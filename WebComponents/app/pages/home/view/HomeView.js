@@ -3,6 +3,7 @@
  * https://github.com/maybewaityou
  */
 import React, { Component } from 'react';
+import CommonStyles from '../../../main/constant/CommonStyle';
 
 class HomeView extends Component {
 
@@ -14,8 +15,10 @@ class HomeView extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
-                asdasd
+            <div style={CommonStyles.homeRightContainer}>
+                <div style={styles.container}>
+                    asdasd
+                </div>
             </div>
         );
     }
@@ -23,7 +26,7 @@ class HomeView extends Component {
 
 const styles = {
     container: {
-        
+
     },
 
 };

@@ -5,10 +5,11 @@
 import Constant from './Constant';
 
 const CommonStyles = {
-    container: {
+    homeRightContainer: {
         overflow: 'auto',
         position: 'fixed',
-        top: 0, left: Constant.defaultTabWidth, bottom: 0, right: 0
+        top: 10, left: Constant.defaultTabWidth + 20, bottom: 10, right: 10,
+        backgroundColor: 'red'
     },
     fullScreenContainer: {
         backgroundColor: 'white',
