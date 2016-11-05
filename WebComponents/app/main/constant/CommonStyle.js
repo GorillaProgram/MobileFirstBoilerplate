@@ -8,8 +8,7 @@ const CommonStyles = {
     homeRightContainer: {
         overflow: 'auto',
         position: 'fixed',
-        top: 10, left: Constant.defaultTabWidth + 20, bottom: 10, right: 10,
-        backgroundColor: 'red'
+        top: 10, left: Constant.defaultTabWidth + 20, bottom: 10, right: 10
     },
     fullScreenContainer: {
         backgroundColor: 'white',
