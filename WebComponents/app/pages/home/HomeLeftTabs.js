@@ -16,11 +16,21 @@ class HomeLeftTabs extends Component {
             selectedTab: 'home'
         };
 
+        this.handleSettingClick = this.handleSettingClick.bind(this);
+        this.handleLoginClick = this.handleLoginClick.bind(this);
         this.handleHomeClick = this.handleHomeClick.bind(this);
         this.handleProductionClick = this.handleProductionClick.bind(this);
         this.handleBusinessManagementClick = this.handleBusinessManagementClick.bind(this);
         this.handleCommonToolsClick = this.handleCommonToolsClick.bind(this);
         this.handleLogoClick = this.handleLogoClick.bind(this);
+    }
+
+    handleSettingClick() {
+        console.log('===== setting =====');
+    }
+
+    handleLoginClick() {
+        this.context.router.push('login');
     }
 
     handleHomeClick() {
@@ -32,27 +42,27 @@ class HomeLeftTabs extends Component {
 
     handleProductionClick() {
         this.setState({
-            selectedTab: 'production'
+            selectedTab: 'product'
         });
-        this.context.router.push('/production');
+        this.context.router.push('product');
     }
 
     handleBusinessManagementClick() {
         this.setState({
             selectedTab: 'businessManagement'
         });
-        this.context.router.push('/businessManagement');
+        this.context.router.push('businessManagement');
     }
 
     handleCommonToolsClick() {
         this.setState({
             selectedTab: 'commonTools'
         });
-        this.context.router.push('/commonTools');
+        this.context.router.push('commonTools');
     }
 
     handleLogoClick() {
-        this.context.router.push('/logo');
+        console.log('===== logo =====');
     }
 
     render() {
@@ -70,7 +80,7 @@ class HomeLeftTabs extends Component {
             businessManagementImage = ImagePath.businessManagementTabIcon;
             commonToolsImage = ImagePath.commonToolsTabIcon;
             homeTitleStyle = styles.tabSelectedStyle;
-        } else if (this.state.selectedTab === 'production') {
+        } else if (this.state.selectedTab === 'product') {
             homeImage = ImagePath.homeTabIcon;
             productionImage = ImagePath.productionTabActiveIcon;
             businessManagementImage = ImagePath.businessManagementTabIcon;
@@ -93,6 +103,8 @@ class HomeLeftTabs extends Component {
             <div style={styles.container}>
                 <HomeLeftLoginBox
                     isLogin={true}
+                    handleLoginClick={this.handleLoginClick}
+                    handleSettingClick={this.handleSettingClick}
                     />
                 <HomeLeftTab title='首页' titleStyle={homeTitleStyle} image={homeImage} style={styles.firstTab} onClick={this.handleHomeClick} />
                 <HomeLeftTab title='产品' titleStyle={productionTitleStyle} image={productionImage} onClick={this.handleProductionClick} />

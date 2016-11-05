@@ -5,8 +5,6 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexRoute, Redirect, hashHistory, browserHistory, createMemoryHistory } from 'react-router';
 import Just from './main/constant/Just';
-import HomeContainer from './pages/home/container/HomeContainer';
-import HomeLeftTabs from './pages/home/HomeLeftTabs';
 
 class App extends Component {
 
@@ -19,9 +17,12 @@ class App extends Component {
     render() {
         return (
             <Router key={Math.random()} history={createMemoryHistory(location)}>
-                <Route path={Just.AppPath} component={HomeLeftTabs}>
-                    <IndexRoute component={HomeContainer} />
-                    <Route path={Just.Test02} component={HomeContainer}></Route>
+                <Route path={Just.RootRoute.path} component={Just.RootRoute.component}>
+                    <IndexRoute component={Just.IndexRoute} />
+                    <Route path={Just.ProductRoute.path} component={Just.ProductRoute.component}></Route>
+                    <Route path={Just.BusinessManagementRoute.path} component={Just.BusinessManagementRoute.component}></Route>
+                    <Route path={Just.CommonToolsRoute.path} component={Just.CommonToolsRoute.component}></Route>
+                    <Route path={Just.LoginRoute.path} component={Just.LoginRoute.component}></Route>
                 </Route>
             </Router>
         );
