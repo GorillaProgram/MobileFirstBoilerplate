@@ -1,4 +1,7 @@
-
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ */
 import React, { Component } from 'react';
 import ContentSlider from '../slider/ContentSlider';
 
