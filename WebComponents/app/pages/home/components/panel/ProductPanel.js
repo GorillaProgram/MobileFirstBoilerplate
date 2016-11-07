@@ -33,8 +33,7 @@ const styles = {
         flexDirection: 'column',
         paddingLeft: 30,
         paddingRight: 30,
-        paddingTop: 10,
-        backgroundColor: '#F8F8F8'
+        paddingTop: 20,
     },
     title: {
         fontSize: 18

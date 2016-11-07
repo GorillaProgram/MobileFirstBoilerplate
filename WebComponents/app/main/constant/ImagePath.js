@@ -17,6 +17,7 @@ const ImagePath = {
     progressbar: './static/imgs/progressbar.png',
     prevArrow: './static/imgs/prevArrow.png',
     nextArrow: './static/imgs/nextArrow.png',
+    noticeContentImage: './static/imgs/noticeContentImage.png',
     
 
 };

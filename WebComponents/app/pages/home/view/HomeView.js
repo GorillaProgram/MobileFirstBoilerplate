@@ -8,6 +8,7 @@ import ImagePath from '../../../main/constant/ImagePath';
 import Constant from '../../../main/constant/Constant';
 import AdImagesSlider from '../../../main/components/view/slider/AdImagesSlider';
 import ProductPanel from '../components/panel/ProductPanel';
+import NoticePanel from '../components/panel/NoticePanel';
 import PrevArrow from '../../../main/components/view/slider/arrow/PrevArrow';
 import NextArrow from '../../../main/components/view/slider/arrow/NextArrow';
 
@@ -53,7 +54,8 @@ class HomeView extends Component {
                                 imageStyle={styles.AdImage} />
                         </div>
                         <div style={styles.noticeLayout}>
-
+                            <NoticePanel
+                                models={this.props.noticeModels} />
                         </div>
                     </div>
                     <div style={styles.homeBottomLayout}>

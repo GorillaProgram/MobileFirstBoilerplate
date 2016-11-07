@@ -25,7 +25,26 @@ class HomeContainer extends Component {
                 url: 'http://www.taobao.com'
             }
         ];
-        // 测试数据
+        const noticeModels = [
+            {
+                title: '公告栏-->> 0'
+            },
+            {
+                title: '公告栏-->> 1'
+            },
+            {
+                title: '公告栏-->> 2'
+            },
+            {
+                title: '公告栏-->> 3'
+            },
+            {
+                title: '公告栏-->> 4'
+            },
+            {
+                title: '公告栏-->> 5'
+            }
+        ];
         const productModels = [
             {
                 image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
@@ -115,6 +134,7 @@ class HomeContainer extends Component {
         return (
             <HomeView
                 adModels={adModels}
+                noticeModels={noticeModels}
                 productModels={productModels}
             />
         );

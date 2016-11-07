@@ -11,6 +11,7 @@ class AdImagesSlider extends Component {
         const imagesView = this.props.models.map((model, index) => {
             return (
                 <img src={model.image} key={`${index}`} style={this.props.imageStyle} onClick={() => {
+                    // TODO 添加点击事件
                     console.log(model.url);
                 }}/>
             );
