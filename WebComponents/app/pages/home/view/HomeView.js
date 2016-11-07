@@ -9,6 +9,7 @@ import Constant from '../../../main/constant/Constant';
 import AdImagesSlider from '../../../main/components/view/slider/AdImagesSlider';
 import ProductPanel from '../components/panel/ProductPanel';
 import NoticePanel from '../components/panel/NoticePanel';
+import BusinessPanel from '../components/panel/BusinessPanel';
 import PrevArrow from '../../../main/components/view/slider/arrow/PrevArrow';
 import NextArrow from '../../../main/components/view/slider/arrow/NextArrow';
 
@@ -69,7 +70,18 @@ class HomeView extends Component {
                                 style={styles.productPanel} />
                         </div>
                         <div style={styles.quicklyEnterPanelLayout}>
-
+                            <div style={styles.businessPanelLayout}>
+                                <BusinessPanel image={ImagePath.homeOpenCard} title="我要" subTitle="开卡" />
+                                <BusinessPanel image={ImagePath.homeContract} title="电子" subTitle="签约" />
+                            </div>
+                            <div style={styles.businessPanelLayout}>
+                                <BusinessPanel image={ImagePath.homeManageMoney} title="我要" subTitle="理财" />
+                                <BusinessPanel image={ImagePath.homeFund} title="精选" subTitle="基金" />
+                            </div>
+                            <div style={styles.businessPanelLayout}>
+                                <BusinessPanel image={ImagePath.homeBenifit} title="优惠" subTitle="活动" />
+                                <BusinessPanel image={ImagePath.homeSearch} title="业务" subTitle="查询" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,12 +145,21 @@ const styles = {
         paddingRight: 50,
     },
     quicklyEnterPanelLayout: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         width: Constant.oneThird,
         height: Constant.matchParent - Constant.homeBlock * 2,
         marginTop: Constant.homeBlock * 2,
         marginLeft: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
         overflow: 'hidden'
+    },
+    businessPanelLayout: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        height: '30%',
     },
     testStyle: {
         width: Constant.matchParent,
