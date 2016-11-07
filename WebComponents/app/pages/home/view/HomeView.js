@@ -20,94 +20,6 @@ class HomeView extends Component {
     }
 
     render() {
-        // 测试数据
-        const hotContent = [
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            }
-        ];
-
         const adImagesSliderSettings = {
             className: 'slick-slider',
             arrows: false,
@@ -150,7 +62,7 @@ class HomeView extends Component {
                                 title="信用卡产品"
                                 image={ImagePath.progressbar}
                                 settings={contentSliderSettings}
-                                models={hotContent}
+                                models={this.props.productModels}
                                 style={styles.productPanel} />
                         </div>
                         <div style={styles.quicklyEnterPanelLayout}>
