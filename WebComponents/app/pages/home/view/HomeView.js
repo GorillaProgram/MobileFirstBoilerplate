@@ -138,8 +138,7 @@ class HomeView extends Component {
                             <AdImagesSlider
                                 settings={adImagesSliderSettings}
                                 images={this.props.adImages}
-                                imageStyle={styles.AdImage}
-                                />
+                                imageStyle={styles.AdImage} />
                         </div>
                         <div style={styles.noticeLayout}>
 
