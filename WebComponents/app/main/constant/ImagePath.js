@@ -13,7 +13,11 @@ const ImagePath = {
     commonToolsTabActiveIcon: './static/imgs/commonToolsTabActiveIcon.png',
     commonToolsTabIcon: './static/imgs/commonToolsTabIcon.png',
     logo: './static/imgs/logo.png',
-    defaultAdImage: './static/imgs/ad.png'
+    defaultAdImage: './static/imgs/ad.png',
+    progressbar: './static/imgs/progressbar.png',
+    prevArrow: './static/imgs/prevArrow.png',
+    nextArrow: './static/imgs/nextArrow.png',
+    
 
 };
 

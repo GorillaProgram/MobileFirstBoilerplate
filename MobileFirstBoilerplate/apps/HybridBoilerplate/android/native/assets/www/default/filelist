@@ -23,8 +23,11 @@
 /static/imgs/homeTabIcon.png
 /static/imgs/loginIcon.png
 /static/imgs/logo.png
+/static/imgs/nextArrow.png
+/static/imgs/prevArrow.png
 /static/imgs/productionTabActiveIcon.png
 /static/imgs/productionTabIcon.png
+/static/imgs/progressbar.png
 /static/imgs/titleLogo.png
 /static/imgs/userSetting.png
 /static/sass/ie.scss
