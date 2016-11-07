@@ -88,10 +88,10 @@ const styles = {
         marginRight: 5,
         marginBottom: 5,
         overflow: 'hidden',
-        borderRadius: 5
     },
     AdImage: {
         height: 170,
+        borderRadius: 5
     },
     noticeLayout: {
         width: Constant.oneThird,
