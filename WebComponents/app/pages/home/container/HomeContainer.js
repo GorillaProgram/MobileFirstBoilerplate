@@ -17,9 +17,19 @@ class HomeContainer extends Component {
     }
 
     render() {
+        const adModels = [
+            {
+                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
+                url: 'http://www.baidu.com'
+            },
+            {
+                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
+                url: 'http://www.taobao.com'
+            }
+        ];
         return (
             <HomeView
-                adImages={['http://10.240.90.212:7001/padServer/padimages/1.png', 'http://10.240.90.212:7001/padServer/padimages/1.png']}
+                adModels={adModels}
             />
         );
     }

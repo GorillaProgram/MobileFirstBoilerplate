@@ -4,9 +4,11 @@ import Slider from 'react-slick';
 class AdImagesSlider extends Component {
 
     render() {
-        const imagesView = this.props.images.map((image, index) => {
+        const imagesView = this.props.models.map((model, index) => {
             return (
-                <img src={image} key={`${index}`} style={this.props.imageStyle} />
+                <img src={model.image} key={`${index}`} style={this.props.imageStyle} onClick={() => {
+                    console.log(model.url);
+                }}/>
             );
         });
 
