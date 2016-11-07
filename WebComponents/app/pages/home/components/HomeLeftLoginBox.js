@@ -8,48 +8,57 @@ class HomeLeftLoginBox extends Component {
 
     }
 
-    render() {
+    loginedBox(model) {
         return (
-            this.props.model ? (
-                <div style={styles.loginBox}>
-                    <div style={styles.userInfoLayout}>
-                        <div style={styles.headImageLayout}>
-                            <img style={styles.userHeadImage} src="./static/imgs/defaultHeadImage.png" />
-                        </div>
-                        <div style={styles.userInfoDesLayout}>
-                            <label style={styles.userInfo}>欢迎您, </label>
-                            <label style={styles.userInfo}>{this.props.model.userName}</label>
-                        </div>
+            <div style={styles.loginBox}>
+                <div style={styles.userInfoLayout}>
+                    <div style={styles.headImageLayout}>
+                        <img style={styles.userHeadImage} src="./static/imgs/defaultHeadImage.png" />
                     </div>
-                    <div style={styles.counterInfoLayout}>
-                        <label style={styles.counterInfo}>
-                            网点号: {this.props.model.orgCode}
-                        </label>
-                        <label style={styles.counterInfo}>
-                            柜员号: {this.props.model.userID}
-                        </label>
-                    </div>
-                    <div style={styles.userSetting} onClick={this.props.handleSettingClick}>
-                        <img style={styles.userSettingImage} src="./static/imgs/userSetting.png"/>
+                    <div style={styles.userInfoDesLayout}>
+                        <label style={styles.userInfo}>欢迎您, </label>
+                        <label style={styles.userInfo}>{model.userName}</label>
                     </div>
                 </div>
-            ) : (
-                <div style={styles.loginBox}>
-                    <div style={styles.userInfoLayout} onClick={this.props.handleLoginClick}>
-                        <div style={styles.headImageLayout}>
-                            <img style={styles.headImage} src="./static/imgs/loginIcon.png" />
-                        </div>
-                        <div style={styles.userInfoDesLayout}>
-                            <label style={styles.userInfo}>点击登录</label>
-                        </div>
-                    </div>
-                    <div style={styles.userSetting}>
-                        <img style={styles.userSettingImage} src="./static/imgs/userSetting.png"/>
-                    </div>
+                <div style={styles.counterInfoLayout}>
+                    <label style={styles.counterInfo}>
+                        网点号: {model.orgCode}
+                    </label>
+                    <label style={styles.counterInfo}>
+                        柜员号: {model.userID}
+                    </label>
                 </div>
-            )
+                <div style={styles.userSetting} onClick={this.props.handleSettingClick}>
+                    <img style={styles.userSettingImage} src="./static/imgs/userSetting.png"/>
+                </div>
+            </div>
         );
     }
+
+    notLoginBox() {
+        return (
+            <div style={styles.loginBox}>
+                <div style={styles.userInfoLayout} onClick={this.props.handleLoginClick}>
+                    <div style={styles.headImageLayout}>
+                        <img style={styles.headImage} src="./static/imgs/loginIcon.png" />
+                    </div>
+                    <div style={styles.userInfoDesLayout}>
+                        <label style={styles.userInfo}>点击登录</label>
+                    </div>
+                </div>
+                <div style={styles.userSetting}>
+                    <img style={styles.userSettingImage} src="./static/imgs/userSetting.png"/>
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+        return (
+            this.props.model ? this.loginedBox(this.props.model) : this.notLoginBox()
+        );
+    }
+
 }
 
 const styles = {
