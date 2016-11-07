@@ -49,9 +49,7 @@ class HomeView extends Component {
                     </div>
                     <div style={styles.homeBottomLayout}>
                         <div style={styles.productSliderLayout}>
-                            <div style={styles.testStyle}>
 
-                            </div>
                         </div>
                         <div style={styles.quicklyEnterPanelLayout}>
                             <div style={styles.testStyle}>
@@ -69,6 +67,7 @@ const styles = {
     container: {
         width: Constant.matchParent,
         height: Constant.matchParent,
+        backgroundColor: 'white'
     },
     homeTopLayout: {
         display: 'flex',
@@ -85,36 +84,42 @@ const styles = {
     AdImagesSliderLayout: {
         width: Constant.twoThirds,
         height: Constant.matchParent,
-        marginRight: 5,
-        marginBottom: 5,
+        backgroundColor: Constant.defaultBackgroundColor,
+        marginRight: Constant.homeBlock,
+        marginBottom: Constant.homeBlock,
         overflow: 'hidden',
+        borderRadius: Constant.homeRadius,
     },
     AdImage: {
-        height: 170,
-        borderRadius: 5
+        height: 163,
+        borderRadius: Constant.homeRadius,
     },
     noticeLayout: {
         width: Constant.oneThird,
         height: Constant.matchParent,
-        marginLeft: 5,
-        marginBottom: 5,
-        borderRadius: 5,
+        backgroundColor: Constant.defaultBackgroundColor,
+        marginLeft: Constant.homeBlock,
+        marginBottom: Constant.homeBlock,
+        borderRadius: Constant.homeRadius,
         overflow: 'hidden'
     },
     productSliderLayout: {
         width: Constant.twoThirds,
-        height: Constant.matchParent - 10,
-        marginTop: 10,
-        marginRight: 5,
-        borderRadius: 5,
-        overflow: 'hidden'
+        height: Constant.matchParent - Constant.homeBlock * 2,
+        backgroundColor: Constant.defaultBackgroundColor,
+        marginTop: Constant.homeBlock * 2,
+        marginRight: Constant.homeBlock,
+        borderRadius: Constant.homeRadius,
+        overflow: 'hidden',
+        border: '1px solid #888888'
     },
     quicklyEnterPanelLayout: {
         width: Constant.oneThird,
-        height: Constant.matchParent - 10,
-        marginTop: 10,
-        marginLeft: 5,
-        borderRadius: 5,
+        height: Constant.matchParent - Constant.homeBlock * 2,
+        backgroundColor: 'white',
+        marginTop: Constant.homeBlock * 2,
+        marginLeft: Constant.homeBlock,
+        borderRadius: Constant.homeRadius,
         overflow: 'hidden'
     },
     testStyle: {
