@@ -161,11 +161,6 @@ const styles = {
         justifyContent: 'space-between',
         height: '30%',
     },
-    testStyle: {
-        width: Constant.matchParent,
-        height: Constant.matchParent,
-        backgroundColor: 'blue'
-    }
 
 };
 
