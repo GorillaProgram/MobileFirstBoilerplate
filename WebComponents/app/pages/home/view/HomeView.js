@@ -42,7 +42,7 @@ class HomeView extends Component {
                                 />
                         </div>
                         <div style={styles.noticeLayout}>
-                            
+
                         </div>
                     </div>
                     <div style={styles.homeBottomLayout}>
@@ -117,8 +117,7 @@ const styles = {
         marginTop: Constant.homeBlock * 2,
         marginLeft: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
-        overflow: 'hidden',
-        border: '1px solid #888888',
+        overflow: 'hidden'
     },
     testStyle: {
         width: Constant.matchParent,
