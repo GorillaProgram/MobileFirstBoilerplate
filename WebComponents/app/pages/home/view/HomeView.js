@@ -55,6 +55,7 @@ class HomeView extends Component {
                         </div>
                         <div style={styles.noticeLayout}>
                             <NoticePanel
+                                title="公告栏"
                                 models={this.props.noticeModels} />
                         </div>
                     </div>

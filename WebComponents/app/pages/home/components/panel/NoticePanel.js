@@ -27,7 +27,7 @@ class NoticePanel extends Component {
 
         return (
             <div style={{...styles.container, ...this.props.style}}>
-                <label style={styles.noticeDes}>公告栏</label>
+                <label style={styles.noticeDes}>{this.props.title}</label>
                 <img src={ImagePath.progressbar} style={styles.noticeProgressbar} />
                 <div style={styles.noticeLayout}>
                     {noticeView}
