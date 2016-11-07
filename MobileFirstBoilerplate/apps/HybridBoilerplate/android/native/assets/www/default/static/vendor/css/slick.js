@@ -206,7 +206,7 @@ export default StyleSheet.create({
     },
     "slick-dots": {
         "position": "absolute",
-        "bottom": -45,
+        "bottom": 10,
         "listStyle": "none",
         "display": "block",
         "textAlign": "center",

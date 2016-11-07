@@ -1,5 +1,3 @@
-
-/* JavaScript content from dist/bundle.js in folder common */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

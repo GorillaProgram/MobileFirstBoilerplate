@@ -19,7 +19,7 @@ class HomeContainer extends Component {
     render() {
         return (
             <HomeView
-                adImages={[ImagePath.defaultAdImage, ImagePath.defaultAdImage]}
+                adImages={['http://10.240.90.212:7001/padServer/padimages/1.png', 'http://10.240.90.212:7001/padServer/padimages/1.png']}
             />
         );
     }

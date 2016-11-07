@@ -88,7 +88,7 @@ const styles = {
         marginRight: 5,
         marginBottom: 5,
         overflow: 'hidden',
-        borderRadius: '5px'
+        borderRadius: 5
     },
     AdImage: {
         height: 170,
@@ -98,21 +98,23 @@ const styles = {
         height: Constant.matchParent,
         marginLeft: 5,
         marginBottom: 5,
-        borderRadius: '5px',
+        borderRadius: 5,
         overflow: 'hidden'
     },
     productSliderLayout: {
         width: Constant.twoThirds,
+        height: Constant.matchParent - 10,
         marginTop: 10,
         marginRight: 5,
-        borderRadius: '5px',
+        borderRadius: 5,
         overflow: 'hidden'
     },
     quicklyEnterPanelLayout: {
         width: Constant.oneThird,
+        height: Constant.matchParent - 10,
         marginTop: 10,
         marginLeft: 5,
-        borderRadius: '5px',
+        borderRadius: 5,
         overflow: 'hidden'
     },
     testStyle: {
