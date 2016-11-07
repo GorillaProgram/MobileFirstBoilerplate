@@ -63,7 +63,6 @@ const styles = {
     container: {
         width: Constant.matchParent,
         height: Constant.matchParent,
-        backgroundColor: 'white'
     },
     homeTopLayout: {
         display: 'flex',
@@ -80,7 +79,7 @@ const styles = {
     AdImagesSliderLayout: {
         width: Constant.twoThirds,
         height: Constant.matchParent,
-        backgroundColor: Constant.defaultBackgroundColor,
+        backgroundColor: Constant.homePanelBackgroundColor,
         marginRight: Constant.homeBlock,
         marginBottom: Constant.homeBlock,
         overflow: 'hidden',
@@ -93,7 +92,7 @@ const styles = {
     noticeLayout: {
         width: Constant.oneThird,
         height: Constant.matchParent,
-        backgroundColor: Constant.defaultBackgroundColor,
+        backgroundColor: Constant.homePanelBackgroundColor,
         marginLeft: Constant.homeBlock,
         marginBottom: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
@@ -103,7 +102,7 @@ const styles = {
     productSliderLayout: {
         width: Constant.twoThirds,
         height: Constant.matchParent - Constant.homeBlock * 2,
-        backgroundColor: Constant.defaultBackgroundColor,
+        backgroundColor: Constant.homePanelBackgroundColor,
         marginTop: Constant.homeBlock * 2,
         marginRight: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
@@ -113,7 +112,6 @@ const styles = {
     quicklyEnterPanelLayout: {
         width: Constant.oneThird,
         height: Constant.matchParent - Constant.homeBlock * 2,
-        backgroundColor: 'white',
         marginTop: Constant.homeBlock * 2,
         marginLeft: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
