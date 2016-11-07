@@ -42,9 +42,7 @@ class HomeView extends Component {
                                 />
                         </div>
                         <div style={styles.noticeLayout}>
-                            <div style={styles.testStyle}>
-
-                            </div>
+                            
                         </div>
                     </div>
                     <div style={styles.homeBottomLayout}>
@@ -52,9 +50,7 @@ class HomeView extends Component {
 
                         </div>
                         <div style={styles.quicklyEnterPanelLayout}>
-                            <div style={styles.testStyle}>
 
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,7 +97,8 @@ const styles = {
         marginLeft: Constant.homeBlock,
         marginBottom: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        border: '1px solid #888888',
     },
     productSliderLayout: {
         width: Constant.twoThirds,
@@ -120,7 +117,8 @@ const styles = {
         marginTop: Constant.homeBlock * 2,
         marginLeft: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        border: '1px solid #888888',
     },
     testStyle: {
         width: Constant.matchParent,
