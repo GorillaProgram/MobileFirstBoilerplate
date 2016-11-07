@@ -85,9 +85,10 @@ const styles = {
     AdImagesSliderLayout: {
         width: Constant.twoThirds,
         height: Constant.matchParent,
-        paddingRight: 5,
-        paddingBottom: 5,
-        overflow: 'hidden'
+        marginRight: 5,
+        marginBottom: 5,
+        overflow: 'hidden',
+        borderRadius: '5px'
     },
     AdImage: {
         height: 170,
@@ -95,18 +96,24 @@ const styles = {
     noticeLayout: {
         width: Constant.oneThird,
         height: Constant.matchParent,
-        paddingLeft: 5,
-        paddingBottom: 5,
+        marginLeft: 5,
+        marginBottom: 5,
+        borderRadius: '5px',
+        overflow: 'hidden'
     },
     productSliderLayout: {
         width: Constant.twoThirds,
-        paddingTop: 10,
-        paddingRight: 5,
+        marginTop: 10,
+        marginRight: 5,
+        borderRadius: '5px',
+        overflow: 'hidden'
     },
     quicklyEnterPanelLayout: {
         width: Constant.oneThird,
-        paddingTop: 10,
-        paddingLeft: 5,
+        marginTop: 10,
+        marginLeft: 5,
+        borderRadius: '5px',
+        overflow: 'hidden'
     },
     testStyle: {
         width: Constant.matchParent,
