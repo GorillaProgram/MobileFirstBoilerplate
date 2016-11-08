@@ -5,10 +5,12 @@
 const Dimensions = {
 
     width() {
-        return screen.availWidth;
+        // return screen.availWidth;
+        return document.body.clientWidth;
     },
     height() {
-        return screen.availHeight;
+        // return screen.availHeight;
+        return document.body.clientHeight;
     }
 
 };
