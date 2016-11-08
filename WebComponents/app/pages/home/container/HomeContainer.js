@@ -15,7 +15,6 @@ class HomeContainer extends Component {
     }
 
     handleOpenCardClick() {
-        console.log('=========');
         this.context.router.push('webView');
     }
 
