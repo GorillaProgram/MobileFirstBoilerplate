@@ -17,7 +17,7 @@ export default {
     screenWidth: Dimensions.width,
     screenHeight: Dimensions.height,
     defaultBackgroundColor: '#F9F9F9',
-    homeBlock: 7,
+    homeBlock: 10,
     homeRadius: 10,
     homePanelBackgroundColor: '#F9F9F9',
     // contentHeight: Dimensions.height - titleHeight,
