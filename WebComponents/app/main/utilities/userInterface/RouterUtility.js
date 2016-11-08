@@ -8,6 +8,7 @@ import ProductContainer from '../../../pages/product/container/ProductContainer'
 import BusinessManagementContainer from '../../../pages/businessManagement/container/BusinessManagementContainer';
 import CommonToolsContainer from '../../../pages/commonTools/container/CommonToolsContainer';
 import LoginContainer from '../../../pages/login/container/LoginContainer';
+import WebView from '../../../main/components/page/WebView';
 
 const RouterUtility = {
 
@@ -31,6 +32,10 @@ const RouterUtility = {
     LoginRoute: {
         path: 'login',
         component: LoginContainer
+    },
+    WebViewRoute: {
+        path: 'webView',
+        component: WebView
     },
 
 };

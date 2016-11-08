@@ -25,6 +25,7 @@ class App extends Component {
                     </Route>
                     <Route path={Just.CommonToolsRoute.path} component={Just.CommonToolsRoute.component}></Route>
                     <Route path={Just.LoginRoute.path} component={Just.LoginRoute.component}></Route>
+                    <Route path={Just.WebViewRoute.path} component={Just.WebViewRoute.component}></Route>
                 </Route>
             </Router>
         );
