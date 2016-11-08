@@ -11,10 +11,15 @@ const CommonStyles = {
         top: 20, left: Constant.defaultTabWidth + 30, bottom: 20, right: 20
     },
     fullScreenContainer: {
-        backgroundColor: 'white',
+        backgroundColor: Constant.defaultBackgroundColor,
         overflow: 'auto',
         position: 'fixed',
         top: 0, left: 0, bottom: 0, right: 0
+    },
+    contentLayout: {
+        backgroundColor: Constant.defaultBackgroundColor,
+        position: 'fixed',
+        top: 80, left: 0, bottom: 0, right: 0
     },
     leftPanel: {
         display: 'flex',

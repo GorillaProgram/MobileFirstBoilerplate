@@ -71,7 +71,7 @@ class HomeView extends Component {
                         </div>
                         <div style={styles.quicklyEnterPanelLayout}>
                             <div style={styles.businessPanelLayout}>
-                                <BusinessPanel image={ImagePath.homeOpenCard} title="我要" subTitle="开卡" />
+                                <BusinessPanel image={ImagePath.homeOpenCard} title="我要" subTitle="开卡" handleClick={this.props.handleOpenCardClick} />
                                 <BusinessPanel image={ImagePath.homeContract} title="电子" subTitle="签约" />
                             </div>
                             <div style={styles.businessPanelLayout}>

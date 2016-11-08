@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Constant from '../../constant/Constant';
 
 class Title extends Component {
 
@@ -34,7 +35,7 @@ const styles = {
     titleLayout: {
         display: 'flex',
         flexDirection: 'column',
-        height: 80,
+        height: Constant.titleHeight,
         backgroundColor: 'white',
         position: 'fixed',
         top: 0,

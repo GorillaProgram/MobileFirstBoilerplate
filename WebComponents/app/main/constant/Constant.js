@@ -5,7 +5,7 @@
 import Dimensions from '../utilities/userInterface/Dimensions';
 
 const tabWidth = 188;
-const titleHeight = 60;
+const titleHeight = 80;
 
 export default {
     defaultTabWidth: tabWidth,

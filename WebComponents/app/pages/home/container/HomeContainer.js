@@ -11,7 +11,12 @@ class HomeContainer extends Component {
     constructor(props) {
         super(props);
 
+        this.handleOpenCardClick = this.handleOpenCardClick.bind(this);
+    }
 
+    handleOpenCardClick() {
+        console.log('=========');
+        this.context.router.push('webView');
     }
 
     render() {
@@ -136,6 +141,7 @@ class HomeContainer extends Component {
                 adModels={adModels}
                 noticeModels={noticeModels}
                 productModels={productModels}
+                handleOpenCardClick={this.handleOpenCardClick}
             />
         );
     }

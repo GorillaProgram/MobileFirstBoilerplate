@@ -3,6 +3,7 @@
  * https://github.com/maybewaityou
  */
 import React, { Component } from 'react';
+import CommonStyle from '../../constant/CommonStyle';
 import Title from '../view/Title';
 
 class WebView extends Component {
@@ -15,11 +16,11 @@ class WebView extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
-                <Title
-                    title="广告 > "
-                    subTitle="haha"
-                />
+            <div style={{...CommonStyle.fullScreenContainer, ...styles.container}}>
+                <Title />
+                <div style={CommonStyle.contentLayout}>
+                    <iframe src="http://www.baidu.com" frameborder="0" width="100%" height="100%"></iframe>
+                </div>
             </div>
         );
     }
@@ -29,7 +30,9 @@ const styles = {
     container: {
 
     },
+    contentLayout: {
 
+    }
 };
 
 export default WebView;
