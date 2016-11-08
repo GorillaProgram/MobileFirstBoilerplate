@@ -14,7 +14,7 @@ class BusinessPanel extends Component {
 
     render() {
         return (
-            <div style={{...styles.container, ...this.props.style}}>
+            <div style={{...styles.container, ...this.props.style}} onClick={this.props.handleClick}>
                 <img src={this.props.image} style={styles.image} />
                 <div style={styles.titleLayout}>
                     <label style={styles.title}>{this.props.title}</label>
