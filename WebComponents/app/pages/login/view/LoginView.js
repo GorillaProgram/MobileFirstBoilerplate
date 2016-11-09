@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import Constant from '../../../main/constant/Constant';
 import CommonStyles from '../../../main/constant/CommonStyle';
+import EditView from '../../../main/components/view/EditView';
 
 class LoginView extends Component {
 
@@ -23,7 +24,9 @@ class LoginView extends Component {
 
                         </div>
                         <div style={styles.loginContentLayout}>
-
+                            <EditView
+                                image="./static/imgs/ad.png"
+                                />
                         </div>
                     </div>
                 </div>
@@ -52,7 +55,12 @@ const styles = {
         backgroundColor: 'red'
     },
     loginContentLayout: {
-
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: Constant.loginDialogHeight - Constant.dialogTitleHeight,
+        backgroundColor: 'blue'
     },
     loginButton: {
 
