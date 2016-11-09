@@ -12,7 +12,7 @@ class LoginView extends Component {
     constructor(props) {
         super(props);
 
-        console.log('=== UIComponents ====>>> ', Button);
+
     }
 
     render() {
@@ -32,6 +32,7 @@ class LoginView extends Component {
                                 image="./static/imgs/ad.png" />
                             <Button
                                 title="登录"
+                                style={styles.loginButton}
                                 onClick={() => {
                                     console.log('=======');
                                 }} />
@@ -64,23 +65,22 @@ const styles = {
         alignItems: 'center',
         height: Constant.dialogTitleHeight,
         paddingLeft: 15,
-        backgroundColor: 'red'
+        borderBottom: '1px solid #888888',
     },
     loginContentLayout: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         height: Constant.loginDialogHeight - Constant.dialogTitleHeight,
-        backgroundColor: 'blue'
     },
     loginUserName: {
-        marginTop: 40
+        marginTop: 30
     },
     loginPassowrd: {
         marginTop: 20
     },
     loginButton: {
-
+        marginTop: 20
     }
 
 };

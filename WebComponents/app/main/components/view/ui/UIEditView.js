@@ -30,7 +30,6 @@ const styles = {
         alignItems: 'center',
         width: '70%',
         height: 40,
-        backgroundColor: 'red'
     },
     editView: {
         height: 33,
