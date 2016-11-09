@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Constant from '../../../main/constant/Constant';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import { Button, EditView } from '../../../main/components/view/UIComponents';
+import ImagePath from '../../../main/constant/ImagePath';
 
 class LoginView extends Component {
 
@@ -26,10 +27,10 @@ class LoginView extends Component {
                         <div style={styles.loginContentLayout}>
                             <EditView
                                 style={styles.loginUserName}
-                                image="./static/imgs/ad.png" />
+                                image={ImagePath.loginUserName} />
                             <EditView
-                                style={styles.loginPassowrd}
-                                image="./static/imgs/ad.png" />
+                                style={styles.loginPassword}
+                                image={ImagePath.loginPassword} />
                             <Button
                                 title="登录"
                                 style={styles.loginButton}
@@ -49,8 +50,9 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
+        // alignItems: 'center',
         height: Constant.screenHeight - 40,
+        marginTop: 50
     },
     loginLayout: {
         width: '60%',
@@ -76,7 +78,7 @@ const styles = {
     loginUserName: {
         marginTop: 30
     },
-    loginPassowrd: {
+    loginPassword: {
         marginTop: 20
     },
     loginButton: {

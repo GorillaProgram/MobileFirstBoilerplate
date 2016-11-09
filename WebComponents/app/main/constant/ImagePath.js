@@ -27,7 +27,8 @@ const ImagePath = {
     homeFund: `${imagePath}fundIcon.png`,
     homeBenifit: `${imagePath}benifitIcon.png`,
     homeSearch: `${imagePath}searchIcon.png`,
-
+    loginUserName: `${imagePath}loginUserName.png`,
+    loginPassword: `${imagePath}loginPassword.png`,
 
 };
 
