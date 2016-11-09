@@ -42,12 +42,14 @@ const styles = {
     },
     loginLayout: {
         width: '60%',
-        height: 300,
+        height: Constant.loginDialogHeight,
         border: '1px solid #888888',
         borderRadius: 10,
+        overflow: 'hidden'
     },
     loginHeaderLayout: {
-
+        height: Constant.dialogTitleHeight,
+        backgroundColor: 'red'
     },
     loginContentLayout: {
 
