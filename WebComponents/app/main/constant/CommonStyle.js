@@ -19,7 +19,7 @@ const CommonStyles = {
     contentLayout: {
         backgroundColor: Constant.defaultBackgroundColor,
         position: 'fixed',
-        top: 80, left: 0, bottom: 0, right: 0
+        top: Constant.titleHeight, left: 0, bottom: 0, right: 0
     },
     leftPanel: {
         display: 'flex',

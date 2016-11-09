@@ -22,7 +22,7 @@ export default {
     homePanelBackgroundColor: '#F9F9F9',
     // contentHeight: Dimensions.height - titleHeight,
     // defaultButtonWidth: 480,
-    // titleHeight: titleHeight,
+    titleHeight: titleHeight,
     // headerHeight: 60,
     // tabLogoWH: 122,
     // defaultFontSize: 16,
