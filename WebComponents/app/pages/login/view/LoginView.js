@@ -51,8 +51,8 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'center',
         // alignItems: 'center',
-        height: Constant.screenHeight - 40,
-        marginTop: 50
+        height: Constant.screenHeight - 40 - 50,
+        marginTop: 50,
     },
     loginLayout: {
         width: '60%',
@@ -67,6 +67,7 @@ const styles = {
         alignItems: 'center',
         height: Constant.dialogTitleHeight,
         paddingLeft: 15,
+        backgroundColor: Constant.homePanelBackgroundColor,
         borderBottom: '1px solid #888888',
     },
     loginContentLayout: {

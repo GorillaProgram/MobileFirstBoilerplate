@@ -150,6 +150,7 @@ const styles = {
         justifyContent: 'space-between',
         width: Constant.oneThird,
         height: Constant.matchParent - Constant.homeBlock * 2,
+        backgroundColor: Constant.homePanelBackgroundColor,
         marginTop: Constant.homeBlock * 2,
         marginLeft: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
