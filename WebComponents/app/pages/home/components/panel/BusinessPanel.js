@@ -32,7 +32,6 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         width: '45%',
-        backgroundColor: '',
         borderRadius: Constant.homeRadius,
         border: '1px solid #888888',
     },
