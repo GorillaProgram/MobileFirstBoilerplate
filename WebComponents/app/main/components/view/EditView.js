@@ -29,13 +29,13 @@ const styles = {
         flexDirection: 'row',
         alignItems: 'center',
         width: '70%',
-        height: 36,
+        height: 40,
         backgroundColor: 'red'
     },
     editView: {
-        height: 30,
+        height: 33,
         width: '100%',
-        fontSize: 16,
+        fontSize: 18,
         color: '#666',
         border: '1px solid #979797',
         boxShadow: 'inset 0 1px 3px 0 rgba(0, 0, 0, 0.50)',

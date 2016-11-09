@@ -21,7 +21,7 @@ class LoginView extends Component {
                 <div style={styles.container}>
                     <div style={styles.loginLayout}>
                         <div style={styles.loginHeaderLayout}>
-
+                            柜员登录
                         </div>
                         <div style={styles.loginContentLayout}>
                             <EditView
@@ -51,7 +51,11 @@ const styles = {
         overflow: 'hidden'
     },
     loginHeaderLayout: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
         height: Constant.dialogTitleHeight,
+        paddingLeft: 15,
         backgroundColor: 'red'
     },
     loginContentLayout: {

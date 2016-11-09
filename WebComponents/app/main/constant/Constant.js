@@ -24,7 +24,7 @@ export default {
     // defaultButtonWidth: 480,
     titleHeight: titleHeight,
     // headerHeight: 60,
-    dialogTitleHeight: 30,
+    dialogTitleHeight: 40,
     loginDialogHeight: 250,
     // tabLogoWH: 122,
     // defaultFontSize: 16,
