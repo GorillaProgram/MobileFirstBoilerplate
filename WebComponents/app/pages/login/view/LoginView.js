@@ -5,14 +5,14 @@
 import React, { Component } from 'react';
 import Constant from '../../../main/constant/Constant';
 import CommonStyles from '../../../main/constant/CommonStyle';
-import EditView from '../../../main/components/view/EditView';
+import { Button, EditView } from '../../../main/components/view/UIComponents';
 
 class LoginView extends Component {
 
     constructor(props) {
         super(props);
 
-
+        console.log('=== UIComponents ====>>> ', Button);
     }
 
     render() {
@@ -25,8 +25,16 @@ class LoginView extends Component {
                         </div>
                         <div style={styles.loginContentLayout}>
                             <EditView
-                                image="./static/imgs/ad.png"
-                                />
+                                style={styles.loginUserName}
+                                image="./static/imgs/ad.png" />
+                            <EditView
+                                style={styles.loginPassowrd}
+                                image="./static/imgs/ad.png" />
+                            <Button
+                                title="登录"
+                                onClick={() => {
+                                    console.log('=======');
+                                }} />
                         </div>
                     </div>
                 </div>
@@ -62,9 +70,14 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
         height: Constant.loginDialogHeight - Constant.dialogTitleHeight,
         backgroundColor: 'blue'
+    },
+    loginUserName: {
+        marginTop: 40
+    },
+    loginPassowrd: {
+        marginTop: 20
     },
     loginButton: {
 
