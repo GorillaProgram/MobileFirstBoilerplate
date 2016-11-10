@@ -17,7 +17,11 @@ class UIEditView extends Component {
         return (
             <div style={{...styles.container, ...this.props.style}}>
                 {hasImage ? <img style={styles.leftImage} src={this.props.image} /> : <div />}
-                <input style={{...styles.editView, paddingLeft: hasImage ? 40 : 15}} type="text" />
+                <input
+                    style={{...styles.editView, paddingLeft: hasImage ? 40 : 15}}
+                    type="text"
+                    onChange={this.props.onChange}
+                    />
             </div>
         );
     }
