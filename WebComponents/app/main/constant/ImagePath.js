@@ -34,7 +34,7 @@ const ImagePath = {
     cardSendBusinessManagementIcon: `${imagePath}cardSendBusinessManagementIcon.png`,
     contractApplyBusinessManagementIcon: `${imagePath}contractApplyBusinessManagementIcon.png`,
     contractChangeBusinessManagementIcon: `${imagePath}contractChangeBusinessManagementIcon.png`,
-    businessManagementBoxIcon: `${imagePath}BusinessManagementBoxIcon.png`,
+    businessManagementBoxIcon: `${imagePath}businessManagementBoxIcon.png`,
     padOutsideBusinessManagementIcon: `${imagePath}padOutsideBusinessManagementIcon.png`,
     padInsideBusinessManagementIcon: `${imagePath}padInsideBusinessManagementIcon.png`,
     clearImageCacheBusinessManagementIcon: `${imagePath}clearImageCacheBusinessManagementIcon.png`,

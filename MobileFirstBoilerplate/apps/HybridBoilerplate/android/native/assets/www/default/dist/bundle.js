@@ -26885,6 +26885,7 @@
 	                prevArrow: _react2.default.createElement(_PrevArrow2.default, null),
 	                nextArrow: _react2.default.createElement(_NextArrow2.default, null)
 	            };
+	
 	            return _react2.default.createElement(
 	                'div',
 	                { style: _CommonStyle2.default.homeRightContainer },
@@ -27155,7 +27156,8 @@
 	    contractChangeBusinessManagementIcon: imagePath + "contractChangeBusinessManagementIcon.png",
 	    businessManagementBoxIcon: imagePath + "BusinessManagementBoxIcon.png",
 	    padOutsideBusinessManagementIcon: imagePath + "padOutsideBusinessManagementIcon.png",
-	    padInsideBusinessManagementIcon: imagePath + "padInsideBusinessManagementIcon.png"
+	    padInsideBusinessManagementIcon: imagePath + "padInsideBusinessManagementIcon.png",
+	    clearImageCacheBusinessManagementIcon: imagePath + "clearImageCacheBusinessManagementIcon.png"
 	
 	};
 	
@@ -30849,7 +30851,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -30879,122 +30881,120 @@
 	
 	
 	var BusinessManagementContainer = function (_Component) {
-	    _inherits(BusinessManagementContainer, _Component);
+	  _inherits(BusinessManagementContainer, _Component);
 	
-	    function BusinessManagementContainer(props) {
-	        _classCallCheck(this, BusinessManagementContainer);
+	  function BusinessManagementContainer(props) {
+	    _classCallCheck(this, BusinessManagementContainer);
 	
-	        var _this = _possibleConstructorReturn(this, (BusinessManagementContainer.__proto__ || Object.getPrototypeOf(BusinessManagementContainer)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (BusinessManagementContainer.__proto__ || Object.getPrototypeOf(BusinessManagementContainer)).call(this, props));
 	
-	        _this.handleOpenCardClick = _this.handleOpenCardClick.bind(_this);
-	        _this.handleCardActiveClick = _this.handleCardActiveClick.bind(_this);
-	        _this.handleSendCardClick = _this.handleSendCardClick.bind(_this);
-	        _this.handleContractApplyClick = _this.handleContractApplyClick.bind(_this);
-	        _this.handleContractChangedClick = _this.handleContractChangedClick.bind(_this);
-	        _this.handleBusinessBoxClick = _this.handleBusinessBoxClick.bind(_this);
-	        _this.handlePadOutsideClick = _this.handlePadOutsideClick.bind(_this);
-	        _this.handlePadInsideClick = _this.handlePadInsideClick.bind(_this);
-	        return _this;
-	    }
+	    _this.handleOpenCardClick = _this.handleOpenCardClick.bind(_this);
+	    _this.handleCardActiveClick = _this.handleCardActiveClick.bind(_this);
+	    _this.handleSendCardClick = _this.handleSendCardClick.bind(_this);
+	    _this.handleContractApplyClick = _this.handleContractApplyClick.bind(_this);
+	    _this.handleContractChangedClick = _this.handleContractChangedClick.bind(_this);
+	    _this.handleBusinessBoxClick = _this.handleBusinessBoxClick.bind(_this);
+	    _this.handlePadOutsideClick = _this.handlePadOutsideClick.bind(_this);
+	    _this.handlePadInsideClick = _this.handlePadInsideClick.bind(_this);
+	    return _this;
+	  }
+	
+	  /**
+	   * 开卡
+	   */
+	
+	
+	  _createClass(BusinessManagementContainer, [{
+	    key: 'handleOpenCardClick',
+	    value: function handleOpenCardClick() {}
 	
 	    /**
-	     * 开卡
+	     * 卡激活
 	     */
 	
+	  }, {
+	    key: 'handleCardActiveClick',
+	    value: function handleCardActiveClick() {}
 	
-	    _createClass(BusinessManagementContainer, [{
-	        key: 'handleOpenCardClick',
-	        value: function handleOpenCardClick() {
-	            console.log('=======');
-	        }
+	    /**
+	     * 发卡
+	     */
 	
-	        /**
-	         * 卡激活
-	         */
+	  }, {
+	    key: 'handleSendCardClick',
+	    value: function handleSendCardClick() {}
 	
-	    }, {
-	        key: 'handleCardActiveClick',
-	        value: function handleCardActiveClick() {}
+	    /**
+	     * 签约申请
+	     */
 	
-	        /**
-	         * 发卡
-	         */
+	  }, {
+	    key: 'handleContractApplyClick',
+	    value: function handleContractApplyClick() {}
 	
-	    }, {
-	        key: 'handleSendCardClick',
-	        value: function handleSendCardClick() {}
+	    /**
+	     * 签约变更
+	     */
 	
-	        /**
-	         * 签约申请
-	         */
+	  }, {
+	    key: 'handleContractChangedClick',
+	    value: function handleContractChangedClick() {}
 	
-	    }, {
-	        key: 'handleContractApplyClick',
-	        value: function handleContractApplyClick() {}
+	    /**
+	     * 业务办理箱
+	     */
 	
-	        /**
-	         * 签约变更
-	         */
+	  }, {
+	    key: 'handleBusinessBoxClick',
+	    value: function handleBusinessBoxClick() {}
 	
-	    }, {
-	        key: 'handleContractChangedClick',
-	        value: function handleContractChangedClick() {}
+	    /**
+	     * 出库
+	     */
 	
-	        /**
-	         * 业务办理箱
-	         */
+	  }, {
+	    key: 'handlePadOutsideClick',
+	    value: function handlePadOutsideClick() {}
 	
-	    }, {
-	        key: 'handleBusinessBoxClick',
-	        value: function handleBusinessBoxClick() {}
+	    /**
+	     * 入库
+	     */
 	
-	        /**
-	         * 出库
-	         */
+	  }, {
+	    key: 'handlePadInsideClick',
+	    value: function handlePadInsideClick() {}
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(_BusinessManagementView2.default, {
+	        handleOpenCardClick: this.handleOpenCardClick,
+	        handleCardActiveClick: this.handleCardActiveClick,
+	        handleSendCardClick: this.handleSendCardClick,
+	        handleContractApplyClick: this.handleContractApplyClick,
+	        handleContractChangedClick: this.handleContractChangedClick,
+	        handleBusinessBoxClick: this.handleBusinessBoxClick,
+	        handlePadOutsideClick: this.handlePadOutsideClick,
+	        handlePadInsideClick: this.handlePadInsideClick
+	      });
+	    }
+	  }]);
 	
-	    }, {
-	        key: 'handlePadOutsideClick',
-	        value: function handlePadOutsideClick() {}
-	
-	        /**
-	         * 入库
-	         */
-	
-	    }, {
-	        key: 'handlePadInsideClick',
-	        value: function handlePadInsideClick() {}
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(_BusinessManagementView2.default, {
-	                handleOpenCardClick: this.handleOpenCardClick,
-	                handleCardActiveClick: this.handleCardActiveClick,
-	                handleSendCardClick: this.handleSendCardClick,
-	                handleContractApplyClick: this.handleContractApplyClick,
-	                handleContractChangedClick: this.handleContractChangedClick,
-	                handleBusinessBoxClick: this.handleBusinessBoxClick,
-	                handlePadOutsideClick: this.handlePadOutsideClick,
-	                handlePadInsideClick: this.handlePadInsideClick
-	            });
-	        }
-	    }]);
-	
-	    return BusinessManagementContainer;
+	  return BusinessManagementContainer;
 	}(_react.Component);
 	
 	BusinessManagementContainer.propTypes = {
-	    dispatch: _react.PropTypes.func.isRequired
+	  dispatch: _react.PropTypes.func.isRequired
 	
 	};
 	
 	BusinessManagementContainer.contextTypes = {
-	    router: _react2.default.PropTypes.object
+	  router: _react2.default.PropTypes.object
 	};
 	
 	function mapStateToProps(state) {
-	    _objectDestructuringEmpty(state);
+	  _objectDestructuringEmpty(state);
 	
-	    return {};
+	  return {};
 	}
 	
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(BusinessManagementContainer);
@@ -31355,7 +31355,11 @@
 	                'div',
 	                { style: _extends({}, styles.container, this.props.style) },
 	                hasImage ? _react2.default.createElement('img', { style: styles.leftImage, src: this.props.image }) : _react2.default.createElement('div', null),
-	                _react2.default.createElement('input', { style: _extends({}, styles.editView, { paddingLeft: hasImage ? 40 : 15 }), type: 'text' })
+	                _react2.default.createElement('input', {
+	                    style: _extends({}, styles.editView, { paddingLeft: hasImage ? 40 : 15 }),
+	                    type: 'text',
+	                    onChange: this.props.onChange
+	                })
 	            );
 	        }
 	    }]);
@@ -31692,6 +31696,16 @@
 	
 	var _CommonStyle2 = _interopRequireDefault(_CommonStyle);
 	
+	var _ImagePath = __webpack_require__(237);
+	
+	var _ImagePath2 = _interopRequireDefault(_ImagePath);
+	
+	var _SliderGroup = __webpack_require__(271);
+	
+	var _SliderGroup2 = _interopRequireDefault(_SliderGroup);
+	
+	var _UIComponents = __webpack_require__(273);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -31716,13 +31730,30 @@
 	    _createClass(CommonToolsView, [{
 	        key: 'render',
 	        value: function render() {
+	            var settings = {
+	                arrows: true,
+	                dots: false,
+	                infinite: false,
+	                slidesToShow: 1,
+	                slidesToScroll: 1
+	            };
+	
 	            return _react2.default.createElement(
 	                'div',
 	                { style: _CommonStyle2.default.homeRightContainer },
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.container },
-	                    'commonTools'
+	                    _react2.default.createElement(
+	                        _SliderGroup2.default,
+	                        { title: '\u5E38\u7528\u5DE5\u5177', settings: settings },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: styles.slide },
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u8FDE\u63A5\u8BBE\u5907', image: _ImagePath2.default.cardSendBusinessManagementIcon, onClick: this.props.handleOpenCardClick }),
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u6E05\u9664\u7F13\u5B58', image: _ImagePath2.default.clearImageCacheBusinessManagementIcon, onClick: this.props.handleCardActiveClick })
+	                        )
+	                    )
 	                )
 	            );
 	        }
@@ -31732,8 +31763,11 @@
 	}(_react.Component);
 	
 	var styles = {
-	    container: {}
-	
+	    container: {},
+	    slide: {
+	        display: 'flex',
+	        flexDirection: 'row'
+	    }
 	};
 	
 	exports.default = CommonToolsView;
@@ -31764,6 +31798,10 @@
 	
 	var _LoginView2 = _interopRequireDefault(_LoginView);
 	
+	var _Just = __webpack_require__(211);
+	
+	var _Just2 = _interopRequireDefault(_Just);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
@@ -31784,13 +31822,46 @@
 	    function LoginContainer(props) {
 	        _classCallCheck(this, LoginContainer);
 	
-	        return _possibleConstructorReturn(this, (LoginContainer.__proto__ || Object.getPrototypeOf(LoginContainer)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (LoginContainer.__proto__ || Object.getPrototypeOf(LoginContainer)).call(this, props));
+	
+	        _this.handleUserNameChange = _this.handleUserNameChange.bind(_this);
+	        _this.handlePasswordChange = _this.handlePasswordChange.bind(_this);
+	        _this.handleLoginClick = _this.handleLoginClick.bind(_this);
+	        return _this;
 	    }
 	
+	    /**
+	     * 用户名更改
+	     */
+	
+	
 	    _createClass(LoginContainer, [{
+	        key: 'handleUserNameChange',
+	        value: function handleUserNameChange(event) {}
+	
+	        /**
+	         * 密码更改
+	         */
+	
+	    }, {
+	        key: 'handlePasswordChange',
+	        value: function handlePasswordChange(event) {}
+	
+	        /**
+	         * 登录
+	         */
+	
+	    }, {
+	        key: 'handleLoginClick',
+	        value: function handleLoginClick() {}
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_LoginView2.default, null);
+	            return _react2.default.createElement(_LoginView2.default, {
+	                handleUserNameChange: this.handleUserNameChange,
+	                handlePasswordChange: this.handlePasswordChange,
+	                handleLoginClick: this.handleLoginClick
+	            });
 	        }
 	    }]);
 	
@@ -31891,16 +31962,18 @@
 	                            { style: styles.loginContentLayout },
 	                            _react2.default.createElement(_UIComponents.EditView, {
 	                                style: styles.loginUserName,
-	                                image: _ImagePath2.default.loginUserName }),
+	                                image: _ImagePath2.default.loginUserName,
+	                                onChange: this.props.handleUserNameChange
+	                            }),
 	                            _react2.default.createElement(_UIComponents.EditView, {
 	                                style: styles.loginPassword,
-	                                image: _ImagePath2.default.loginPassword }),
+	                                image: _ImagePath2.default.loginPassword,
+	                                onChange: this.props.handlePasswordChange
+	                            }),
 	                            _react2.default.createElement(_UIComponents.Button, {
 	                                title: '\u767B\u5F55',
 	                                style: styles.loginButton,
-	                                onClick: function onClick() {
-	                                    console.log('=======');
-	                                } })
+	                                onClick: this.props.handleLoginClick })
 	                        )
 	                    )
 	                )
