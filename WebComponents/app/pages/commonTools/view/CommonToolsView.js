@@ -31,7 +31,7 @@ class CommonToolsView extends Component {
                     <SliderGroup title="常用工具" settings={settings}>
                         <div style={styles.slide}>
                             <Square title="连接设备" image={ImagePath.cardSendBusinessManagementIcon} onClick={this.props.handleOpenCardClick} />
-                            <Square title="清除缓存" image={ImagePath.cardActiveBusinessManagementIcon} onClick={this.props.handleCardActiveClick} />
+                            <Square title="清除缓存" image={ImagePath.clearImageCacheBusinessManagementIcon} onClick={this.props.handleCardActiveClick} />
                         </div>
                     </SliderGroup>
                 </div>

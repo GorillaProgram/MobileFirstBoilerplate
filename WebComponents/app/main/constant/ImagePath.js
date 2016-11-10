@@ -37,7 +37,7 @@ const ImagePath = {
     businessManagementBoxIcon: `${imagePath}BusinessManagementBoxIcon.png`,
     padOutsideBusinessManagementIcon: `${imagePath}padOutsideBusinessManagementIcon.png`,
     padInsideBusinessManagementIcon: `${imagePath}padInsideBusinessManagementIcon.png`,
-
+    clearImageCacheBusinessManagementIcon: `${imagePath}clearImageCacheBusinessManagementIcon.png`,
 
 };
 
