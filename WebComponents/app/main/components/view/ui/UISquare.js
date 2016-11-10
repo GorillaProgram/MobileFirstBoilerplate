@@ -26,8 +26,8 @@ const styles = {
         width: 80,
         height: 80,
         marginTop: 10,
-        marginLeft: 20,
-        marginRight: 20,
+        marginLeft: 10,
+        marginRight: 10,
         color: '#333333',
         fontSize: 16,
         borderRadius: 5
