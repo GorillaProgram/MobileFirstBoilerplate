@@ -38,8 +38,8 @@
 /*.slick-prev:before { content: "←"; }*/
 /*[dir="rtl"] .slick-prev:before { content: "→"; }*/
 
-.slick-next { right: -35px; }
-[dir="rtl"] .slick-next { left: -35px; right: auto; }
+.slick-next { right: -25px; }
+[dir="rtl"] .slick-next { left: -25px; right: auto; }
 /*.slick-next:before { content: "→"; }*/
 /*[dir="rtl"] .slick-next:before { content: "←"; }*/
 

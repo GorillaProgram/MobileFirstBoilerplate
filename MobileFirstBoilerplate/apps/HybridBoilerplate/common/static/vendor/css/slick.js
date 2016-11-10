@@ -136,7 +136,7 @@ export default StyleSheet.create({
         "paddingLeft": 0,
         "border": "none",
         "outline": "none",
-        "right": -35
+        "right": -25
     },
     "slick-prev:hover": {
         "outline": "none",
@@ -199,7 +199,7 @@ export default StyleSheet.create({
         "right": -35
     },
     "[dir=\"rtl\"] slick-next": {
-        "left": -35,
+        "left": -25,
         "right": "auto"
     },
     "slick-dots": {

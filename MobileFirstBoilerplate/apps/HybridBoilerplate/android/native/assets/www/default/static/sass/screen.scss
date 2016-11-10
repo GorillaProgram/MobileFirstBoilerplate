@@ -5,6 +5,12 @@
 
 @import "compass/reset", "partials/variables", "partials/mixin";
 
+/* jqm override start */
+.ui-page-theme-a {
+    background-color: white;
+}
+/* jqm override end */
+
 /* content start */
 .screenLayout {
     position: fixed;

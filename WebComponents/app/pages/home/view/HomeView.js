@@ -44,6 +44,7 @@ class HomeView extends Component {
             prevArrow: <PrevArrow />,
             nextArrow: <NextArrow />
         };
+        
         return (
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>

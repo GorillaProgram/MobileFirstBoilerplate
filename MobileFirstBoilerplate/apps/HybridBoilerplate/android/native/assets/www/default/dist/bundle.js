@@ -70,7 +70,7 @@
 	
 	var _Just2 = _interopRequireDefault(_Just);
 	
-	var _App = __webpack_require__(285);
+	var _App = __webpack_require__(293);
 	
 	var _App2 = _interopRequireDefault(_App);
 	
@@ -24184,9 +24184,9 @@
 	
 	var _Just2 = _interopRequireDefault(_Just);
 	
-	var _NetworkActions = __webpack_require__(282);
+	var _NetworkActions = __webpack_require__(290);
 	
-	var _Actions = __webpack_require__(283);
+	var _Actions = __webpack_require__(291);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -24334,11 +24334,11 @@
 	
 	var _UIManager2 = _interopRequireDefault(_UIManager);
 	
-	var _PeripheralManager = __webpack_require__(277);
+	var _PeripheralManager = __webpack_require__(285);
 	
 	var _PeripheralManager2 = _interopRequireDefault(_PeripheralManager);
 	
-	var _TaskManager = __webpack_require__(280);
+	var _TaskManager = __webpack_require__(288);
 	
 	var _TaskManager2 = _interopRequireDefault(_TaskManager);
 	
@@ -25457,7 +25457,7 @@
 	                     * https://github.com/maybewaityou
 	                     */
 	
-	var titleHeight = 60;
+	var titleHeight = 80;
 	
 	exports.default = {
 	    defaultTabWidth: tabWidth,
@@ -25466,16 +25466,18 @@
 	    twoThirds: '66.6%',
 	    // defaultHomeWidth: Dimensions.width - tabWidth,
 	    // defaultHomeHeight: Dimensions.height,
-	    screenWidth: _Dimensions2.default.width,
-	    screenHeight: _Dimensions2.default.height,
+	    screenWidth: _Dimensions2.default.width(),
+	    screenHeight: _Dimensions2.default.height(),
 	    defaultBackgroundColor: '#F9F9F9',
 	    homeBlock: 10,
 	    homeRadius: 10,
 	    homePanelBackgroundColor: '#F9F9F9',
 	    // contentHeight: Dimensions.height - titleHeight,
 	    // defaultButtonWidth: 480,
-	    // titleHeight: titleHeight,
+	    titleHeight: titleHeight,
 	    // headerHeight: 60,
+	    dialogTitleHeight: 40,
+	    loginDialogHeight: 250,
 	    // tabLogoWH: 122,
 	    // defaultFontSize: 16,
 	    // smallFontSize: 14,
@@ -25521,10 +25523,12 @@
 	 */
 	var Dimensions = {
 	    width: function width() {
-	        return screen.availWidth;
+	        // return screen.availWidth;
+	        return document.body.clientWidth;
 	    },
 	    height: function height() {
-	        return screen.availHeight;
+	        // return screen.availHeight;
+	        return document.body.clientHeight;
 	    }
 	};
 	
@@ -25968,7 +25972,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Welcome to Compass.\n * In this file you should write your main styles. (or centralize your imports)\n * Import this file using the following HTML or equivalent:\n * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\n/* line 5, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  font-size: 100%;\n  vertical-align: baseline;\n}\n\n/* line 22, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nhtml {\n  line-height: 1;\n}\n\n/* line 24, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nol, ul {\n  list-style: none;\n}\n\n/* line 26, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\n/* line 28, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\ncaption, th, td {\n  text-align: left;\n  font-weight: normal;\n  vertical-align: middle;\n}\n\n/* line 30, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nq, blockquote {\n  quotes: none;\n}\n/* line 103, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nq:before, q:after, blockquote:before, blockquote:after {\n  content: \"\";\n  content: none;\n}\n\n/* line 32, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\na img {\n  border: none;\n}\n\n/* line 116, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n  display: block;\n}\n\n/* 颜色相关 start */\n/* 颜色相关 end */\n/* Title相关 start */\n/* Title相关 end */\n/* button相关 start */\n/* 字体相关 end */\n/* 字体相关 start */\n/* 字体相关 end */\n/* Tab相关 start */\n/* Tab相关 end */\n/* Select相关 start */\n/* Select相关 end */\n/* Table相关 start */\n/* Table相关 end */\n/* 控件相关 start */\n/* line 72, ../sass/partials/_mixin.scss */\n.positiveButton, .negativeButton, .buttonLayout .smallButton, .dialogPositiveButton, .dialogNegativeButton {\n  height: 44px;\n  min-height: 44px;\n  font-size: 18px;\n  color: #FFFFFF;\n  text-align: center;\n  letter-spacing: -0.15px;\n  background: #1177DB;\n  border: none;\n  outline: none;\n  border-radius: 10px;\n}\n/* line 83, ../sass/partials/_mixin.scss */\n.positiveButton:active, .negativeButton:active, .buttonLayout .smallButton:active, .dialogPositiveButton:active, .dialogNegativeButton:active {\n  background: #0B4D8D;\n}\n\n/* 控件相关 end */\n/* 布局相关 start */\n/* 布局相关 end */\n/* content start */\n/* line 9, ../sass/screen.scss */\n.screenLayout {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n\n/* line 13, ../sass/screen.scss */\n.contentLayout {\n  position: fixed;\n  top: 100px;\n  left: 20;\n  right: 20;\n  bottom: 20;\n  background-color: #f8f8f8;\n}\n\n/* line 18, ../sass/screen.scss */\n.horizontalLayout {\n  display: flex;\n  flex-direction: row;\n}\n\n/* line 21, ../sass/screen.scss */\n.verticalLayout {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n/* line 25, ../sass/screen.scss */\n.scrollable {\n  overflow: auto;\n}\n\n/* line 28, ../sass/screen.scss */\n.leftLayout {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 100%;\n  margin-right: 10px;\n}\n\n/* line 34, ../sass/screen.scss */\n.rightLayout {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 100%;\n  margin-left: 10px;\n}\n\n/* line 41, ../sass/screen.scss */\n.positiveButton {\n  width: 400px;\n  width: 20%;\n  font-size: 18px;\n}\n\n/* line 46, ../sass/screen.scss */\n.negativeButton {\n  width: 400px;\n  width: 20%;\n  font-size: 18px;\n  background-color: #7F7F7F;\n}\n/* line 51, ../sass/screen.scss */\n.negativeButton:active {\n  background-color: #666;\n}\n\n/* content end */\n/* loading start */\n/* line 58, ../sass/screen.scss */\n.ui-loader {\n  opacity: 1 !important;\n}\n\n/* line 61, ../sass/screen.scss */\n.ui-corner-all {\n  opacity: 1 !important;\n}\n\n/* line 64, ../sass/screen.scss */\n.ui-body-z {\n  opacity: 1 !important;\n}\n\n/* line 67, ../sass/screen.scss */\n.ui-loader-verbose {\n  opacity: 1 !important;\n}\n\n/* line 70, ../sass/screen.scss */\n.ui-loader-textonly {\n  opacity: 1 !important;\n}\n\n/* line 73, ../sass/screen.scss */\n.ui-page-theme-a {\n  text-shadow: none !important;\n}\n\n/* line 76, ../sass/screen.scss */\n.sk-circle-layout {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(255, 255, 255, 0.75);\n}\n\n/* line 84, ../sass/screen.scss */\n.sk-circle {\n  width: 80px;\n  height: 80px;\n  position: relative;\n}\n\n/* line 88, ../sass/screen.scss */\n.sk-circle .sk-child {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n\n/* line 94, ../sass/screen.scss */\n.sk-circle .sk-child:before {\n  content: '';\n  display: block;\n  margin: 0 auto;\n  width: 15%;\n  height: 15%;\n  background-color: #1177DB;\n  border-radius: 100%;\n  -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;\n  animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;\n}\n\n/* line 104, ../sass/screen.scss */\n.sk-circle .sk-circle2 {\n  -webkit-transform: rotate(30deg);\n  -ms-transform: rotate(30deg);\n  transform: rotate(30deg);\n}\n\n/* line 108, ../sass/screen.scss */\n.sk-circle .sk-circle3 {\n  -webkit-transform: rotate(60deg);\n  -ms-transform: rotate(60deg);\n  transform: rotate(60deg);\n}\n\n/* line 112, ../sass/screen.scss */\n.sk-circle .sk-circle4 {\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n\n/* line 116, ../sass/screen.scss */\n.sk-circle .sk-circle5 {\n  -webkit-transform: rotate(120deg);\n  -ms-transform: rotate(120deg);\n  transform: rotate(120deg);\n}\n\n/* line 120, ../sass/screen.scss */\n.sk-circle .sk-circle6 {\n  -webkit-transform: rotate(150deg);\n  -ms-transform: rotate(150deg);\n  transform: rotate(150deg);\n}\n\n/* line 124, ../sass/screen.scss */\n.sk-circle .sk-circle7 {\n  -webkit-transform: rotate(180deg);\n  -ms-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n/* line 128, ../sass/screen.scss */\n.sk-circle .sk-circle8 {\n  -webkit-transform: rotate(210deg);\n  -ms-transform: rotate(210deg);\n  transform: rotate(210deg);\n}\n\n/* line 132, ../sass/screen.scss */\n.sk-circle .sk-circle9 {\n  -webkit-transform: rotate(240deg);\n  -ms-transform: rotate(240deg);\n  transform: rotate(240deg);\n}\n\n/* line 136, ../sass/screen.scss */\n.sk-circle .sk-circle10 {\n  -webkit-transform: rotate(270deg);\n  -ms-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n\n/* line 140, ../sass/screen.scss */\n.sk-circle .sk-circle11 {\n  -webkit-transform: rotate(300deg);\n  -ms-transform: rotate(300deg);\n  transform: rotate(300deg);\n}\n\n/* line 144, ../sass/screen.scss */\n.sk-circle .sk-circle12 {\n  -webkit-transform: rotate(330deg);\n  -ms-transform: rotate(330deg);\n  transform: rotate(330deg);\n}\n\n/* line 148, ../sass/screen.scss */\n.sk-circle .sk-circle2:before {\n  -webkit-animation-delay: -1.1s;\n  animation-delay: -1.1s;\n}\n\n/* line 151, ../sass/screen.scss */\n.sk-circle .sk-circle3:before {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s;\n}\n\n/* line 154, ../sass/screen.scss */\n.sk-circle .sk-circle4:before {\n  -webkit-animation-delay: -0.9s;\n  animation-delay: -0.9s;\n}\n\n/* line 157, ../sass/screen.scss */\n.sk-circle .sk-circle5:before {\n  -webkit-animation-delay: -0.8s;\n  animation-delay: -0.8s;\n}\n\n/* line 160, ../sass/screen.scss */\n.sk-circle .sk-circle6:before {\n  -webkit-animation-delay: -0.7s;\n  animation-delay: -0.7s;\n}\n\n/* line 163, ../sass/screen.scss */\n.sk-circle .sk-circle7:before {\n  -webkit-animation-delay: -0.6s;\n  animation-delay: -0.6s;\n}\n\n/* line 166, ../sass/screen.scss */\n.sk-circle .sk-circle8:before {\n  -webkit-animation-delay: -0.5s;\n  animation-delay: -0.5s;\n}\n\n/* line 169, ../sass/screen.scss */\n.sk-circle .sk-circle9:before {\n  -webkit-animation-delay: -0.4s;\n  animation-delay: -0.4s;\n}\n\n/* line 172, ../sass/screen.scss */\n.sk-circle .sk-circle10:before {\n  -webkit-animation-delay: -0.3s;\n  animation-delay: -0.3s;\n}\n\n/* line 175, ../sass/screen.scss */\n.sk-circle .sk-circle11:before {\n  -webkit-animation-delay: -0.2s;\n  animation-delay: -0.2s;\n}\n\n/* line 178, ../sass/screen.scss */\n.sk-circle .sk-circle12:before {\n  -webkit-animation-delay: -0.1s;\n  animation-delay: -0.1s;\n}\n\n/* line 181, ../sass/screen.scss */\n.sk-circle-text-layout {\n  font-size: 18px;\n  margin-top: 20px;\n}\n\n@-webkit-keyframes sk-circleBounceDelay {\n  0%, 80%, 100% {\n    -webkit-transform: scale(0);\n    transform: scale(0);\n  }\n  40% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n@keyframes sk-circleBounceDelay {\n  0%, 80%, 100% {\n    -webkit-transform: scale(0);\n    transform: scale(0);\n  }\n  40% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n/* loading end */\n/* dialog start */\n/* line 204, ../sass/screen.scss */\n.dialogLayout {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n/* line 209, ../sass/screen.scss */\n.dialogLayout .dialogBackground {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(255, 255, 255, 0.75);\n}\n/* line 214, ../sass/screen.scss */\n.dialogLayout .dialog {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 50%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 225, ../sass/screen.scss */\n.dialogLayout .dialog .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 15px;\n}\n/* line 235, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 100%;\n  padding: 30px;\n  padding-left: 20%;\n  padding-bottom: 20px;\n}\n/* line 242, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout .dialogImage {\n  width: 70px;\n  height: 70px;\n}\n/* line 246, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout .dialogMessageLayout {\n  width: 70%;\n  margin-left: 30px;\n  overflow: auto;\n}\n/* line 250, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout .dialogMessageLayout .dialogMessage {\n  font-size: 18px;\n}\n/* line 255, ../sass/screen.scss */\n.dialogLayout .dialog .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 84px;\n  justify-content: space-around;\n  margin-bottom: 20px;\n}\n/* line 263, ../sass/screen.scss */\n.dialogLayout .dialogCard {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 60%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 273, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n}\n/* line 282, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  padding: 20px;\n}\n/* line 288, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout .dialogImageDes {\n  font-size: 18px;\n  margin-top: 10px;\n}\n/* line 292, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout .dialogImage {\n  width: 80%;\n  height: 70%;\n}\n/* line 296, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout .dialogFingerprint {\n  width: 130px;\n  height: 130px;\n  margin-top: 20px;\n}\n/* line 302, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 84px;\n  justify-content: space-around;\n  margin-bottom: 20px;\n}\n/* line 310, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n  height: 80%;\n  min-height: 300px;\n  background-color: white;\n  margin-top: 5%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 321, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n  z-index: 1000;\n}\n/* line 331, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogConsumerInfoConfirmLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 80%;\n}\n/* line 335, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogConsumerInfoConfirmLayout .dialogConsumerInfoLayout {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 280px;\n  padding-left: 20px;\n  padding-right: 20px;\n  overflow: auto;\n}\n/* line 343, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogConsumerInfoConfirmLayout .dialogConsumerSignatureLayout {\n  width: 50%;\n  height: 280px;\n  padding-left: 20px;\n  padding-right: 20px;\n  overflow: auto;\n}\n/* line 351, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 44px;\n  justify-content: space-around;\n  min-height: 44px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n/* line 361, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 60%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 371, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n}\n/* line 380, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius .dialogEditLayout {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  padding: 20px;\n}\n/* line 387, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 84px;\n  justify-content: space-around;\n  margin-bottom: 20px;\n}\n/* line 395, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails {\n  display: flex;\n  flex-direction: column;\n  width: 70%;\n  height: 60%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 405, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  justify-content: space-between;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n  background-color: #EDEDED;\n}\n/* line 414, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogHeaderLayout .closeImage {\n  width: 34px;\n  height: 34px;\n}\n/* line 419, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  padding: 20px;\n  overflow: auto;\n}\n/* line 426, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 44px;\n  min-height: 44px;\n}\n/* line 431, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout .editLayout {\n  width: 50%;\n}\n/* line 433, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout .editLayout .editTitle {\n  width: 120px;\n}\n/* line 436, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout .editLayout .editValue {\n  width: 60%;\n}\n\n/* line 444, ../sass/screen.scss */\n.buttonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  margin-top: 30px;\n  justify-content: space-around;\n}\n/* line 449, ../sass/screen.scss */\n.buttonLayout .smallButton {\n  width: 30%;\n  margin: 0;\n}\n\n/* line 455, ../sass/screen.scss */\n.dialogPositiveButton {\n  width: 400px;\n  width: 30%;\n  font-size: 18px;\n}\n\n/* line 460, ../sass/screen.scss */\n.dialogNegativeButton {\n  width: 400px;\n  width: 30%;\n  font-size: 18px;\n  background-color: #7F7F7F;\n}\n/* line 465, ../sass/screen.scss */\n.dialogNegativeButton:active {\n  background-color: #666;\n}\n\n/* dialog end */\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Welcome to Compass.\n * In this file you should write your main styles. (or centralize your imports)\n * Import this file using the following HTML or equivalent:\n * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\n/* line 5, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  font-size: 100%;\n  vertical-align: baseline;\n}\n\n/* line 22, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nhtml {\n  line-height: 1;\n}\n\n/* line 24, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nol, ul {\n  list-style: none;\n}\n\n/* line 26, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\n/* line 28, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\ncaption, th, td {\n  text-align: left;\n  font-weight: normal;\n  vertical-align: middle;\n}\n\n/* line 30, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nq, blockquote {\n  quotes: none;\n}\n/* line 103, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\nq:before, q:after, blockquote:before, blockquote:after {\n  content: \"\";\n  content: none;\n}\n\n/* line 32, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\na img {\n  border: none;\n}\n\n/* line 116, ../../../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */\narticle, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {\n  display: block;\n}\n\n/* 颜色相关 start */\n/* 颜色相关 end */\n/* Title相关 start */\n/* Title相关 end */\n/* button相关 start */\n/* 字体相关 end */\n/* 字体相关 start */\n/* 字体相关 end */\n/* Tab相关 start */\n/* Tab相关 end */\n/* Select相关 start */\n/* Select相关 end */\n/* Table相关 start */\n/* Table相关 end */\n/* 控件相关 start */\n/* line 72, ../sass/partials/_mixin.scss */\n.positiveButton, .negativeButton, .buttonLayout .smallButton, .dialogPositiveButton, .dialogNegativeButton {\n  height: 44px;\n  min-height: 44px;\n  font-size: 18px;\n  color: #FFFFFF;\n  text-align: center;\n  letter-spacing: -0.15px;\n  background: #1177DB;\n  border: none;\n  outline: none;\n  border-radius: 10px;\n}\n/* line 83, ../sass/partials/_mixin.scss */\n.positiveButton:active, .negativeButton:active, .buttonLayout .smallButton:active, .dialogPositiveButton:active, .dialogNegativeButton:active {\n  background: #0B4D8D;\n}\n\n/* 控件相关 end */\n/* 布局相关 start */\n/* 布局相关 end */\n/* jqm override start */\n/* line 9, ../sass/screen.scss */\n.ui-page-theme-a {\n  background-color: white;\n}\n\n/* jqm override end */\n/* content start */\n/* line 15, ../sass/screen.scss */\n.screenLayout {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n\n/* line 19, ../sass/screen.scss */\n.contentLayout {\n  position: fixed;\n  top: 100px;\n  left: 20;\n  right: 20;\n  bottom: 20;\n  background-color: #f8f8f8;\n}\n\n/* line 24, ../sass/screen.scss */\n.horizontalLayout {\n  display: flex;\n  flex-direction: row;\n}\n\n/* line 27, ../sass/screen.scss */\n.verticalLayout {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n/* line 31, ../sass/screen.scss */\n.scrollable {\n  overflow: auto;\n}\n\n/* line 34, ../sass/screen.scss */\n.leftLayout {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 100%;\n  margin-right: 10px;\n}\n\n/* line 40, ../sass/screen.scss */\n.rightLayout {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 100%;\n  margin-left: 10px;\n}\n\n/* line 47, ../sass/screen.scss */\n.positiveButton {\n  width: 400px;\n  width: 20%;\n  font-size: 18px;\n}\n\n/* line 52, ../sass/screen.scss */\n.negativeButton {\n  width: 400px;\n  width: 20%;\n  font-size: 18px;\n  background-color: #7F7F7F;\n}\n/* line 57, ../sass/screen.scss */\n.negativeButton:active {\n  background-color: #666;\n}\n\n/* content end */\n/* loading start */\n/* line 64, ../sass/screen.scss */\n.ui-loader {\n  opacity: 1 !important;\n}\n\n/* line 67, ../sass/screen.scss */\n.ui-corner-all {\n  opacity: 1 !important;\n}\n\n/* line 70, ../sass/screen.scss */\n.ui-body-z {\n  opacity: 1 !important;\n}\n\n/* line 73, ../sass/screen.scss */\n.ui-loader-verbose {\n  opacity: 1 !important;\n}\n\n/* line 76, ../sass/screen.scss */\n.ui-loader-textonly {\n  opacity: 1 !important;\n}\n\n/* line 79, ../sass/screen.scss */\n.ui-page-theme-a {\n  text-shadow: none !important;\n}\n\n/* line 82, ../sass/screen.scss */\n.sk-circle-layout {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(255, 255, 255, 0.75);\n}\n\n/* line 90, ../sass/screen.scss */\n.sk-circle {\n  width: 80px;\n  height: 80px;\n  position: relative;\n}\n\n/* line 94, ../sass/screen.scss */\n.sk-circle .sk-child {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n\n/* line 100, ../sass/screen.scss */\n.sk-circle .sk-child:before {\n  content: '';\n  display: block;\n  margin: 0 auto;\n  width: 15%;\n  height: 15%;\n  background-color: #1177DB;\n  border-radius: 100%;\n  -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;\n  animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;\n}\n\n/* line 110, ../sass/screen.scss */\n.sk-circle .sk-circle2 {\n  -webkit-transform: rotate(30deg);\n  -ms-transform: rotate(30deg);\n  transform: rotate(30deg);\n}\n\n/* line 114, ../sass/screen.scss */\n.sk-circle .sk-circle3 {\n  -webkit-transform: rotate(60deg);\n  -ms-transform: rotate(60deg);\n  transform: rotate(60deg);\n}\n\n/* line 118, ../sass/screen.scss */\n.sk-circle .sk-circle4 {\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n\n/* line 122, ../sass/screen.scss */\n.sk-circle .sk-circle5 {\n  -webkit-transform: rotate(120deg);\n  -ms-transform: rotate(120deg);\n  transform: rotate(120deg);\n}\n\n/* line 126, ../sass/screen.scss */\n.sk-circle .sk-circle6 {\n  -webkit-transform: rotate(150deg);\n  -ms-transform: rotate(150deg);\n  transform: rotate(150deg);\n}\n\n/* line 130, ../sass/screen.scss */\n.sk-circle .sk-circle7 {\n  -webkit-transform: rotate(180deg);\n  -ms-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n\n/* line 134, ../sass/screen.scss */\n.sk-circle .sk-circle8 {\n  -webkit-transform: rotate(210deg);\n  -ms-transform: rotate(210deg);\n  transform: rotate(210deg);\n}\n\n/* line 138, ../sass/screen.scss */\n.sk-circle .sk-circle9 {\n  -webkit-transform: rotate(240deg);\n  -ms-transform: rotate(240deg);\n  transform: rotate(240deg);\n}\n\n/* line 142, ../sass/screen.scss */\n.sk-circle .sk-circle10 {\n  -webkit-transform: rotate(270deg);\n  -ms-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n\n/* line 146, ../sass/screen.scss */\n.sk-circle .sk-circle11 {\n  -webkit-transform: rotate(300deg);\n  -ms-transform: rotate(300deg);\n  transform: rotate(300deg);\n}\n\n/* line 150, ../sass/screen.scss */\n.sk-circle .sk-circle12 {\n  -webkit-transform: rotate(330deg);\n  -ms-transform: rotate(330deg);\n  transform: rotate(330deg);\n}\n\n/* line 154, ../sass/screen.scss */\n.sk-circle .sk-circle2:before {\n  -webkit-animation-delay: -1.1s;\n  animation-delay: -1.1s;\n}\n\n/* line 157, ../sass/screen.scss */\n.sk-circle .sk-circle3:before {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s;\n}\n\n/* line 160, ../sass/screen.scss */\n.sk-circle .sk-circle4:before {\n  -webkit-animation-delay: -0.9s;\n  animation-delay: -0.9s;\n}\n\n/* line 163, ../sass/screen.scss */\n.sk-circle .sk-circle5:before {\n  -webkit-animation-delay: -0.8s;\n  animation-delay: -0.8s;\n}\n\n/* line 166, ../sass/screen.scss */\n.sk-circle .sk-circle6:before {\n  -webkit-animation-delay: -0.7s;\n  animation-delay: -0.7s;\n}\n\n/* line 169, ../sass/screen.scss */\n.sk-circle .sk-circle7:before {\n  -webkit-animation-delay: -0.6s;\n  animation-delay: -0.6s;\n}\n\n/* line 172, ../sass/screen.scss */\n.sk-circle .sk-circle8:before {\n  -webkit-animation-delay: -0.5s;\n  animation-delay: -0.5s;\n}\n\n/* line 175, ../sass/screen.scss */\n.sk-circle .sk-circle9:before {\n  -webkit-animation-delay: -0.4s;\n  animation-delay: -0.4s;\n}\n\n/* line 178, ../sass/screen.scss */\n.sk-circle .sk-circle10:before {\n  -webkit-animation-delay: -0.3s;\n  animation-delay: -0.3s;\n}\n\n/* line 181, ../sass/screen.scss */\n.sk-circle .sk-circle11:before {\n  -webkit-animation-delay: -0.2s;\n  animation-delay: -0.2s;\n}\n\n/* line 184, ../sass/screen.scss */\n.sk-circle .sk-circle12:before {\n  -webkit-animation-delay: -0.1s;\n  animation-delay: -0.1s;\n}\n\n/* line 187, ../sass/screen.scss */\n.sk-circle-text-layout {\n  font-size: 18px;\n  margin-top: 20px;\n}\n\n@-webkit-keyframes sk-circleBounceDelay {\n  0%, 80%, 100% {\n    -webkit-transform: scale(0);\n    transform: scale(0);\n  }\n  40% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n@keyframes sk-circleBounceDelay {\n  0%, 80%, 100% {\n    -webkit-transform: scale(0);\n    transform: scale(0);\n  }\n  40% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n  }\n}\n/* loading end */\n/* dialog start */\n/* line 210, ../sass/screen.scss */\n.dialogLayout {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n/* line 215, ../sass/screen.scss */\n.dialogLayout .dialogBackground {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(255, 255, 255, 0.75);\n}\n/* line 220, ../sass/screen.scss */\n.dialogLayout .dialog {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 50%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 231, ../sass/screen.scss */\n.dialogLayout .dialog .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 15px;\n}\n/* line 241, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 100%;\n  padding: 30px;\n  padding-left: 20%;\n  padding-bottom: 20px;\n}\n/* line 248, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout .dialogImage {\n  width: 70px;\n  height: 70px;\n}\n/* line 252, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout .dialogMessageLayout {\n  width: 70%;\n  margin-left: 30px;\n  overflow: auto;\n}\n/* line 256, ../sass/screen.scss */\n.dialogLayout .dialog .dialogContentLayout .dialogMessageLayout .dialogMessage {\n  font-size: 18px;\n}\n/* line 261, ../sass/screen.scss */\n.dialogLayout .dialog .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 84px;\n  justify-content: space-around;\n  margin-bottom: 20px;\n}\n/* line 269, ../sass/screen.scss */\n.dialogLayout .dialogCard {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 60%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 279, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n}\n/* line 288, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  padding: 20px;\n}\n/* line 294, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout .dialogImageDes {\n  font-size: 18px;\n  margin-top: 10px;\n}\n/* line 298, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout .dialogImage {\n  width: 80%;\n  height: 70%;\n}\n/* line 302, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogContentBigImageLayout .dialogFingerprint {\n  width: 130px;\n  height: 130px;\n  margin-top: 20px;\n}\n/* line 308, ../sass/screen.scss */\n.dialogLayout .dialogCard .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 84px;\n  justify-content: space-around;\n  margin-bottom: 20px;\n}\n/* line 316, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n  height: 80%;\n  min-height: 300px;\n  background-color: white;\n  margin-top: 5%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 327, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n  z-index: 1000;\n}\n/* line 337, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogConsumerInfoConfirmLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 80%;\n}\n/* line 341, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogConsumerInfoConfirmLayout .dialogConsumerInfoLayout {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 280px;\n  padding-left: 20px;\n  padding-right: 20px;\n  overflow: auto;\n}\n/* line 349, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogConsumerInfoConfirmLayout .dialogConsumerSignatureLayout {\n  width: 50%;\n  height: 280px;\n  padding-left: 20px;\n  padding-right: 20px;\n  overflow: auto;\n}\n/* line 357, ../sass/screen.scss */\n.dialogLayout .dialogConsumerInfoConfirm .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 44px;\n  justify-content: space-around;\n  min-height: 44px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n/* line 367, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius {\n  display: flex;\n  flex-direction: column;\n  width: 50%;\n  height: 60%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 377, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  background-color: #EDEDED;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n}\n/* line 386, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius .dialogEditLayout {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  padding: 20px;\n}\n/* line 393, ../sass/screen.scss */\n.dialogLayout .dialogEditRadius .dialogButtonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 84px;\n  justify-content: space-around;\n  margin-bottom: 20px;\n}\n/* line 401, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails {\n  display: flex;\n  flex-direction: column;\n  width: 70%;\n  height: 60%;\n  background-color: white;\n  margin-top: 10%;\n  border: 1px solid #999999;\n  border-radius: 10px;\n  box-shadow: 0 0 20px 0 black;\n  z-index: 1000;\n}\n/* line 411, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogHeaderLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  justify-content: space-between;\n  color: #333;\n  font-size: 18px;\n  padding: 15px;\n  background-color: #EDEDED;\n}\n/* line 420, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogHeaderLayout .closeImage {\n  width: 34px;\n  height: 34px;\n}\n/* line 425, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  padding: 20px;\n  overflow: auto;\n}\n/* line 432, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  height: 44px;\n  min-height: 44px;\n}\n/* line 437, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout .editLayout {\n  width: 50%;\n}\n/* line 439, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout .editLayout .editTitle {\n  width: 120px;\n}\n/* line 442, ../sass/screen.scss */\n.dialogLayout .dialogBusinessDetails .dialogDetailsLayout .dialogDetailsRowLayout .editLayout .editValue {\n  width: 60%;\n}\n\n/* line 450, ../sass/screen.scss */\n.buttonLayout {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  margin-top: 30px;\n  justify-content: space-around;\n}\n/* line 455, ../sass/screen.scss */\n.buttonLayout .smallButton {\n  width: 30%;\n  margin: 0;\n}\n\n/* line 461, ../sass/screen.scss */\n.dialogPositiveButton {\n  width: 400px;\n  width: 30%;\n  font-size: 18px;\n}\n\n/* line 466, ../sass/screen.scss */\n.dialogNegativeButton {\n  width: 400px;\n  width: 30%;\n  font-size: 18px;\n  background-color: #7F7F7F;\n}\n/* line 471, ../sass/screen.scss */\n.dialogNegativeButton:active {\n  background-color: #666;\n}\n\n/* dialog end */\n", ""]);
 	
 	// exports
 
@@ -26521,7 +26525,7 @@
 	
 	var _RouterUtility2 = _interopRequireDefault(_RouterUtility);
 	
-	var _DialogUtility = __webpack_require__(275);
+	var _DialogUtility = __webpack_require__(283);
 	
 	var _DialogUtility2 = _interopRequireDefault(_DialogUtility);
 	
@@ -26561,20 +26565,20 @@
 	
 	var _BusinessManagementContainer2 = _interopRequireDefault(_BusinessManagementContainer);
 	
-	var _CommonToolsContainer = __webpack_require__(271);
+	var _CommonToolsContainer = __webpack_require__(277);
 	
 	var _CommonToolsContainer2 = _interopRequireDefault(_CommonToolsContainer);
 	
-	var _LoginContainer = __webpack_require__(273);
+	var _LoginContainer = __webpack_require__(279);
 	
 	var _LoginContainer2 = _interopRequireDefault(_LoginContainer);
 	
+	var _WebView = __webpack_require__(281);
+	
+	var _WebView2 = _interopRequireDefault(_WebView);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	/**
-	 * Created by MeePwn
-	 * https://github.com/maybewaityou
-	 */
 	var RouterUtility = {
 	
 	    IndexRoute: _HomeContainer2.default,
@@ -26597,10 +26601,16 @@
 	    LoginRoute: {
 	        path: 'login',
 	        component: _LoginContainer2.default
+	    },
+	    WebViewRoute: {
+	        path: 'webView',
+	        component: _WebView2.default
 	    }
 	
-	};
-	
+	}; /**
+	    * Created by MeePwn
+	    * https://github.com/maybewaityou
+	    */
 	exports.default = RouterUtility;
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "RouterUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
@@ -26649,10 +26659,18 @@
 	    function HomeContainer(props) {
 	        _classCallCheck(this, HomeContainer);
 	
-	        return _possibleConstructorReturn(this, (HomeContainer.__proto__ || Object.getPrototypeOf(HomeContainer)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (HomeContainer.__proto__ || Object.getPrototypeOf(HomeContainer)).call(this, props));
+	
+	        _this.handleOpenCardClick = _this.handleOpenCardClick.bind(_this);
+	        return _this;
 	    }
 	
 	    _createClass(HomeContainer, [{
+	        key: 'handleOpenCardClick',
+	        value: function handleOpenCardClick() {
+	            this.context.router.push('webView');
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var adModels = [{
@@ -26739,7 +26757,8 @@
 	            return _react2.default.createElement(_HomeView2.default, {
 	                adModels: adModels,
 	                noticeModels: noticeModels,
-	                productModels: productModels
+	                productModels: productModels,
+	                handleOpenCardClick: this.handleOpenCardClick
 	            });
 	        }
 	    }]);
@@ -26910,7 +26929,7 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { style: styles.businessPanelLayout },
-	                                _react2.default.createElement(_BusinessPanel2.default, { image: _ImagePath2.default.homeOpenCard, title: '\u6211\u8981', subTitle: '\u5F00\u5361' }),
+	                                _react2.default.createElement(_BusinessPanel2.default, { image: _ImagePath2.default.homeOpenCard, title: '\u6211\u8981', subTitle: '\u5F00\u5361', handleClick: this.props.handleOpenCardClick }),
 	                                _react2.default.createElement(_BusinessPanel2.default, { image: _ImagePath2.default.homeContract, title: '\u7535\u5B50', subTitle: '\u7B7E\u7EA6' })
 	                            ),
 	                            _react2.default.createElement(
@@ -26995,6 +27014,7 @@
 	        justifyContent: 'space-between',
 	        width: _Constant2.default.oneThird,
 	        height: _Constant2.default.matchParent - _Constant2.default.homeBlock * 2,
+	        backgroundColor: _Constant2.default.homePanelBackgroundColor,
 	        marginTop: _Constant2.default.homeBlock * 2,
 	        marginLeft: _Constant2.default.homeBlock,
 	        borderRadius: _Constant2.default.homeRadius,
@@ -27038,10 +27058,15 @@
 	        top: 20, left: _Constant2.default.defaultTabWidth + 30, bottom: 20, right: 20
 	    },
 	    fullScreenContainer: {
-	        backgroundColor: 'white',
+	        backgroundColor: _Constant2.default.defaultBackgroundColor,
 	        overflow: 'auto',
 	        position: 'fixed',
 	        top: 0, left: 0, bottom: 0, right: 0
+	    },
+	    contentLayout: {
+	        backgroundColor: _Constant2.default.defaultBackgroundColor,
+	        position: 'fixed',
+	        top: _Constant2.default.titleHeight, left: 0, bottom: 0, right: 0
 	    },
 	    leftPanel: {
 	        display: 'flex',
@@ -27072,25 +27097,6 @@
 	        flex: 1,
 	        width: '99%',
 	        marginTop: 80
-	    },
-	    arrow: {
-	        display: 'flex',
-	        justifyContent: 'center',
-	        alignItems: 'center'
-	    },
-	    square: {
-	        display: 'flex',
-	        flexDirection: 'column',
-	        justifyContent: 'center',
-	        alignItems: 'center',
-	        width: _Constant2.default.squareWH,
-	        height: _Constant2.default.squareWH,
-	        marginTop: 10,
-	        marginLeft: 20,
-	        marginRight: 20,
-	        color: '#333333',
-	        fontSize: _Constant2.default.defaultFontSize,
-	        borderRadius: 5
 	    }
 	}; /**
 	    * Created by MeePwn
@@ -27139,7 +27145,17 @@
 	    homeManageMoney: imagePath + "manageMoneyIcon.png",
 	    homeFund: imagePath + "fundIcon.png",
 	    homeBenifit: imagePath + "benifitIcon.png",
-	    homeSearch: imagePath + "searchIcon.png"
+	    homeSearch: imagePath + "searchIcon.png",
+	    loginUserName: imagePath + "loginUserName.png",
+	    loginPassword: imagePath + "loginPassword.png",
+	    cardOpenBusinessManagementIcon: imagePath + "cardOpenBusinessManagementIcon.png",
+	    cardActiveBusinessManagementIcon: imagePath + "cardActiveBusinessManagementIcon.png",
+	    cardSendBusinessManagementIcon: imagePath + "cardSendBusinessManagementIcon.png",
+	    contractApplyBusinessManagementIcon: imagePath + "contractApplyBusinessManagementIcon.png",
+	    contractChangeBusinessManagementIcon: imagePath + "contractChangeBusinessManagementIcon.png",
+	    businessManagementBoxIcon: imagePath + "BusinessManagementBoxIcon.png",
+	    padOutsideBusinessManagementIcon: imagePath + "padOutsideBusinessManagementIcon.png",
+	    padInsideBusinessManagementIcon: imagePath + "padInsideBusinessManagementIcon.png"
 	
 	};
 	
@@ -29984,7 +30000,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { style: _extends({}, styles.container, this.props.style) },
+	                { style: _extends({}, styles.container, this.props.style), onClick: this.props.handleClick },
 	                _react2.default.createElement('img', { src: this.props.image, style: styles.image }),
 	                _react2.default.createElement(
 	                    'div',
@@ -30056,10 +30072,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _CommonStyle = __webpack_require__(236);
-	
-	var _CommonStyle2 = _interopRequireDefault(_CommonStyle);
-	
 	var _ImagePath = __webpack_require__(237);
 	
 	var _ImagePath2 = _interopRequireDefault(_ImagePath);
@@ -30086,7 +30098,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                _extends({}, this.props, { style: _CommonStyle2.default.arrow }),
+	                _extends({}, this.props, { style: _extends({}, styles.container, this.props.style) }),
 	                _react2.default.createElement('img', { src: _ImagePath2.default.prevArrow, style: styles.arrow })
 	            );
 	        }
@@ -30096,6 +30108,11 @@
 	}(_react.Component);
 	
 	var styles = {
+	    container: {
+	        display: 'flex',
+	        justifyContent: 'center',
+	        alignItems: 'center'
+	    },
 	    arrow: {
 	        width: 30,
 	        height: 43
@@ -30156,7 +30173,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                _extends({}, this.props, { style: _CommonStyle2.default.arrow }),
+	                _extends({}, this.props, { style: _extends({}, styles.container, this.props.style) }),
 	                _react2.default.createElement('img', { src: _ImagePath2.default.nextArrow, style: styles.arrow })
 	            );
 	        }
@@ -30166,6 +30183,11 @@
 	}(_react.Component);
 	
 	var styles = {
+	    container: {
+	        display: 'flex',
+	        justifyContent: 'center',
+	        alignItems: 'center'
+	    },
 	    arrow: {
 	        width: 30,
 	        height: 43
@@ -30862,13 +30884,98 @@
 	    function BusinessManagementContainer(props) {
 	        _classCallCheck(this, BusinessManagementContainer);
 	
-	        return _possibleConstructorReturn(this, (BusinessManagementContainer.__proto__ || Object.getPrototypeOf(BusinessManagementContainer)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (BusinessManagementContainer.__proto__ || Object.getPrototypeOf(BusinessManagementContainer)).call(this, props));
+	
+	        _this.handleOpenCardClick = _this.handleOpenCardClick.bind(_this);
+	        _this.handleCardActiveClick = _this.handleCardActiveClick.bind(_this);
+	        _this.handleSendCardClick = _this.handleSendCardClick.bind(_this);
+	        _this.handleContractApplyClick = _this.handleContractApplyClick.bind(_this);
+	        _this.handleContractChangedClick = _this.handleContractChangedClick.bind(_this);
+	        _this.handleBusinessBoxClick = _this.handleBusinessBoxClick.bind(_this);
+	        _this.handlePadOutsideClick = _this.handlePadOutsideClick.bind(_this);
+	        _this.handlePadInsideClick = _this.handlePadInsideClick.bind(_this);
+	        return _this;
 	    }
 	
+	    /**
+	     * 开卡
+	     */
+	
+	
 	    _createClass(BusinessManagementContainer, [{
+	        key: 'handleOpenCardClick',
+	        value: function handleOpenCardClick() {
+	            console.log('=======');
+	        }
+	
+	        /**
+	         * 卡激活
+	         */
+	
+	    }, {
+	        key: 'handleCardActiveClick',
+	        value: function handleCardActiveClick() {}
+	
+	        /**
+	         * 发卡
+	         */
+	
+	    }, {
+	        key: 'handleSendCardClick',
+	        value: function handleSendCardClick() {}
+	
+	        /**
+	         * 签约申请
+	         */
+	
+	    }, {
+	        key: 'handleContractApplyClick',
+	        value: function handleContractApplyClick() {}
+	
+	        /**
+	         * 签约变更
+	         */
+	
+	    }, {
+	        key: 'handleContractChangedClick',
+	        value: function handleContractChangedClick() {}
+	
+	        /**
+	         * 业务办理箱
+	         */
+	
+	    }, {
+	        key: 'handleBusinessBoxClick',
+	        value: function handleBusinessBoxClick() {}
+	
+	        /**
+	         * 出库
+	         */
+	
+	    }, {
+	        key: 'handlePadOutsideClick',
+	        value: function handlePadOutsideClick() {}
+	
+	        /**
+	         * 入库
+	         */
+	
+	    }, {
+	        key: 'handlePadInsideClick',
+	        value: function handlePadInsideClick() {}
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_BusinessManagementView2.default, null);
+	            return _react2.default.createElement(_BusinessManagementView2.default, {
+	                handleOpenCardClick: this.handleOpenCardClick,
+	                handleCardActiveClick: this.handleCardActiveClick,
+	                handleSendCardClick: this.handleSendCardClick,
+	                handleContractApplyClick: this.handleContractApplyClick,
+	                handleContractChangedClick: this.handleContractChangedClick,
+	                handleBusinessBoxClick: this.handleBusinessBoxClick,
+	                handlePadOutsideClick: this.handlePadOutsideClick,
+	                handlePadInsideClick: this.handlePadInsideClick
+	            });
 	        }
 	    }]);
 	
@@ -30916,6 +31023,16 @@
 	
 	var _CommonStyle2 = _interopRequireDefault(_CommonStyle);
 	
+	var _ImagePath = __webpack_require__(237);
+	
+	var _ImagePath2 = _interopRequireDefault(_ImagePath);
+	
+	var _SliderGroup = __webpack_require__(271);
+	
+	var _SliderGroup2 = _interopRequireDefault(_SliderGroup);
+	
+	var _UIComponents = __webpack_require__(273);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30940,13 +31057,52 @@
 	    _createClass(BusinessManagementView, [{
 	        key: 'render',
 	        value: function render() {
+	            var settings = {
+	                arrows: true,
+	                dots: false,
+	                infinite: false,
+	                slidesToShow: 1,
+	                slidesToScroll: 1
+	            };
+	
 	            return _react2.default.createElement(
 	                'div',
 	                { style: _CommonStyle2.default.homeRightContainer },
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.container },
-	                    'businessManagement'
+	                    _react2.default.createElement(
+	                        _SliderGroup2.default,
+	                        { title: '\u501F\u8BB0\u5361\u4E1A\u52A1', settings: settings },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: styles.slide },
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u5F00\u5361', image: _ImagePath2.default.cardOpenBusinessManagementIcon, onClick: this.props.handleOpenCardClick }),
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u5361\u6FC0\u6D3B', image: _ImagePath2.default.cardActiveBusinessManagementIcon, onClick: this.props.handleCardActiveClick }),
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u53D1\u5361', image: _ImagePath2.default.cardSendBusinessManagementIcon, onClick: this.props.handleSendCardClick })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _SliderGroup2.default,
+	                        { title: '\u7535\u5B50\u94F6\u884C\u7B7E\u7EA6', settings: settings },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: styles.slide },
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u7B7E\u7EA6\u7533\u8BF7', image: _ImagePath2.default.contractApplyBusinessManagementIcon, onClick: this.props.handleContractApplyClick }),
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u7B7E\u7EA6\u53D8\u66F4', image: _ImagePath2.default.contractChangeBusinessManagementIcon, onClick: this.props.handleContractChangedClick })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _SliderGroup2.default,
+	                        { title: '\u4E1A\u52A1\u529E\u7406', settings: settings },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: styles.slide },
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u4E1A\u52A1\u529E\u7406\u7BB1', image: _ImagePath2.default.businessManagementBoxIcon, onClick: this.props.handleBusinessBoxClick }),
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u51FA\u5E93', image: _ImagePath2.default.padOutsideBusinessManagementIcon, onClick: this.props.handlePadOutsideClick }),
+	                            _react2.default.createElement(_UIComponents.Square, { title: '\u5165\u5E93', image: _ImagePath2.default.padInsideBusinessManagementIcon, onClick: this.props.handlePadInsideClick })
+	                        )
+	                    )
 	                )
 	            );
 	        }
@@ -30956,8 +31112,11 @@
 	}(_react.Component);
 	
 	var styles = {
-	    container: {}
-	
+	    container: {},
+	    slide: {
+	        display: 'flex',
+	        flexDirection: 'row'
+	    }
 	};
 	
 	exports.default = BusinessManagementView;
@@ -30976,6 +31135,477 @@
 	    value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _SquaresSlider = __webpack_require__(272);
+	
+	var _SquaresSlider2 = _interopRequireDefault(_SquaresSlider);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SliderGroup = function (_Component) {
+	    _inherits(SliderGroup, _Component);
+	
+	    function SliderGroup(props) {
+	        _classCallCheck(this, SliderGroup);
+	
+	        return _possibleConstructorReturn(this, (SliderGroup.__proto__ || Object.getPrototypeOf(SliderGroup)).call(this, props));
+	    }
+	
+	    _createClass(SliderGroup, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, styles.container, this.props.style) },
+	                _react2.default.createElement(
+	                    'label',
+	                    { style: styles.title },
+	                    this.props.title
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: styles.panel },
+	                    _react2.default.createElement(
+	                        _SquaresSlider2.default,
+	                        { settings: this.props.settings },
+	                        this.props.children
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SliderGroup;
+	}(_react.Component);
+	
+	var styles = {
+	    container: {
+	        padding: 5
+	    },
+	    panel: {
+	        height: 100,
+	        marginTop: 10,
+	        marginLeft: 40,
+	        marginRight: 40,
+	        marginBottom: 10,
+	        backgroundColor: '#F8F8F8',
+	        borderRadius: 10,
+	        border: '1px solid #888888'
+	    },
+	    title: {
+	        fontSize: 18,
+	        marginTop: 10,
+	        marginLeft: 40
+	    }
+	};
+	
+	exports.default = SliderGroup;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "SliderGroup.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactSlick = __webpack_require__(239);
+	
+	var _reactSlick2 = _interopRequireDefault(_reactSlick);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SquaresSlider = function (_Component) {
+	    _inherits(SquaresSlider, _Component);
+	
+	    function SquaresSlider() {
+	        _classCallCheck(this, SquaresSlider);
+	
+	        return _possibleConstructorReturn(this, (SquaresSlider.__proto__ || Object.getPrototypeOf(SquaresSlider)).apply(this, arguments));
+	    }
+	
+	    _createClass(SquaresSlider, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _reactSlick2.default,
+	                this.props.settings,
+	                this.props.children
+	            );
+	        }
+	    }]);
+	
+	    return SquaresSlider;
+	}(_react.Component);
+	
+	exports.default = SquaresSlider;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "SquaresSlider.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Square = exports.Button = exports.EditView = undefined;
+	
+	var _UIEditView = __webpack_require__(274);
+	
+	var _UIEditView2 = _interopRequireDefault(_UIEditView);
+	
+	var _UIButton = __webpack_require__(275);
+	
+	var _UIButton2 = _interopRequireDefault(_UIButton);
+	
+	var _UISquare = __webpack_require__(276);
+	
+	var _UISquare2 = _interopRequireDefault(_UISquare);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var EditView = exports.EditView = _UIEditView2.default;
+	var Button = exports.Button = _UIButton2.default;
+	var Square = exports.Square = _UISquare2.default;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "UIComponents.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by MeePwn
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	
+	var UIEditView = function (_Component) {
+	    _inherits(UIEditView, _Component);
+	
+	    function UIEditView(props) {
+	        _classCallCheck(this, UIEditView);
+	
+	        return _possibleConstructorReturn(this, (UIEditView.__proto__ || Object.getPrototypeOf(UIEditView)).call(this, props));
+	    }
+	
+	    _createClass(UIEditView, [{
+	        key: 'render',
+	        value: function render() {
+	            var hasImage = this.props.image ? true : false;
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, styles.container, this.props.style) },
+	                hasImage ? _react2.default.createElement('img', { style: styles.leftImage, src: this.props.image }) : _react2.default.createElement('div', null),
+	                _react2.default.createElement('input', { style: _extends({}, styles.editView, { paddingLeft: hasImage ? 40 : 15 }), type: 'text' })
+	            );
+	        }
+	    }]);
+	
+	    return UIEditView;
+	}(_react.Component);
+	
+	var styles = {
+	    container: {
+	        display: 'flex',
+	        flexDirection: 'row',
+	        alignItems: 'center',
+	        width: '70%',
+	        height: 40
+	    },
+	    editView: {
+	        height: 33,
+	        width: '100%',
+	        fontSize: 18,
+	        color: '#666',
+	        border: '1px solid #979797',
+	        boxShadow: 'inset 0 1px 3px 0 rgba(0, 0, 0, 0.50)',
+	        borderRadius: 5,
+	        letterSpacing: '-0.12px'
+	    },
+	    leftImage: {
+	        width: 20,
+	        height: 20,
+	        marginLeft: 10,
+	        position: 'absolute'
+	    }
+	
+	};
+	
+	exports.default = UIEditView;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "UIEditView.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by MeePwn
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	
+	var UIButton = function (_Component) {
+	    _inherits(UIButton, _Component);
+	
+	    function UIButton(props) {
+	        _classCallCheck(this, UIButton);
+	
+	        var _this = _possibleConstructorReturn(this, (UIButton.__proto__ || Object.getPrototypeOf(UIButton)).call(this, props));
+	
+	        _this.state = {
+	            buttonStyle: styles.defaultStyle
+	        };
+	        return _this;
+	    }
+	
+	    _createClass(UIButton, [{
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+	
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, styles.container, this.props.style) },
+	                _react2.default.createElement(
+	                    'button',
+	                    {
+	                        style: _extends({}, styles.button, this.state.buttonStyle),
+	                        onMouseDown: function onMouseDown() {
+	                            _this2.setState({
+	                                buttonStyle: styles.activeStyle
+	                            });
+	                        },
+	                        onMouseLeave: function onMouseLeave() {
+	                            _this2.setState({
+	                                buttonStyle: styles.defaultStyle
+	                            });
+	                        },
+	                        onMouseUp: function onMouseUp() {
+	                            _this2.setState({
+	                                buttonStyle: styles.defaultStyle
+	                            });
+	                        },
+	                        onClick: this.props.onClick
+	                    },
+	                    this.props.title
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return UIButton;
+	}(_react.Component);
+	
+	var styles = {
+	    container: {
+	        display: 'flex',
+	        flexDirection: 'row',
+	        justifyContent: 'center',
+	        alignItems: 'center',
+	        width: 400
+	    },
+	    button: {
+	        width: '80%',
+	        height: 44,
+	        minHeight: 44,
+	        fontSize: 18,
+	        color: 'white',
+	        letterSpacing: '-0.15px',
+	        border: 'none',
+	        outline: 'none',
+	        borderRadius: 10
+	    },
+	    defaultStyle: {
+	        background: '#1177DB'
+	    },
+	    activeStyle: {
+	        background: '#0B4D8D'
+	    }
+	};
+	
+	exports.default = UIButton;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "UIButton.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var UISquare = function (_Component) {
+	    _inherits(UISquare, _Component);
+	
+	    function UISquare(props) {
+	        _classCallCheck(this, UISquare);
+	
+	        return _possibleConstructorReturn(this, (UISquare.__proto__ || Object.getPrototypeOf(UISquare)).call(this, props));
+	    }
+	
+	    _createClass(UISquare, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, styles.constainer, this.props.style), onClick: this.props.onClick },
+	                _react2.default.createElement('img', { src: this.props.image, style: styles.image }),
+	                _react2.default.createElement(
+	                    'label',
+	                    { style: styles.title },
+	                    this.props.title
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return UISquare;
+	}(_react.Component);
+	
+	var styles = {
+	    constainer: {
+	        display: 'flex',
+	        flexDirection: 'column',
+	        justifyContent: 'center',
+	        alignItems: 'center',
+	        width: 80,
+	        height: 80,
+	        marginTop: 13,
+	        marginLeft: 10,
+	        marginRight: 10,
+	        color: '#333333',
+	        fontSize: 16,
+	        borderRadius: 5
+	    },
+	    image: {
+	        width: 55,
+	        height: 55
+	    },
+	    title: {
+	        fontSize: 16,
+	        marginTop: 5
+	    }
+	};
+	
+	exports.default = UISquare;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "UISquare.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(1);
@@ -30984,7 +31614,7 @@
 	
 	var _reactRedux = __webpack_require__(172);
 	
-	var _CommonToolsView = __webpack_require__(272);
+	var _CommonToolsView = __webpack_require__(278);
 	
 	var _CommonToolsView2 = _interopRequireDefault(_CommonToolsView);
 	
@@ -31041,7 +31671,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "CommonToolsContainer.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 272 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31111,7 +31741,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "CommonToolsView.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 273 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31130,7 +31760,7 @@
 	
 	var _reactRedux = __webpack_require__(172);
 	
-	var _LoginView = __webpack_require__(274);
+	var _LoginView = __webpack_require__(280);
 	
 	var _LoginView2 = _interopRequireDefault(_LoginView);
 	
@@ -31187,7 +31817,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "LoginContainer.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 274 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31204,9 +31834,19 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _Constant = __webpack_require__(215);
+	
+	var _Constant2 = _interopRequireDefault(_Constant);
+	
 	var _CommonStyle = __webpack_require__(236);
 	
 	var _CommonStyle2 = _interopRequireDefault(_CommonStyle);
+	
+	var _UIComponents = __webpack_require__(273);
+	
+	var _ImagePath = __webpack_require__(237);
+	
+	var _ImagePath2 = _interopRequireDefault(_ImagePath);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -31238,7 +31878,31 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.container },
-	                    'login'
+	                    _react2.default.createElement(
+	                        'div',
+	                        { style: styles.loginLayout },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: styles.loginHeaderLayout },
+	                            '\u67DC\u5458\u767B\u5F55'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: styles.loginContentLayout },
+	                            _react2.default.createElement(_UIComponents.EditView, {
+	                                style: styles.loginUserName,
+	                                image: _ImagePath2.default.loginUserName }),
+	                            _react2.default.createElement(_UIComponents.EditView, {
+	                                style: styles.loginPassword,
+	                                image: _ImagePath2.default.loginPassword }),
+	                            _react2.default.createElement(_UIComponents.Button, {
+	                                title: '\u767B\u5F55',
+	                                style: styles.loginButton,
+	                                onClick: function onClick() {
+	                                    console.log('=======');
+	                                } })
+	                        )
+	                    )
 	                )
 	            );
 	        }
@@ -31248,7 +31912,45 @@
 	}(_react.Component);
 	
 	var styles = {
-	    container: {}
+	    container: {
+	        display: 'flex',
+	        flexDirection: 'row',
+	        justifyContent: 'center',
+	        height: _Constant2.default.screenHeight - 40 - 50,
+	        marginTop: 50
+	    },
+	    loginLayout: {
+	        width: '60%',
+	        height: _Constant2.default.loginDialogHeight,
+	        border: '1px solid #888888',
+	        borderRadius: 10,
+	        overflow: 'hidden',
+	        boxShadow: '0px 2px 3px 0px rgba(0,0,0,0.50)'
+	    },
+	    loginHeaderLayout: {
+	        display: 'flex',
+	        flexDirection: 'row',
+	        alignItems: 'center',
+	        height: _Constant2.default.dialogTitleHeight,
+	        paddingLeft: 15,
+	        backgroundColor: _Constant2.default.homePanelBackgroundColor,
+	        borderBottom: '1px solid #888888'
+	    },
+	    loginContentLayout: {
+	        display: 'flex',
+	        flexDirection: 'column',
+	        alignItems: 'center',
+	        height: _Constant2.default.loginDialogHeight - _Constant2.default.dialogTitleHeight
+	    },
+	    loginUserName: {
+	        marginTop: 30
+	    },
+	    loginPassword: {
+	        marginTop: 20
+	    },
+	    loginButton: {
+	        marginTop: 20
+	    }
 	
 	};
 	
@@ -31257,7 +31959,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "LoginView.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 275 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31268,7 +31970,234 @@
 	    value: true
 	});
 	
-	var _Base64Images = __webpack_require__(276);
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _CommonStyle = __webpack_require__(236);
+	
+	var _CommonStyle2 = _interopRequireDefault(_CommonStyle);
+	
+	var _Title = __webpack_require__(282);
+	
+	var _Title2 = _interopRequireDefault(_Title);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by MeePwn
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	
+	var WebView = function (_Component) {
+	    _inherits(WebView, _Component);
+	
+	    function WebView(props) {
+	        _classCallCheck(this, WebView);
+	
+	        return _possibleConstructorReturn(this, (WebView.__proto__ || Object.getPrototypeOf(WebView)).call(this, props));
+	    }
+	
+	    _createClass(WebView, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, _CommonStyle2.default.fullScreenContainer, styles.container) },
+	                _react2.default.createElement(_Title2.default, null),
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: _CommonStyle2.default.contentLayout },
+	                    _react2.default.createElement('iframe', { frameborder: '0', width: '100%', height: '100%' })
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return WebView;
+	}(_react.Component);
+	
+	var styles = {
+	    container: {},
+	    contentLayout: {}
+	};
+	
+	exports.default = WebView;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "WebView.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 282 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Constant = __webpack_require__(215);
+	
+	var _Constant2 = _interopRequireDefault(_Constant);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Title = function (_Component) {
+	    _inherits(Title, _Component);
+	
+	    function Title(props) {
+	        _classCallCheck(this, Title);
+	
+	        return _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).call(this, props));
+	    }
+	
+	    _createClass(Title, [{
+	        key: 'render',
+	        value: function render() {
+	            var backTo = '/';
+	            if (this.props.backTo) {
+	                backTo = this.props.backTo;
+	            }
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, styles.titleLayout, this.props.titleLayout) },
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: _extends({}, styles.titleLayoutContent, this.props.titleLayoutContent) },
+	                    _react2.default.createElement('img', { style: _extends({}, styles.titleImage, this.props.titleImage), src: './static/imgs/titleLogo.png' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { style: _extends({}, styles.title, this.props.titleStyle) },
+	                        this.props.title
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { style: _extends({}, styles.subTitle, this.props.subTitleStyle) },
+	                        this.props.subTitle
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { style: _extends({}, styles.backLayout, this.props.backLayout) },
+	                        _react2.default.createElement('img', { style: _extends({}, styles.backImage, this.props.backImage), src: './static/imgs/homeIcon.png' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { style: _extends({}, styles.backTitle, this.props.backTitleStyle) },
+	                            '\u9000\u51FA\u4E1A\u52A1'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement('div', { style: styles.titleLayoutBorderBottom })
+	            );
+	        }
+	    }]);
+	
+	    return Title;
+	}(_react.Component);
+	
+	var styles = {
+	    titleLayout: {
+	        display: 'flex',
+	        flexDirection: 'column',
+	        height: _Constant2.default.titleHeight,
+	        backgroundColor: 'white',
+	        position: 'fixed',
+	        top: 0,
+	        left: 0,
+	        right: 0,
+	        zIndex: 1
+	    },
+	    titleLayoutContent: {
+	        display: 'flex',
+	        flexDirection: 'row',
+	        alignItems: 'center',
+	        height: 74
+	    },
+	    titleImage: {
+	        width: 192,
+	        height: 43,
+	        marginLeft: 21
+	    },
+	    title: {
+	        marginLeft: 42,
+	        fontSize: 24,
+	        color: '#333'
+	    },
+	    subTitle: {
+	        fontSize: 24,
+	        color: '#FF8800'
+	    },
+	    backLayout: {
+	        display: 'flex',
+	        flexDirection: 'row',
+	        justifyContent: 'center',
+	        alignItems: 'center',
+	        width: 120,
+	        height: 36,
+	        position: 'absolute',
+	        top: 21,
+	        right: 21,
+	        background: 'rgba(255, 255, 255, 0.1)',
+	        border: '2px solid #1D50A3',
+	        borderRadius: 5
+	    },
+	    backImage: {
+	        width: 25,
+	        height: 20
+	    },
+	    backTitle: {
+	        marginTop: 3,
+	        marginLeft: 6,
+	        fontSize: 18,
+	        color: '#1D50A3'
+	    },
+	    titleLayoutBorderBottom: {
+	        height: 6,
+	        backgroundImage: 'linear-gradient(-180deg, #183F80 0%, #1A4A96 100%)'
+	    }
+	};
+	
+	exports.default = Title;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Title.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _Base64Images = __webpack_require__(284);
 	
 	var _Base64Images2 = _interopRequireDefault(_Base64Images);
 	
@@ -31513,7 +32442,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "DialogUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 276 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31525,7 +32454,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Base64Images.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 277 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31542,7 +32471,7 @@
 	                                                                                                                                                                                                                                                                   */
 	
 	
-	var _PeripheralUtility = __webpack_require__(278);
+	var _PeripheralUtility = __webpack_require__(286);
 	
 	var _PeripheralUtility2 = _interopRequireDefault(_PeripheralUtility);
 	
@@ -31550,7 +32479,7 @@
 	
 	var _DeviceUtility2 = _interopRequireDefault(_DeviceUtility);
 	
-	var _MapUtility = __webpack_require__(279);
+	var _MapUtility = __webpack_require__(287);
 	
 	var _MapUtility2 = _interopRequireDefault(_MapUtility);
 	
@@ -31563,7 +32492,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "PeripheralManager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 278 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31813,17 +32742,16 @@
 	    // 设备读取失败的回调
 	    // deviceName一共7种1.ID 身份证 2.JCIC 芯片卡 3.KPD 密码键盘 4.WR 手写屏 5.FIG 指纹仪 6.MCR 磁条卡
 	
-	};
-	/**
-	 * Created by MeePwn
-	 * https://github.com/maybewaityou
-	 */
+	}; /**
+	    * Created by MeePwn
+	    * https://github.com/maybewaityou
+	    */
 	exports.default = PeripheralUtility;
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "PeripheralUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 279 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31883,7 +32811,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "MapUtility.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 280 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31900,7 +32828,7 @@
 	                                                                                                                                                                                                                                                                   */
 	
 	
-	var _AtomicTask = __webpack_require__(281);
+	var _AtomicTask = __webpack_require__(289);
 	
 	var _AtomicTask2 = _interopRequireDefault(_AtomicTask);
 	
@@ -31913,7 +32841,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TaskManager.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 281 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -31939,7 +32867,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AtomicTask.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 282 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -32000,7 +32928,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NetworkActions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 283 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -32019,11 +32947,11 @@
 	exports.delayAdd = delayAdd;
 	exports.delaySubtract = delaySubtract;
 	
-	var _NetworkActions = __webpack_require__(282);
+	var _NetworkActions = __webpack_require__(290);
 	
 	var _NetworkActions2 = _interopRequireDefault(_NetworkActions);
 	
-	var _LoginActions = __webpack_require__(284);
+	var _LoginActions = __webpack_require__(292);
 	
 	var _LoginActions2 = _interopRequireDefault(_LoginActions);
 	
@@ -32125,7 +33053,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Actions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 284 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -32136,7 +33064,7 @@
 	    value: true
 	});
 	
-	var _NetworkActions = __webpack_require__(282);
+	var _NetworkActions = __webpack_require__(290);
 	
 	var _NetworkActions2 = _interopRequireDefault(_NetworkActions);
 	
@@ -32205,7 +33133,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "LoginActions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 285 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -32222,7 +33150,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactRouter = __webpack_require__(286);
+	var _reactRouter = __webpack_require__(294);
 	
 	var _Just = __webpack_require__(211);
 	
@@ -32262,7 +33190,8 @@
 	                    _react2.default.createElement(_reactRouter.Route, { path: _Just2.default.ProductRoute.path, component: _Just2.default.ProductRoute.component }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: _Just2.default.BusinessManagementRoute.path, component: _Just2.default.BusinessManagementRoute.component }),
 	                    _react2.default.createElement(_reactRouter.Route, { path: _Just2.default.CommonToolsRoute.path, component: _Just2.default.CommonToolsRoute.component }),
-	                    _react2.default.createElement(_reactRouter.Route, { path: _Just2.default.LoginRoute.path, component: _Just2.default.LoginRoute.component })
+	                    _react2.default.createElement(_reactRouter.Route, { path: _Just2.default.LoginRoute.path, component: _Just2.default.LoginRoute.component }),
+	                    _react2.default.createElement(_reactRouter.Route, { path: _Just2.default.WebViewRoute.path, component: _Just2.default.WebViewRoute.component })
 	                )
 	            );
 	        }
@@ -32276,7 +33205,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "App.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 286 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32284,7 +33213,7 @@
 	exports.__esModule = true;
 	exports.createMemoryHistory = exports.hashHistory = exports.browserHistory = exports.applyRouterMiddleware = exports.formatPattern = exports.useRouterHistory = exports.match = exports.routerShape = exports.locationShape = exports.RouterContext = exports.createRoutes = exports.Route = exports.Redirect = exports.IndexRoute = exports.IndexRedirect = exports.withRouter = exports.IndexLink = exports.Link = exports.Router = undefined;
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
 	Object.defineProperty(exports, 'createRoutes', {
 	  enumerable: true,
@@ -32293,7 +33222,7 @@
 	  }
 	});
 	
-	var _PropTypes = __webpack_require__(288);
+	var _PropTypes = __webpack_require__(296);
 	
 	Object.defineProperty(exports, 'locationShape', {
 	  enumerable: true,
@@ -32308,7 +33237,7 @@
 	  }
 	});
 	
-	var _PatternUtils = __webpack_require__(289);
+	var _PatternUtils = __webpack_require__(297);
 	
 	Object.defineProperty(exports, 'formatPattern', {
 	  enumerable: true,
@@ -32317,63 +33246,63 @@
 	  }
 	});
 	
-	var _Router2 = __webpack_require__(290);
+	var _Router2 = __webpack_require__(298);
 	
 	var _Router3 = _interopRequireDefault(_Router2);
 	
-	var _Link2 = __webpack_require__(306);
+	var _Link2 = __webpack_require__(314);
 	
 	var _Link3 = _interopRequireDefault(_Link2);
 	
-	var _IndexLink2 = __webpack_require__(307);
+	var _IndexLink2 = __webpack_require__(315);
 	
 	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 	
-	var _withRouter2 = __webpack_require__(308);
+	var _withRouter2 = __webpack_require__(316);
 	
 	var _withRouter3 = _interopRequireDefault(_withRouter2);
 	
-	var _IndexRedirect2 = __webpack_require__(309);
+	var _IndexRedirect2 = __webpack_require__(317);
 	
 	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 	
-	var _IndexRoute2 = __webpack_require__(311);
+	var _IndexRoute2 = __webpack_require__(319);
 	
 	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 	
-	var _Redirect2 = __webpack_require__(310);
+	var _Redirect2 = __webpack_require__(318);
 	
 	var _Redirect3 = _interopRequireDefault(_Redirect2);
 	
-	var _Route2 = __webpack_require__(312);
+	var _Route2 = __webpack_require__(320);
 	
 	var _Route3 = _interopRequireDefault(_Route2);
 	
-	var _RouterContext2 = __webpack_require__(302);
+	var _RouterContext2 = __webpack_require__(310);
 	
 	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
 	
-	var _match2 = __webpack_require__(313);
+	var _match2 = __webpack_require__(321);
 	
 	var _match3 = _interopRequireDefault(_match2);
 	
-	var _useRouterHistory2 = __webpack_require__(327);
+	var _useRouterHistory2 = __webpack_require__(335);
 	
 	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 	
-	var _applyRouterMiddleware2 = __webpack_require__(328);
+	var _applyRouterMiddleware2 = __webpack_require__(336);
 	
 	var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
 	
-	var _browserHistory2 = __webpack_require__(329);
+	var _browserHistory2 = __webpack_require__(337);
 	
 	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
 	
-	var _hashHistory2 = __webpack_require__(337);
+	var _hashHistory2 = __webpack_require__(345);
 	
 	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 	
-	var _createMemoryHistory2 = __webpack_require__(315);
+	var _createMemoryHistory2 = __webpack_require__(323);
 	
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 	
@@ -32406,7 +33335,7 @@
 	exports.createMemoryHistory = _createMemoryHistory3.default;
 
 /***/ },
-/* 287 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32504,7 +33433,7 @@
 	}
 
 /***/ },
-/* 288 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32537,7 +33466,7 @@
 	});
 
 /***/ },
-/* 289 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -32779,7 +33708,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 290 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -32796,21 +33725,21 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _createTransitionManager2 = __webpack_require__(291);
+	var _createTransitionManager2 = __webpack_require__(299);
 	
 	var _createTransitionManager3 = _interopRequireDefault(_createTransitionManager2);
 	
-	var _InternalPropTypes = __webpack_require__(301);
+	var _InternalPropTypes = __webpack_require__(309);
 	
-	var _RouterContext = __webpack_require__(302);
+	var _RouterContext = __webpack_require__(310);
 	
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
-	var _RouterUtils = __webpack_require__(305);
+	var _RouterUtils = __webpack_require__(313);
 	
-	var _routerWarning = __webpack_require__(292);
+	var _routerWarning = __webpack_require__(300);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -32960,7 +33889,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 291 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -32971,25 +33900,25 @@
 	
 	exports.default = createTransitionManager;
 	
-	var _routerWarning = __webpack_require__(292);
+	var _routerWarning = __webpack_require__(300);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _computeChangedRoutes2 = __webpack_require__(294);
+	var _computeChangedRoutes2 = __webpack_require__(302);
 	
 	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 	
-	var _TransitionUtils = __webpack_require__(295);
+	var _TransitionUtils = __webpack_require__(303);
 	
-	var _isActive2 = __webpack_require__(297);
+	var _isActive2 = __webpack_require__(305);
 	
 	var _isActive3 = _interopRequireDefault(_isActive2);
 	
-	var _getComponents = __webpack_require__(298);
+	var _getComponents = __webpack_require__(306);
 	
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 	
-	var _matchRoutes = __webpack_require__(300);
+	var _matchRoutes = __webpack_require__(308);
 	
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 	
@@ -33241,7 +34170,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 292 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33250,7 +34179,7 @@
 	exports.default = routerWarning;
 	exports._resetWarned = _resetWarned;
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -33282,7 +34211,7 @@
 	}
 
 /***/ },
-/* 293 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -33349,14 +34278,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 294 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _PatternUtils = __webpack_require__(289);
+	var _PatternUtils = __webpack_require__(297);
 	
 	function routeParamsChanged(route, prevState, nextState) {
 	  if (!route.path) return false;
@@ -33431,7 +34360,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 295 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33441,7 +34370,7 @@
 	exports.runChangeHooks = runChangeHooks;
 	exports.runLeaveHooks = runLeaveHooks;
 	
-	var _AsyncUtils = __webpack_require__(296);
+	var _AsyncUtils = __webpack_require__(304);
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -33591,7 +34520,7 @@
 	}
 
 /***/ },
-/* 296 */
+/* 304 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -33684,7 +34613,7 @@
 	}
 
 /***/ },
-/* 297 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33695,7 +34624,7 @@
 	
 	exports.default = isActive;
 	
-	var _PatternUtils = __webpack_require__(289);
+	var _PatternUtils = __webpack_require__(297);
 	
 	function deepEqual(a, b) {
 	  if (a == b) return true;
@@ -33841,16 +34770,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 298 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _AsyncUtils = __webpack_require__(296);
+	var _AsyncUtils = __webpack_require__(304);
 	
-	var _PromiseUtils = __webpack_require__(299);
+	var _PromiseUtils = __webpack_require__(307);
 	
 	function getComponentsForRoute(nextState, route, callback) {
 	  if (route.component || route.components) {
@@ -33886,7 +34815,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 299 */
+/* 307 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -33898,7 +34827,7 @@
 	}
 
 /***/ },
-/* 300 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -33911,17 +34840,17 @@
 	
 	exports.default = matchRoutes;
 	
-	var _AsyncUtils = __webpack_require__(296);
+	var _AsyncUtils = __webpack_require__(304);
 	
-	var _PromiseUtils = __webpack_require__(299);
+	var _PromiseUtils = __webpack_require__(307);
 	
-	var _PatternUtils = __webpack_require__(289);
+	var _PatternUtils = __webpack_require__(297);
 	
-	var _routerWarning = __webpack_require__(292);
+	var _routerWarning = __webpack_require__(300);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -34157,7 +35086,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 301 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34194,7 +35123,7 @@
 	var routes = exports.routes = oneOfType([route, arrayOf(route)]);
 
 /***/ },
-/* 302 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34213,13 +35142,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _getRouteParams = __webpack_require__(303);
+	var _getRouteParams = __webpack_require__(311);
 	
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 	
-	var _ContextUtils = __webpack_require__(304);
+	var _ContextUtils = __webpack_require__(312);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -34333,14 +35262,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 303 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _PatternUtils = __webpack_require__(289);
+	var _PatternUtils = __webpack_require__(297);
 	
 	/**
 	 * Extracts an object of params the given route cares about from
@@ -34364,7 +35293,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 304 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34490,7 +35419,7 @@
 	}
 
 /***/ },
-/* 305 */
+/* 313 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34523,7 +35452,7 @@
 	}
 
 /***/ },
-/* 306 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34540,9 +35469,9 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _PropTypes = __webpack_require__(288);
+	var _PropTypes = __webpack_require__(296);
 	
-	var _ContextUtils = __webpack_require__(304);
+	var _ContextUtils = __webpack_require__(312);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -34687,7 +35616,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 307 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34700,7 +35629,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Link = __webpack_require__(306);
+	var _Link = __webpack_require__(314);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
@@ -34720,7 +35649,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 308 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34743,9 +35672,9 @@
 	
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 	
-	var _ContextUtils = __webpack_require__(304);
+	var _ContextUtils = __webpack_require__(312);
 	
-	var _PropTypes = __webpack_require__(288);
+	var _PropTypes = __webpack_require__(296);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -34798,7 +35727,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 309 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34809,7 +35738,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(292);
+	var _routerWarning = __webpack_require__(300);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -34817,11 +35746,11 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _Redirect = __webpack_require__(310);
+	var _Redirect = __webpack_require__(318);
 	
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 	
-	var _InternalPropTypes = __webpack_require__(301);
+	var _InternalPropTypes = __webpack_require__(309);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -34868,7 +35797,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 310 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34883,11 +35812,11 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
-	var _PatternUtils = __webpack_require__(289);
+	var _PatternUtils = __webpack_require__(297);
 	
-	var _InternalPropTypes = __webpack_require__(301);
+	var _InternalPropTypes = __webpack_require__(309);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -34977,7 +35906,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 311 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34988,7 +35917,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _routerWarning = __webpack_require__(292);
+	var _routerWarning = __webpack_require__(300);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -34996,9 +35925,9 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
-	var _InternalPropTypes = __webpack_require__(301);
+	var _InternalPropTypes = __webpack_require__(309);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35044,7 +35973,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 312 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -35059,9 +35988,9 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
-	var _InternalPropTypes = __webpack_require__(301);
+	var _InternalPropTypes = __webpack_require__(309);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35108,7 +36037,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 313 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -35117,23 +36046,23 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _Actions = __webpack_require__(314);
+	var _Actions = __webpack_require__(322);
 	
 	var _invariant = __webpack_require__(201);
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _createMemoryHistory = __webpack_require__(315);
+	var _createMemoryHistory = __webpack_require__(323);
 	
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 	
-	var _createTransitionManager = __webpack_require__(291);
+	var _createTransitionManager = __webpack_require__(299);
 	
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 	
-	var _RouteUtils = __webpack_require__(287);
+	var _RouteUtils = __webpack_require__(295);
 	
-	var _RouterUtils = __webpack_require__(305);
+	var _RouterUtils = __webpack_require__(313);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35186,7 +36115,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 314 */
+/* 322 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35213,7 +36142,7 @@
 	var POP = exports.POP = 'POP';
 
 /***/ },
-/* 315 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35221,15 +36150,15 @@
 	exports.__esModule = true;
 	exports.default = createMemoryHistory;
 	
-	var _useQueries = __webpack_require__(316);
+	var _useQueries = __webpack_require__(324);
 	
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 	
-	var _useBasename = __webpack_require__(323);
+	var _useBasename = __webpack_require__(331);
 	
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 	
-	var _createMemoryHistory = __webpack_require__(324);
+	var _createMemoryHistory = __webpack_require__(332);
 	
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 	
@@ -35249,7 +36178,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 316 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35258,15 +36187,15 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _queryString = __webpack_require__(317);
+	var _queryString = __webpack_require__(325);
 	
-	var _runTransitionHook = __webpack_require__(320);
+	var _runTransitionHook = __webpack_require__(328);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _LocationUtils = __webpack_require__(321);
+	var _LocationUtils = __webpack_require__(329);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35375,12 +36304,12 @@
 	exports.default = useQueries;
 
 /***/ },
-/* 317 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(318);
-	var objectAssign = __webpack_require__(319);
+	var strictUriEncode = __webpack_require__(326);
+	var objectAssign = __webpack_require__(327);
 	
 	function encode(value, opts) {
 		if (opts.encode) {
@@ -35479,7 +36408,7 @@
 
 
 /***/ },
-/* 318 */
+/* 326 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35491,7 +36420,7 @@
 
 
 /***/ },
-/* 319 */
+/* 327 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35580,14 +36509,14 @@
 
 
 /***/ },
-/* 320 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
 	exports.__esModule = true;
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -35609,7 +36538,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 321 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -35625,13 +36554,13 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
-	var _Actions = __webpack_require__(314);
+	var _Actions = __webpack_require__(322);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35707,7 +36636,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 322 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -35715,7 +36644,7 @@
 	exports.__esModule = true;
 	exports.createPath = exports.parsePath = exports.getQueryStringValueFromPath = exports.stripQueryStringValueFromPath = exports.addQueryStringValueToPath = undefined;
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -35814,7 +36743,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 323 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35823,11 +36752,11 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _runTransitionHook = __webpack_require__(320);
+	var _runTransitionHook = __webpack_require__(328);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35928,7 +36857,7 @@
 	exports.default = useBasename;
 
 /***/ },
-/* 324 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -35937,7 +36866,7 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -35945,15 +36874,15 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _LocationUtils = __webpack_require__(321);
+	var _LocationUtils = __webpack_require__(329);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
-	var _createHistory = __webpack_require__(325);
+	var _createHistory = __webpack_require__(333);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
-	var _Actions = __webpack_require__(314);
+	var _Actions = __webpack_require__(322);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -36074,24 +37003,24 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 325 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _AsyncUtils = __webpack_require__(326);
+	var _AsyncUtils = __webpack_require__(334);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
-	var _runTransitionHook = __webpack_require__(320);
+	var _runTransitionHook = __webpack_require__(328);
 	
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 	
-	var _Actions = __webpack_require__(314);
+	var _Actions = __webpack_require__(322);
 	
-	var _LocationUtils = __webpack_require__(321);
+	var _LocationUtils = __webpack_require__(329);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -36255,7 +37184,7 @@
 	exports.default = createHistory;
 
 /***/ },
-/* 326 */
+/* 334 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36316,7 +37245,7 @@
 	};
 
 /***/ },
-/* 327 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36324,11 +37253,11 @@
 	exports.__esModule = true;
 	exports.default = useRouterHistory;
 	
-	var _useQueries = __webpack_require__(316);
+	var _useQueries = __webpack_require__(324);
 	
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 	
-	var _useBasename = __webpack_require__(323);
+	var _useBasename = __webpack_require__(331);
 	
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 	
@@ -36343,7 +37272,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 328 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -36356,11 +37285,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _RouterContext = __webpack_require__(302);
+	var _RouterContext = __webpack_require__(310);
 	
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 	
-	var _routerWarning = __webpack_require__(292);
+	var _routerWarning = __webpack_require__(300);
 	
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 	
@@ -36406,18 +37335,18 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 329 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _createBrowserHistory = __webpack_require__(330);
+	var _createBrowserHistory = __webpack_require__(338);
 	
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 	
-	var _createRouterHistory = __webpack_require__(336);
+	var _createRouterHistory = __webpack_require__(344);
 	
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 	
@@ -36427,7 +37356,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 330 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -36440,19 +37369,19 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _ExecutionEnvironment = __webpack_require__(331);
+	var _ExecutionEnvironment = __webpack_require__(339);
 	
-	var _BrowserProtocol = __webpack_require__(332);
+	var _BrowserProtocol = __webpack_require__(340);
 	
 	var BrowserProtocol = _interopRequireWildcard(_BrowserProtocol);
 	
-	var _RefreshProtocol = __webpack_require__(335);
+	var _RefreshProtocol = __webpack_require__(343);
 	
 	var RefreshProtocol = _interopRequireWildcard(_RefreshProtocol);
 	
-	var _DOMUtils = __webpack_require__(333);
+	var _DOMUtils = __webpack_require__(341);
 	
-	var _createHistory = __webpack_require__(325);
+	var _createHistory = __webpack_require__(333);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
@@ -36526,7 +37455,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 331 */
+/* 339 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36535,7 +37464,7 @@
 	var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /***/ },
-/* 332 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36543,15 +37472,15 @@
 	exports.__esModule = true;
 	exports.go = exports.replaceLocation = exports.pushLocation = exports.startListener = exports.getUserConfirmation = exports.getCurrentLocation = undefined;
 	
-	var _LocationUtils = __webpack_require__(321);
+	var _LocationUtils = __webpack_require__(329);
 	
-	var _DOMUtils = __webpack_require__(333);
+	var _DOMUtils = __webpack_require__(341);
 	
-	var _DOMStateStorage = __webpack_require__(334);
+	var _DOMStateStorage = __webpack_require__(342);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
-	var _ExecutionEnvironment = __webpack_require__(331);
+	var _ExecutionEnvironment = __webpack_require__(339);
 	
 	var PopStateEvent = 'popstate';
 	var HashChangeEvent = 'hashchange';
@@ -36638,7 +37567,7 @@
 	};
 
 /***/ },
-/* 333 */
+/* 341 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36683,7 +37612,7 @@
 	};
 
 /***/ },
-/* 334 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -36691,7 +37620,7 @@
 	exports.__esModule = true;
 	exports.readState = exports.saveState = undefined;
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -36774,7 +37703,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 335 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36782,7 +37711,7 @@
 	exports.__esModule = true;
 	exports.replaceLocation = exports.pushLocation = exports.getCurrentLocation = exports.go = exports.getUserConfirmation = undefined;
 	
-	var _BrowserProtocol = __webpack_require__(332);
+	var _BrowserProtocol = __webpack_require__(340);
 	
 	Object.defineProperty(exports, 'getUserConfirmation', {
 	  enumerable: true,
@@ -36797,9 +37726,9 @@
 	  }
 	});
 	
-	var _LocationUtils = __webpack_require__(321);
+	var _LocationUtils = __webpack_require__(329);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
 	var getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation() {
 	  return (0, _LocationUtils.createLocation)(window.location);
@@ -36816,7 +37745,7 @@
 	};
 
 /***/ },
-/* 336 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36829,7 +37758,7 @@
 	  return history;
 	};
 	
-	var _useRouterHistory = __webpack_require__(327);
+	var _useRouterHistory = __webpack_require__(335);
 	
 	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 	
@@ -36840,18 +37769,18 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 337 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _createHashHistory = __webpack_require__(338);
+	var _createHashHistory = __webpack_require__(346);
 	
 	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 	
-	var _createRouterHistory = __webpack_require__(336);
+	var _createRouterHistory = __webpack_require__(344);
 	
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 	
@@ -36861,7 +37790,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 338 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -36870,7 +37799,7 @@
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
@@ -36878,15 +37807,15 @@
 	
 	var _invariant2 = _interopRequireDefault(_invariant);
 	
-	var _ExecutionEnvironment = __webpack_require__(331);
+	var _ExecutionEnvironment = __webpack_require__(339);
 	
-	var _DOMUtils = __webpack_require__(333);
+	var _DOMUtils = __webpack_require__(341);
 	
-	var _HashProtocol = __webpack_require__(339);
+	var _HashProtocol = __webpack_require__(347);
 	
 	var HashProtocol = _interopRequireWildcard(_HashProtocol);
 	
-	var _createHistory = __webpack_require__(325);
+	var _createHistory = __webpack_require__(333);
 	
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 	
@@ -37014,7 +37943,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 339 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -37022,7 +37951,7 @@
 	exports.__esModule = true;
 	exports.replaceLocation = exports.pushLocation = exports.startListener = exports.getCurrentLocation = exports.go = exports.getUserConfirmation = undefined;
 	
-	var _BrowserProtocol = __webpack_require__(332);
+	var _BrowserProtocol = __webpack_require__(340);
 	
 	Object.defineProperty(exports, 'getUserConfirmation', {
 	  enumerable: true,
@@ -37037,17 +37966,17 @@
 	  }
 	});
 	
-	var _warning = __webpack_require__(293);
+	var _warning = __webpack_require__(301);
 	
 	var _warning2 = _interopRequireDefault(_warning);
 	
-	var _LocationUtils = __webpack_require__(321);
+	var _LocationUtils = __webpack_require__(329);
 	
-	var _DOMUtils = __webpack_require__(333);
+	var _DOMUtils = __webpack_require__(341);
 	
-	var _DOMStateStorage = __webpack_require__(334);
+	var _DOMStateStorage = __webpack_require__(342);
 	
-	var _PathUtils = __webpack_require__(322);
+	var _PathUtils = __webpack_require__(330);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
