@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Square extends Component {
+class UISquare extends Component {
     constructor(props) {
         super(props);
 
@@ -42,4 +42,4 @@ const styles = {
     },
 }
 
-export default Square;
+export default UISquare;

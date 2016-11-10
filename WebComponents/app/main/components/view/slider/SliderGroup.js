@@ -10,7 +10,7 @@ class SliderGroup extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
+            <div style={{...styles.container, ...this.props.style}}>
                 <label style={styles.title}>{this.props.title}</label>
                 <div style={styles.panel}>
                     <SquaresSlider settings={this.props.settings}>
@@ -24,8 +24,7 @@ class SliderGroup extends Component {
 
 const styles = {
     container: {
-        marginLeft: 10,
-        marginRight: 10
+        padding: 5,
     },
     panel: {
         height: 100,
@@ -33,7 +32,9 @@ const styles = {
         marginLeft: 40,
         marginRight: 40,
         marginBottom: 10,
-        backgroundColor: '#F8F8F8'
+        backgroundColor: '#F8F8F8',
+        borderRadius: 10,
+        border: '1px solid #888888',
     },
     title: {
         fontSize: 18,

@@ -29,6 +29,15 @@ const ImagePath = {
     homeSearch: `${imagePath}searchIcon.png`,
     loginUserName: `${imagePath}loginUserName.png`,
     loginPassword: `${imagePath}loginPassword.png`,
+    cardOpenBusinessManagementIcon: `${imagePath}cardOpenBusinessManagementIcon.png`,
+    cardActiveBusinessManagementIcon: `${imagePath}cardActiveBusinessManagementIcon.png`,
+    cardSendBusinessManagementIcon: `${imagePath}cardSendBusinessManagementIcon.png`,
+    contractApplyBusinessManagementIcon: `${imagePath}contractApplyBusinessManagementIcon.png`,
+    contractChangeBusinessManagementIcon: `${imagePath}contractChangeBusinessManagementIcon.png`,
+    businessManagementBoxIcon: `${imagePath}BusinessManagementBoxIcon.png`,
+    padOutsideBusinessManagementIcon: `${imagePath}padOutsideBusinessManagementIcon.png`,
+    padInsideBusinessManagementIcon: `${imagePath}padInsideBusinessManagementIcon.png`,
+
 
 };
 
