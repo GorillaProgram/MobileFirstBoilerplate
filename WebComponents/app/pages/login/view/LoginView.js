@@ -50,7 +50,6 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        // alignItems: 'center',
         height: Constant.screenHeight - 40 - 50,
         marginTop: 50,
     },
