@@ -59,7 +59,8 @@ const styles = {
         height: Constant.loginDialogHeight,
         border: '1px solid #888888',
         borderRadius: 10,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        boxShadow: '0px 2px 3px 0px rgba(0,0,0,0.50)'
     },
     loginHeaderLayout: {
         display: 'flex',
