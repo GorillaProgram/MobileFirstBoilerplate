@@ -27,7 +27,7 @@ class LoginContainer extends Component {
     /**
      * 密码更改
      */
-    handlePasswordChange() {
+    handlePasswordChange(event) {
 
     }
 
