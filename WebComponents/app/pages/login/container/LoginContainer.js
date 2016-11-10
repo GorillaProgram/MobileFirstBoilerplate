@@ -21,7 +21,13 @@ class LoginContainer extends Component {
      * 用户名更改
      */
     handleUserNameChange(event) {
-        console.log('====>>>', event.target.value);
+        console.log('====>>>', this.props);
+        this.context.router.push({
+            pathname: 'product',
+            state: {
+                name: 'user'
+            }
+        });
     }
 
     /**
