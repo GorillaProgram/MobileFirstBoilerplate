@@ -25,12 +25,12 @@ const styles = {
         alignItems: 'center',
         width: 80,
         height: 80,
-        marginTop: 10,
+        marginTop: 13,
         marginLeft: 10,
         marginRight: 10,
         color: '#333333',
         fontSize: 16,
-        borderRadius: 5
+        borderRadius: 5,
     },
     image: {
         width: 55,
