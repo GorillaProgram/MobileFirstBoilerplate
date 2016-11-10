@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import configureStore from './framework/store/Store';
+import configureStore from './dataflow/store/Store';
 import Just from './main/context/Just';
 import App from './App';
 
