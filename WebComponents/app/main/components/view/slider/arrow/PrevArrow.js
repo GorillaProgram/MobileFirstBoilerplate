@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CommonStyle from '../../../../constant/CommonStyle';
 import ImagePath from '../../../../constant/ImagePath';
 
 class PrevArrow extends Component {
@@ -11,7 +10,7 @@ class PrevArrow extends Component {
 
     render() {
         return (
-            <div {...this.props} style={CommonStyle.arrow}>
+            <div {...this.props} style={{...styles.container, ...this.props.style}}>
                 <img src={ImagePath.prevArrow} style={styles.arrow} />
             </div>
         );
@@ -19,6 +18,11 @@ class PrevArrow extends Component {
 }
 
 const styles = {
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     arrow: {
         width: 30,
         height: 43

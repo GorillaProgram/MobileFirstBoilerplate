@@ -51,25 +51,6 @@ const CommonStyles = {
         width: '99%',
         marginTop: 80
     },
-    arrow: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    square: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: Constant.squareWH,
-        height: Constant.squareWH,
-        marginTop: 10,
-        marginLeft: 20,
-        marginRight: 20,
-        color: '#333333',
-        fontSize: Constant.defaultFontSize,
-        borderRadius: 5
-    },
 };
 
 export default CommonStyles;

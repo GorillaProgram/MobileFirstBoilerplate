@@ -11,7 +11,7 @@ class NextArrow extends Component {
 
     render() {
         return (
-            <div {...this.props} style={CommonStyle.arrow}>
+            <div {...this.props} style={{...styles.container, ...this.props.style}}>
                 <img src={ImagePath.nextArrow} style={styles.arrow} />
             </div>
         );
@@ -19,6 +19,11 @@ class NextArrow extends Component {
 }
 
 const styles = {
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     arrow: {
         width: 30,
         height: 43
