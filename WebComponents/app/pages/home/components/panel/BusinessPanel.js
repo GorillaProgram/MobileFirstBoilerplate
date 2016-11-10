@@ -32,6 +32,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         width: '45%',
+        backgroundColor: Constant.homePanelBackgroundColor,
         borderRadius: Constant.homeRadius,
         border: '1px solid #888888',
     },

@@ -44,7 +44,7 @@ class HomeView extends Component {
             prevArrow: <PrevArrow />,
             nextArrow: <NextArrow />
         };
-        
+
         return (
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>
@@ -151,7 +151,6 @@ const styles = {
         justifyContent: 'space-between',
         width: Constant.oneThird,
         height: Constant.matchParent - Constant.homeBlock * 2,
-        backgroundColor: Constant.homePanelBackgroundColor,
         marginTop: Constant.homeBlock * 2,
         marginLeft: Constant.homeBlock,
         borderRadius: Constant.homeRadius,
