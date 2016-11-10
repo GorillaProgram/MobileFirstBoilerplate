@@ -4,7 +4,7 @@
  */
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexRoute, Redirect, hashHistory, browserHistory, createMemoryHistory } from 'react-router';
-import Just from './main/constant/Just';
+import Just from './main/context/Just';
 
 class App extends Component {
 

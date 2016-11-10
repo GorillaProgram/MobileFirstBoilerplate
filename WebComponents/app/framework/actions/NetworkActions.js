@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import Just from '../../main/constant/Just';
+import Just from '../../main/context/Just';
 
 export const REQUESTING = 'REQUESTING';
 export const RECEIVED = 'RECEIVED';

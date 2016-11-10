@@ -27,16 +27,18 @@ class LoginView extends Component {
                         <div style={styles.loginContentLayout}>
                             <EditView
                                 style={styles.loginUserName}
-                                image={ImagePath.loginUserName} />
+                                image={ImagePath.loginUserName}
+                                onChange={this.props.handleUserNameChange}
+                                />
                             <EditView
                                 style={styles.loginPassword}
-                                image={ImagePath.loginPassword} />
+                                image={ImagePath.loginPassword}
+                                onChange={this.props.handlePasswordChange}
+                                />
                             <Button
                                 title="登录"
                                 style={styles.loginButton}
-                                onClick={() => {
-                                    console.log('=======');
-                                }} />
+                                onClick={this.props.handleLoginClick} />
                         </div>
                     </div>
                 </div>

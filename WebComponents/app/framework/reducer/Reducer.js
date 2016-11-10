@@ -3,7 +3,7 @@
  * https://github.com/maybewaityou
  */
 import { combineReducers } from 'redux';
-import Just from '../../main/constant/Just';
+import Just from '../../main/context/Just';
 import {
     REQUESTING,
     RECEIVED,

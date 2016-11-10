@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import Just from '../constant/Just';
+import Just from '../context/Just';
 
 const AtomicTask = {
 

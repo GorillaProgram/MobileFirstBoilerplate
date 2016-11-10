@@ -10,7 +10,7 @@ import PeripheralManager from '../manager/PeripheralManager';
 import TaskManager from '../manager/TaskManager';
 
 const Just = {
-    
+
     ...LifeCircle,
     ...DataManager,
     ...FunctionManager,

@@ -3,7 +3,7 @@
  * https://github.com/maybewaityou
  */
 import NetworkActions from './NetworkActions';
-import Just from '../../main/constant/Just';
+import Just from '../../main/context/Just';
 
 const LoginActions = {
     validateTeller: (params) => {
