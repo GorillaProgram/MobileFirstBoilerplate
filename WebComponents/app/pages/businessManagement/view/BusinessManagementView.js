@@ -37,15 +37,15 @@ class BusinessManagementView extends Component {
                     </SliderGroup>
                     <SliderGroup title="电子银行签约" settings={settings}>
                         <div style={styles.slide}>
-                            <Square title="签约申请" image={ImagePath.contractApplyBusinessManagementIcon} onClick={this.props.handleSignmentApplyClick} />
-                            <Square title="签约变更" image={ImagePath.contractChangeBusinessManagementIcon} onClick={this.props.handleSignmentChangedClick} />
+                            <Square title="签约申请" image={ImagePath.contractApplyBusinessManagementIcon} onClick={this.props.handleContractApplyClick} />
+                            <Square title="签约变更" image={ImagePath.contractChangeBusinessManagementIcon} onClick={this.props.handleContractChangedClick} />
                         </div>
                     </SliderGroup>
                     <SliderGroup title="业务办理" settings={settings}>
                         <div style={styles.slide}>
-                            <Square title="业务办理箱" image={ImagePath.businessManagementBoxIcon} onClick={this.props.handleBusinessTodoClick} />
-                            <Square title="出库" image={ImagePath.padOutsideBusinessManagementIcon} onClick={this.props.handleOutsideClick} />
-                            <Square title="入库" image={ImagePath.padInsideBusinessManagementIcon} onClick={this.props.handleInsideClick} />
+                            <Square title="业务办理箱" image={ImagePath.businessManagementBoxIcon} onClick={this.props.handleBusinessBoxClick} />
+                            <Square title="出库" image={ImagePath.padOutsideBusinessManagementIcon} onClick={this.props.handlePadOutsideClick} />
+                            <Square title="入库" image={ImagePath.padInsideBusinessManagementIcon} onClick={this.props.handlePadInsideClick} />
                         </div>
                     </SliderGroup>
                 </div>
