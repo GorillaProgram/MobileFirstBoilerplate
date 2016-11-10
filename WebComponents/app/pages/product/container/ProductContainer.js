@@ -15,7 +15,6 @@ class ProductContainer extends Component {
     }
 
     render() {
-        console.log(this.props.location);
         return (
             <ProductView
 
