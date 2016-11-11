@@ -31,6 +31,7 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        height: 90,
         width: '45%',
         backgroundColor: Constant.homePanelBackgroundColor,
         borderRadius: Constant.homeRadius,
