@@ -21,6 +21,7 @@ class LoginContainer extends Component {
      * 用户名更改
      */
     handleUserNameChange(event) {
+        const { dispatch } = this.props;
 
     }
 
