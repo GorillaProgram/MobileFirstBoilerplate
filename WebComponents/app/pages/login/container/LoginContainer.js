@@ -6,7 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import LoginView from '../view/LoginView';
 import Just from '../../../main/context/Just';
-import {  } from '../../../dataflow/actions/Actions';
+import { test } from '../../../dataflow/actions/Actions';
 
 class LoginContainer extends Component {
 
@@ -23,7 +23,7 @@ class LoginContainer extends Component {
      */
     handleUserNameChange(event) {
         const { dispatch } = this.props;
-        dispatch();
+        dispatch(test(event.target.value.length));
     }
 
     /**
