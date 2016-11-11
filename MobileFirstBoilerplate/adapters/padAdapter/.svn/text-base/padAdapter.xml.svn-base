@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed Materials - Property of IBM 5725-I43 (C) Copyright IBM Corp. 
+	2011, 2013. All Rights Reserved. US Government Users Restricted Rights - 
+	Use, duplication or disclosure restricted by GSA ADP Schedule Contract with 
+	IBM Corp. -->
+<wl:adapter name="padAdapter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>padAdapter</displayName>
+	<description>padAdapter</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<domain>10.240.90.212</domain>
+			<port>7001</port>
+			<connectionTimeoutInMilliseconds>120000</connectionTimeoutInMilliseconds>
+			<socketTimeoutInMilliseconds>120000</socketTimeoutInMilliseconds>
+			<maxConcurrentConnectionsPerNode>50</maxConcurrentConnectionsPerNode>
+			<!-- Following properties used by adapter's key manager for choosing specific 
+				certificate from key store <sslCertificateAlias></sslCertificateAlias> <sslCertificatePassword></sslCertificatePassword> -->
+		</connectionPolicy>
+	</connectivity>
+
+
+	<procedure name="validateTeller" />
+
+	<procedure name="validatePwd" />
+
+	<procedure name="validateFingerPrint" />
+
+	<procedure name="authvalidateTeller" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="doAuthCommit" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="doAuthCancel" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="loginvalidate" />
+
+	<procedure name="loginsign" />
+
+	<procedure name="queryCityparam"/>
+
+	<procedure name="docheck" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="getSerialNo" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="queryCardInfo" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardInfoQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="checkAcPwd" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perSignApp" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perEbankCstInfInq" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="corSmsFun" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="getCifTypeStr" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="dymPwdGnrt" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="dymPwdChk" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perCheckLogId" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="corSmsFee" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="corFee" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perTermSign" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perTermSignPost" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perEUseCanc" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="poffList" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perPapMgmActT" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="ebankCustInfo" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perBankLimit" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="padCarryCardRegQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="identifyingCodeQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="getStories" />
+
+	<procedure name="customerInfoQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="imageUpload" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="getStoriesFiltered" />
+
+	<procedure name="cardOpen" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="inquire" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="productMain" />
+
+	<procedure name="inquireContextData" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="productDetail" />
+
+	<procedure name="cardStatusQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="padOut" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="padOutCheck"/>
+
+	<procedure name="getPad" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="getOutInfoFromTransno" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardCustemerInfoQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardIsNeedMeesage" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="checkPassworld" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="IDNoQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="IsEmployee" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="IsInBlackList" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="openAccount" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardActiveCommit" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="judgeCardCategory" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardIsOpen" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perTermSignBg" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="perTermSignBgPost" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="signQryList" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardOpenCustemerInfoQuery" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="isFirstStockFromDatabase" securityTest="AdapterAuth-securityTest"/>
+	
+		
+	<procedure name="padBacked" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="inquire_d" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="showIndexInfo" />
+	
+
+	<procedure name="getProdCode" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="commitCardOpen" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="padOutCancel" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="padBack" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="padOutChange" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="CheckFromPNUM" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="checkusedbyid" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="rePinBlock" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="checkPassword" securityTest="AdapterAuth-securityTest"/>
+	
+	<procedure name="getPadImageUrls"/>
+	
+	<procedure name="padBackCarryCardCount" securityTest="AdapterAuth-securityTest"/>
+
+	<procedure name="cardStatusChange" securityTest="AdapterAuth-securityTest"/>
+	
+</wl:adapter>

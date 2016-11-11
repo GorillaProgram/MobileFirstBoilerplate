@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/repos/tip/!svn/ver/59502/development/TIP.MMS/trunk/pad/SHbank/adapters/padAdapter
+END
+padAdapter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/repos/tip/!svn/ver/59360/development/TIP.MMS/trunk/pad/SHbank/adapters/padAdapter/padAdapter.xml
+END
+padAdapter-impl.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/repos/tip/!svn/ver/59502/development/TIP.MMS/trunk/pad/SHbank/adapters/padAdapter/padAdapter-impl.js
+END
+filtered.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/repos/tip/!svn/ver/52247/development/TIP.MMS/trunk/pad/SHbank/adapters/padAdapter/filtered.xsl
+END

@@ -6,9 +6,9 @@ import Just from '../context/Just';
 
 const AtomicTask = {
 
-    function validateTellerTask(userID) {
+    validateTellerTask(userID) {
         return Just.promiseTask('padAdapter', 'validateTeller', [userID])
-            .then(function (result) {
+            .then((result) => {
                 return Just.promise(result.responseJSON.bsadata);
             });
     },
