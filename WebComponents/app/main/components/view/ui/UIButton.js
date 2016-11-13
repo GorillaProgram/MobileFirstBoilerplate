@@ -1,6 +1,9 @@
 /**
  * Created by MeePwn
  * https://github.com/maybewaityou
+ *
+ * description:
+ *      UI控件
  */
 import React, { Component } from 'react';
 

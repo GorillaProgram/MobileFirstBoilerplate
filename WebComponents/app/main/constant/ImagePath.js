@@ -1,12 +1,16 @@
 /**
  * Created by MeePwn
  * https://github.com/maybewaityou
+ *
+ * description:
+ *      图片路径
  */
 
 const imagePath = `./static/imgs/`;
 
 const ImagePath = {
 
+    /* 首页 start */
     homeTabActiveIcon: `${imagePath}homeTabActiveIcon.png`,
     homeTabIcon: `${imagePath}homeTabIcon.png`,
     productionTabActiveIcon: `${imagePath}productionTabActiveIcon.png`,
@@ -38,6 +42,17 @@ const ImagePath = {
     padOutsideBusinessManagementIcon: `${imagePath}padOutsideBusinessManagementIcon.png`,
     padInsideBusinessManagementIcon: `${imagePath}padInsideBusinessManagementIcon.png`,
     clearImageCacheBusinessManagementIcon: `${imagePath}clearImageCacheBusinessManagementIcon.png`,
+    /* 首页 end */
+
+    /* dialog start */
+    messageIcon: `${imagePath}messageIcon.png`,
+    successIcon: `${imagePath}successIcon.png`,
+    failureIcon: `${imagePath}failureIcon.png`,
+    IDIcon: `${imagePath}IDIcon.png`,
+    debitCardIcon: `${imagePath}debitCardIcon.png`,
+    fingerprintIcon: `${imagePath}fingerprintIcon.png`,
+    signatureIcon: `${imagePath}signatureIcon.png`,
+    /* dialog end */
 
 };
 

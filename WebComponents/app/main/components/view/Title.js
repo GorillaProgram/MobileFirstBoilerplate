@@ -1,3 +1,10 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *      Title
+ */
 import React, { Component } from 'react';
 import Constant from '../../constant/Constant';
 

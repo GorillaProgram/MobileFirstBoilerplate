@@ -1,6 +1,9 @@
 /**
  * Created by MeePwn
  * https://github.com/maybewaityou
+ *
+ * description:
+ *      WebView
  */
 import React, { Component } from 'react';
 import CommonStyle from '../../constant/CommonStyle';

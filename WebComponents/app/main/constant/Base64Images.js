@@ -1,5 +1,9 @@
 /**
- * Created by MeePwn on 2016/10/21.
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *      全局的
  */
 const Base64Images = {
 
