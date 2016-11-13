@@ -7,7 +7,7 @@ import AtomicTask from '../task/AtomicTask';
 const TaskManager = {
 
     ...AtomicTask
-    
+
 };
 
 export default TaskManager;
