@@ -1,3 +1,10 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *      Slider包装类
+ */
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 

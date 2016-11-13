@@ -1,3 +1,10 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *      业务办理中的Slider
+ */
 import React, { Component } from 'react';
 import SquaresSlider from './SquaresSlider';
 

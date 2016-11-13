@@ -1,3 +1,10 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *      Slider中的左箭头
+ */
 import React, { Component } from 'react';
 import ImagePath from '../../../../constant/ImagePath';
 

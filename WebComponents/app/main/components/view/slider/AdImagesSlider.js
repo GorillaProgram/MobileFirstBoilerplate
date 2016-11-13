@@ -1,6 +1,9 @@
 /**
  * Created by MeePwn
  * https://github.com/maybewaityou
+ *
+ * description:
+ *      广告Slider
  */
 import React, { Component } from 'react';
 import Slider from 'react-slick';
