@@ -61,7 +61,6 @@ const NetworkUtility = {
         }
         DebugUtility.log('==== result ====>>>>> ', result);
     },
-
     failure(error, silence) {
         if (DataUtility.isNull(silence)) {
             JQMUtility.hideLoader();
