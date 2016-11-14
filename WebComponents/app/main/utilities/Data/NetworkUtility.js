@@ -29,24 +29,24 @@ const NetworkUtility = {
                                 resolve(result);
                             } else {
                                 NetworkUtility.failure('error', silence);
-                                reject('error');
+                                resolve('error');
                             }
                         } else if(result.responseJSON.retCode === RESPONSE_FAILURE) {
                             NetworkUtility.failure(result.responseJSON.retMsg, silence);
-                            reject(result.responseJSON.retMsg);
+                            resolve(result.responseJSON.retMsg);
                         } else {
                             NetworkUtility.failure('error', silence);
-                            reject('error');
+                            resolve('error');
                         }
                     },
                     onFailure: (error) => {
                         NetworkUtility.failure(error, silence);
-                        reject(error);
+                        resolve(error);
                     }
                 });
             } catch (error) {
                 NetworkUtility.exception(error, silence);
-                reject(error);
+                resolve(error);
             }
         });
     },
