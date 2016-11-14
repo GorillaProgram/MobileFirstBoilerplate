@@ -54,6 +54,7 @@
     },
     "dependencies": {
         "imgcache.js": "^1.0.0",
+        "immutable": "^3.8.1",
         "normalizr": "^2.2.1",
         "object-assign": "^4.1.0",
         "query-string": "^4.2.3",
