@@ -18,22 +18,6 @@ const LoginActions = {
                 });
         };
     },
-    // validateTeller: (params) => {
-    //     return dispatch => {
-    //         dispatch(NetworkActions.requesting());
-    //         return Just.silenceTask(params.adapter, params.procedure, params.parameters)
-    //             .then((validateTellerResponse) => {
-    //                 return dispatch(Just.silenceTask(params.adapter, params.procedure, params.parameters)
-    //                     .then((loginAfterValidateTellerResponse) => {
-    //                         return dispatch(Just.silenceTask(params.adapter, params.procedure, params.parameters)
-    //                             .then((loginResponse) => {
-    //                                 dispatch(NetworkActions.received());
-    //                                 return dispatch(NetworkActions.receivedData(params, loginResponse));
-    //                             }));
-    //                     }));
-    //             });
-    //     };
-    // },
     prevLogin: (params) => {
         return dispatch => {
             dispatch(NetworkActions.requesting());
