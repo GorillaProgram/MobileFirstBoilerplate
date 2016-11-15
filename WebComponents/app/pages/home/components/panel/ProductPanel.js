@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ContentSlider from '../slider/ContentSlider';
 
 class ProductPanel extends Component {
@@ -47,6 +47,14 @@ const styles = {
         marginTop: 25,
         marginBottom: 20,
     }
-}
+};
+
+ProductPanel.propTypes = {
+    style: PropTypes.object,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    settings: PropTypes.object.isRequired,
+    models: PropTypes.array.isRequired
+};
 
 export default ProductPanel;
