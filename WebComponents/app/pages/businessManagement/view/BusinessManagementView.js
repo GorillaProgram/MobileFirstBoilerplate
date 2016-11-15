@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import ImagePath from '../../../main/constant/ImagePath';
 import SliderGroup from '../../../main/components/view/slider/SliderGroup';
@@ -53,6 +53,17 @@ class BusinessManagementView extends Component {
         );
     }
 }
+
+BusinessManagementView.propTypes = {
+    handleOpenCardClick: PropTypes.func.isRequired,
+    handleCardActiveClick: PropTypes.func.isRequired,
+    handleSendCardClick: PropTypes.func.isRequired,
+    handleContractApplyClick: PropTypes.func.isRequired,
+    handleContractChangedClick: PropTypes.func.isRequired,
+    handleBusinessBoxClick: PropTypes.func.isRequired,
+    handlePadOutsideClick: PropTypes.func.isRequired,
+    handlePadInsideClick: PropTypes.func.isRequired
+};
 
 const styles = {
     container: {
