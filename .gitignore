@@ -252,3 +252,7 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 ##### Swift end #####
+
+##### Mac start #####
+.DS_Store
+##### Mac end #####
