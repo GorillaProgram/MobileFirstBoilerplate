@@ -29,7 +29,7 @@ CommonToolsContainer.propTypes = {
 };
 
 CommonToolsContainer.contextTypes = {
-    router: React.PropTypes.object
+    router: PropTypes.object
 };
 
 function mapStateToProps(state) {
