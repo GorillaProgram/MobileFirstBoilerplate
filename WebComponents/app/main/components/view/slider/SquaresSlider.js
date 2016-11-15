@@ -5,7 +5,7 @@
  * description:
  *      Slider包装类
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Slider from 'react-slick';
 
 class SquaresSlider extends Component {
@@ -18,5 +18,10 @@ class SquaresSlider extends Component {
         );
     }
 }
+
+SquaresSlider.propTypes = {
+    settings: PropTypes.object.isRequired,
+    children: PropTypes.any
+};
 
 export default SquaresSlider;

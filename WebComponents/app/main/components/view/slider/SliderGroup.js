@@ -5,7 +5,7 @@
  * description:
  *      业务办理中的Slider
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import SquaresSlider from './SquaresSlider';
 
 class SliderGroup extends Component {
@@ -48,6 +48,13 @@ const styles = {
         marginTop: 10,
         marginLeft: 40,
     },
-}
+};
+
+SliderGroup.propTypes = {
+    style: PropTypes.object,
+    title: PropTypes.string,
+    settings: PropTypes.object,
+    children: PropTypes.any
+};
 
 export default SliderGroup;
