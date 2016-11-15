@@ -5,7 +5,7 @@
  * description:
  *      UI控件
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class UIEditView extends Component {
 
@@ -55,6 +55,12 @@ const styles = {
         position: 'absolute',
     }
 
+};
+
+UIEditView.propTypes = {
+    style: PropTypes.object,
+    image: PropTypes.string,
+    onChange: PropTypes.func.isRequired
 };
 
 export default UIEditView;

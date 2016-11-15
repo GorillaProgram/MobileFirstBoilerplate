@@ -5,7 +5,7 @@
  * description:
  *      UI控件
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class UISquare extends Component {
     constructor(props) {
@@ -47,6 +47,13 @@ const styles = {
         fontSize: 16,
         marginTop: 5
     },
-}
+};
+
+UISquare.propTypes = {
+    style: PropTypes.object,
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    onClick: PropTypes.func
+};
 
 export default UISquare;
