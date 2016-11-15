@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class Content extends Component {
     constructor(props) {
@@ -51,6 +51,10 @@ const styles = {
     contentItem: {
         marginTop: 5
     }
-}
+};
+
+Content.propTypes = {
+    model: PropTypes.object.isRequired
+};
 
 export default Content;
