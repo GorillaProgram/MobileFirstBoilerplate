@@ -11,13 +11,13 @@ const LifeCircle = {
      * 初始化页面配置
      */
     initializePage() {
-        document.addEventListener("deviceready", () => {
+        document.addEventListener('deviceready', () => {
 
             /* 初始化图片缓存 */
             ImageCache.imageCacheInitConfig();
 
             // 返回按钮事件
-            document.addEventListener("backbutton", DeviceUtility.eventBackButton, false); // 返回键
+            document.addEventListener('backbutton', DeviceUtility.eventBackButton, false); // 返回键
         }, false);
     }
 
