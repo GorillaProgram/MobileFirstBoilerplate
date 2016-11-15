@@ -22,7 +22,7 @@ class WebView extends Component {
             <div style={{...CommonStyle.fullScreenContainer, ...styles.container}}>
                 <Title />
                 <div style={CommonStyle.contentLayout}>
-                    <iframe frameborder="0" width="100%" height="100%"></iframe>
+                    <iframe frameBorder="0" width="100%" height="100%"></iframe>
                 </div>
             </div>
         );
