@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ImagePath from '../../../../main/constant/ImagePath';
 
 class NoticePanel extends Component {
@@ -15,10 +15,7 @@ class NoticePanel extends Component {
     render() {
         const noticeView = this.props.models.map((model, index) => {
             return (
-                <div key={`${index}`} style={styles.noticeContentLayout} onClick={() => {
-                    // TODO 添加点击事件
-                    console.log(model.title);
-                }}>
+                <div key={`${index}`} style={styles.noticeContentLayout} onClick={model.onClick}>
                     <img src={ImagePath.noticeContentImage} style={styles.noticeContentImage} />
                     <div style={styles.noticeContent}>{model.title}</div>
                 </div>
@@ -79,6 +76,12 @@ const styles = {
         marginLeft: 5,
     }
 
-}
+};
+
+NoticePanel.propTypes = {
+    style: PropTypes.object,
+    title: PropTypes.string.isRequired,
+    models: PropTypes.array.isRequired
+};
 
 export default NoticePanel;
