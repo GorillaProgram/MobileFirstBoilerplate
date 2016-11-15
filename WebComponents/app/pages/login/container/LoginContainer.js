@@ -6,7 +6,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import LoginView from '../view/LoginView';
 import Just from '../../../main/context/Just';
-import { test } from '../../../dataflow/actions/Actions';
 
 class LoginContainer extends Component {
 
@@ -22,14 +21,14 @@ class LoginContainer extends Component {
      * 用户名更改
      */
     handleUserNameChange(event) {
-
+        Just.log(`=== userName ===>>>> ${event.target.value}`);
     }
 
     /**
      * 密码更改
      */
     handlePasswordChange(event) {
-
+        Just.log(`=== password ===>>>> ${event.target.value}`);
     }
 
     /**
