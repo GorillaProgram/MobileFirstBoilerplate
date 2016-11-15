@@ -218,7 +218,7 @@ const DialogUtility = {
                 ICPositiveAction();
             }
             DialogUtility.dismissDialog();
-        })
+        });
     },
     /**
      * 刷指纹Dialog
