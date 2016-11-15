@@ -79,7 +79,7 @@ const ImageCache = {
                     DebugUtility.log('====缓存成功' + path);
                 } else {
                     ImgCache.cacheFile(path, (path, success) => {
-                        DebugUtility.log('缓存成功====' + path);
+                        DebugUtility.log('缓存成功====' + path + ' ====== success ======' + success);
                     });
                 }
             });
