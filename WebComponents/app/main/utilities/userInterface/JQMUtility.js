@@ -10,7 +10,7 @@ const JQMUtility = {
     showLoader(message) {
         var messageTag = DataUtility.isNotNull(message) ? `
             <div class="sk-circle-text-layout">${message}</div>
-        ` : ``;
+        ` : '';
         JQMUtility.loader(`
                 <div class="sk-circle-layout">
                     <div class="sk-circle">
