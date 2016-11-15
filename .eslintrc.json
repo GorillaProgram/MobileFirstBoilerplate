@@ -6,7 +6,6 @@
         "node": true
     },
     "extends": "eslint:recommended",
-    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -15,17 +14,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "immutable"
+        "react"
     ],
     "rules": {
-        "strict": 0,
-        "immutable/no-let": 2,
-        "immutable/no-this": 2,
-        "immutable/no-mutation": 2,
         "indent": [
             "error",
-            "tab"
+            4
         ],
         "linebreak-style": [
             "error",
@@ -38,6 +32,8 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error"
     }
 }
