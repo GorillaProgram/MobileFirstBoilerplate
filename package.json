@@ -8,6 +8,7 @@
         "watch": "webpack-dev-server --progress --colors --inline --hot -d",
         "server": "webpack-dev-server --devtool eval --progress --colors --inline --hot --content-base build",
         "build": "webpack --progress --colors",
+        "": "",
         "start": "gulp server",
         "clean": "gulp clean",
         "rebuild": "gulp build"
