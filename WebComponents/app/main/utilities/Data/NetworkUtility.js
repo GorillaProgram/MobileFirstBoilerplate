@@ -14,7 +14,7 @@ const NetworkUtility = {
         DebugUtility.log('==== adapter ====>>>>> ', adapter);
         DebugUtility.log('==== procedure ====>>>>> ', procedure);
         DebugUtility.log('==== parameters ====>>>>> ', parameters);
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             try {
                 WL.Client.invokeProcedure({
                     adapter: adapter,
@@ -23,7 +23,7 @@ const NetworkUtility = {
                 }, {
                     timeout: Constant.REQUEST_TIMEOUT,
                     onSuccess: (result) => {
-                        if (result.responseJSON.retCode === RESPONSE_SUCCESS) {
+                        if (result.responseJSON.retCode === Constant.RESPONSE_SUCCESS) {
                             if (DataUtility.isNutNull(result.responseJSON.bsadata)) {
                                 NetworkUtility.success(result, silence);
                                 resolve(result);
@@ -31,7 +31,7 @@ const NetworkUtility = {
                                 NetworkUtility.failure('error', silence);
                                 resolve('error');
                             }
-                        } else if(result.responseJSON.retCode === RESPONSE_FAILURE) {
+                        } else if(result.responseJSON.retCode === Constant.RESPONSE_FAILURE) {
                             NetworkUtility.failure(result.responseJSON.retMsg, silence);
                             resolve(result.responseJSON.retMsg);
                         } else {
@@ -76,7 +76,7 @@ const NetworkUtility = {
         if (DataUtility.isNull(silence)) {
             JQMUtility.hideLoader();
         }
-        alert("系统错误" + JSONUtility.jsonToString(error.message.toString()));
+        alert('系统错误' + JSONUtility.jsonToString(error.message.toString()));
     },
     /* 公共回调方法 end */
 

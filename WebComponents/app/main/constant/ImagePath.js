@@ -6,7 +6,7 @@
  *      图片路径
  */
 
-const imagePath = `./static/imgs/`;
+const imagePath = './static/imgs/';
 
 const ImagePath = {
 

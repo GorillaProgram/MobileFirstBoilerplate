@@ -15,10 +15,10 @@ const StoreUtility = {
     memoryCache(key, value) {
         if (value) {
             // setter | remove
-            key === 'remove' ? memoryCacheRemove(value) : memoryCacheSetter(key, value);
+            key === 'remove' ? StoreUtility.memoryCacheRemove(value) : StoreUtility.memoryCacheSetter(key, value);
         } else {
             // getter
-            return memoryCacheGetter(key);
+            return StoreUtility.memoryCacheGetter(key);
         }
     },
 
@@ -52,10 +52,10 @@ const StoreUtility = {
     diskCache(key, value) {
         if (value) {
             // setter | remove
-            key === 'remove' ? diskCacheRemove(value) : diskCacheSetter(key, value);
+            key === 'remove' ? StoreUtility.diskCacheRemove(value) : StoreUtility.diskCacheSetter(key, value);
         } else {
             // getter
-            return diskCacheGetter(key);
+            return StoreUtility.diskCacheGetter(key);
         }
     },
 
