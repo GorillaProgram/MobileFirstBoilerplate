@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import ImagePath from '../../../main/constant/ImagePath';
 import Constant from '../../../main/constant/Constant';
@@ -90,6 +90,13 @@ class HomeView extends Component {
         );
     }
 }
+
+HomeView.propTypes = {
+    adModels: PropTypes.array.isRequired,
+    noticeModels: PropTypes.array.isRequired,
+    productModels: PropTypes.array.isRequired,
+    handleOpenCardClick: PropTypes.func.isRequired
+};
 
 const styles = {
     container: {
