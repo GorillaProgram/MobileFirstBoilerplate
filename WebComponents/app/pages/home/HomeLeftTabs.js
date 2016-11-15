@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ImagePath from '../../main/constant/ImagePath';
 import Just from '../../main/context/Just';
 import HomeLeftTab from './components/HomeLeftTab';
@@ -152,8 +152,12 @@ const styles = {
     }
 };
 
+HomeLeftTabs.propTypes = {
+    children: PropTypes.any
+};
+
 HomeLeftTabs.contextTypes = {
-  router: React.PropTypes.object
+    router: PropTypes.object
 };
 
 export default HomeLeftTabs;
