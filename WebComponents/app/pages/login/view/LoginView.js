@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Constant from '../../../main/constant/Constant';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import { Button, EditView } from '../../../main/components/view/UIComponents';
@@ -46,6 +46,12 @@ class LoginView extends Component {
         );
     }
 }
+
+LoginView.propTypes = {
+    handleUserNameChange: PropTypes.func.isRequired,
+    handlePasswordChange: PropTypes.func.isRequired,
+    handleLoginClick: PropTypes.func.isRequired
+};
 
 const styles = {
     container: {
