@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class HomeLeftTab extends Component {
 
@@ -40,6 +40,15 @@ const styles = {
         marginTop: 8,
         marginLeft: 21
     }
+};
+
+HomeLeftTab.propTypes = {
+    style: PropTypes.object,
+    image: PropTypes.string.isRequired,
+    imageStyle: PropTypes.object,
+    title: PropTypes.string.isRequired,
+    titleStyle: PropTypes.object,
+    onClick: PropTypes.func
 };
 
 export default HomeLeftTab;
