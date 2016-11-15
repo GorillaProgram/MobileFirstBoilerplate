@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class HomeLeftLoginBox extends Component {
 
@@ -127,6 +127,12 @@ const styles = {
         width: '100%',
         height: '100%'
     }
+};
+
+HomeLeftLoginBox.propTypes = {
+    model: PropTypes.object,
+    handleLoginClick: PropTypes.func,
+    handleSettingClick: PropTypes.func
 };
 
 export default HomeLeftLoginBox;
