@@ -54,6 +54,16 @@ class BusinessManagementView extends Component {
     }
 }
 
+const styles = {
+    container: {
+
+    },
+    slide: {
+        display: 'flex',
+        flexDirection: 'row',
+    }
+};
+
 BusinessManagementView.propTypes = {
     handleOpenCardClick: PropTypes.func.isRequired,
     handleCardActiveClick: PropTypes.func.isRequired,
@@ -63,16 +73,6 @@ BusinessManagementView.propTypes = {
     handleBusinessBoxClick: PropTypes.func.isRequired,
     handlePadOutsideClick: PropTypes.func.isRequired,
     handlePadInsideClick: PropTypes.func.isRequired
-};
-
-const styles = {
-    container: {
-
-    },
-    slide: {
-        display: 'flex',
-        flexDirection: 'row',
-    }
 };
 
 export default BusinessManagementView;
