@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Slider from 'react-slick';
 import Content from './components/Content';
 
@@ -29,5 +29,10 @@ class ContentSlider extends Component {
         );
     }
 }
+
+ContentSlider.propTypes = {
+    models: PropTypes.array.isRequired,
+    settings: PropTypes.object.isRequired
+};
 
 export default ContentSlider;
