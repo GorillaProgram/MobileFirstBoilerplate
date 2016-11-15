@@ -47,12 +47,6 @@ class LoginView extends Component {
     }
 }
 
-LoginView.propTypes = {
-    handleUserNameChange: PropTypes.func.isRequired,
-    handlePasswordChange: PropTypes.func.isRequired,
-    handleLoginClick: PropTypes.func.isRequired
-};
-
 const styles = {
     container: {
         display: 'flex',
@@ -94,6 +88,12 @@ const styles = {
         marginTop: 20
     }
 
+};
+
+LoginView.propTypes = {
+    handleUserNameChange: PropTypes.func.isRequired,
+    handlePasswordChange: PropTypes.func.isRequired,
+    handleLoginClick: PropTypes.func.isRequired
 };
 
 export default LoginView;

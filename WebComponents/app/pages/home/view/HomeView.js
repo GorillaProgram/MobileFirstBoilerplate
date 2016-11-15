@@ -91,13 +91,6 @@ class HomeView extends Component {
     }
 }
 
-HomeView.propTypes = {
-    adModels: PropTypes.array.isRequired,
-    noticeModels: PropTypes.array.isRequired,
-    productModels: PropTypes.array.isRequired,
-    handleOpenCardClick: PropTypes.func.isRequired
-};
-
 const styles = {
     container: {
         width: Constant.matchParent,
@@ -170,6 +163,13 @@ const styles = {
         height: '30%',
     },
 
+};
+
+HomeView.propTypes = {
+    adModels: PropTypes.array.isRequired,
+    noticeModels: PropTypes.array.isRequired,
+    productModels: PropTypes.array.isRequired,
+    handleOpenCardClick: PropTypes.func.isRequired
 };
 
 export default HomeView;
