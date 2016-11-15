@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Constant from '../../../../main/constant/Constant';
 
 class BusinessPanel extends Component {
@@ -50,6 +50,14 @@ const styles = {
     title: {
         fontSize: 16,
     }
-}
+};
+
+BusinessPanel.propTypes = {
+    style: PropTypes.object,
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    handleClick: PropTypes.func
+};
 
 export default BusinessPanel;
