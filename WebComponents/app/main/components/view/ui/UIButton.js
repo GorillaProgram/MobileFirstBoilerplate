@@ -5,7 +5,7 @@
  * description:
  *      UI控件
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class UIButton extends Component {
 
@@ -71,6 +71,12 @@ const styles = {
     activeStyle: {
         background: '#0B4D8D'
     }
+};
+
+UIButton.propTypes = {
+    style: PropTypes.object,
+    title: PropTypes.string.isRequired,
+    onClick: PropTypes.func
 };
 
 export default UIButton;
