@@ -11,13 +11,20 @@ class CommonToolsContainer extends Component {
     constructor(props) {
         super(props);
 
+        this.handleClearCacheClick = this.handleClearCacheClick.bind(this);
+    }
+
+    /**
+     * 清除缓存
+     */
+    handleClearCacheClick() {
 
     }
 
     render() {
         return (
             <CommonToolsView
-
+                handleClearCacheClick={this.handleClearCacheClick}
             />
         );
     }
