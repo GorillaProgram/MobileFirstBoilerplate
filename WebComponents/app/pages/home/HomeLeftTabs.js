@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import ImagePath from '../../main/constant/ImagePath';
 import HomeLeftTab from './components/HomeLeftTab';
 import HomeLeftLoginBox from './components/HomeLeftLoginBox';
