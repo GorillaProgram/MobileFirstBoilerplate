@@ -4,6 +4,7 @@
  */
 import React, { Component } from 'react';
 import ImagePath from '../../main/constant/ImagePath';
+import Just from '../../main/context/Just';
 import HomeLeftTab from './components/HomeLeftTab';
 import HomeLeftLoginBox from './components/HomeLeftLoginBox';
 
@@ -26,7 +27,7 @@ class HomeLeftTabs extends Component {
     }
 
     handleSettingClick() {
-        console.log('===== setting =====');
+        Just.log('===== setting =====');
     }
 
     handleLoginClick() {
@@ -62,7 +63,7 @@ class HomeLeftTabs extends Component {
     }
 
     handleLogoClick() {
-        console.log('===== logo =====');
+        Just.log('===== logo =====');
     }
 
     render() {
