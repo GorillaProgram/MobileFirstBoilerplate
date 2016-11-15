@@ -5,7 +5,7 @@
  * description:
  *      Title
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Constant from '../../constant/Constant';
 
 class Title extends Component {
@@ -13,21 +13,33 @@ class Title extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            backTo: '/'
+        };
 
+        this.handleBackClick = this.handleBackClick.bind(this);
+    }
+
+    /**
+     * 返回事件
+     */
+    handleBackClick() {
+        this.context.router.push(this.state.backTo);
     }
 
     render() {
-        var backTo = '/';
         if (this.props.backTo) {
-            backTo = this.props.backTo
+            this.setState({
+                backTo: this.props.backTo
+            });
         }
         return (
             <div style={{...styles.titleLayout, ...this.props.titleLayout}}>
         		<div style={{...styles.titleLayoutContent, ...this.props.titleLayoutContent}}>
-        			<img style={{...styles.titleImage, ...this.props.titleImage}} src="./static/imgs/titleLogo.png" />
+                    <img style={{...styles.titleImage, ...this.props.titleImage}} src="./static/imgs/titleLogo.png" />
         			<div style={{...styles.title, ...this.props.titleStyle}}>{this.props.title}</div>
         			<div style={{...styles.subTitle, ...this.props.subTitleStyle}}>{this.props.subTitle}</div>
-        			<div style={{...styles.backLayout, ...this.props.backLayout}}>
+        			<div style={{...styles.backLayout, ...this.props.backLayout}} onClick={this.handleBackClick}>
         				<img style={{...styles.backImage, ...this.props.backImage}} src="./static/imgs/homeIcon.png" />
         				<div style={{...styles.backTitle, ...this.props.backTitleStyle}}>退出业务</div>
         			</div>
@@ -98,6 +110,25 @@ const styles = {
         height: 6,
         backgroundImage: 'linear-gradient(-180deg, #183F80 0%, #1A4A96 100%)'
     }
-}
+};
+
+Title.propTypes = {
+    backTo: PropTypes.string,
+    title: PropTypes.string,
+    subTitle: PropTypes.string,
+    titleLayout: PropTypes.object,
+    titleLayoutContent: PropTypes.object,
+    titleImage: PropTypes.object,
+    titleStyle: PropTypes.object,
+    subTitleStyle: PropTypes.object,
+    backLayout: PropTypes.object,
+    backImage: PropTypes.object,
+    backTitleStyle: PropTypes.object
+};
+
+Title.contextTypes = {
+    router: PropTypes.object
+};
+
 
 export default Title;
