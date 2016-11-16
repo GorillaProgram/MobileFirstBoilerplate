@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
+const eslint = require('gulp-eslint');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const del = require('del');
@@ -30,6 +31,14 @@ gulp.task('clean', () => {
 /* ========================== server start ========================== */
 
 /* ========================== server end ========================== */
+
+/* ========================== eslint end ========================== */
+gulp.task('lint', function() {
+  return gulp.src('WebComponents/app/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+/* ========================== eslint end ========================== */
 
 /* ========================== build start ========================== */
 gulp.task('webpack_build', (callback) => {
