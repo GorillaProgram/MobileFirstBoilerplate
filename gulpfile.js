@@ -33,7 +33,7 @@ gulp.task('clean', () => {
 /* ========================== server end ========================== */
 
 /* ========================== eslint end ========================== */
-gulp.task('lint', function() {
+gulp.task('lint', () => {
   return gulp.src('WebComponents/app/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
