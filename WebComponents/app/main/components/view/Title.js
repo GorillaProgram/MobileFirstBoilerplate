@@ -35,17 +35,17 @@ class Title extends Component {
         }
         return (
             <div style={{...styles.titleLayout, ...this.props.titleLayout}}>
-        		<div style={{...styles.titleLayoutContent, ...this.props.titleLayoutContent}}>
+                <div style={{...styles.titleLayoutContent, ...this.props.titleLayoutContent}}>
                     <img style={{...styles.titleImage, ...this.props.titleImage}} src="./static/imgs/titleLogo.png" />
-        			<div style={{...styles.title, ...this.props.titleStyle}}>{this.props.title}</div>
-        			<div style={{...styles.subTitle, ...this.props.subTitleStyle}}>{this.props.subTitle}</div>
-        			<div style={{...styles.backLayout, ...this.props.backLayout}} onClick={this.handleBackClick}>
-        				<img style={{...styles.backImage, ...this.props.backImage}} src="./static/imgs/homeIcon.png" />
-        				<div style={{...styles.backTitle, ...this.props.backTitleStyle}}>退出业务</div>
-        			</div>
-        		</div>
-        		<div style={styles.titleLayoutBorderBottom}></div>
-        	</div>
+                    <div style={{...styles.title, ...this.props.titleStyle}}>{this.props.title}</div>
+                    <div style={{...styles.subTitle, ...this.props.subTitleStyle}}>{this.props.subTitle}</div>
+                    <div style={{...styles.backLayout, ...this.props.backLayout}} onClick={this.handleBackClick}>
+                        <img style={{...styles.backImage, ...this.props.backImage}} src="./static/imgs/homeIcon.png" />
+                        <div style={{...styles.backTitle, ...this.props.backTitleStyle}}>退出业务</div>
+                    </div>
+                </div>
+                <div style={styles.titleLayoutBorderBottom}></div>
+            </div>
         );
     }
 }
