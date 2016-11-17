@@ -34,9 +34,9 @@ gulp.task('clean', () => {
 
 /* ========================== eslint end ========================== */
 gulp.task('lint', () => {
-  return gulp.src('WebComponents/app/**/*.js')
-    .pipe(eslint())
-    .pipe(eslint.format());
+    return gulp.src('WebComponents/app/**/*.js')
+        .pipe(eslint())
+        .pipe(eslint.format());
 });
 /* ========================== eslint end ========================== */
 
