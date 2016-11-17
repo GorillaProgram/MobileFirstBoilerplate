@@ -23,9 +23,7 @@
         "url": "https://github.com/GorillaProgram/MobileFirstBoilerplate/issues"
     },
     "homepage": "https://github.com/GorillaProgram/MobileFirstBoilerplate#readme",
-    "pre-commit": [
-        /*"eslint"*/
-    ],
+    "pre-commit": [],
     "devDependencies": {
         "babel-cli": "^6.18.0",
         "babel-core": "^6.18.0",
