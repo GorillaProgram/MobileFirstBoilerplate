@@ -24,7 +24,7 @@ const DataUtility = {
     dateFormate(date) {
         var newDate = '';
         if (DataUtility.isNotNull(date)) {
-            if (date.length == 8) {
+            if (date.length === 8) {
                 newDate = date.substr(0, 4) + '-' + date.substr(4, 2) + '-' + date.substr(6, 2);
             }
         }

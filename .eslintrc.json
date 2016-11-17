@@ -41,6 +41,12 @@
             "error",
             "always"
         ],
+        "eqeqeq": [
+            2,
+            "allow-null"
+        ],
+        "default-case": 2,
+        "no-empty-pattern": 2,
         "camelcase": 2,
         "brace-style": [
             2,
@@ -49,11 +55,11 @@
                 "allowSingleLine": true
             }
         ],
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
         /*"immutable/no-let": 2,*/
         /*"immutable/no-this": 2,*/
         /*"immutable/no-mutation": 2,*/
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
         "import/no-unresolved": [
             2,
             {

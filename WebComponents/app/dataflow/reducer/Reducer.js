@@ -49,7 +49,7 @@ function login(state = {
             bsadata: action.payload.response.responseJSON.bsadata,
             RSD: action.payload.response.responseJSON.bsadata.RSD,
             orgCode: action.payload.response.responseJSON.bsadata.orgCode,
-            shouldShowPasswordLayout: action.payload.response.responseJSON.bsadata.RSD == 1, // 登录方式 1密码 2指纹
+            shouldShowPasswordLayout: action.payload.response.responseJSON.bsadata.RSD === 1, // 登录方式 1密码 2指纹
         };
     case LOGIN:
         Just.log('===== LOGIN =====');
