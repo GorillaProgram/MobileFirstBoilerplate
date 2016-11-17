@@ -6,7 +6,6 @@
  *      Slider中的右箭头
  */
 import React, { Component, PropTypes } from 'react';
-import CommonStyle from '../../../../constant/CommonStyle';
 import ImagePath from '../../../../constant/ImagePath';
 
 class NextArrow extends Component {
