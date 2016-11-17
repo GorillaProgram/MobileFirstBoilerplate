@@ -41,6 +41,14 @@
             "error",
             "always"
         ],
+        "camelcase": 2,
+        "brace-style": [
+            2,
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "immutable/no-let": 2,
