@@ -29,10 +29,13 @@ var config = {
             __PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
         })
     ],
+    eslint: {
+        configFile: './.eslintrc.json'
+    },
     module: {
         loaders: [
             { test: /\.html$/, loader: 'file?name=[name].[ext]' },
-            { test: /\.js$/, exclude: /node_modules/, loader: 'react-hot!babel' },
+            { test: /\.js$/, exclude: /node_modules/, loader: 'react-hot!babel!eslint-loader' },
             { test: /\.css$/, loader: 'style!css' },
             { test: /\.scss$/, loader: 'style!css!sass'},
             { test: /\.(jpg|png|svg)$/, loader: "url?limit=8192" }
