@@ -5,7 +5,7 @@
  * description:
  *      Slider中的左箭头
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ImagePath from '../../../../constant/ImagePath';
 
 class PrevArrow extends Component {
@@ -34,6 +34,10 @@ const styles = {
         width: 30,
         height: 43
     }
-}
+};
+
+PrevArrow.propTypes = {
+    style: PropTypes.object
+};
 
 export default PrevArrow;
