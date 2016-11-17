@@ -4,7 +4,6 @@
  */
 import NetworkActions from './NetworkActions';
 import LoginActions from './LoginActions';
-import Just from '../../main/context/Just';
 
 /* ============================= Action Type Start =============================== */
 export const TEST = 'TEST';
@@ -47,13 +46,13 @@ export function validateTeller(params) {
     return (dispatch) => {
         return dispatch(LoginActions.validateTeller(params));
     };
-}
+};
 
 export function login(params) {
     return (dispatch) => {
         return dispatch(LoginActions.prevLogin(params));
     };
-}
+};
 
 // login 相关Action
 
@@ -82,14 +81,14 @@ export function subtract(item) {
 
 export function delayAdd(item, second) {
     return dispatch => {
-        Just.log('delayAdd');
+        console.log('delayAdd');
         return dispatch(delay(delayAddAction(item), second));
     };
 }
 
 export function delaySubtract(item, second) {
     return dispatch => {
-        Just.log('delaySubtract');
+        console.log('delaySubtract');
         return dispatch(delay(delaySubtractAction(item), second));
     };
 }

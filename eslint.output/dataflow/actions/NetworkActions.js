@@ -37,6 +37,6 @@ const NetworkActions = {
             }
         };
     },
-};
+}
 
 export default NetworkActions;

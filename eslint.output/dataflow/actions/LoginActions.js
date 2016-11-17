@@ -38,8 +38,8 @@ const LoginActions = {
                 }, (error) => {
                     return dispatch(NetworkActions.error(params, error));
                 });
-        };
+        }
     }
-};
+}
 
 export default LoginActions;
