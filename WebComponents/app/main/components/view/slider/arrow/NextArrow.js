@@ -5,7 +5,7 @@
  * description:
  *      Slider中的右箭头
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import CommonStyle from '../../../../constant/CommonStyle';
 import ImagePath from '../../../../constant/ImagePath';
 
@@ -35,6 +35,10 @@ const styles = {
         width: 30,
         height: 43
     }
-}
+};
+
+NextArrow.propTypes = {
+    style: PropTypes.object
+};
 
 export default NextArrow;
