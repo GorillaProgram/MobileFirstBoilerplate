@@ -5,6 +5,12 @@
         "es6": true,
         "node": true
     },
+    "globals": {
+        "WL": false,
+        "cordova": false,
+        "Camera": false,
+        "$": false
+    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
@@ -54,7 +60,12 @@
         "no-new": 2,
         "no-new-func": 2,
         "no-new-wrappers": 2,
-        "no-redeclare": [2, { "builtinGlobals": true }],
+        "no-redeclare": [
+            2,
+            {
+                "builtinGlobals": true
+            }
+        ],
         "no-script-url": 2,
         "no-self-assign": 2,
         "no-self-compare": 2,
@@ -64,7 +75,17 @@
         "no-useless-call": 2,
         "no-empty-pattern": 2,
         "no-void": 2,
-        "no-warning-comments": [2, { "terms": ["todo", "fixme", "any other term"], "location": "anywhere" }],
+        "no-warning-comments": [
+            2,
+            {
+                "terms": [
+                    "todo",
+                    "fixme",
+                    "any other term"
+                ],
+                "location": "anywhere"
+            }
+        ],
         "no-with": 2,
         "no-undef": 2,
         "no-undef-init": 2,
@@ -72,7 +93,7 @@
         "no-unused-vars": 2,
         "global-require": 2,
         "no-mixed-requires": 2,
-        
+        "no-new-require": 2,
         "strict": 2,
         "default-case": 2,
         "camelcase": 2,
@@ -83,11 +104,11 @@
                 "allowSingleLine": true
             }
         ],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
         /*"immutable/no-let": 2,*/
         /*"immutable/no-this": 2,*/
         /*"immutable/no-mutation": 2,*/
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
         "import/no-unresolved": [
             2,
             {
