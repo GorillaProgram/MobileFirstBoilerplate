@@ -175,7 +175,7 @@ const PeripheralUtility = {
                 return FunctionUtility.promiseError('error');
             })
             .then((result) => {
-                // TODO 封装外设获取的值
+                // 封装外设获取的值
                 var resultData = JSONUtility.stringToJson(result);
                 var src = 'data:image/jpeg;base64,' + resultData.data.WRData;
                 return FunctionUtility.promise(src);
