@@ -2,7 +2,6 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import NetworkActions from './NetworkActions';
 import LoginActions from './LoginActions';
 import Just from '../../main/context/Just';
 
@@ -34,8 +33,8 @@ function delaySubtractAction(item) {
 
 function delay(func, second) {
     return dispatch => {
-        new Promise((res, rej) => {
-            res(setTimeout(func, second));
+        new Promise((resolve) => {
+            resolve(setTimeout(func, second));
         });
     };
 }

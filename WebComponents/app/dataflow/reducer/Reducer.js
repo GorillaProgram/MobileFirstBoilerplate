@@ -12,8 +12,7 @@ import {
 import {
     VALIDATE_TELLER,
     LOGIN,
-    TEST, DEFAULT, ADD, SUBTRACT ,
-    DELAY_ADD, DELAY_SUBTRACT
+    TEST, ADD, SUBTRACT
 } from '../actions/Actions';
 
 function test(state = {

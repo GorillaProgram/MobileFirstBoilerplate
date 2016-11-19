@@ -33,6 +33,7 @@ const LoginActions = {
         return dispatch => {
             return Just.silenceTask(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
+                    Just.log(prevResponse);
                     dispatch(NetworkActions.received());
                     return dispatch(NetworkActions.receivedData(params, response));
                 }, (error) => {

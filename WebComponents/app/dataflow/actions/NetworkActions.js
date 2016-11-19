@@ -2,8 +2,6 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import Just from '../../main/context/Just';
-
 export const REQUESTING = 'REQUESTING';
 export const RECEIVED = 'RECEIVED';
 export const ERROR = 'ERROR';
@@ -25,7 +23,8 @@ const NetworkActions = {
         return {
             type: ERROR,
             payload: {
-                params
+                params,
+                error
             }
         };
     },
@@ -33,6 +32,7 @@ const NetworkActions = {
         return {
             type: params.actionType,
             payload: {
+                params,
                 response: response
             }
         };
