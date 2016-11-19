@@ -33,9 +33,9 @@ function delaySubtractAction(item) {
 
 function delay(func, second) {
     return dispatch => {
-        new Promise((resolve) => {
+        dispatch(new Promise((resolve) => {
             resolve(setTimeout(func, second));
-        });
+        }));
     };
 }
 /* ============================= Action Private End =============================== */
