@@ -4,6 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import Just from '../../../main/context/Just';
 import BusinessManagementView from '../view/BusinessManagementView';
 
 class BusinessManagementContainer extends Component {
@@ -103,7 +104,8 @@ BusinessManagementContainer.contextTypes = {
 };
 
 function mapStateToProps(state) {
-    const {  } = state;
+    const { test } = state;
+    Just.log(test);
     return {
 
     };

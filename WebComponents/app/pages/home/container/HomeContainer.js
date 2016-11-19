@@ -4,6 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import Just from '../../../main/context/Just';
 import HomeView from '../view/HomeView';
 
 class HomeContainer extends Component {
@@ -156,7 +157,8 @@ HomeContainer.contextTypes = {
 };
 
 function mapStateToProps(state) {
-    const {  } = state;
+    const { test } = state;
+    Just.log(test);
     return {
 
     };

@@ -4,6 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import Just from '../../../main/context/Just';
 import ProductView from '../view/ProductView';
 
 class ProductContainer extends Component {
@@ -33,7 +34,8 @@ ProductContainer.contextTypes = {
 };
 
 function mapStateToProps(state) {
-    const {  } = state;
+    const { test } = state;
+    Just.log(test);
     return {
 
     };

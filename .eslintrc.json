@@ -57,7 +57,6 @@
         "no-implicit-globals": 2,
         "no-implied-eval": 2,
         "no-invalid-this": 2,
-
         "no-new-func": 2,
         "no-new-wrappers": 2,
         "no-redeclare": [
@@ -89,6 +88,7 @@
         "no-with": 2,
         "no-undef": 2,
         "no-undef-init": 2,
+        "no-undefined": 2,
         "no-unused-vars": 2,
         "global-require": 2,
         "no-mixed-requires": 2,
