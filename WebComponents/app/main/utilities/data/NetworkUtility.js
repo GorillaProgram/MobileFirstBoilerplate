@@ -56,13 +56,13 @@ const NetworkUtility = {
     },
     /* 公共回调方法 start */
     success(result, silence) {
-        if (DataUtility.isNull(silence)) {
+        if (DataUtility.isNotNull(silence)) {
             JQMUtility.hideLoader();
         }
         DebugUtility.log('==== result ====>>>>> ', result);
     },
     failure(error, silence) {
-        if (DataUtility.isNull(silence)) {
+        if (DataUtility.isNotNull(silence)) {
             JQMUtility.hideLoader();
         }
         DebugUtility.log('==== failure ====>>>>> ', error);
@@ -73,7 +73,7 @@ const NetworkUtility = {
         }
     },
     exception(error, silence) {
-        if (DataUtility.isNull(silence)) {
+        if (DataUtility.isNotNull(silence)) {
             JQMUtility.hideLoader();
         }
         alert('系统错误' + JSONUtility.jsonToString(error.message.toString()));
