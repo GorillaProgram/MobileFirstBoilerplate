@@ -4,6 +4,8 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { SHOW_INDEX_INFO, showIndexInfo } from '../../../dataflow/actions/Actions';
+import Just from '../../../main/context/Just';
 import HomeView from '../view/HomeView';
 
 class HomeContainer extends Component {
@@ -19,6 +21,10 @@ class HomeContainer extends Component {
     }
 
     render() {
+        const { dispatch } = this.props;
+        dispatch(showIndexInfo({
+            actionType: SHOW_INDEX_INFO
+        }));
         const adModels = [
             {
                 image: 'http://10.240.90.212:7001/padServer/padimages/1.png',

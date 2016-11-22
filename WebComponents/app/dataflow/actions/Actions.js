@@ -46,7 +46,7 @@ function delay(func, second) {
 export function showIndexInfo(params) {
     return (dispatch) => {
         return dispatch(HomeActions.showIndex(params));
-    }
+    };
 }
 
 // login 相关Action
