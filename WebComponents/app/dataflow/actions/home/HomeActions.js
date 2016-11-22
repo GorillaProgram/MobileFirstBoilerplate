@@ -5,8 +5,8 @@
  * description:
  *
  */
- import NetworkActions from '../NetworkActions';
- import Just from '../../../main/context/Just';
+import NetworkActions from '../NetworkActions';
+import Just from '../../../main/context/Just';
 
 const HomeActions = {
 
