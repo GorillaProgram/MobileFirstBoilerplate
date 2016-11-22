@@ -9,11 +9,13 @@ import RouterUtility from '../utilities/userInterface/RouterUtility';
 import DialogUtility from '../utilities/userInterface/DialogUtility';
 
 const UIManager = {
+
     ...Dimensions,
     ...ImageCache,
     ...JQMUtility,
     ...RouterUtility,
     ...DialogUtility
+
 };
 
 export default UIManager;

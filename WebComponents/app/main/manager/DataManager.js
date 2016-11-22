@@ -9,11 +9,13 @@ import NetworkUtility from '../utilities/data/NetworkUtility';
 import StoreUtility from '../utilities/data/StoreUtility';
 
 const DataManager = {
+
     ...DebugUtility,
     ...DataUtility,
     ...JSONUtility,
     ...NetworkUtility,
     ...StoreUtility
+
 };
 
 export default DataManager;
