@@ -11,7 +11,7 @@ const AtomicTask = {
             .then((result) => {
                 return Just.promise(result.responseJSON.bsadata);
             }, (error) => {
-                return Just.promise(error);
+                return Just.promiseError(error);
             });
     },
     validateTellerTask(userID) {

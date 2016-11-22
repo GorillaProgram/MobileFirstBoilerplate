@@ -10,6 +10,14 @@ import JSONUtility from './JSONUtility';
 
 const NetworkUtility = {
 
+    parameters(adapter, procedure, parameters) {
+        return {
+            adapter,
+            procedure,
+            parameters,
+            silence
+        };
+    },
     silenceTask(adapter, procedure, parameters, silence) {
         DebugUtility.log('==== adapter ====>>>>> ', adapter);
         DebugUtility.log('==== procedure ====>>>>> ', procedure);

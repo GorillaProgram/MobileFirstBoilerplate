@@ -1,7 +1,7 @@
 const FunctionUtility = {
 
-    delayExecute(executor) {
-        setTimeout(executor, 500);
+    delayExecute(executor, timeInterval) {
+        setTimeout(executor, timeInterval ? timeInterval : 500);
     },
     promise(params) {
         return new Promise((resolve) => {
@@ -9,8 +9,8 @@ const FunctionUtility = {
         });
     },
     promiseError(error) {
-        return new Promise((resolve) => {
-            resolve(error);
+        return new Promise((rejeck) => {
+            rejeck(error);
         });
     }
 

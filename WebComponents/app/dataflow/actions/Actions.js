@@ -2,6 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
+import HomeActions from './home/HomeActions';
 import LoginActions from './LoginActions';
 import Just from '../../main/context/Just';
 
@@ -41,6 +42,12 @@ function delay(func, second) {
 /* ============================= Action Private End =============================== */
 
 /* ============================= Action Creator Start =============================== */
+export function showIndexInfo(params) {
+    return (dispatch) => {
+        return dispatch(HomeActions.showIndex(params));
+    }
+}
+
 // login 相关Action
 export function validateTeller(params) {
     return (dispatch) => {
