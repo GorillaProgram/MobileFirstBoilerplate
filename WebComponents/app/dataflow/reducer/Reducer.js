@@ -35,11 +35,13 @@ function showIndex(state = {
 
 }, action) {
     switch (action.type) {
-        case SHOW_INDEX_INFO:
+    case SHOW_INDEX_INFO:
         return {
             ...state,
             payload: action.payload
-        }
+        };
+    default:
+        return state;
     }
 }
 
