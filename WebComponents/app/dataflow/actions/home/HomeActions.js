@@ -10,7 +10,7 @@ import Just from '../../../main/context/Just';
 
 const HomeActions = {
 
-    showIndexInfo: (params) => {
+    showIndexInfo(params) {
         return dispatch => {
             dispatch(NetworkActions.requesting());
             return Just.indexInfoTask()
@@ -22,6 +22,7 @@ const HomeActions = {
                 });
         };
     }
+
 };
 
 export default HomeActions;

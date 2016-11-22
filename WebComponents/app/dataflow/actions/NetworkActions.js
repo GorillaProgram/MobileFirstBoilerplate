@@ -7,6 +7,7 @@ export const RECEIVED = 'RECEIVED';
 export const ERROR = 'ERROR';
 
 const NetworkActions = {
+
     requesting: () => {
         return {
             type: REQUESTING,
@@ -37,6 +38,7 @@ const NetworkActions = {
             }
         };
     },
+
 };
 
 export default NetworkActions;

@@ -6,7 +6,8 @@ import NetworkActions from './NetworkActions';
 import Just from '../../main/context/Just';
 
 const LoginActions = {
-    validateTeller: (params) => {
+
+    validateTeller(params) {
         return dispatch => {
             dispatch(NetworkActions.requesting());
             return Just.silenceTask(params.adapter, params.procedure, params.parameters)
@@ -18,7 +19,7 @@ const LoginActions = {
                 });
         };
     },
-    prevLogin: (params) => {
+    prevLogin(params) {
         return dispatch => {
             dispatch(NetworkActions.requesting());
             return Just.silenceTask(params.adapter, params.procedure, params.parameters)
@@ -29,7 +30,7 @@ const LoginActions = {
                 });
         };
     },
-    login: (params, prevResponse) => {
+    login(params, prevResponse) {
         return dispatch => {
             return Just.silenceTask(params.adapter, params.procedure, params.parameters)
                 .then((response) => {
@@ -41,6 +42,7 @@ const LoginActions = {
                 });
         };
     }
+
 };
 
 export default LoginActions;
