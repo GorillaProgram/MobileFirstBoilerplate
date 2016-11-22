@@ -9,7 +9,7 @@ const AtomicTask = {
     indexInfoTask() {
         return Just.promiseTask('padAdapter', 'showIndexInfo', [])
             .then((result) => {
-                return Just.promise(result.responseJSON.bsadata);
+                return Just.promise(result);
             }, (error) => {
                 return Just.promiseError(error);
             });

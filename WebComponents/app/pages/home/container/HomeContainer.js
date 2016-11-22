@@ -162,8 +162,8 @@ HomeContainer.contextTypes = {
 };
 
 function mapStateToProps(state) {
-    const { test } = state;
-    Just.log(test);
+    const { network } = state;
+    Just.log(`==== network ====>>>>>> ${network}`);
     return {
 
     };

@@ -10,6 +10,7 @@ import {
     ERROR,
 } from '../actions/NetworkActions';
 import {
+    SHOW_INDEX_INFO,
     VALIDATE_TELLER,
     LOGIN,
     TEST, ADD, SUBTRACT
@@ -27,6 +28,18 @@ function test(state = {
         };
     default:
         return state;
+    }
+}
+
+function showIndex(state = {
+
+}, action) {
+    switch (action.type) {
+        case SHOW_INDEX_INFO:
+        return {
+            ...state,
+            payload: action.payload
+        }
     }
 }
 
@@ -114,6 +127,7 @@ function calculate(state = {
 const rootReducer = combineReducers({
     calculate,
     test,
+    showIndex,
     login,
     network
 });
