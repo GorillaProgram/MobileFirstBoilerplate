@@ -13,6 +13,8 @@ class HomeContainer extends Component {
         super(props);
 
         this.handleOpenCardClick = this.handleOpenCardClick.bind(this);
+        const { dispatch } = this.props;
+        dispatch();
     }
 
     handleOpenCardClick() {

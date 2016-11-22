@@ -256,3 +256,8 @@ fastlane/test_output
 ##### Mac start #####
 .DS_Store
 ##### Mac end #####
+
+##### MobileFirst Project start #####
+MobileFirstBoilerplate/
+SHbank/
+##### MobileFirst Project end #####

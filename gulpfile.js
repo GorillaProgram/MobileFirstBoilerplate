@@ -15,7 +15,8 @@ const assign = require('object-assign');
 const reactPath = './WebComponents/';
 const reactDistPath = reactPath + 'dist';
 const reactStaticResourcePath = reactPath + 'static';
-const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
+// const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
+const mobileFirstPath = './SHbank/apps/SHbank/common/';
 const mobileFirstDistPath = mobileFirstPath + 'dist';
 const mobileFirstStaticResourcePath = mobileFirstPath + 'static';
 /* ========================== path end ========================== */

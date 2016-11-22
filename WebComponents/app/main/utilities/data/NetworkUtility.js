@@ -23,6 +23,7 @@ const NetworkUtility = {
                 }, {
                     timeout: Constant.REQUEST_TIMEOUT,
                     onSuccess: (result) => {
+                        DebugUtility.log(`=== result ====== result ======= result ========== ${JSONUtility.jsonToString(result)}`);
                         if (result.responseJSON.retCode === Constant.RESPONSE_SUCCESS) {
                             if (DataUtility.isNutNull(result.responseJSON.bsadata)) {
                                 NetworkUtility.success(result, silence);

@@ -6,7 +6,8 @@ const env = process.env.NODE_ENV;
 const entryPath = './WebComponents/app/index.js';
 const reactPath = './WebComponents/';
 const reactPublicPath = '/WebComponents/';
-const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
+// const mobileFirstPath = './MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
+const mobileFirstPath = './SHbank/apps/SHbank/common/';
 const mobileFirstPublicPath = '/MobileFirstBoilerplate/apps/HybridBoilerplate/common/';
 
 const dirPath = reactPath;

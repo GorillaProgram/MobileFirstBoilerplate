@@ -7,7 +7,7 @@ import Constant from '../../constant/Constant';
 const DataUtility = {
 
     isNull(arg) {
-        return arg ? false : (arg === null || arg === '' || arg === 'null' || arg === ' ' || arg === 'undefined' || arg === 'error: no value for key ~');
+        return (arg === undefined || arg === null || arg === '' || arg === 'null' || arg === ' ' || arg === 'undefined' || arg === 'error: no value for key ~');
     },
     isNotNull(arg) {
         return !DataUtility.isNull(arg);
