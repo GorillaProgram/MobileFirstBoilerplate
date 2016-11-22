@@ -22,7 +22,7 @@ const NetworkUtility = {
         DebugUtility.log('==== adapter ====>>>>> ', adapter);
         DebugUtility.log('==== procedure ====>>>>> ', procedure);
         DebugUtility.log('==== parameters ====>>>>> ', parameters);
-        return new Promise((resolve) => {
+        return new Promise((resolve, reject) => {
             try {
                 WL.Client.invokeProcedure({
                     adapter: adapter,
@@ -30,7 +30,7 @@ const NetworkUtility = {
                     parameters: parameters
                 }, {
                     timeout: Constant.REQUEST_TIMEOUT,
-                    onSuccess: (result, reject) => {
+                    onSuccess: (result) => {
                         DebugUtility.log('==== result ====>>>>> ', JSONUtility.jsonToString(result));
                         if (result.responseJSON.retCode === Constant.RESPONSE_SUCCESS) {
                             if (DataUtility.isNutNull(result.responseJSON.bsadata)) {
