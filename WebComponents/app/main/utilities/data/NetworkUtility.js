@@ -30,32 +30,32 @@ const NetworkUtility = {
                     parameters: parameters
                 }, {
                     timeout: Constant.REQUEST_TIMEOUT,
-                    onSuccess: (result) => {
-                        DebugUtility.log(`=== result ====== result ======= result ========== ${JSONUtility.jsonToString(result)}`);
+                    onSuccess: (result, reject) => {
+                        DebugUtility.log('==== result ====>>>>> ', JSONUtility.jsonToString(result));
                         if (result.responseJSON.retCode === Constant.RESPONSE_SUCCESS) {
                             if (DataUtility.isNutNull(result.responseJSON.bsadata)) {
                                 NetworkUtility.success(result, silence);
                                 resolve(result);
                             } else {
                                 NetworkUtility.failure('error', silence);
-                                resolve('error');
+                                reject('error');
                             }
                         } else if(result.responseJSON.retCode === Constant.RESPONSE_FAILURE) {
                             NetworkUtility.failure(result.responseJSON.retMsg, silence);
-                            resolve(result.responseJSON.retMsg);
+                            reject(result.responseJSON.retMsg);
                         } else {
                             NetworkUtility.failure('error', silence);
-                            resolve('error');
+                            reject('error');
                         }
                     },
                     onFailure: (error) => {
                         NetworkUtility.failure(error, silence);
-                        resolve(error);
+                        reject(error);
                     }
                 });
             } catch (error) {
                 NetworkUtility.exception(error, silence);
-                resolve(error);
+                reject(error);
             }
         });
     },
@@ -65,13 +65,13 @@ const NetworkUtility = {
     },
     /* 公共回调方法 start */
     success(result, silence) {
-        if (DataUtility.isNotNull(silence)) {
+        if (DataUtility.isNull(silence)) {
             JQMUtility.hideLoader();
         }
         DebugUtility.log('==== result ====>>>>> ', result);
     },
     failure(error, silence) {
-        if (DataUtility.isNotNull(silence)) {
+        if (DataUtility.isNull(silence)) {
             JQMUtility.hideLoader();
         }
         DebugUtility.log('==== failure ====>>>>> ', error);
@@ -82,7 +82,7 @@ const NetworkUtility = {
         }
     },
     exception(error, silence) {
-        if (DataUtility.isNotNull(silence)) {
+        if (DataUtility.isNull(silence)) {
             JQMUtility.hideLoader();
         }
         alert('系统错误' + JSONUtility.jsonToString(error.message.toString()));

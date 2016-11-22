@@ -163,7 +163,7 @@ HomeContainer.contextTypes = {
 
 function mapStateToProps(state) {
     const { network } = state;
-    Just.log(`==== network ====>>>>>> ${network}`);
+    Just.log(`==== network ====>>>>>> ${Just.jsonToString(network)}`);
     return {
 
     };
