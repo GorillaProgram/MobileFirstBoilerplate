@@ -45,7 +45,7 @@ function delay(func, second) {
 /* ============================= Action Creator Start =============================== */
 export function showIndexInfo(params) {
     return (dispatch) => {
-        return dispatch(HomeActions.showIndex(params));
+        return dispatch(HomeActions.showIndexInfo(params));
     };
 }
 
