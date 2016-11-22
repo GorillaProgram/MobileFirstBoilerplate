@@ -15,6 +15,7 @@ export const DELAY_ADD = 'DELAY_ADD';
 export const DELAY_SUBTRACT = 'DELAY_SUBTRACT';
 export const LOGIN = 'LOGIN';
 export const VALIDATE_TELLER = 'VALIDATE_TELLER';
+export const SHOW_INDEX_INFO = 'SHOW_INDEX_INFO';
 /* ============================= Action Type End =============================== */
 
 /* ============================= Action Private Start =============================== */

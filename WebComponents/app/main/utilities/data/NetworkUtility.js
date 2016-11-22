@@ -10,7 +10,7 @@ import JSONUtility from './JSONUtility';
 
 const NetworkUtility = {
 
-    parameters(adapter, procedure, parameters) {
+    parameters(adapter, procedure, parameters, silence) {
         return {
             adapter,
             procedure,

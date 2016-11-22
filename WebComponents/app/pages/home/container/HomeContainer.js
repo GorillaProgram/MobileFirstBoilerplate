@@ -4,7 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { showIndexInfo } from '../../../dataflow/actions/Actions';
+import { SHOW_INDEX_INFO, showIndexInfo } from '../../../dataflow/actions/Actions';
 import Just from '../../../main/context/Just';
 import HomeView from '../view/HomeView';
 
@@ -16,8 +16,7 @@ class HomeContainer extends Component {
         this.handleOpenCardClick = this.handleOpenCardClick.bind(this);
         const { dispatch } = this.props;
         dispatch(showIndexInfo({
-            ...Just.parameters('', '', ''),
-            actionType: ''
+            actionType: SHOW_INDEX_INFO
         }));
     }
 
