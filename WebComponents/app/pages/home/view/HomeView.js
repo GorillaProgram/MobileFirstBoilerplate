@@ -22,7 +22,7 @@ class HomeView extends Component {
 
     }
 
-    adImagesSliderOrNoInfoPanel() {
+    adImagesSliderOrNoInfoPanel(adModels) {
         const adImagesSliderSettings = {
             className: 'slick-slider',
             arrows: false,
@@ -36,13 +36,13 @@ class HomeView extends Component {
             autoplaySpeed: 5000
         };
         return (
-            this.props.adModels.length === 0 ?
+            adModels.length === 0 ?
             <NoInfoPanel
                 image='./static/imgs/defaultAdImage.png'
-                title='暂无广告信息' /> :
+                title='暂无广告图片' /> :
             <AdImagesSlider
                 settings={adImagesSliderSettings}
-                models={this.props.adModels}
+                models={adModels}
                 imageStyle={styles.AdImage} />
         );
     }
@@ -64,7 +64,7 @@ class HomeView extends Component {
                 <div style={styles.container}>
                     <div style={styles.homeTopLayout}>
                         <div style={styles.AdImagesSliderLayout}>
-                            {adImagesSliderOrNoInfoPanel()}
+                            {this.adImagesSliderOrNoInfoPanel(this.props.adModels)}
                         </div>
                         <div style={styles.noticeLayout}>
                             <NoticePanel
@@ -127,6 +127,7 @@ const styles = {
         marginBottom: Constant.homeBlock,
         overflow: 'hidden',
         borderRadius: Constant.homeRadius,
+        border: '1px solid #888888',
     },
     AdImage: {
         height: 163,

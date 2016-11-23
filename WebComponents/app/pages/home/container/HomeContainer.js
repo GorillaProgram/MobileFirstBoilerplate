@@ -143,9 +143,9 @@ class HomeContainer extends Component {
         ];
         return (
             <HomeView
-                adModels={adModels}
-                noticeModels={noticeModels}
-                productModels={productModels}
+                adModels={[]}
+                noticeModels={[]}
+                productModels={[]}
                 handleOpenCardClick={this.handleOpenCardClick}
             />
         );

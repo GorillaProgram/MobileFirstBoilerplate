@@ -13,13 +13,13 @@ class NoticePanel extends Component {
 
     }
 
-    noticeViewOrNoInfoPanel() {
+    noticeViewOrNoInfoPanel(models) {
         return (
-            this.props.models.length === 0 ?
+            models.length === 0 ?
             <NoInfoPanel
-                image='./static/imgs/defaultAdImage.png'
+                image='./static/imgs/defaultNoticeImage.png'
                 title='暂无公告信息' /> :
-            this.props.models.map((model, index) => {
+            models.map((model, index) => {
                 return (
                     <div key={`${index}`} style={styles.noticeContentLayout} onClick={model.onClick}>
                         <img src={ImagePath.noticeContentImage} style={styles.noticeContentImage} />
@@ -36,7 +36,7 @@ class NoticePanel extends Component {
                 <label style={styles.noticeDes}>{this.props.title}</label>
                 <img src={ImagePath.progressbar} style={styles.noticeProgressbar} />
                 <div style={styles.noticeLayout}>
-                    {noticeViewOrNoInfoPanel()}
+                    {this.noticeViewOrNoInfoPanel(this.props.models)}
                 </div>
             </div>
         );

@@ -26787,9 +26787,9 @@
 	                }]
 	            }];
 	            return _react2.default.createElement(_HomeView2.default, {
-	                adModels: adModels,
-	                noticeModels: noticeModels,
-	                productModels: productModels,
+	                adModels: [],
+	                noticeModels: [],
+	                productModels: [],
 	                handleOpenCardClick: this.handleOpenCardClick
 	            });
 	        }
@@ -27204,8 +27204,8 @@
 	    }
 	
 	    _createClass(HomeView, [{
-	        key: 'render',
-	        value: function render() {
+	        key: 'adImagesSliderOrNoInfoPanel',
+	        value: function adImagesSliderOrNoInfoPanel(adModels) {
 	            var adImagesSliderSettings = {
 	                className: 'slick-slider',
 	                arrows: false,
@@ -27218,6 +27218,16 @@
 	                lazyLoad: true,
 	                autoplaySpeed: 5000
 	            };
+	            return adModels.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
+	                image: './static/imgs/defaultAdImage.png',
+	                title: '\u6682\u65E0\u5E7F\u544A\u4FE1\u606F' }) : _react2.default.createElement(_AdImagesSlider2.default, {
+	                settings: adImagesSliderSettings,
+	                models: adModels,
+	                imageStyle: styles.AdImage });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
 	            var contentSliderSettings = {
 	                className: 'slick-slider',
 	                arrows: true,
@@ -27241,9 +27251,7 @@
 	                        _react2.default.createElement(
 	                            'div',
 	                            { style: styles.AdImagesSliderLayout },
-	                            _react2.default.createElement(_NoInfoPanel2.default, {
-	                                image: './static/imgs/defaultAdImage.png',
-	                                title: '\u6682\u65E0\u4FE1\u606F' })
+	                            this.adImagesSliderOrNoInfoPanel(this.props.adModels)
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
@@ -30036,6 +30044,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _NoInfoPanel = __webpack_require__(242);
+	
+	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
+	
 	var _ContentSlider = __webpack_require__(263);
 	
 	var _ContentSlider2 = _interopRequireDefault(_ContentSlider);
@@ -30062,6 +30074,15 @@
 	    }
 	
 	    _createClass(ProductPanel, [{
+	        key: 'sliderOrNoInfoPanel',
+	        value: function sliderOrNoInfoPanel(models, settings) {
+	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
+	                image: './static/imgs/defaultAdImage.png',
+	                title: '\u6682\u65E0\u4EA7\u54C1\u4FE1\u606F' }) : _react2.default.createElement(_ContentSlider2.default, {
+	                settings: settings,
+	                models: models });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -30076,9 +30097,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.sliderLayout },
-	                    _react2.default.createElement(_ContentSlider2.default, {
-	                        settings: this.props.settings,
-	                        models: this.props.models })
+	                    this.sliderOrNoInfoPanel(this.props.models, this.props.settings)
 	                )
 	            );
 	        }
@@ -30104,8 +30123,12 @@
 	        marginTop: 14
 	    },
 	    sliderLayout: {
-	        marginTop: 25,
-	        marginBottom: 20
+	        position: 'relative',
+	        top: 25,
+	        bottom: 20,
+	        backgroundColor: 'red'
+	        // marginTop: 25,
+	        // marginBottom: 20
 	    }
 	};
 	
@@ -30317,6 +30340,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _NoInfoPanel = __webpack_require__(242);
+	
+	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
+	
 	var _ImagePath = __webpack_require__(241);
 	
 	var _ImagePath2 = _interopRequireDefault(_ImagePath);
@@ -30343,9 +30370,11 @@
 	    }
 	
 	    _createClass(NoticePanel, [{
-	        key: 'render',
-	        value: function render() {
-	            var noticeView = this.props.models.map(function (model, index) {
+	        key: 'noticeViewOrNoInfoPanel',
+	        value: function noticeViewOrNoInfoPanel(models) {
+	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
+	                image: './static/imgs/defaultAdImage.png',
+	                title: '\u6682\u65E0\u516C\u544A\u4FE1\u606F' }) : models.map(function (model, index) {
 	                return _react2.default.createElement(
 	                    'div',
 	                    { key: '' + index, style: styles.noticeContentLayout, onClick: model.onClick },
@@ -30357,7 +30386,10 @@
 	                    )
 	                );
 	            });
-	
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                { style: _extends({}, styles.container, this.props.style) },
@@ -30370,7 +30402,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.noticeLayout },
-	                    noticeView
+	                    this.noticeViewOrNoInfoPanel(this.props.models)
 	                )
 	            );
 	        }

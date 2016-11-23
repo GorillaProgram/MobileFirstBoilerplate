@@ -13,15 +13,15 @@ class ProductPanel extends Component {
 
     }
 
-    sliderOrNoInfoPanel() {
+    sliderOrNoInfoPanel(models, settings) {
         return (
-            this.props.models.length === 0 ?
+            models.length === 0 ?
             <NoInfoPanel
-                image='./static/imgs/defaultAdImage.png'
-                title='暂无产品信息' /> :
+                image='./static/imgs/defaultProductImage.png'
+                title='暂无热销产品' /> :
             <ContentSlider
-                settings={this.props.settings}
-                models={this.props.models} />
+                settings={settings}
+                models={models} />
         );
     }
 
@@ -31,7 +31,7 @@ class ProductPanel extends Component {
                 <label style={styles.title}>{this.props.title}</label>
                 <img src={this.props.image} style={styles.image} />
                 <div style={styles.sliderLayout}>
-                    {sliderOrNoInfoPanel()}
+                    {this.sliderOrNoInfoPanel(this.props.models, this.props.settings)}
                 </div>
             </div>
         );
@@ -55,8 +55,12 @@ const styles = {
         marginTop: 14
     },
     sliderLayout: {
-        marginTop: 25,
-        marginBottom: 20,
+        position: 'relative',
+        top: 25,
+        bottom: 20,
+        backgroundColor: 'red'
+        // marginTop: 25,
+        // marginBottom: 20
     }
 };
 
