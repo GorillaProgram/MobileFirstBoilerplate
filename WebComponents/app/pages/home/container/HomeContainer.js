@@ -5,6 +5,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { SHOW_INDEX_INFO, showIndexInfo } from '../../../dataflow/actions/Actions';
+import Just from '../../../main/context/Just';
 import HomeView from '../view/HomeView';
 
 class HomeContainer extends Component {
@@ -50,6 +51,7 @@ HomeContainer.contextTypes = {
 
 function mapStateToProps(state) {
     const { showIndex } = state;
+    Just.log(`==== showIndex ====>>>>> ${showIndex}`);
     return {
         adModels: showIndex.adModels,
         noticeModels: showIndex.noticeModels,
