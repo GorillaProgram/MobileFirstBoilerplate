@@ -26700,11 +26700,10 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var dispatch = this.props.dispatch;
-	
-	            dispatch((0, _Actions.showIndexInfo)({
-	                actionType: _Actions.SHOW_INDEX_INFO
-	            }));
+	            // const { dispatch } = this.props;
+	            // dispatch(showIndexInfo({
+	            //     actionType: SHOW_INDEX_INFO
+	            // }));
 	            var adModels = [{
 	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
 	                url: 'http://www.baidu.com'
@@ -27357,10 +27356,9 @@
 	        border: '1px solid #888888'
 	    },
 	    productPanel: {
-	        flex: 1,
+	        height: _Constant2.default.matchParent,
 	        paddingLeft: 50,
-	        paddingRight: 50,
-	        backgroundColor: 'yellow'
+	        paddingRight: 50
 	    },
 	    quicklyEnterPanelLayout: {
 	        display: 'flex',
@@ -30114,7 +30112,8 @@
 	        flexDirection: 'column',
 	        paddingLeft: 30,
 	        paddingRight: 30,
-	        paddingTop: 20
+	        paddingTop: 20,
+	        paddingBottom: 20
 	    },
 	    title: {
 	        fontSize: 18
@@ -30125,10 +30124,9 @@
 	        marginTop: 14
 	    },
 	    sliderLayout: {
+	        height: '100%',
 	        marginTop: 25,
-	        marginBottom: 20,
-	        backgroundColor: 'blue'
-	
+	        marginBottom: 20
 	    }
 	};
 	

@@ -56,7 +56,6 @@ const styles = {
         marginTop: 14
     },
     sliderLayout: {
-        height: '100%',
         marginTop: 25,
         marginBottom: 20
     }

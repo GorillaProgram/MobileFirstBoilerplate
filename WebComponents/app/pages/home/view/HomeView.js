@@ -154,7 +154,6 @@ const styles = {
         border: '1px solid #888888'
     },
     productPanel: {
-        height: Constant.matchParent,
         paddingLeft: 50,
         paddingRight: 50,
     },
