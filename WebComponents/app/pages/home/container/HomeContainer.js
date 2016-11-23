@@ -5,13 +5,17 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { SHOW_INDEX_INFO, showIndexInfo } from '../../../dataflow/actions/Actions';
-import Just from '../../../main/context/Just';
 import HomeView from '../view/HomeView';
 
 class HomeContainer extends Component {
 
     constructor(props) {
         super(props);
+
+        const { dispatch } = this.props;
+        dispatch(showIndexInfo({
+            actionType: SHOW_INDEX_INFO
+        }));
 
         this.handleOpenCardClick = this.handleOpenCardClick.bind(this);
     }
@@ -21,131 +25,12 @@ class HomeContainer extends Component {
     }
 
     render() {
-        const { dispatch } = this.props;
-        dispatch(showIndexInfo({
-            actionType: SHOW_INDEX_INFO
-        }));
-        const adModels = [
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                url: 'http://www.baidu.com'
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                url: 'http://www.taobao.com'
-            }
-        ];
-        const noticeModels = [
-            {
-                title: '公告栏-->> 0'
-            },
-            {
-                title: '公告栏-->> 1'
-            },
-            {
-                title: '公告栏-->> 2'
-            },
-            {
-                title: '公告栏-->> 3'
-            },
-            {
-                title: '公告栏-->> 4'
-            },
-            {
-                title: '公告栏-->> 5'
-            }
-        ];
-        const productModels = [
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            },
-            {
-                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-                content: [
-                    {
-                        des: '名称',
-                        text: '白金卡(精致版)'
-                    },
-                    {
-                        des: '额度',
-                        text: '10万-100万'
-                    },
-                    {
-                        des: '币种',
-                        text: '多币种'
-                    },
-                    {
-                        des: '简介',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                    }
-                ]
-            }
-        ];
+        const { adModels, noticeModels, productModels } = this.props;
         return (
             <HomeView
-                adModels={[]}
-                noticeModels={[]}
-                productModels={[]}
+                adModels={adModels}
+                noticeModels={noticeModels}
+                productModels={productModels}
                 handleOpenCardClick={this.handleOpenCardClick}
             />
         );
@@ -154,7 +39,9 @@ class HomeContainer extends Component {
 
 HomeContainer.propTypes = {
     dispatch: PropTypes.func.isRequired,
-
+    adModels: PropTypes.array.isRequired,
+    noticeModels: PropTypes.array.isRequired,
+    productModels: PropTypes.array.isRequired
 };
 
 HomeContainer.contextTypes = {
@@ -163,9 +50,10 @@ HomeContainer.contextTypes = {
 
 function mapStateToProps(state) {
     const { showIndex } = state;
-    Just.log(`==== showIndex ====>>>>>> ${Just.jsonToString(showIndex)}`);
     return {
-        // adModels: showIndex
+        adModels: showIndex.adModels,
+        noticeModels: showIndex.noticeModels,
+        productModels: showIndex.productModels
     };
 }
 

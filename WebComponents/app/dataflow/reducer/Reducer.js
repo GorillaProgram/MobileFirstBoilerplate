@@ -38,9 +38,43 @@ function showIndex(state = {
 }, action) {
     switch (action.type) {
     case SHOW_INDEX_INFO:
+        const response = action.payload.response;
         return {
             ...state,
-            payload: action.payload
+            adModels: response.list1.filter((item) => {
+                return item.TYPE === 'carousel';
+            })
+            .map((item) => {
+                return {
+                    image: item.IMG_URL,
+                    url: item.TO_URL
+                };
+            }),
+            noticeModels: response.list2.map((item) => {
+                return {
+                    type: item.MESSAGE_TYPE,
+                    title: item.MESSAGE_TITLE,
+                    content: item.MESSAGE_CONTENT
+                };
+            }),
+            productModels: response.list1.filter((item) => {
+                return item.TYPE === 'hot';
+            })
+            .map((item) => {
+                return {
+                    image: item.IMG_URL,
+                    content: [
+                        {
+                            des: '名称',
+                            text: item.CONTENT_NAME
+                        },
+                        {
+                            des: '简介',
+                            text: item.CONTENT_DESC
+                        }
+                    ]
+                };
+            })
         };
     default:
         return state;

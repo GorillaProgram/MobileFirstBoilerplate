@@ -24206,7 +24206,11 @@
 	}
 	
 	function showIndex() {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+	        adModels: [],
+	        noticeModels: [],
+	        productModels: []
+	    };
 	    var action = arguments[1];
 	
 	    switch (action.type) {
@@ -26660,10 +26664,6 @@
 	
 	var _Actions = __webpack_require__(235);
 	
-	var _Just = __webpack_require__(211);
-	
-	var _Just2 = _interopRequireDefault(_Just);
-	
 	var _HomeView = __webpack_require__(239);
 	
 	var _HomeView2 = _interopRequireDefault(_HomeView);
@@ -26688,6 +26688,12 @@
 	
 	        var _this = _possibleConstructorReturn(this, (HomeContainer.__proto__ || Object.getPrototypeOf(HomeContainer)).call(this, props));
 	
+	        var dispatch = _this.props.dispatch;
+	
+	        dispatch((0, _Actions.showIndexInfo)({
+	            actionType: _Actions.SHOW_INDEX_INFO
+	        }));
+	
 	        _this.handleOpenCardClick = _this.handleOpenCardClick.bind(_this);
 	        return _this;
 	    }
@@ -26700,96 +26706,15 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var dispatch = this.props.dispatch;
+	            var _props = this.props,
+	                adModels = _props.adModels,
+	                noticeModels = _props.noticeModels,
+	                productModels = _props.productModels;
 	
-	            dispatch((0, _Actions.showIndexInfo)({
-	                actionType: _Actions.SHOW_INDEX_INFO
-	            }));
-	            var adModels = [{
-	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-	                url: 'http://www.baidu.com'
-	            }, {
-	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-	                url: 'http://www.taobao.com'
-	            }];
-	            var noticeModels = [{
-	                title: '公告栏-->> 0'
-	            }, {
-	                title: '公告栏-->> 1'
-	            }, {
-	                title: '公告栏-->> 2'
-	            }, {
-	                title: '公告栏-->> 3'
-	            }, {
-	                title: '公告栏-->> 4'
-	            }, {
-	                title: '公告栏-->> 5'
-	            }];
-	            var productModels = [{
-	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-	                content: [{
-	                    des: '名称',
-	                    text: '白金卡(精致版)'
-	                }, {
-	                    des: '额度',
-	                    text: '10万-100万'
-	                }, {
-	                    des: '币种',
-	                    text: '多币种'
-	                }, {
-	                    des: '简介',
-	                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-	                }]
-	            }, {
-	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-	                content: [{
-	                    des: '名称',
-	                    text: '白金卡(精致版)'
-	                }, {
-	                    des: '额度',
-	                    text: '10万-100万'
-	                }, {
-	                    des: '币种',
-	                    text: '多币种'
-	                }, {
-	                    des: '简介',
-	                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-	                }]
-	            }, {
-	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-	                content: [{
-	                    des: '名称',
-	                    text: '白金卡(精致版)'
-	                }, {
-	                    des: '额度',
-	                    text: '10万-100万'
-	                }, {
-	                    des: '币种',
-	                    text: '多币种'
-	                }, {
-	                    des: '简介',
-	                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-	                }]
-	            }, {
-	                image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
-	                content: [{
-	                    des: '名称',
-	                    text: '白金卡(精致版)'
-	                }, {
-	                    des: '额度',
-	                    text: '10万-100万'
-	                }, {
-	                    des: '币种',
-	                    text: '多币种'
-	                }, {
-	                    des: '简介',
-	                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-	                }]
-	            }];
 	            return _react2.default.createElement(_HomeView2.default, {
-	                adModels: [],
-	                noticeModels: [],
-	                productModels: [],
+	                adModels: adModels,
+	                noticeModels: noticeModels,
+	                productModels: productModels,
 	                handleOpenCardClick: this.handleOpenCardClick
 	            });
 	        }
@@ -26799,8 +26724,10 @@
 	}(_react.Component);
 	
 	HomeContainer.propTypes = {
-	    dispatch: _react.PropTypes.func.isRequired
-	
+	    dispatch: _react.PropTypes.func.isRequired,
+	    adModels: _react.PropTypes.array.isRequired,
+	    noticeModels: _react.PropTypes.array.isRequired,
+	    productModels: _react.PropTypes.array.isRequired
 	};
 	
 	HomeContainer.contextTypes = {
@@ -26810,9 +26737,37 @@
 	function mapStateToProps(state) {
 	    var showIndex = state.showIndex;
 	
-	    _Just2.default.log('==== showIndex ====>>>>>> ' + _Just2.default.jsonToString(showIndex));
+	    var response = showIndex.payload.response;
 	    return {
-	        // adModels: showIndex
+	        adModels: response.list1.filter(function (item) {
+	            return item.TYPE === 'carousel';
+	        }).map(function (item) {
+	            return {
+	                image: item.IMG_URL,
+	                url: item.TO_URL
+	            };
+	        }),
+	        noticeModels: response.list2.map(function (item) {
+	            return {
+	                type: item.MESSAGE_TYPE,
+	                title: item.MESSAGE_TITLE,
+	                content: item.MESSAGE_CONTENT
+	            };
+	        }),
+	        productModels: response.list1.filter(function (item) {
+	            return item.TYPE === 'hot';
+	        }).map(function (item) {
+	            return {
+	                image: item.IMG_URL,
+	                content: [{
+	                    des: '名称',
+	                    text: item.CONTENT_NAME
+	                }, {
+	                    des: '简介',
+	                    text: item.CONTENT_DESC
+	                }]
+	            };
+	        })
 	    };
 	}
 	
