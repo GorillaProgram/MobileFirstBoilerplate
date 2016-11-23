@@ -55,12 +55,10 @@ const styles = {
         marginTop: 14
     },
     sliderLayout: {
-        position: 'relative',
-        top: 25,
-        bottom: 20,
-        backgroundColor: 'red'
-        // marginTop: 25,
-        // marginBottom: 20
+        marginTop: 25,
+        marginBottom: 20,
+        backgroundColor: 'blue',
+
     }
 };
 

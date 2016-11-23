@@ -27220,7 +27220,7 @@
 	            };
 	            return adModels.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
 	                image: './static/imgs/defaultAdImage.png',
-	                title: '\u6682\u65E0\u5E7F\u544A\u4FE1\u606F' }) : _react2.default.createElement(_AdImagesSlider2.default, {
+	                title: '\u6682\u65E0\u5E7F\u544A\u56FE\u7247' }) : _react2.default.createElement(_AdImagesSlider2.default, {
 	                settings: adImagesSliderSettings,
 	                models: adModels,
 	                imageStyle: styles.AdImage });
@@ -27358,7 +27358,10 @@
 	    },
 	    productPanel: {
 	        paddingLeft: 50,
-	        paddingRight: 50
+	        paddingRight: 50,
+	        position: 'relative',
+	        top: 0, left: 0, bottom: 0, right: 0,
+	        backgroundColor: 'red'
 	    },
 	    quicklyEnterPanelLayout: {
 	        display: 'flex',
@@ -30077,8 +30080,8 @@
 	        key: 'sliderOrNoInfoPanel',
 	        value: function sliderOrNoInfoPanel(models, settings) {
 	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
-	                image: './static/imgs/defaultAdImage.png',
-	                title: '\u6682\u65E0\u4EA7\u54C1\u4FE1\u606F' }) : _react2.default.createElement(_ContentSlider2.default, {
+	                image: './static/imgs/defaultProductImage.png',
+	                title: '\u6682\u65E0\u70ED\u9500\u4EA7\u54C1' }) : _react2.default.createElement(_ContentSlider2.default, {
 	                settings: settings,
 	                models: models });
 	        }
@@ -30123,12 +30126,10 @@
 	        marginTop: 14
 	    },
 	    sliderLayout: {
-	        position: 'relative',
-	        top: 25,
-	        bottom: 20,
-	        backgroundColor: 'red'
-	        // marginTop: 25,
-	        // marginBottom: 20
+	        marginTop: 25,
+	        marginBottom: 20,
+	        backgroundColor: 'blue'
+	
 	    }
 	};
 	
@@ -30373,7 +30374,7 @@
 	        key: 'noticeViewOrNoInfoPanel',
 	        value: function noticeViewOrNoInfoPanel(models) {
 	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
-	                image: './static/imgs/defaultAdImage.png',
+	                image: './static/imgs/defaultNoticeImage.png',
 	                title: '\u6682\u65E0\u516C\u544A\u4FE1\u606F' }) : models.map(function (model, index) {
 	                return _react2.default.createElement(
 	                    'div',
