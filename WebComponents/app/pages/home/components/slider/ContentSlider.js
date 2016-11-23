@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 import Content from './components/Content';
 
 class ContentSlider extends Component {
+
     constructor(props) {
         super(props);
 

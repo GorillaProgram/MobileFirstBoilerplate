@@ -7,6 +7,7 @@ import NoInfoPanel from '../../../../main/components/view/panel/NoInfoPanel';
 import ContentSlider from '../slider/ContentSlider';
 
 class ProductPanel extends Component {
+
     constructor(props) {
         super(props);
 

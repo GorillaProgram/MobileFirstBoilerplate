@@ -7,6 +7,7 @@ import NoInfoPanel from '../../../../main/components/view/panel/NoInfoPanel';
 import ImagePath from '../../../../main/constant/ImagePath';
 
 class NoticePanel extends Component {
+
     constructor(props) {
         super(props);
 

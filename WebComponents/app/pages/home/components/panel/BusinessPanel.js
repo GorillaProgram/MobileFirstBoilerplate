@@ -6,6 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import Constant from '../../../../main/constant/Constant';
 
 class BusinessPanel extends Component {
+
     constructor(props) {
         super(props);
 
