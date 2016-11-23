@@ -34,7 +34,7 @@ const NetworkActions = {
             type: params.actionType,
             payload: {
                 params,
-                response: response
+                response
             }
         };
     },

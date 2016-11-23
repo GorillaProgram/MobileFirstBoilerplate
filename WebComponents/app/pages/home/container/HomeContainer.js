@@ -165,7 +165,7 @@ function mapStateToProps(state) {
     const { showIndex } = state;
     Just.log(`==== showIndex ====>>>>>> ${Just.jsonToString(showIndex)}`);
     return {
-
+        // adModels: showIndex
     };
 }
 

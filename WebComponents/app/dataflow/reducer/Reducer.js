@@ -32,7 +32,9 @@ function test(state = {
 }
 
 function showIndex(state = {
-
+    adModels: [],
+    noticeModels: [],
+    productModels: []
 }, action) {
     switch (action.type) {
     case SHOW_INDEX_INFO:
