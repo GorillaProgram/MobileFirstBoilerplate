@@ -21,10 +21,10 @@ class HomeContainer extends Component {
     }
 
     render() {
-        // const { dispatch } = this.props;
-        // dispatch(showIndexInfo({
-        //     actionType: SHOW_INDEX_INFO
-        // }));
+        const { dispatch } = this.props;
+        dispatch(showIndexInfo({
+            actionType: SHOW_INDEX_INFO
+        }));
         const adModels = [
             {
                 image: 'http://10.240.90.212:7001/padServer/padimages/1.png',
