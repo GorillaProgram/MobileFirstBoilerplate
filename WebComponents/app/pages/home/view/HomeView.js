@@ -6,6 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import ImagePath from '../../../main/constant/ImagePath';
 import Constant from '../../../main/constant/Constant';
+import NoInfoPanel from '../../../main/components/view/panel/NoInfoPanel';
 import AdImagesSlider from '../../../main/components/view/slider/AdImagesSlider';
 import ProductPanel from '../components/panel/ProductPanel';
 import NoticePanel from '../components/panel/NoticePanel';
@@ -21,7 +22,7 @@ class HomeView extends Component {
 
     }
 
-    render() {
+    adImagesSliderOrNoInfoPanel() {
         const adImagesSliderSettings = {
             className: 'slick-slider',
             arrows: false,
@@ -34,6 +35,19 @@ class HomeView extends Component {
             lazyLoad: true,
             autoplaySpeed: 5000
         };
+        return (
+            this.props.adModels.length === 0 ?
+            <NoInfoPanel
+                image='./static/imgs/defaultAdImage.png'
+                title='暂无广告信息' /> :
+            <AdImagesSlider
+                settings={adImagesSliderSettings}
+                models={this.props.adModels}
+                imageStyle={styles.AdImage} />
+        );
+    }
+
+    render() {
         const contentSliderSettings = {
             className: 'slick-slider',
             arrows: true,
@@ -50,10 +64,7 @@ class HomeView extends Component {
                 <div style={styles.container}>
                     <div style={styles.homeTopLayout}>
                         <div style={styles.AdImagesSliderLayout}>
-                            <AdImagesSlider
-                                settings={adImagesSliderSettings}
-                                models={this.props.adModels}
-                                imageStyle={styles.AdImage} />
+                            {adImagesSliderOrNoInfoPanel()}
                         </div>
                         <div style={styles.noticeLayout}>
                             <NoticePanel

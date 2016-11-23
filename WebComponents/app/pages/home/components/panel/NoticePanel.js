@@ -3,6 +3,7 @@
  * https://github.com/maybewaityou
  */
 import React, { Component, PropTypes } from 'react';
+import NoInfoPanel from '../../../../main/components/view/panel/NoInfoPanel';
 import ImagePath from '../../../../main/constant/ImagePath';
 
 class NoticePanel extends Component {
@@ -12,22 +13,30 @@ class NoticePanel extends Component {
 
     }
 
-    render() {
-        const noticeView = this.props.models.map((model, index) => {
-            return (
-                <div key={`${index}`} style={styles.noticeContentLayout} onClick={model.onClick}>
-                    <img src={ImagePath.noticeContentImage} style={styles.noticeContentImage} />
-                    <div style={styles.noticeContent}>{model.title}</div>
-                </div>
-            );
-        });
+    noticeViewOrNoInfoPanel() {
+        return (
+            this.props.models.length === 0 ?
+            <NoInfoPanel
+                image='./static/imgs/defaultAdImage.png'
+                title='暂无公告信息' /> :
+            this.props.models.map((model, index) => {
+                return (
+                    <div key={`${index}`} style={styles.noticeContentLayout} onClick={model.onClick}>
+                        <img src={ImagePath.noticeContentImage} style={styles.noticeContentImage} />
+                        <div style={styles.noticeContent}>{model.title}</div>
+                    </div>
+                );
+            })
+        );
+    }
 
+    render() {
         return (
             <div style={{...styles.container, ...this.props.style}}>
                 <label style={styles.noticeDes}>{this.props.title}</label>
                 <img src={ImagePath.progressbar} style={styles.noticeProgressbar} />
                 <div style={styles.noticeLayout}>
-                    {noticeView}
+                    {noticeViewOrNoInfoPanel()}
                 </div>
             </div>
         );

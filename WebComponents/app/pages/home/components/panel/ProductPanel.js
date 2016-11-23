@@ -3,6 +3,7 @@
  * https://github.com/maybewaityou
  */
 import React, { Component, PropTypes } from 'react';
+import NoInfoPanel from '../../../../main/components/view/panel/NoInfoPanel';
 import ContentSlider from '../slider/ContentSlider';
 
 class ProductPanel extends Component {
@@ -12,15 +13,25 @@ class ProductPanel extends Component {
 
     }
 
+    sliderOrNoInfoPanel() {
+        return (
+            this.props.models.length === 0 ?
+            <NoInfoPanel
+                image='./static/imgs/defaultAdImage.png'
+                title='暂无产品信息' /> :
+            <ContentSlider
+                settings={this.props.settings}
+                models={this.props.models} />
+        );
+    }
+
     render() {
         return (
             <div style={{...styles.container, ...this.props.style}}>
                 <label style={styles.title}>{this.props.title}</label>
                 <img src={this.props.image} style={styles.image} />
                 <div style={styles.sliderLayout}>
-                    <ContentSlider
-                        settings={this.props.settings}
-                        models={this.props.models} />
+                    {sliderOrNoInfoPanel()}
                 </div>
             </div>
         );
