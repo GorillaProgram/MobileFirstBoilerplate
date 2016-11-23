@@ -38,10 +38,9 @@ function showIndex(state = {
 }, action) {
     switch (action.type) {
     case SHOW_INDEX_INFO:
-        const response = action.payload.response;
         return {
             ...state,
-            adModels: response.list1.filter((item) => {
+            adModels: action.payload.response.list1.filter((item) => {
                 return item.TYPE === 'carousel';
             })
             .map((item) => {
@@ -50,14 +49,14 @@ function showIndex(state = {
                     url: item.TO_URL
                 };
             }),
-            noticeModels: response.list2.map((item) => {
+            noticeModels: action.payload.response.list2.map((item) => {
                 return {
                     type: item.MESSAGE_TYPE,
                     title: item.MESSAGE_TITLE,
                     content: item.MESSAGE_CONTENT
                 };
             }),
-            productModels: response.list1.filter((item) => {
+            productModels: action.payload.response.list1.filter((item) => {
                 return item.TYPE === 'hot';
             })
             .map((item) => {

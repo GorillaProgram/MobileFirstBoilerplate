@@ -24216,7 +24216,35 @@
 	    switch (action.type) {
 	        case _Actions.SHOW_INDEX_INFO:
 	            return _extends({}, state, {
-	                payload: action.payload
+	                adModels: action.payload.response.list1.filter(function (item) {
+	                    return item.TYPE === 'carousel';
+	                }).map(function (item) {
+	                    return {
+	                        image: item.IMG_URL,
+	                        url: item.TO_URL
+	                    };
+	                }),
+	                noticeModels: action.payload.response.list2.map(function (item) {
+	                    return {
+	                        type: item.MESSAGE_TYPE,
+	                        title: item.MESSAGE_TITLE,
+	                        content: item.MESSAGE_CONTENT
+	                    };
+	                }),
+	                productModels: action.payload.response.list1.filter(function (item) {
+	                    return item.TYPE === 'hot';
+	                }).map(function (item) {
+	                    return {
+	                        image: item.IMG_URL,
+	                        content: [{
+	                            des: '名称',
+	                            text: item.CONTENT_NAME
+	                        }, {
+	                            des: '简介',
+	                            text: item.CONTENT_DESC
+	                        }]
+	                    };
+	                })
 	            });
 	        default:
 	            return state;
@@ -26737,37 +26765,10 @@
 	function mapStateToProps(state) {
 	    var showIndex = state.showIndex;
 	
-	    var response = showIndex.payload.response;
 	    return {
-	        adModels: response.list1.filter(function (item) {
-	            return item.TYPE === 'carousel';
-	        }).map(function (item) {
-	            return {
-	                image: item.IMG_URL,
-	                url: item.TO_URL
-	            };
-	        }),
-	        noticeModels: response.list2.map(function (item) {
-	            return {
-	                type: item.MESSAGE_TYPE,
-	                title: item.MESSAGE_TITLE,
-	                content: item.MESSAGE_CONTENT
-	            };
-	        }),
-	        productModels: response.list1.filter(function (item) {
-	            return item.TYPE === 'hot';
-	        }).map(function (item) {
-	            return {
-	                image: item.IMG_URL,
-	                content: [{
-	                    des: '名称',
-	                    text: item.CONTENT_NAME
-	                }, {
-	                    des: '简介',
-	                    text: item.CONTENT_DESC
-	                }]
-	            };
-	        })
+	        adModels: showIndex.adModels,
+	        noticeModels: showIndex.noticeModels,
+	        productModels: showIndex.productModels
 	    };
 	}
 	
