@@ -12,7 +12,8 @@
         "start": "gulp server",
         "clean": "gulp clean",
         "rebuild": "gulp build",
-        "commit": "git add . && git commit -m \"first commit\""
+        "commit": "git add . && git commit -m \"first commit\"",
+        "push": "git push -u origin master"
     },
     "repository": {
         "type": "git",
