@@ -33,7 +33,7 @@ const NetworkUtility = {
                     onSuccess: (result) => {
                         DebugUtility.log('==== result ====>>>>> ', JSONUtility.jsonToString(result));
                         if (result.responseJSON.retCode === Constant.RESPONSE_SUCCESS) {
-                            if (DataUtility.isNutNull(result.responseJSON.bsadata)) {
+                            if (DataUtility.isNotNull(result.responseJSON.bsadata)) {
                                 NetworkUtility.success(result, silence);
                                 resolve(result);
                             } else {

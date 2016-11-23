@@ -25456,7 +25456,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _Dimensions = __webpack_require__(216);
@@ -25473,54 +25473,59 @@
 	var titleHeight = 80;
 	
 	exports.default = {
-	  defaultTabWidth: tabWidth,
-	  matchParent: '100%',
-	  oneThird: '33.4%',
-	  twoThirds: '66.6%',
-	  // defaultHomeWidth: Dimensions.width - tabWidth,
-	  // defaultHomeHeight: Dimensions.height,
-	  screenWidth: _Dimensions2.default.width(),
-	  screenHeight: _Dimensions2.default.height(),
-	  defaultBackgroundColor: '#F9F9F9',
-	  homeBlock: 10,
-	  homeRadius: 10,
-	  homePanelBackgroundColor: '#F9F9F9',
-	  // contentHeight: Dimensions.height - titleHeight,
-	  // defaultButtonWidth: 480,
-	  titleHeight: titleHeight,
-	  // headerHeight: 60,
-	  dialogTitleHeight: 40,
-	  loginDialogHeight: 250,
-	  // tabLogoWH: 122,
-	  // defaultFontSize: 16,
-	  // smallFontSize: 14,
-	  // largeFontSize: 18,
-	  // fontSize13: 13,
-	  // fontSize12: 12,
-	  // fontSize11: 11,
-	  // lightFontColor: 'white',
-	  // tabSelectedColor: '#1177db',
-	  // tabHeaderColor: '#004892',
-	  // primaryColor: '#0096ef',
-	  // titleBackgroundColor: '#00a2e3',
-	  // orangeColor: '#ff6e01',
-	  // squareWH: 80,
-	  // matchParent: '100%',
-	  // inputTypes: {
-	  //     editView: 'editView',
-	  //     textView: 'textView',
-	  //     textViewOnly: 'textViewOnly',
-	  // },
+	    defaultTabWidth: tabWidth,
+	    matchParent: '100%',
+	    oneThird: '33.4%',
+	    twoThirds: '66.6%',
+	    // defaultHomeWidth: Dimensions.width - tabWidth,
+	    // defaultHomeHeight: Dimensions.height,
+	    screenWidth: _Dimensions2.default.width(),
+	    screenHeight: _Dimensions2.default.height(),
+	    defaultBackgroundColor: '#F9F9F9',
+	    homeBlock: 10,
+	    homeRadius: 10,
+	    homePanelBackgroundColor: '#F9F9F9',
+	    // contentHeight: Dimensions.height - titleHeight,
+	    // defaultButtonWidth: 480,
+	    titleHeight: titleHeight,
+	    // headerHeight: 60,
+	    dialogTitleHeight: 40,
+	    loginDialogHeight: 250,
+	    // tabLogoWH: 122,
+	    // defaultFontSize: 16,
+	    // smallFontSize: 14,
+	    // largeFontSize: 18,
+	    // fontSize13: 13,
+	    // fontSize12: 12,
+	    // fontSize11: 11,
+	    // lightFontColor: 'white',
+	    // tabSelectedColor: '#1177db',
+	    // tabHeaderColor: '#004892',
+	    // primaryColor: '#0096ef',
+	    // titleBackgroundColor: '#00a2e3',
+	    // orangeColor: '#ff6e01',
+	    // squareWH: 80,
+	    // matchParent: '100%',
+	    // inputTypes: {
+	    //     editView: 'editView',
+	    //     textView: 'textView',
+	    //     textViewOnly: 'textViewOnly',
+	    // },
 	
-	  REQUEST_TIMEOUT: 95 * 1000, // 网络请求超时时间
-	  IMAGE_CACHE_SIZE: 50 * 1024 * 1024, // 图片缓存大小
-	  FULL_IMAGE_URL: 'http://10.240.90.212:7001/padServer/padimages/', // 图片地址(需要前端进行拼接)
-	  /**
-	   * 读取外设成功标示
-	   */
-	  SUCCESS_CODE_FROM_PERIPHERAL: '000',
-	  FAILURE_CODE_FROM_PERIPHERAL: '001'
+	    /* 网络请求 start */
+	    REQUEST_TIMEOUT: 95 * 1000, // 超时时间
+	    RESPONSE_SUCCESS: 'PD0000', // 成功标示
+	    RESPONSE_FAILURE: 'PD9999', // 失败标示
+	    /* 网络请求 end */
 	
+	    /* 图片 start */
+	    IMAGE_CACHE_SIZE: 50 * 1024 * 1024, // 大小
+	    FULL_IMAGE_URL: 'http://10.240.90.212:7001/padServer/padimages/', // 图片地址(需要前端进行拼接)
+	    /* 图片 end */
+	
+	    /* 读取外设成功标示 start */
+	    SUCCESS_CODE_FROM_PERIPHERAL: '000',
+	    FAILURE_CODE_FROM_PERIPHERAL: '001'
 	};
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Constant.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
