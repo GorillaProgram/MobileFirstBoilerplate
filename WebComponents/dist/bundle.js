@@ -25860,7 +25860,7 @@
 	                    onSuccess: function onSuccess(result) {
 	                        _DebugUtility2.default.log('==== result ====>>>>> ', _JSONUtility2.default.jsonToString(result));
 	                        if (result.responseJSON.retCode === _Constant2.default.RESPONSE_SUCCESS) {
-	                            if (_DataUtility2.default.isNutNull(result.responseJSON.bsadata)) {
+	                            if (_DataUtility2.default.isNotNull(result.responseJSON.bsadata)) {
 	                                NetworkUtility.success(result, silence);
 	                                resolve(result);
 	                            } else {
