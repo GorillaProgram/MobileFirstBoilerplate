@@ -26808,9 +26808,9 @@
 	};
 	
 	function mapStateToProps(state) {
-	    var network = state.network;
+	    var showIndex = state.showIndex;
 	
-	    _Just2.default.log('==== network ====>>>>>> ' + _Just2.default.jsonToString(network));
+	    _Just2.default.log('==== showIndex ====>>>>>> ' + _Just2.default.jsonToString(showIndex));
 	    return {};
 	}
 	
