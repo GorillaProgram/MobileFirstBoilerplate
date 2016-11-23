@@ -47,13 +47,20 @@ export default {
     //     textViewOnly: 'textViewOnly',
     // },
 
-    REQUEST_TIMEOUT: 95 * 1000, // 网络请求超时时间
-    IMAGE_CACHE_SIZE: 50 * 1024 * 1024, // 图片缓存大小
+    /* 网络请求 start */
+    REQUEST_TIMEOUT: 95 * 1000, // 超时时间
+    RESPONSE_SUCCESS: 'PD0000', // 成功标示
+    RESPONSE_FAILURE: 'PD9999', // 失败标示
+    /* 网络请求 end */
+
+    /* 图片 start */
+    IMAGE_CACHE_SIZE: 50 * 1024 * 1024, // 大小
     FULL_IMAGE_URL: 'http://10.240.90.212:7001/padServer/padimages/', // 图片地址(需要前端进行拼接)
-    /**
-     * 读取外设成功标示
-     */
+    /* 图片 end */
+
+    /* 读取外设成功标示 start */
     SUCCESS_CODE_FROM_PERIPHERAL: '000',
     FAILURE_CODE_FROM_PERIPHERAL: '001',
-    
+    /* 读取外设成功标示 end */
+
 };
