@@ -45,6 +45,7 @@ const styles = {
         paddingLeft: 30,
         paddingRight: 30,
         paddingTop: 20,
+        paddingBottom: 20
     },
     title: {
         fontSize: 18
@@ -55,10 +56,9 @@ const styles = {
         marginTop: 14
     },
     sliderLayout: {
+        height: '100%',
         marginTop: 25,
-        marginBottom: 20,
-        backgroundColor: 'blue',
-
+        marginBottom: 20
     }
 };
 

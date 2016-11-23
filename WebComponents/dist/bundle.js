@@ -27357,11 +27357,10 @@
 	        border: '1px solid #888888'
 	    },
 	    productPanel: {
+	        flex: 1,
 	        paddingLeft: 50,
 	        paddingRight: 50,
-	        position: 'relative',
-	        top: 0, left: 0, bottom: 0, right: 0,
-	        backgroundColor: 'red'
+	        backgroundColor: 'yellow'
 	    },
 	    quicklyEnterPanelLayout: {
 	        display: 'flex',

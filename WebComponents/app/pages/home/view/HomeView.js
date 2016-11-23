@@ -154,11 +154,9 @@ const styles = {
         border: '1px solid #888888'
     },
     productPanel: {
+        height: Constant.matchParent,
         paddingLeft: 50,
         paddingRight: 50,
-        position: 'absolute',
-        top: 0, left: 0, bottom: 0, right: 0,
-        backgroundColor: 'yellow'
     },
     quicklyEnterPanelLayout: {
         display: 'flex',
