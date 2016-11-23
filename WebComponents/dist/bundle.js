@@ -26761,11 +26761,13 @@
 	
 	        var _this = _possibleConstructorReturn(this, (HomeContainer.__proto__ || Object.getPrototypeOf(HomeContainer)).call(this, props));
 	
-	        var dispatch = _this.props.dispatch;
+	        _Just2.default.delayExecute(function () {
+	            var dispatch = _this.props.dispatch;
 	
-	        dispatch((0, _Actions.showIndexInfo)({
-	            actionType: _Actions.SHOW_INDEX_INFO
-	        }));
+	            dispatch((0, _Actions.showIndexInfo)({
+	                actionType: _Actions.SHOW_INDEX_INFO
+	            }), 1000);
+	        });
 	
 	        _this.handleOpenCardClick = _this.handleOpenCardClick.bind(_this);
 	        return _this;

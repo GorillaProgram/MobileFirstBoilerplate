@@ -13,10 +13,12 @@ class HomeContainer extends Component {
     constructor(props) {
         super(props);
 
-        const { dispatch } = this.props;
-        dispatch(showIndexInfo({
-            actionType: SHOW_INDEX_INFO
-        }));
+        Just.delayExecute(() => {
+            const { dispatch } = this.props;
+            dispatch(showIndexInfo({
+                actionType: SHOW_INDEX_INFO
+            }), 1000);
+        });
 
         this.handleOpenCardClick = this.handleOpenCardClick.bind(this);
     }
@@ -51,7 +53,7 @@ HomeContainer.contextTypes = {
 
 function mapStateToProps(state) {
     const { showIndex } = state;
-    Just.log(`==== showIndex ====>>>>> ${showIndex}`);
+    Just.log(`==== showIndex ====>>>>> ${Just.jsonToString(showIndex)}`);
     return {
         adModels: showIndex.adModels,
         noticeModels: showIndex.noticeModels,
