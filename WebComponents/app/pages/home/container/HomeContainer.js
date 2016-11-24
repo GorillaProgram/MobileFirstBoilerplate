@@ -13,12 +13,12 @@ class HomeContainer extends Component {
     constructor(props) {
         super(props);
 
-        // Just.delayExecute(() => {
-        //     const { dispatch } = this.props;
-        //     dispatch(showIndexInfo({
-        //         actionType: SHOW_INDEX_INFO
-        //     }), 1000);
-        // });
+        Just.delayExecute(() => {
+            const { dispatch } = this.props;
+            dispatch(showIndexInfo({
+                actionType: SHOW_INDEX_INFO
+            }), 1000);
+        });
 
         this.handleOpenCardClick = this.handleOpenCardClick.bind(this);
     }
