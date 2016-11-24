@@ -18,8 +18,8 @@ class ProductDetailsView extends Component {
         return (
             Just.isNull(detailsURL) ?
             <NoInfoPanel
-                image='./static/imgs/defaultAdImage.png'
-                title='暂无广告图片' /> :
+                image='./static/imgs/defaultNoticeImage.png'
+                title='查不到详情信息' /> :
             <img src={detailsURL} />
         );
     }
