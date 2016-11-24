@@ -27119,11 +27119,7 @@
 	
 	var _Constant2 = _interopRequireDefault(_Constant);
 	
-	var _NoInfoPanel = __webpack_require__(242);
-	
-	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
-	
-	var _AdImagesSlider = __webpack_require__(243);
+	var _AdImagesSlider = __webpack_require__(242);
 	
 	var _AdImagesSlider2 = _interopRequireDefault(_AdImagesSlider);
 	
@@ -27169,8 +27165,8 @@
 	    }
 	
 	    _createClass(HomeView, [{
-	        key: 'adImagesSliderOrNoInfoPanel',
-	        value: function adImagesSliderOrNoInfoPanel(adModels) {
+	        key: 'render',
+	        value: function render() {
 	            var adImagesSliderSettings = {
 	                className: 'slick-slider',
 	                arrows: false,
@@ -27183,16 +27179,6 @@
 	                lazyLoad: true,
 	                autoplaySpeed: 5000
 	            };
-	            return adModels.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
-	                image: './static/imgs/defaultAdImage.png',
-	                title: '\u6682\u65E0\u5E7F\u544A\u56FE\u7247' }) : _react2.default.createElement(_AdImagesSlider2.default, {
-	                settings: adImagesSliderSettings,
-	                models: adModels,
-	                imageStyle: styles.AdImage });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
 	            var contentSliderSettings = {
 	                className: 'slick-slider',
 	                arrows: true,
@@ -27216,14 +27202,21 @@
 	                        _react2.default.createElement(
 	                            'div',
 	                            { style: styles.AdImagesSliderLayout },
-	                            this.adImagesSliderOrNoInfoPanel(this.props.adModels)
+	                            _react2.default.createElement(_AdImagesSlider2.default, {
+	                                settings: adImagesSliderSettings,
+	                                models: this.props.adModels,
+	                                imageStyle: styles.AdImage,
+	                                noInfoImage: './static/imgs/defaultAdImage.png',
+	                                noInfoTitle: '\u6682\u65E0\u5E7F\u544A\u56FE\u7247' })
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { style: styles.noticeLayout },
 	                            _react2.default.createElement(_NoticePanel2.default, {
 	                                title: '\u516C\u544A\u680F',
-	                                models: this.props.noticeModels })
+	                                models: this.props.noticeModels,
+	                                noInfoImage: './static/imgs/defaultNoticeImage.png',
+	                                noInfoTitle: '\u6682\u65E0\u516C\u544A\u4FE1\u606F' })
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -27237,7 +27230,9 @@
 	                                image: _ImagePath2.default.progressbar,
 	                                settings: contentSliderSettings,
 	                                models: this.props.productModels,
-	                                style: styles.productPanel })
+	                                style: styles.productPanel,
+	                                noInfoImage: './static/imgs/defaultProductImage.png',
+	                                noInfoTitle: '\u6682\u65E0\u70ED\u9500\u4EA7\u54C1' })
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
@@ -27520,6 +27515,113 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _NoInfoPanel = __webpack_require__(243);
+	
+	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
+	
+	var _reactSlick = __webpack_require__(244);
+	
+	var _reactSlick2 = _interopRequireDefault(_reactSlick);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by MeePwn
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * https://github.com/maybewaityou
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * description:
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      广告Slider
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	
+	var AdImagesSlider = function (_Component) {
+	    _inherits(AdImagesSlider, _Component);
+	
+	    function AdImagesSlider(props) {
+	        _classCallCheck(this, AdImagesSlider);
+	
+	        return _possibleConstructorReturn(this, (AdImagesSlider.__proto__ || Object.getPrototypeOf(AdImagesSlider)).call(this, props));
+	    }
+	
+	    _createClass(AdImagesSlider, [{
+	        key: 'adImagesSliderOrNoInfoPanel',
+	        value: function adImagesSliderOrNoInfoPanel(models, settings, noInfoImage, noInfoTitle) {
+	            var _this2 = this;
+	
+	            var imagesView = this.props.models.map(function (model, index) {
+	                return _react2.default.createElement('img', { src: model.image, key: '' + index, style: _this2.props.imageStyle, onClick: model.onClick });
+	            });
+	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
+	                image: noInfoImage,
+	                title: noInfoTitle }) : _react2.default.createElement(
+	                _reactSlick2.default,
+	                settings,
+	                imagesView
+	            );
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	
+	            return _react2.default.createElement(
+	                'div',
+	                { style: _extends({}, styles.container, this.props.style) },
+	                this.adImagesSliderOrNoInfoPanel(this.props.models, this.props.settings, this.props.noInfoImage, this.props.noInfoTitle)
+	            );
+	        }
+	    }]);
+	
+	    return AdImagesSlider;
+	}(_react.Component);
+	
+	var styles = {
+	    container: {
+	        display: 'flex',
+	        flexDirection: 'column',
+	        width: '100%',
+	        height: '100%',
+	        justifyContent: 'center',
+	        alignItems: 'center'
+	    }
+	};
+	
+	AdImagesSlider.propTypes = {
+	    style: _react.PropTypes.object,
+	    imageStyle: _react.PropTypes.object,
+	    settings: _react.PropTypes.object.isRequired,
+	    models: _react.PropTypes.array.isRequired,
+	    noInfoImage: _react.PropTypes.string.isRequired,
+	    noInfoTitle: _react.PropTypes.string.isRequired
+	};
+	
+	exports.default = AdImagesSlider;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AdImagesSlider.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27592,82 +27694,6 @@
 	exports.default = NoInfoPanel;
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "NoInfoPanel.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactSlick = __webpack_require__(244);
-	
-	var _reactSlick2 = _interopRequireDefault(_reactSlick);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by MeePwn
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * https://github.com/maybewaityou
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * description:
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *      广告Slider
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-	
-	
-	var AdImagesSlider = function (_Component) {
-	    _inherits(AdImagesSlider, _Component);
-	
-	    function AdImagesSlider() {
-	        _classCallCheck(this, AdImagesSlider);
-	
-	        return _possibleConstructorReturn(this, (AdImagesSlider.__proto__ || Object.getPrototypeOf(AdImagesSlider)).apply(this, arguments));
-	    }
-	
-	    _createClass(AdImagesSlider, [{
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-	
-	            var imagesView = this.props.models.map(function (model, index) {
-	                return _react2.default.createElement('img', { src: model.image, key: '' + index, style: _this2.props.imageStyle, onClick: model.onClick });
-	            });
-	
-	            return _react2.default.createElement(
-	                _reactSlick2.default,
-	                this.props.settings,
-	                imagesView
-	            );
-	        }
-	    }]);
-	
-	    return AdImagesSlider;
-	}(_react.Component);
-	
-	AdImagesSlider.propTypes = {
-	    imageStyle: _react.PropTypes.object,
-	    settings: _react.PropTypes.object.isRequired,
-	    models: _react.PropTypes.array.isRequired
-	};
-	
-	exports.default = AdImagesSlider;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/MeePwn/Desktop/MeePwn/HTML+CSS+JS/MobileFirst/One-is-All/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AdImagesSlider.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 244 */
@@ -30009,7 +30035,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _NoInfoPanel = __webpack_require__(242);
+	var _NoInfoPanel = __webpack_require__(243);
 	
 	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
 	
@@ -30040,10 +30066,10 @@
 	
 	    _createClass(ProductPanel, [{
 	        key: 'sliderOrNoInfoPanel',
-	        value: function sliderOrNoInfoPanel(models, settings) {
+	        value: function sliderOrNoInfoPanel(models, settings, noInfoImage, noInfoTitle) {
 	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
-	                image: './static/imgs/defaultProductImage.png',
-	                title: '\u6682\u65E0\u70ED\u9500\u4EA7\u54C1' }) : _react2.default.createElement(_ContentSlider2.default, {
+	                image: noInfoImage,
+	                title: noInfoTitle }) : _react2.default.createElement(_ContentSlider2.default, {
 	                settings: settings,
 	                models: models });
 	        }
@@ -30062,7 +30088,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.sliderLayout },
-	                    this.sliderOrNoInfoPanel(this.props.models, this.props.settings)
+	                    this.sliderOrNoInfoPanel(this.props.models, this.props.settings, this.props.noInfoImage, this.props.noInfoTitle)
 	                )
 	            );
 	        }
@@ -30099,7 +30125,9 @@
 	    title: _react.PropTypes.string.isRequired,
 	    image: _react.PropTypes.string.isRequired,
 	    settings: _react.PropTypes.object.isRequired,
-	    models: _react.PropTypes.array.isRequired
+	    models: _react.PropTypes.array.isRequired,
+	    noInfoImage: _react.PropTypes.string.isRequired,
+	    noInfoTitle: _react.PropTypes.string.isRequired
 	};
 	
 	exports.default = ProductPanel;
@@ -30302,7 +30330,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _NoInfoPanel = __webpack_require__(242);
+	var _NoInfoPanel = __webpack_require__(243);
 	
 	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
 	
@@ -30333,10 +30361,10 @@
 	
 	    _createClass(NoticePanel, [{
 	        key: 'noticeViewOrNoInfoPanel',
-	        value: function noticeViewOrNoInfoPanel(models) {
+	        value: function noticeViewOrNoInfoPanel(models, noInfoImage, noInfoTitle) {
 	            return models.length === 0 ? _react2.default.createElement(_NoInfoPanel2.default, {
-	                image: './static/imgs/defaultNoticeImage.png',
-	                title: '\u6682\u65E0\u516C\u544A\u4FE1\u606F' }) : models.map(function (model, index) {
+	                image: noInfoImage,
+	                title: noInfoTitle }) : models.map(function (model, index) {
 	                return _react2.default.createElement(
 	                    'div',
 	                    { key: '' + index, style: styles.noticeContentLayout, onClick: model.onClick },
@@ -30364,7 +30392,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: styles.noticeLayout },
-	                    this.noticeViewOrNoInfoPanel(this.props.models)
+	                    this.noticeViewOrNoInfoPanel(this.props.models, this.props.noInfoImage, this.props.noInfoTitle)
 	                )
 	            );
 	        }
@@ -30418,7 +30446,9 @@
 	NoticePanel.propTypes = {
 	    style: _react.PropTypes.object,
 	    title: _react.PropTypes.string.isRequired,
-	    models: _react.PropTypes.array.isRequired
+	    models: _react.PropTypes.array.isRequired,
+	    noInfoImage: _react.PropTypes.string.isRequired,
+	    noInfoTitle: _react.PropTypes.string.isRequired
 	};
 	
 	exports.default = NoticePanel;
@@ -32075,7 +32105,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _NoInfoPanel = __webpack_require__(242);
+	var _NoInfoPanel = __webpack_require__(243);
 	
 	var _NoInfoPanel2 = _interopRequireDefault(_NoInfoPanel);
 	

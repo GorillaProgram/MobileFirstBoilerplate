@@ -14,12 +14,12 @@ class ProductDetailsView extends Component {
 
     }
 
-    detailsOrNoInfoPanel(detailsURL) {
+    detailsOrNoInfoPanel(detailsURL, noInfoImage, noInfoTitle) {
         return (
             Just.isNull(detailsURL) ?
             <NoInfoPanel
-                image='./static/imgs/defaultNoticeImage.png'
-                title='查不到详情信息' /> :
+                image={noInfoImage}
+                title={noInfoTitle} /> :
             <img src={detailsURL} />
         );
     }
@@ -27,7 +27,7 @@ class ProductDetailsView extends Component {
     render() {
         return (
             <div style={{...styles.container, ...this.props.style}}>
-                {this.detailsOrNoInfoPanel(this.props.detailsURL)}
+                {this.detailsOrNoInfoPanel(this.props.detailsURL, this.props.noInfoImage, this.props.noInfoTitle)}
             </div>
         );
     }
@@ -36,7 +36,8 @@ class ProductDetailsView extends Component {
 const styles = {
     container: {
         display: 'flex',
-        flex: 1,
+        width: '100%',
+        height: '100%',
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -45,7 +46,9 @@ const styles = {
 
 ProductDetailsView.propTypes = {
     style: PropTypes.object,
-    detailsURL: PropTypes.string.isRequired
+    detailsURL: PropTypes.string.isRequired,
+    noInfoImage: PropTypes.string.isRequired,
+    noInfoTitle: PropTypes.string.isRequired
 };
 
 export default ProductDetailsView;

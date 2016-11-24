@@ -45,7 +45,9 @@ class ProductView extends Component {
                     <div style={styles.productDetailsLayout}>
                         <ProductDetailsView
                             style={styles.productDetails}
-                            detailsURL="" />
+                            detailsURL=""
+                            noInfoImage="./static/imgs/defaultNoticeImage.png"
+                            noInfoTitle="查不到详情信息" />
                     </div>
                 </div>
             </div>
