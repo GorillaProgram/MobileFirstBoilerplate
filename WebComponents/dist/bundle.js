@@ -26772,7 +26772,6 @@
 	function mapStateToProps(state) {
 	    var showIndex = state.showIndex;
 	
-	    _Just2.default.log('==== showIndex ====>>>>> ' + _Just2.default.jsonToString(showIndex));
 	    return {
 	        adModels: showIndex.adModels,
 	        noticeModels: showIndex.noticeModels,
@@ -31965,6 +31964,7 @@
 	    leftImage: {
 	        width: 20,
 	        height: 20,
+	        marginTop: 10,
 	        marginLeft: 10,
 	        position: 'absolute'
 	    }

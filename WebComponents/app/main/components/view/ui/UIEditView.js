@@ -51,6 +51,7 @@ const styles = {
     leftImage: {
         width: 20,
         height: 20,
+        marginTop: 10,
         marginLeft: 10,
         position: 'absolute',
     }
