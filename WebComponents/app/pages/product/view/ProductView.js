@@ -21,7 +21,9 @@ class ProductView extends Component {
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>
                     <div style={styles.productListLayout}>
-
+                        <TabGroup >
+                            
+                        </TabGroup>
                     </div>
                     <div style={styles.productDetailsLayout}>
                         <ProductDetailsView
