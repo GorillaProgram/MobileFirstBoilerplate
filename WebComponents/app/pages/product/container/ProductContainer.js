@@ -13,7 +13,7 @@ class ProductContainer extends Component {
         super(props);
 
         this.state = {
-            allTabSelectedStatus: true,
+            allTabSelectedStatus: true, // 全部
             financingTabSelectedStatus: false, // 理财
             foundationTabSelectedStatus: false // 基金
         };
@@ -27,21 +27,33 @@ class ProductContainer extends Component {
      * 全部
      */
     handleAllTabSelected() {
-
+        this.setState({
+            allTabSelectedStatus: true, // 全部
+            financingTabSelectedStatus: false, // 理财
+            foundationTabSelectedStatus: false // 基金
+        });
     }
 
     /**
      * 理财
      */
     handleFinancingTabSelected() {
-
+        this.setState({
+            allTabSelectedStatus: false, // 全部
+            financingTabSelectedStatus: true, // 理财
+            foundationTabSelectedStatus: false // 基金
+        });
     }
 
     /**
      * 基金
      */
     handleFoundationTabSelected() {
-
+        this.setState({
+            allTabSelectedStatus: false, // 全部
+            financingTabSelectedStatus: false, // 理财
+            foundationTabSelectedStatus: true // 基金
+        });
     }
 
     render() {
