@@ -6,7 +6,6 @@ import React, { Component, PropTypes } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import ImagePath from '../../../main/constant/ImagePath';
 import Constant from '../../../main/constant/Constant';
-import NoInfoPanel from '../../../main/components/view/panel/NoInfoPanel';
 import AdImagesSlider from '../../../main/components/view/slider/AdImagesSlider';
 import ProductPanel from '../components/panel/ProductPanel';
 import NoticePanel from '../components/panel/NoticePanel';
