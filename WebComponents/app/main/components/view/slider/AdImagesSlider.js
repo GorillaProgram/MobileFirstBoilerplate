@@ -17,7 +17,7 @@ class AdImagesSlider extends Component {
 
     }
 
-    adImagesSliderOrNoInfoPanel(models, noInfoImage, noInfoTitle) {
+    adImagesSliderOrNoInfoPanel(models, settings, noInfoImage, noInfoTitle) {
         const imagesView = this.props.models.map((model, index) => {
             return (
                 <img src={model.image} key={`${index}`} style={this.props.imageStyle} onClick={model.onClick}/>
@@ -28,7 +28,7 @@ class AdImagesSlider extends Component {
             <NoInfoPanel
                 image={noInfoImage}
                 title={noInfoTitle} /> :
-            <Slider {...this.props.settings}>
+            <Slider {...settings}>
                 {imagesView}
             </Slider>
         );
@@ -38,7 +38,7 @@ class AdImagesSlider extends Component {
 
         return (
             <div style={{...styles.container, ...this.props.style}}>
-                {this.adImagesSliderOrNoInfoPanel(this.props.models, this.props.noInfoImage, this.props.noInfoTitle)}
+                {this.adImagesSliderOrNoInfoPanel(this.props.models, this.props.settings, this.props.noInfoImage, this.props.noInfoTitle)}
             </div>
         );
     }
@@ -57,7 +57,9 @@ AdImagesSlider.propTypes = {
     style: PropTypes.object,
     imageStyle: PropTypes.object,
     settings: PropTypes.object.isRequired,
-    models: PropTypes.array.isRequired
+    models: PropTypes.array.isRequired,
+    noInfoImage: PropTypes.string.isRequired,
+    noInfoTitle: PropTypes.string.isRequired
 };
 
 export default AdImagesSlider;

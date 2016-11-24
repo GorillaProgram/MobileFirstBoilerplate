@@ -14,12 +14,12 @@ class NoticePanel extends Component {
 
     }
 
-    noticeViewOrNoInfoPanel(models) {
+    noticeViewOrNoInfoPanel(models, noInfoImage, noInfoTitle) {
         return (
             models.length === 0 ?
             <NoInfoPanel
-                image='./static/imgs/defaultNoticeImage.png'
-                title='暂无公告信息' /> :
+                image={noInfoImage}
+                title={noInfoTitle} /> :
             models.map((model, index) => {
                 return (
                     <div key={`${index}`} style={styles.noticeContentLayout} onClick={model.onClick}>
@@ -37,7 +37,7 @@ class NoticePanel extends Component {
                 <label style={styles.noticeDes}>{this.props.title}</label>
                 <img src={ImagePath.progressbar} style={styles.noticeProgressbar} />
                 <div style={styles.noticeLayout}>
-                    {this.noticeViewOrNoInfoPanel(this.props.models)}
+                    {this.noticeViewOrNoInfoPanel(this.props.models, this.props.noInfoImage, this.props.noInfoTitle)}
                 </div>
             </div>
         );
@@ -91,7 +91,9 @@ const styles = {
 NoticePanel.propTypes = {
     style: PropTypes.object,
     title: PropTypes.string.isRequired,
-    models: PropTypes.array.isRequired
+    models: PropTypes.array.isRequired,
+    noInfoImage: PropTypes.string.isRequired,
+    noInfoTitle: PropTypes.string.isRequired
 };
 
 export default NoticePanel;

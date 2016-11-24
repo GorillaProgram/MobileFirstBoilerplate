@@ -14,12 +14,12 @@ class ProductPanel extends Component {
 
     }
 
-    sliderOrNoInfoPanel(models, settings) {
+    sliderOrNoInfoPanel(models, settings, noInfoImage, noInfoTitle) {
         return (
             models.length === 0 ?
             <NoInfoPanel
-                image='./static/imgs/defaultProductImage.png'
-                title='暂无热销产品' /> :
+                image={noInfoImage}
+                title={noInfoTitle} /> :
             <ContentSlider
                 settings={settings}
                 models={models} />
@@ -32,7 +32,7 @@ class ProductPanel extends Component {
                 <label style={styles.title}>{this.props.title}</label>
                 <img src={this.props.image} style={styles.image} />
                 <div style={styles.sliderLayout}>
-                    {this.sliderOrNoInfoPanel(this.props.models, this.props.settings)}
+                    {this.sliderOrNoInfoPanel(this.props.models, this.props.settings, this.props.noInfoImage, this.props.noInfoTitle)}
                 </div>
             </div>
         );
@@ -67,7 +67,9 @@ ProductPanel.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     settings: PropTypes.object.isRequired,
-    models: PropTypes.array.isRequired
+    models: PropTypes.array.isRequired,
+    noInfoImage: PropTypes.string.isRequired,
+    noInfoTitle: PropTypes.string.isRequired
 };
 
 export default ProductPanel;

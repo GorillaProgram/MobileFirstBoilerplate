@@ -61,7 +61,9 @@ class HomeView extends Component {
                         <div style={styles.noticeLayout}>
                             <NoticePanel
                                 title="公告栏"
-                                models={this.props.noticeModels} />
+                                models={this.props.noticeModels}
+                                noInfoImage="./static/imgs/defaultNoticeImage.png"
+                                noInfoTitle="暂无公告信息" />
                         </div>
                     </div>
                     <div style={styles.homeBottomLayout}>
@@ -71,7 +73,9 @@ class HomeView extends Component {
                                 image={ImagePath.progressbar}
                                 settings={contentSliderSettings}
                                 models={this.props.productModels}
-                                style={styles.productPanel} />
+                                style={styles.productPanel}
+                                noInfoImage='./static/imgs/defaultProductImage.png'
+                                noInfoTitle='暂无热销产品' />
                         </div>
                         <div style={styles.quicklyEnterPanelLayout}>
                             <div style={styles.businessPanelLayout}>
