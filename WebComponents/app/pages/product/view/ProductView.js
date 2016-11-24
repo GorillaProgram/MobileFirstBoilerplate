@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import Constant from '../../../main/constant/Constant';
 import { TabGroup } from '../../../main/components/view/UIComponents';
+import ProductDetailsView from '../components/ProductDetailsView';
 
 class ProductView extends Component {
 
@@ -20,10 +21,12 @@ class ProductView extends Component {
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>
                     <div style={styles.productListLayout}>
-                        
+
                     </div>
                     <div style={styles.productDetailsLayout}>
-
+                        <ProductDetailsView
+                            style={styles.productDetails}
+                            detailsURL="" />
                     </div>
                 </div>
             </div>
@@ -52,6 +55,9 @@ const styles = {
         borderRadius: Constant.homeRadius,
         overflow: 'hidden',
         border: '1px solid #888888'
+    },
+    productDetails: {
+        height: Constant.matchParent
     }
 
 };
