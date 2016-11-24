@@ -12,13 +12,47 @@ class ProductContainer extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            allTabSelectedStatus: true,
+            financingTabSelectedStatus: false, // 理财
+            foundationTabSelectedStatus: false // 基金
+        };
+
+        this.handleAllTabSelected = this.handleAllTabSelected.bind(this);
+        this.handleFinancingTabSelected = this.handleFinancingTabSelected.bind(this);
+        this.handleFoundationTabSelected = this.handleFoundationTabSelected.bind(this);
+    }
+
+    /**
+     * 全部
+     */
+    handleAllTabSelected() {
+
+    }
+
+    /**
+     * 理财
+     */
+    handleFinancingTabSelected() {
+
+    }
+
+    /**
+     * 基金
+     */
+    handleFoundationTabSelected() {
 
     }
 
     render() {
         return (
             <ProductView
-
+                allTabSelectedStatus={this.state.allTabSelectedStatus}
+                financingTabSelectedStatus={this.state.financingTabSelectedStatus}
+                foundationTabSelectedStatus={this.state.foundationTabSelectedStatus}
+                handleAllTabSelected={this.handleAllTabSelected}
+                handleFinancingTabSelected={this.handleFinancingTabSelected}
+                handleFoundationTabSelected={this.handleFoundationTabSelected}
             />
         );
     }

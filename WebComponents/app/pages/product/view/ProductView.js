@@ -2,7 +2,7 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import Constant from '../../../main/constant/Constant';
 import { Tab, TabGroup } from '../../../main/components/view/UIComponents';
@@ -24,17 +24,23 @@ class ProductView extends Component {
                         <TabGroup style={styles.tabGroup} >
                             <Tab
                                 title="全部"
-                                isSelected={true}
-                                style={styles.tab} />
+                                isSelected={this.props.allTabSelectedStatus}
+                                style={styles.tab}
+                                onClick={this.props.handleAllTabSelected} />
                             <Tab
                                 title="理财"
-                                isSelected={false}
-                                style={styles.tab} />
+                                isSelected={this.props.financingTabSelectedStatus}
+                                style={styles.tab}
+                                onClick={this.props.handleFinancingTabSelected} />
                             <Tab
                                 title="基金"
-                                isSelected={false}
-                                style={styles.tab} />
+                                isSelected={this.props.foundationTabSelectedStatus}
+                                style={styles.tab}
+                                onClick={this.props.handleFoundationTabSelected} />
                         </TabGroup>
+                        <div style={styles.productList}>
+
+                        </div>
                     </div>
                     <div style={styles.productDetailsLayout}>
                         <ProductDetailsView
@@ -65,6 +71,9 @@ const styles = {
     tab: {
         flex: 1,
     },
+    productList: {
+
+    },
     productDetailsLayout: {
         flex: 1,
         backgroundColor: Constant.homePanelBackgroundColor,
@@ -77,6 +86,15 @@ const styles = {
         height: Constant.matchParent
     }
 
+};
+
+ProductView.propTypes = {
+    allTabSelectedStatus: PropTypes.bool.isRequired,
+    financingTabSelectedStatus: PropTypes.bool.isRequired,
+    foundationTabSelectedStatus: PropTypes.bool.isRequired,
+    handleAllTabSelected: PropTypes.func.isRequired,
+    handleFinancingTabSelected: PropTypes.func.isRequired,
+    handleFoundationTabSelected: PropTypes.func.isRequired
 };
 
 export default ProductView;

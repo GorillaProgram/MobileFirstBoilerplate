@@ -44,6 +44,7 @@ const styles = {
 };
 
 ProductDetailsView.propTypes = {
+    style: PropTypes.object,
     detailsURL: PropTypes.string.isRequired
 };
 

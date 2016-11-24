@@ -3,8 +3,6 @@
  * https://github.com/maybewaityou
  */
 import React, { Component, PropTypes } from 'react';
-import UITab from './UITab';
-
 
 class UITabGroup extends Component {
 
@@ -19,9 +17,6 @@ class UITabGroup extends Component {
             <div style={{...styles.container, ...this.props.style}}>
                 <div style={{...styles.tabLayout, ...this.props.tabLayout}}>
                     {this.props.children}
-                </div>
-                <div style={{...styles.tabContentLayout, ...this.props.tabContentLayout}}>
-
                 </div>
             </div>
         );
@@ -39,14 +34,13 @@ const styles = {
         flex: 1,
         backgroundColor: 'white',
         border: '1px solid #1177DB'
-    },
-    tabContentLayout: {
-
     }
 };
 
 UITabGroup.propTypes = {
-
+    style: PropTypes.object,
+    tabLayout: PropTypes.object,
+    children: PropTypes.any
 };
 
 export default UITabGroup;

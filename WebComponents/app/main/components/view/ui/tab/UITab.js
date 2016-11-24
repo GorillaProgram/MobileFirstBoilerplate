@@ -48,7 +48,8 @@ UITab.propTypes = {
     style: PropTypes.object,
     title: PropTypes.string.isRequired,
     titleStyle: PropTypes.object,
-    isSelected: PropTypes.bool.isRequired
+    isSelected: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired
 };
 
 export default UITab;
