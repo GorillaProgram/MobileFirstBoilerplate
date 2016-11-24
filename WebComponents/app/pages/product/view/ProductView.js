@@ -4,6 +4,8 @@
  */
 import React, { Component } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
+import Constant from '../../../main/constant/Constant';
+import { TabGroup } from '../../../main/components/view/UIComponents';
 
 class ProductView extends Component {
 
@@ -17,7 +19,12 @@ class ProductView extends Component {
         return (
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>
-                    product
+                    <div style={styles.productListLayout}>
+                        
+                    </div>
+                    <div style={styles.productDetailsLayout}>
+
+                    </div>
                 </div>
             </div>
         );
@@ -26,8 +33,26 @@ class ProductView extends Component {
 
 const styles = {
     container: {
-
+        display: 'flex',
+        flexDirection: 'row',
+        height: Constant.matchParent,
     },
+    productListLayout: {
+        flex: 1,
+        backgroundColor: Constant.homePanelBackgroundColor,
+        marginRight: Constant.homeBlock,
+        borderRadius: Constant.homeRadius,
+        overflow: 'hidden',
+        border: '1px solid #888888'
+    },
+    productDetailsLayout: {
+        flex: 1,
+        backgroundColor: Constant.homePanelBackgroundColor,
+        marginLeft: Constant.homeBlock,
+        borderRadius: Constant.homeRadius,
+        overflow: 'hidden',
+        border: '1px solid #888888'
+    }
 
 };
 
