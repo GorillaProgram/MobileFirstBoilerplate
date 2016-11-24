@@ -59,6 +59,7 @@ const styles = {
         overflow: 'hidden',
     },
     tabGroup: {
+        height: 44,
         backgroundColor: 'blue'
     },
     tab: {

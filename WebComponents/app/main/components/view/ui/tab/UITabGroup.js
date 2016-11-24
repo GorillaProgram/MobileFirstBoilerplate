@@ -32,7 +32,6 @@ const styles = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        height: 44,
     },
     tabLayout: {
         display: 'flex',
