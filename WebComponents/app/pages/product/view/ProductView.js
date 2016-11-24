@@ -42,11 +42,8 @@ const styles = {
     },
     productListLayout: {
         flex: 1,
-        backgroundColor: Constant.homePanelBackgroundColor,
         marginRight: Constant.homeBlock,
-        borderRadius: Constant.homeRadius,
         overflow: 'hidden',
-        border: '1px solid #888888'
     },
     productDetailsLayout: {
         flex: 1,
