@@ -18,18 +18,7 @@ class UITabGroup extends Component {
         return (
             <div style={{...styles.container, ...this.props.style}}>
                 <div style={{...styles.tabLayout, ...this.props.tabLayout}}>
-                    <UITab
-                        title="全部"
-                        isSelected={true}
-                        style={styles.tabStyle} />
-                    <UITab
-                        title="理财"
-                        isSelected={false}
-                        style={styles.tabStyle} />
-                    <UITab
-                        title="基金"
-                        isSelected={false}
-                        style={styles.tabStyle} />
+                    {this.props.children}
                 </div>
                 <div style={{...styles.tabContentLayout, ...this.props.tabContentLayout}}>
 
@@ -51,9 +40,6 @@ const styles = {
         flex: 1,
         backgroundColor: 'white',
         border: '1px solid #1177DB'
-    },
-    tabStyle: {
-        flex: 1,
     },
     tabContentLayout: {
 

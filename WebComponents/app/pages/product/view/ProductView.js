@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import CommonStyles from '../../../main/constant/CommonStyle';
 import Constant from '../../../main/constant/Constant';
-import { TabGroup } from '../../../main/components/view/UIComponents';
+import { Tab, TabGroup } from '../../../main/components/view/UIComponents';
 import ProductDetailsView from '../components/ProductDetailsView';
 
 class ProductView extends Component {
@@ -21,8 +21,19 @@ class ProductView extends Component {
             <div style={CommonStyles.homeRightContainer}>
                 <div style={styles.container}>
                     <div style={styles.productListLayout}>
-                        <TabGroup >
-                            
+                        <TabGroup style={styles.tabGroup} >
+                            <Tab
+                                title="全部"
+                                isSelected={true}
+                                style={styles.tab} />
+                            <Tab
+                                title="理财"
+                                isSelected={false}
+                                style={styles.tab} />
+                            <Tab
+                                title="基金"
+                                isSelected={false}
+                                style={styles.tab} />
                         </TabGroup>
                     </div>
                     <div style={styles.productDetailsLayout}>
@@ -46,6 +57,12 @@ const styles = {
         flex: 1,
         marginRight: Constant.homeBlock,
         overflow: 'hidden',
+    },
+    tabGroup: {
+        backgroundColor: 'blue'
+    },
+    tab: {
+        flex: 1,
     },
     productDetailsLayout: {
         flex: 1,

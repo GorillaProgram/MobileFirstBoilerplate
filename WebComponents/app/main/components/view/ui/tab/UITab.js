@@ -15,7 +15,7 @@ class UITab extends Component {
     render() {
         const isSelectedStyle = this.props.isSelected ? styles.selected : styles.unselected;
         return (
-            <div style={{...styles.container, ...isSelectedStyle, ...this.props.style}}>
+            <div style={{...styles.container, ...isSelectedStyle, ...this.props.style}} onClick={this.props.onClick}>
                 <div style={{...styles.title, ...this.props.titleStyle}}>
                     {this.props.title}
                 </div>
@@ -29,7 +29,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     title: {
         fontSize: 18,
