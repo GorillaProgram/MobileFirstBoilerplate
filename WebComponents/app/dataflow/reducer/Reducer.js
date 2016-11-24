@@ -41,92 +41,40 @@ function showIndex(state = {
         Just.log('===== SHOW_INDEX_INFO =====');
         return {
             ...state,
-            adModels: [
-                {
-                    image: 'http://10.240.90.214:7001/padServer/padimages/home/20161117144525120.png',
-                    url: 'http://www.baidu.com'
-                },
-                {
-                    image: 'http://10.240.90.214:7001/padServer/padimages/home/20161122100055000.png',
-                    url: 'http://www.taobao.com'
-                }
-            ],
-            noticeModels: [
-                {
-                    title: '中大奖'
-                },
-                {
-                    title: 'ssr'
-                },
-                {
-                    title: 'hahaha'
-                },
-                {
-                    title: '新消息'
-                }
-            ],
-            productModels: [
-                {
-                    image: 'http://10.240.90.214:7001/padServer/padimages/home/20161122100055000.png',
+            adModels: action.payload.response.responseJSON.bsadata.list1.filter((item) => {
+                return item.TYPE === 'carousel';
+            })
+            .map((item) => {
+                return {
+                    image: item.IMG_URL,
+                    url: item.TO_URL
+                };
+            }),
+            noticeModels: action.payload.response.responseJSON.bsadata.list2.map((item) => {
+                return {
+                    type: item.MESSAGE_TYPE,
+                    title: item.MESSAGE_TITLE,
+                    content: item.MESSAGE_CONTENT
+                };
+            }),
+            productModels: action.payload.response.responseJSON.bsadata.list1.filter((item) => {
+                return item.TYPE === 'hot';
+            })
+            .map((item) => {
+                return {
+                    image: item.IMG_URL,
                     content: [
                         {
                             des: '名称',
-                            text: '白金卡'
+                            text: item.CONTENT_NAME
                         },
                         {
                             des: '简介',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                            text: item.CONTENT_DESC
                         }
                     ]
-                },
-                {
-                    image: 'http://10.240.90.214:7001/padServer/padimages/home/20161117144525120.png',
-                    content: [
-                        {
-                            des: '名称',
-                            text: '白金卡'
-                        },
-                        {
-                            des: '简介',
-                            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        }
-                    ]
-                }
-            ]
-            // adModels: action.payload.response.list1.filter((item) => {
-            //     return item.TYPE === 'carousel';
-            // })
-            // .map((item) => {
-            //     return {
-            //         image: item.IMG_URL,
-            //         url: item.TO_URL
-            //     };
-            // }),
-            // noticeModels: action.payload.response.list2.map((item) => {
-            //     return {
-            //         type: item.MESSAGE_TYPE,
-            //         title: item.MESSAGE_TITLE,
-            //         content: item.MESSAGE_CONTENT
-            //     };
-            // }),
-            // productModels: action.payload.response.list1.filter((item) => {
-            //     return item.TYPE === 'hot';
-            // })
-            // .map((item) => {
-            //     return {
-            //         image: item.IMG_URL,
-            //         content: [
-            //             {
-            //                 des: '名称',
-            //                 text: item.CONTENT_NAME
-            //             },
-            //             {
-            //                 des: '简介',
-            //                 text: item.CONTENT_DESC
-            //             }
-            //         ]
-            //     };
-            // })
+                };
+            })
         };
     default:
         return state;
