@@ -6,6 +6,13 @@ import DebugUtility from '../function/DebugUtility';
 
 const DeviceUtility = {
 
+    /**
+     * 禁止复制
+     */
+    copyForbidden() {
+        document.documentElement.style.webkitUserSelect = 'none';
+        document.documentElement.style.webkitTouchCallout = 'none';
+    },
     /* 返回键处理 start */
     eventBackButton() {
         // 调用Toast提示

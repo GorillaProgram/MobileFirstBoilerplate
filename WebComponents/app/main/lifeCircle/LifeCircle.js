@@ -16,7 +16,10 @@ const LifeCircle = {
             /* 初始化图片缓存 */
             ImageCache.imageCacheInitConfig();
 
-            // 返回按钮事件
+            /* 禁止长按复制 */
+            DeviceUtility.copyForbidden();
+
+            /* 返回按钮事件 */
             document.addEventListener('backbutton', DeviceUtility.eventBackButton, false); // 返回键
         }, false);
     }

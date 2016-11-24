@@ -125,9 +125,8 @@ const styles = {
         border: '1px solid #888888',
     },
     AdImage: {
-        // height: 163,
-        width: '100%',
-        height: '100%',
+        height: 163,
+        width: Constant.matchParent,
         borderRadius: Constant.homeRadius,
     },
     noticeLayout: {

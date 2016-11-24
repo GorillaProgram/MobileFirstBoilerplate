@@ -25,21 +25,20 @@ class AdImagesSlider extends Component {
         });
         return (
             models.length === 0 ?
-            <NoInfoPanel
-                image={noInfoImage}
-                title={noInfoTitle} /> :
-            <Slider {...settings}>
+            <div style={{...styles.container, ...this.props.style}}>
+                <NoInfoPanel
+                    image={noInfoImage}
+                    title={noInfoTitle} />
+            </div> :
+            <Slider style={styles.slider} {...settings}>
                 {imagesView}
             </Slider>
         );
     }
 
     render() {
-
         return (
-            <div style={{...styles.container, ...this.props.style}}>
-                {this.adImagesSliderOrNoInfoPanel(this.props.models, this.props.settings, this.props.noInfoImage, this.props.noInfoTitle)}
-            </div>
+            this.adImagesSliderOrNoInfoPanel(this.props.models, this.props.settings, this.props.noInfoImage, this.props.noInfoTitle)
         );
     }
 }
@@ -52,6 +51,9 @@ const styles = {
         height: '100%',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    slider: {
+        overflow: 'hidden'
     }
 };
 
