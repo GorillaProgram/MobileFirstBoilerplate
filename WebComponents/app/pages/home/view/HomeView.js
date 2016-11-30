@@ -169,8 +169,7 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         height: '30%',
-    },
-
+    }
 };
 
 HomeView.propTypes = {
