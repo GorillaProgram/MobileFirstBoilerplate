@@ -16,7 +16,6 @@
         "plugin:react/recommended",
         "plugin:import/errors",
         "plugin:import/warnings"
-        
     ],
     "parser": "babel-eslint",
     "parserOptions": {
